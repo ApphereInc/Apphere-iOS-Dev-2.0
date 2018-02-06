@@ -16,10 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Custom statubar
+        
+        // NOTE: this kind of thing can get you rejected from the app store.
+        // In order to color the status bar, just move the inner view down
+        // and make the outer view have this background color.
+
         UIApplication.shared.isStatusBarHidden = false
         UIApplication.shared.statusBarStyle = .lightContent
         let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
         statusBar.backgroundColor = UIColor(red: 136/255, green: 86/255, blue: 237/255, alpha: 1)
+        
         
         return true
     }
