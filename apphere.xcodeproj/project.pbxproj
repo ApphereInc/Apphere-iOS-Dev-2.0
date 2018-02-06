@@ -20,6 +20,8 @@
 		2CD1B8711FD3C4F200179D26 /* apphereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1B8701FD3C4F200179D26 /* apphereUITests.swift */; };
 		D68AEF1FBC8CC03FD4CDB7BB /* Pods_apphere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD841BEA5874BB9F1D25DA6 /* Pods_apphere.framework */; };
 		E50CB028372812DC52179166 /* Pods_apphereUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A2627E04DA46F7E9CF7BC /* Pods_apphereUITests.framework */; };
+		EA4A5970202A53AF0062ACF4 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A596F202A53AF0062ACF4 /* EventCell.swift */; };
+		EA4A5972202A5BDE0062ACF4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5971202A5BDE0062ACF4 /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		A13389D41504502C5E8BDB98 /* Pods-apphereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apphereTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-apphereTests/Pods-apphereTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8A8606E2F53538358D5F2B2 /* Pods-apphereUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apphereUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-apphereUITests/Pods-apphereUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CAD841BEA5874BB9F1D25DA6 /* Pods_apphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA4A596F202A53AF0062ACF4 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		EA4A5971202A5BDE0062ACF4 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 				2CD1B8571FD3C4F200179D26 /* Assets.xcassets */,
 				2CD1B8591FD3C4F200179D26 /* LaunchScreen.storyboard */,
 				2CD1B85C1FD3C4F200179D26 /* Info.plist */,
+				EA4A596F202A53AF0062ACF4 /* EventCell.swift */,
+				EA4A5971202A5BDE0062ACF4 /* Event.swift */,
 			);
 			path = apphere;
 			sourceTree = "<group>";
@@ -478,6 +484,8 @@
 				2CC8CBAA1FE7DA1500A0D598 /* MapViewController.swift in Sources */,
 				2CD1B8511FD3C4F200179D26 /* FirstViewController.swift in Sources */,
 				2C3A13CC1FE5BBF60041410C /* HomeViewController.swift in Sources */,
+				EA4A5972202A5BDE0062ACF4 /* Event.swift in Sources */,
+				EA4A5970202A53AF0062ACF4 /* EventCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
