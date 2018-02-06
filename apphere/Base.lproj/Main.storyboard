@@ -434,13 +434,13 @@ Developer: Derek Sheldon</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="ov9-Oj-hqU">
                                     <size key="itemSize" width="300" height="344"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="event" id="tuY-EE-hgc" userLabel="Event" customClass="EventCell" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="27.5" y="20" width="300" height="344"/>
+                                        <rect key="frame" x="27.5" y="50" width="300" height="344"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
@@ -512,6 +512,27 @@ Developer: Derek Sheldon</string>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="t7d-uA-trr" customClass="HeaderView" customModule="apphere" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="DECEMBER 19" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-ab-1tK">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                            <color key="textColor" red="0.50716221332550049" green="0.34449067711830139" blue="0.89811784029006958" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="SB7-ab-1tK" secondAttribute="trailing" id="4JY-WD-kI5"/>
+                                        <constraint firstItem="SB7-ab-1tK" firstAttribute="top" secondItem="t7d-uA-trr" secondAttribute="top" id="Wv2-ss-QGP"/>
+                                        <constraint firstItem="SB7-ab-1tK" firstAttribute="leading" secondItem="t7d-uA-trr" secondAttribute="leading" id="bo3-i4-9Mq"/>
+                                        <constraint firstAttribute="bottom" secondItem="SB7-ab-1tK" secondAttribute="bottom" id="gRa-bz-EAs"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="label" destination="SB7-ab-1tK" id="tue-DF-t4d"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="La9-D8-5uU" id="0IR-FU-i8w"/>
                                     <outlet property="delegate" destination="La9-D8-5uU" id="RWW-Jg-rmM"/>
