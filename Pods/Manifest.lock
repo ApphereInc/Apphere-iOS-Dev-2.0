@@ -1,0 +1,25 @@
+PODS:
+  - EstimoteIndoorSDK (2.7.1):
+    - EstimoteSDK (~> 4.16.0)
+  - EstimoteMirror (0.1.7):
+    - EstimoteMirrorCore
+  - EstimoteMirrorCore (0.1.7)
+  - EstimoteSDK (4.16.2)
+  - Mapbox-iOS-SDK (3.7.0)
+
+DEPENDENCIES:
+  - EstimoteIndoorSDK
+  - EstimoteMirror (~> 0.1.6)
+  - EstimoteSDK
+  - Mapbox-iOS-SDK (~> 3.7)
+
+SPEC CHECKSUMS:
+  EstimoteIndoorSDK: 53eaf12601b855f1d7eea7ae930d3fb8f66fb71d
+  EstimoteMirror: aeda09d28cae0bb952207951d33d06f888ad9c54
+  EstimoteMirrorCore: 432a54b0533648412500f75d0cd169fd09df0dc0
+  EstimoteSDK: 17d0778be064419dd905f41981f831052f4c19ee
+  Mapbox-iOS-SDK: 699818d30e1ed4985d3efc6a06c40b90907c586d
+
+PODFILE CHECKSUM: 26ccd82cea954c48bc90632e9d48516ddf7655b5
+
+COCOAPODS: 1.1.1
