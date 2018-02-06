@@ -36,6 +36,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
               headerTitle: "sweet ride ice cream",
               headerSubtitle: "free holiday scoop",
               footerTitle: "12",
-              footerSubtitle: "here now")
+              footerSubtitle: "here now"),
+        Event(photo: UIImage(named: "red")!,
+              headerTitle: "red robin exeter",
+              headerSubtitle: "15% off all burgers",
+              footerTitle: "31",
+              footerSubtitle: "dec")
     ]
 }
