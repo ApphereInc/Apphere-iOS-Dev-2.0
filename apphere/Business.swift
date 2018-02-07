@@ -8,10 +8,10 @@
 
 import UIKit
 
-struct Event {
+struct Business {
     var photo: UIImage
-    var headerTitle: String
-    var headerSubtitle: String
-    var footerTitle: String
-    var footerSubtitle: String
+    var name: String
+    var promotion: String
+    var footerLargeText: String
+    var footerSmallText: String
 }

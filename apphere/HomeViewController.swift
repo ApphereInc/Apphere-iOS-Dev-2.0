@@ -14,12 +14,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return events.count
+        return businesses.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "event", for: indexPath) as! EventCell
-        cell.event = events[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "business", for: indexPath) as! BusinessCell
+        cell.business = businesses[indexPath.item]
         return cell
     }
     
@@ -31,16 +31,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet var collectionView: UICollectionView!
     
-    var events: [Event] = [
-        Event(photo: UIImage(named: "sweet")!,
-              headerTitle: "sweet ride ice cream",
-              headerSubtitle: "free holiday scoop",
-              footerTitle: "12",
-              footerSubtitle: "here now"),
-        Event(photo: UIImage(named: "red")!,
-              headerTitle: "red robin exeter",
-              headerSubtitle: "15% off all burgers",
-              footerTitle: "31",
-              footerSubtitle: "dec")
+    var businesses: [Business] = [
+        Business(photo: UIImage(named: "sweet")!,
+              name: "sweet ride ice cream",
+              promotion: "free holiday scoop",
+              footerLargeText: "12",
+              footerSmallText: "here now"),
+        Business(photo: UIImage(named: "red")!,
+              name: "red robin exeter",
+              promotion: "15% off all burgers",
+              footerLargeText: "31",
+              footerSmallText: "dec")
     ]
 }

@@ -439,7 +439,7 @@ Developer: Derek Sheldon</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="event" id="tuY-EE-hgc" userLabel="Event" customClass="EventCell" customModule="apphere" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="business" id="tuY-EE-hgc" userLabel="Business" customClass="BusinessCell" customModule="apphere" customModuleProvider="target">
                                         <rect key="frame" x="37.5" y="50" width="300" height="344"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -504,11 +504,11 @@ Developer: Derek Sheldon</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="footerSubtitleLabel" destination="Pt7-bZ-BHn" id="tSm-eM-yZz"/>
-                                            <outlet property="footerTitleLabel" destination="1eQ-sD-ias" id="mmT-Ie-XCd"/>
-                                            <outlet property="headerSubtitleLabel" destination="bN4-Og-biA" id="RK6-py-pdV"/>
-                                            <outlet property="headerTitleLabel" destination="Cyu-Tu-CXS" id="YuF-gP-hjo"/>
+                                            <outlet property="footerLargeTextLabel" destination="1eQ-sD-ias" id="mmT-Ie-XCd"/>
+                                            <outlet property="footerSmallTextLabel" destination="Pt7-bZ-BHn" id="tSm-eM-yZz"/>
+                                            <outlet property="nameLabel" destination="Cyu-Tu-CXS" id="YuF-gP-hjo"/>
                                             <outlet property="photoView" destination="1aF-x4-tG4" id="T6v-he-v0o"/>
+                                            <outlet property="promotionLabel" destination="bN4-Og-biA" id="RK6-py-pdV"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
