@@ -10,11 +10,10 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        ESTConfig.setupAppID("apphere-p0d", andAppToken: "09f32257eb15a6937ed7447b110825eb")
         return true
     }
     
@@ -39,19 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    func applicationDidFinishLaunching(_ application: UIApplication) {
-        ESTConfig.setupAppID("apphere-ay2", andAppToken: "9008b38cb62a391150d4e6c292bea191")
-        
-        
-
-    
-        
-    }
-    
-    
-    
-    
 }
 
 
