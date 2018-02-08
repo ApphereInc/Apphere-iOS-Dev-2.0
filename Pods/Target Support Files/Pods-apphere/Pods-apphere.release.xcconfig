@@ -1,14 +1,14 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
 ENABLE_BITCODE = NO
 FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/EstimoteMirror" "${PODS_ROOT}/EstimoteMirrorCore/Core" "${PODS_ROOT}/EstimoteSDK/EstimoteSDK" "${PODS_ROOT}/Mapbox-iOS-SDK/dynamic"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/EstimoteIndoorSDK" "${PODS_ROOT}/Headers/EstimoteSDK" $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/EstimoteIndoorSDK" "${PODS_ROOT}/Headers/Public/EstimoteMirrorCore" "${PODS_ROOT}/Headers/Public/EstimoteSDK" "${PODS_ROOT}/Headers/Public/Mapbox-iOS-SDK"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-LIBRARY_SEARCH_PATHS = $(inherited) "$(PODS_ROOT)/EstimoteIndoorSDK" "$(PODS_ROOT)/EstimoteSDK" $(inherited) "${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK"
+LIBRARY_SEARCH_PATHS = $(inherited) "$(PODS_ROOT)/EstimoteIndoorSDK" "$(PODS_ROOT)/EstimoteSDK" "${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK"
 OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/EstimoteMirror/MirrorDisplay.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/EstimoteIndoorSDK" -isystem "${PODS_ROOT}/Headers/Public/EstimoteMirrorCore" -isystem "${PODS_ROOT}/Headers/Public/EstimoteSDK" -isystem "${PODS_ROOT}/Headers/Public/Mapbox-iOS-SDK"
 OTHER_LDFLAGS = $(inherited) -ObjC -l"EstimoteIndoorSDK" -l"c++" -l"z" -framework "AudioToolbox" -framework "CoreBluetooth" -framework "CoreLocation" -framework "CoreMotion" -framework "EstimoteSDK" -framework "Foundation" -framework "Mapbox" -framework "MediaPlayer" -framework "MessageUI" -framework "MirrorCoreSDK" -framework "MirrorDisplay" -framework "MobileCoreServices" -framework "SystemConfiguration" -framework "UIKit"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
