@@ -9,9 +9,10 @@
 import UIKit
 
 struct Business {
-    var photo: UIImage
-    var name: String
-    var promotion: String
-    var footerLargeText: String
-    var footerSmallText: String
+    let photo: UIImage
+    let name: String
+    let promotion: String
+    let activeCustomerCount: Int
+    let dailyCustomerCount: Int
+    let totalCustomerCount: Int
 }

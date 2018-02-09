@@ -14,8 +14,8 @@ class BusinessCell: UICollectionViewCell {
             photoView.image             = business.photo
             nameLabel.text              = business.name.uppercased()
             promotionLabel.text         = business.promotion.uppercased()
-            footerLargeTextLabel.text   = business.footerLargeText.uppercased()
-            footerSmallTextLabel.text   = business.footerSmallText.uppercased()
+            footerLargeTextLabel.text   = String(business.activeCustomerCount)
+            footerSmallTextLabel.text   = "HERE NOW"
         }
     }
     

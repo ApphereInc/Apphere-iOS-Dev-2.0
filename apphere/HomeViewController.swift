@@ -44,12 +44,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         Business(photo: UIImage(named: "sweet")!,
               name: "sweet ride ice cream",
               promotion: "free holiday scoop",
-              footerLargeText: "12",
-              footerSmallText: "here now"),
+              activeCustomerCount: 12, dailyCustomerCount: 48, totalCustomerCount: 2020),
         Business(photo: UIImage(named: "red")!,
               name: "red robin exeter",
               promotion: "15% off all burgers",
-              footerLargeText: "31",
-              footerSmallText: "dec")
+              activeCustomerCount: 20, dailyCustomerCount: 62, totalCustomerCount: 4467)
     ]
 }
