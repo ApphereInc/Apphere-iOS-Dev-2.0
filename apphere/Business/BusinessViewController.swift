@@ -12,7 +12,10 @@ class BusinessViewController: UIViewController {
     var business: Business!
     
     override func viewDidLoad() {
-        nameLabel.text = business.name.capitalized
+        photoView.image                 = business.photo
+        nameLabel.text                  = business.name.uppercased()
+        promotionLabel.text             = business.promotion.uppercased()
+        activeCustomerCountLabel.text   = String(business.activeCustomerCount)
     }
     
     @IBAction func closeButtonTapped() {
@@ -20,4 +23,7 @@ class BusinessViewController: UIViewController {
     }
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var promotionLabel: UILabel!
+    @IBOutlet weak var activeCustomerCountLabel: UILabel!
 }
