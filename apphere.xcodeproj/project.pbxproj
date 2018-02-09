@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F5E9F13F4775A144B0EE51A /* Pods_apphereTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD1BECA63D0FD0D4BBBEC00 /* Pods_apphereTests.framework */; };
 		2C05C7151FDBDF5700D1DBE9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C05C7141FDBDF5700D1DBE9 /* SecondViewController.swift */; };
-		2C3A13CC1FE5BBF60041410C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A13CB1FE5BBF60041410C /* HomeViewController.swift */; };
+		2C3A13CC1FE5BBF60041410C /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A13CB1FE5BBF60041410C /* BusinessListViewController.swift */; };
 		2CC8CBAA1FE7DA1500A0D598 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8CBA91FE7DA1500A0D598 /* MapViewController.swift */; };
 		2CD1B84F1FD3C4F200179D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */; };
 		2CD1B8511FD3C4F200179D26 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1B8501FD3C4F200179D26 /* FirstViewController.swift */; };
@@ -22,7 +22,7 @@
 		E50CB028372812DC52179166 /* Pods_apphereUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A2627E04DA46F7E9CF7BC /* Pods_apphereUITests.framework */; };
 		EA4A5970202A53AF0062ACF4 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */; };
 		EA4A5972202A5BDE0062ACF4 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5971202A5BDE0062ACF4 /* Business.swift */; };
-		EA4A5974202A68020062ACF4 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5973202A68020062ACF4 /* HeaderView.swift */; };
+		EA4A5974202A68020062ACF4 /* BusinessListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */; };
 		EA6A474A202B7A2600455766 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A4749202B7A2600455766 /* BusinessViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,7 @@
 /* Begin PBXFileReference section */
 		1FD1BECA63D0FD0D4BBBEC00 /* Pods_apphereTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apphereTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C05C7141FDBDF5700D1DBE9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		2C3A13CB1FE5BBF60041410C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2C3A13CB1FE5BBF60041410C /* BusinessListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListViewController.swift; sourceTree = "<group>"; };
 		2CC8CBA91FE7DA1500A0D598 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2CD1B84B1FD3C4F200179D26 /* apphere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apphere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		CAD841BEA5874BB9F1D25DA6 /* Pods_apphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		EA4A5971202A5BDE0062ACF4 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
-		EA4A5973202A68020062ACF4 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessListHeaderView.swift; sourceTree = "<group>"; };
 		EA6A4749202B7A2600455766 /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		EAF4F8C2202B790500FEA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "apphere/Base.lproj/Old Storyboard.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,20 +141,16 @@
 		2CD1B84D1FD3C4F200179D26 /* apphere */ = {
 			isa = PBXGroup;
 			children = (
-				2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */,
+				EA22D012202DE820006C2861 /* Business */,
 				2CD1B8501FD3C4F200179D26 /* FirstViewController.swift */,
 				2C05C7141FDBDF5700D1DBE9 /* SecondViewController.swift */,
-				2C3A13CB1FE5BBF60041410C /* HomeViewController.swift */,
 				2CC8CBA91FE7DA1500A0D598 /* MapViewController.swift */,
-				EA6A4749202B7A2600455766 /* BusinessViewController.swift */,
+				2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */,
 				2CD1B8541FD3C4F200179D26 /* Main.storyboard */,
-				EAF4F8C1202B790500FEA1F2 /* Old Storyboard.storyboard */,
-				2CD1B8571FD3C4F200179D26 /* Assets.xcassets */,
 				2CD1B8591FD3C4F200179D26 /* LaunchScreen.storyboard */,
 				2CD1B85C1FD3C4F200179D26 /* Info.plist */,
-				EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */,
-				EA4A5973202A68020062ACF4 /* HeaderView.swift */,
-				EA4A5971202A5BDE0062ACF4 /* Business.swift */,
+				2CD1B8571FD3C4F200179D26 /* Assets.xcassets */,
+				EA22D011202DE73E006C2861 /* Old */,
 			);
 			path = apphere;
 			sourceTree = "<group>";
@@ -198,6 +194,26 @@
 				B8A8606E2F53538358D5F2B2 /* Pods-apphereUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA22D011202DE73E006C2861 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				EAF4F8C1202B790500FEA1F2 /* Old Storyboard.storyboard */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
+		EA22D012202DE820006C2861 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				2C3A13CB1FE5BBF60041410C /* BusinessListViewController.swift */,
+				EA6A4749202B7A2600455766 /* BusinessViewController.swift */,
+				EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */,
+				EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */,
+				EA4A5971202A5BDE0062ACF4 /* Business.swift */,
+			);
+			path = Business;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,10 +562,10 @@
 				2CC8CBAA1FE7DA1500A0D598 /* MapViewController.swift in Sources */,
 				EA6A474A202B7A2600455766 /* BusinessViewController.swift in Sources */,
 				2CD1B8511FD3C4F200179D26 /* FirstViewController.swift in Sources */,
-				2C3A13CC1FE5BBF60041410C /* HomeViewController.swift in Sources */,
+				2C3A13CC1FE5BBF60041410C /* BusinessListViewController.swift in Sources */,
 				EA4A5972202A5BDE0062ACF4 /* Business.swift in Sources */,
 				EA4A5970202A53AF0062ACF4 /* BusinessCell.swift in Sources */,
-				EA4A5974202A68020062ACF4 /* HeaderView.swift in Sources */,
+				EA4A5974202A68020062ACF4 /* BusinessListHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

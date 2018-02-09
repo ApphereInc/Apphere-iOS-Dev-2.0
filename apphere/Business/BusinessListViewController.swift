@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  BusinessListViewController.swift
 //  apphere
 //
 //  Created by Derek Sheldon on 12/16/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class BusinessListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -33,7 +33,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! HeaderView
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! BusinessListHeaderView
         header.date = Date()
         return header
     }

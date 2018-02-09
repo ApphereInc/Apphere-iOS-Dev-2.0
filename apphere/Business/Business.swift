@@ -1,5 +1,5 @@
 //
-//  Event.swift
+//  Business.swift
 //  apphere
 //
 //  Created by Tony Mann on 2/6/18.

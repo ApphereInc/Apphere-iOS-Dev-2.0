@@ -161,7 +161,7 @@ Developer: Derek Sheldon</string>
         <!--Home View Controller-->
         <scene sceneID="FYs-ts-ggw">
             <objects>
-                <viewController id="La9-D8-5uU" userLabel="Home View Controller" customClass="HomeViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="La9-D8-5uU" userLabel="Home View Controller" customClass="BusinessListViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LTk-w2-tFT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,7 +245,7 @@ Developer: Derek Sheldon</string>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="t7d-uA-trr" customClass="HeaderView" customModule="apphere" customModuleProvider="target">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="t7d-uA-trr" customClass="BusinessListHeaderView" customModule="apphere" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
