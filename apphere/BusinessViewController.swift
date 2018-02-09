@@ -12,8 +12,11 @@ class BusinessViewController: UIViewController {
     var business: Business!
     
     override func viewDidLoad() {
-        navigationItem.title = business.name.capitalized
-        nameLabel.text = business.promotion.capitalized
+        nameLabel.text = business.name.capitalized
+    }
+    
+    @IBAction func closeButtonTapped() {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBOutlet weak var nameLabel: UILabel!
