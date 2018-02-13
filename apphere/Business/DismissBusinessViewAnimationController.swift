@@ -25,12 +25,12 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         transitionContext.containerView.addSubview(tabBarView)
 
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-//            businessDetailViewController.positionContainer(left: 20.0,
-//                                                 right: 20.0,
-//                                                 top: self.selectedBusinessCellFrame.origin.y + 20.0,
-//                                                 bottom: 0.0)
-//            businessDetailViewController.setHeaderHeight(self.selectedBusinessCellFrame.size.height - 40.0)
-//            businessDetailViewController.configureRoundedCorners(shouldRound: true)
+            businessDetailViewController.containerTopConstraint.constant =  self.selectedBusinessCellFrame.origin.y + 20.0
+            businessDetailViewController.containerLeadingConstraint.constant = 10.0
+            businessDetailViewController.containerTrailingConstraint.constant = -10.0
+            businessDetailView.layoutIfNeeded()
+            
+            businessDetailViewController.photoView.layer.cornerRadius = 14.0
         }, completion: { (_) in
             tabBarView.isHidden = false
             businessDetailView.removeFromSuperview()

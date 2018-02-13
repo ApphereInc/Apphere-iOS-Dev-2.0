@@ -18,6 +18,10 @@ class BusinessDetailViewController: UIViewController {
         activeCustomerCountLabel.text   = String(business.activeCustomerCount)
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     @IBAction func closeButtonTapped() {
         dismiss(animated: true, completion: nil)
     }
@@ -26,4 +30,9 @@ class BusinessDetailViewController: UIViewController {
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var promotionLabel: UILabel!
     @IBOutlet weak var activeCustomerCountLabel: UILabel!
+    @IBOutlet weak var containerTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var containerBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var containerLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var containerTrailingConstraint: NSLayoutConstraint!
+
 }

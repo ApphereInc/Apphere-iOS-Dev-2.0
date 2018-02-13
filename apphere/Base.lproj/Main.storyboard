@@ -307,7 +307,7 @@ Developer: Derek Sheldon</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtD-6W-098" userLabel="Container">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-sE-iJ9">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="344"/>
@@ -316,17 +316,17 @@ Developer: Derek Sheldon</string>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o7-eQ-Hs9" userLabel="Close Button">
-                                        <rect key="frame" x="345" y="5" width="25" height="25"/>
+                                        <rect key="frame" x="326" y="5" width="44" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="8d5-ZM-CIF"/>
-                                            <constraint firstAttribute="width" constant="25" id="OED-3U-ily"/>
+                                            <constraint firstAttribute="height" constant="44" id="8d5-ZM-CIF"/>
+                                            <constraint firstAttribute="width" constant="44" id="OED-3U-ily"/>
                                         </constraints>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="X"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
+                                                <integer key="value" value="22"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -379,15 +379,19 @@ Developer: Derek Sheldon</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GtD-6W-098" firstAttribute="top" secondItem="Fpy-mn-DcO" secondAttribute="top" id="78v-Ev-MJO"/>
-                            <constraint firstItem="GtD-6W-098" firstAttribute="leading" secondItem="Fpy-mn-DcO" secondAttribute="leading" id="oZ7-4l-exB"/>
-                            <constraint firstItem="Fpy-mn-DcO" firstAttribute="bottom" secondItem="GtD-6W-098" secondAttribute="bottom" id="pRg-tx-4KF"/>
-                            <constraint firstItem="GtD-6W-098" firstAttribute="trailing" secondItem="Fpy-mn-DcO" secondAttribute="trailing" id="u52-vj-hIr"/>
+                            <constraint firstItem="GtD-6W-098" firstAttribute="top" secondItem="OmI-1S-9g8" secondAttribute="top" id="78v-Ev-MJO"/>
+                            <constraint firstItem="GtD-6W-098" firstAttribute="leading" secondItem="OmI-1S-9g8" secondAttribute="leading" id="oZ7-4l-exB"/>
+                            <constraint firstAttribute="bottom" secondItem="GtD-6W-098" secondAttribute="bottom" id="pRg-tx-4KF"/>
+                            <constraint firstItem="GtD-6W-098" firstAttribute="trailing" secondItem="OmI-1S-9g8" secondAttribute="trailing" id="u52-vj-hIr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fpy-mn-DcO"/>
                     </view>
                     <connections>
                         <outlet property="activeCustomerCountLabel" destination="evY-Nv-baR" id="GgL-B5-aaP"/>
+                        <outlet property="containerBottomConstraint" destination="pRg-tx-4KF" id="I25-1U-Pcr"/>
+                        <outlet property="containerLeadingConstraint" destination="oZ7-4l-exB" id="G0k-zp-9PS"/>
+                        <outlet property="containerTopConstraint" destination="78v-Ev-MJO" id="QIa-3a-1jN"/>
+                        <outlet property="containerTrailingConstraint" destination="u52-vj-hIr" id="bRR-Am-cqu"/>
                         <outlet property="nameLabel" destination="usv-VJ-bwq" id="rbf-AR-cgl"/>
                         <outlet property="photoView" destination="5ZE-sE-iJ9" id="zg9-gl-xaE"/>
                         <outlet property="promotionLabel" destination="DeM-69-JUw" id="dwp-Ra-Vhc"/>

@@ -16,6 +16,8 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
             let businessViewController = segue.destination as! BusinessDetailViewController
             businessViewController.business = businesses[indexPath.item]
             businessViewController.transitioningDelegate = self
+            presentBusinessViewAnimationController.selectedBusinessCellFrame = cell.frame
+            dismissBusinessViewAnimationController.selectedBusinessCellFrame = cell.frame
         }
     }
     

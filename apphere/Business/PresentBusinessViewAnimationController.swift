@@ -21,21 +21,20 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         }
         
         transitionContext.containerView.addSubview(businessDetailView)
-//        businessDetailViewController.positionContainer(left: 20.0,
-//                                           right: 20.0,
-//                                           top: selectedBusinessCellFrame.origin.y + 20.0,
-//                                           bottom: 0.0)
-//        businessDetailViewController.setHeaderHeight(selectedBusinessCellFrame.size.height - 40.0)
-//        businessDetailViewController.configureRoundedCorners(shouldRound: true)
+        businessDetailViewController.containerTopConstraint.constant = selectedBusinessCellFrame.origin.y + 20.0
+        businessDetailViewController.containerLeadingConstraint.constant = 10.0
+        businessDetailViewController.containerTrailingConstraint.constant = -10.0
+        businessDetailView.layoutIfNeeded()
+        
+        businessDetailViewController.photoView.layer.cornerRadius = 14.0
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-//            businessDetailViewController.positionContainer(left: 0.0,
-//                                               right: 0.0,
-//                                               top: 0.0,
-//                                               bottom: 0.0)
-//            businessDetailViewController.setHeaderHeight(500)
-//            businessDetailViewController.view.backgroundColor = .white
-//            businessDetailViewController.configureRoundedCorners(shouldRound: false)
+            businessDetailViewController.containerTopConstraint.constant = 0.0
+            businessDetailViewController.containerLeadingConstraint.constant = 0.0
+            businessDetailViewController.containerTrailingConstraint.constant = 0.0
+            businessDetailView.layoutIfNeeded()
+            
+            businessDetailViewController.photoView.layer.cornerRadius = 0.0
         }, completion: { (_) in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
