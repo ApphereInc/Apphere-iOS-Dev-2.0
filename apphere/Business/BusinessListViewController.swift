@@ -39,14 +39,6 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         return header
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let businessDetailViewController = storyboard!.instantiateViewController(withIdentifier: "businessDetail") as! BusinessDetailViewController
-//        businessDetailViewController.modalPresentationStyle = .custom
-//        businessDetailViewController.business = businesses[indexPath.item]
-//        businessDetailViewController.transitioningDelegate = self
-//        present(businessDetailViewController, animated: true, completion: nil)
-//    }
-    
     // MARK: - UIViewControllerTransitioningDelegate
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
