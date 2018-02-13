@@ -1,5 +1,5 @@
 //
-//  HeaderView.swift
+//  BusinessListHeaderView.swift
 //  apphere
 //
 //  Created by Tony Mann on 2/6/18.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class HeaderView: UICollectionReusableView {
+class BusinessListHeaderView: UICollectionReusableView {
     var date: Date! {
         didSet {
-            label.text = HeaderView.dateFormatter.string(from: date).uppercased()
+            label.text = BusinessListHeaderView.dateFormatter.string(from: date).uppercased()
         }
     }
     
