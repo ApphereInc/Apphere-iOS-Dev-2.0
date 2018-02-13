@@ -62,10 +62,28 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         Business(photo: UIImage(named: "sweet")!,
               name: "sweet ride ice cream",
               promotion: "free holiday scoop",
-              activeCustomerCount: 12, dailyCustomerCount: 48, totalCustomerCount: 2020),
+              activeCustomerCount: 12,
+              dailyCustomerCount: 48,
+              totalCustomerCount: 2020,
+              address1: "542 Penn Ave",
+              address2: nil,
+              city: "West Reading",
+              state: "PA",
+              zip: "19611",
+              phoneNumber: "(484) 987-7338"
+        ),
         Business(photo: UIImage(named: "red")!,
               name: "red robin exeter",
               promotion: "15% off all burgers",
-              activeCustomerCount: 20, dailyCustomerCount: 62, totalCustomerCount: 4467)
+              activeCustomerCount: 20,
+              dailyCustomerCount: 62,
+              totalCustomerCount: 4467,
+              address1: "111 Main St",
+              address2: nil,
+              city: "West Reading",
+              state: "PA",
+              zip: "19611",
+              phoneNumber: "(484) 367-9318"
+        )
     ]
 }

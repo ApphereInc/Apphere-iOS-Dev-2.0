@@ -18,6 +18,11 @@ class BusinessDetailViewController: UIViewController {
         activeCustomerCountLabel.text   = String(business.activeCustomerCount)
         dailyCustomerCountLabel.text    = String(business.dailyCustomerCount)
         totalCustomerCountLabel.text    = String(business.totalCustomerCount)
+        
+        update(label: address1Label,    withText: business.address1)
+        update(label: address2Label,    withText: business.address2)
+        update(label: cityStateZipLabel,withText: business.cityStateZip)
+        update(label: phoneNumberLabel, withText: business.phoneNumber)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -28,7 +33,20 @@ class BusinessDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    private func update(label: UILabel, withText text: String?) {
+        if let text = text {
+            label.text = text
+            label.isHidden = false
+        } else {
+            label.isHidden = true
+        }
+    }
+    
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var address1Label: UILabel!
+    @IBOutlet weak var address2Label: UILabel!
+    @IBOutlet weak var cityStateZipLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var promotionLabel: UILabel!
     @IBOutlet weak var activeCustomerCountLabel: UILabel!
