@@ -1,5 +1,5 @@
 //
-//  BusinessViewController.swift
+//  BusinessDetailViewController.swift
 //  apphere
 //
 //  Created by Tony Mann on 2/7/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessViewController: UIViewController {
+class BusinessDetailViewController: UIViewController {
     var business: Business!
     
     override func viewDidLoad() {

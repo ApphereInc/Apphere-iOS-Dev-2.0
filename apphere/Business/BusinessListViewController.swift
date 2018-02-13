@@ -8,19 +8,18 @@
 
 import UIKit
 
-class BusinessListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+class BusinessListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "business" {
+        if segue.identifier == "businessDetail" {
             let cell = sender as! BusinessCell
             let indexPath = collectionView.indexPath(for: cell)!
-            let businessViewController = segue.destination as! BusinessViewController
+            let businessViewController = segue.destination as! BusinessDetailViewController
             businessViewController.business = businesses[indexPath.item]
+            businessViewController.transitioningDelegate = self
         }
     }
+    
+    // MARK: - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return businesses.count
@@ -38,8 +37,33 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         return header
     }
     
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let businessDetailViewController = storyboard!.instantiateViewController(withIdentifier: "businessDetail") as! BusinessDetailViewController
+//        businessDetailViewController.modalPresentationStyle = .custom
+//        businessDetailViewController.business = businesses[indexPath.item]
+//        businessDetailViewController.transitioningDelegate = self
+//        present(businessDetailViewController, animated: true, completion: nil)
+//    }
+    
+    // MARK: - UIViewControllerTransitioningDelegate
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return presentBusinessViewAnimationController
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return dismissBusinessViewAnimationController
+    }
+    
+    // MARK: - Outlets
+    
     @IBOutlet var collectionView: UICollectionView!
     
+    // MARK: - Properties
+    
+    let presentBusinessViewAnimationController = PresentBusinessViewAnimationController()
+    let dismissBusinessViewAnimationController = DismissBusinessViewAnimationController()
+
     var businesses: [Business] = [
         Business(photo: UIImage(named: "sweet")!,
               name: "sweet ride ice cream",

@@ -20,10 +20,12 @@
 		2CD1B8711FD3C4F200179D26 /* apphereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1B8701FD3C4F200179D26 /* apphereUITests.swift */; };
 		D68AEF1FBC8CC03FD4CDB7BB /* Pods_apphere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD841BEA5874BB9F1D25DA6 /* Pods_apphere.framework */; };
 		E50CB028372812DC52179166 /* Pods_apphereUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A2627E04DA46F7E9CF7BC /* Pods_apphereUITests.framework */; };
+		EA22D015202E1339006C2861 /* DismissBusinessViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22D013202E1339006C2861 /* DismissBusinessViewAnimationController.swift */; };
+		EA22D016202E1339006C2861 /* PresentBusinessViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22D014202E1339006C2861 /* PresentBusinessViewAnimationController.swift */; };
 		EA4A5970202A53AF0062ACF4 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */; };
 		EA4A5972202A5BDE0062ACF4 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5971202A5BDE0062ACF4 /* Business.swift */; };
 		EA4A5974202A68020062ACF4 /* BusinessListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */; };
-		EA6A474A202B7A2600455766 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A4749202B7A2600455766 /* BusinessViewController.swift */; };
+		EA6A474A202B7A2600455766 /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +83,12 @@
 		A13389D41504502C5E8BDB98 /* Pods-apphereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apphereTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-apphereTests/Pods-apphereTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8A8606E2F53538358D5F2B2 /* Pods-apphereUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apphereUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-apphereUITests/Pods-apphereUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CAD841BEA5874BB9F1D25DA6 /* Pods_apphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA22D013202E1339006C2861 /* DismissBusinessViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissBusinessViewAnimationController.swift; sourceTree = "<group>"; };
+		EA22D014202E1339006C2861 /* PresentBusinessViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentBusinessViewAnimationController.swift; sourceTree = "<group>"; };
 		EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		EA4A5971202A5BDE0062ACF4 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessListHeaderView.swift; sourceTree = "<group>"; };
-		EA6A4749202B7A2600455766 /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
+		EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
 		EAF4F8C2202B790500FEA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "apphere/Base.lproj/Old Storyboard.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,8 +211,10 @@
 		EA22D012202DE820006C2861 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				EA22D014202E1339006C2861 /* PresentBusinessViewAnimationController.swift */,
+				EA22D013202E1339006C2861 /* DismissBusinessViewAnimationController.swift */,
 				2C3A13CB1FE5BBF60041410C /* BusinessListViewController.swift */,
-				EA6A4749202B7A2600455766 /* BusinessViewController.swift */,
+				EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */,
 				EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */,
 				EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */,
 				EA4A5971202A5BDE0062ACF4 /* Business.swift */,
@@ -559,8 +565,10 @@
 			files = (
 				2C05C7151FDBDF5700D1DBE9 /* SecondViewController.swift in Sources */,
 				2CD1B84F1FD3C4F200179D26 /* AppDelegate.swift in Sources */,
+				EA22D016202E1339006C2861 /* PresentBusinessViewAnimationController.swift in Sources */,
+				EA22D015202E1339006C2861 /* DismissBusinessViewAnimationController.swift in Sources */,
 				2CC8CBAA1FE7DA1500A0D598 /* MapViewController.swift in Sources */,
-				EA6A474A202B7A2600455766 /* BusinessViewController.swift in Sources */,
+				EA6A474A202B7A2600455766 /* BusinessDetailViewController.swift in Sources */,
 				2CD1B8511FD3C4F200179D26 /* FirstViewController.swift in Sources */,
 				2C3A13CC1FE5BBF60041410C /* BusinessListViewController.swift in Sources */,
 				EA4A5972202A5BDE0062ACF4 /* Business.swift in Sources */,
