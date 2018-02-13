@@ -14,8 +14,10 @@ class BusinessDetailViewController: UIViewController {
     override func viewDidLoad() {
         photoView.image                 = business.photo
         nameLabel.text                  = business.name.uppercased()
-        promotionLabel.text             = business.promotion.uppercased()
+        promotionLabel.text             = business.promotion
         activeCustomerCountLabel.text   = String(business.activeCustomerCount)
+        dailyCustomerCountLabel.text    = String(business.dailyCustomerCount)
+        totalCustomerCountLabel.text    = String(business.totalCustomerCount)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -30,6 +32,8 @@ class BusinessDetailViewController: UIViewController {
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var promotionLabel: UILabel!
     @IBOutlet weak var activeCustomerCountLabel: UILabel!
+    @IBOutlet weak var dailyCustomerCountLabel: UILabel!
+    @IBOutlet weak var totalCustomerCountLabel: UILabel!
     @IBOutlet weak var containerTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerLeadingConstraint: NSLayoutConstraint!
