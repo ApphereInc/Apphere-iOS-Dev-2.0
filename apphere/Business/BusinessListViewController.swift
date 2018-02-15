@@ -14,7 +14,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
             let cell = sender as! BusinessCell
             let indexPath = collectionView.indexPath(for: cell)!
             let businessViewController = segue.destination as! BusinessDetailViewController
-            businessViewController.business = businesses[indexPath.item]
+            businessViewController.business = BusinessDirectory.businesses[indexPath.item]
             businessViewController.transitioningDelegate = self
             presentBusinessViewAnimationController.selectedBusinessCellFrame = cell.frame
             dismissBusinessViewAnimationController.selectedBusinessCellFrame = cell.frame
@@ -28,12 +28,12 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     // MARK: - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return businesses.count
+        return BusinessDirectory.businesses.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "business", for: indexPath) as! BusinessCell
-        cell.business = businesses[indexPath.item]
+        cell.business = BusinessDirectory.businesses[indexPath.item]
         return cell
     }
     
@@ -61,33 +61,4 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     
     let presentBusinessViewAnimationController = PresentBusinessViewAnimationController()
     let dismissBusinessViewAnimationController = DismissBusinessViewAnimationController()
-
-    var businesses: [Business] = [
-        Business(photo: UIImage(named: "sweet")!,
-              name: "sweet ride ice cream",
-              promotion: "free holiday scoop",
-              activeCustomerCount: 12,
-              dailyCustomerCount: 48,
-              totalCustomerCount: 2020,
-              address1: "542 Penn Ave",
-              address2: nil,
-              city: "West Reading",
-              state: "PA",
-              zip: "19611",
-              phoneNumber: "(484) 987-7338"
-        ),
-        Business(photo: UIImage(named: "red")!,
-              name: "red robin exeter",
-              promotion: "15% off all burgers",
-              activeCustomerCount: 20,
-              dailyCustomerCount: 62,
-              totalCustomerCount: 4467,
-              address1: "111 Main St",
-              address2: nil,
-              city: "West Reading",
-              state: "PA",
-              zip: "19611",
-              phoneNumber: "(484) 367-9318"
-        )
-    ]
 }

@@ -11,7 +11,7 @@ import UIKit
 class BusinessCell: UICollectionViewCell {
     var business: Business! {
         didSet {
-            photoView.image                 = business.photo
+            photoView.image                 = UIImage(named: business.photo)
             nameLabel.text                  = business.name.uppercased()
             promotionLabel.text             = business.promotion.uppercased()
             activeCustomerCountLabel.text   = String(business.activeCustomerCount)

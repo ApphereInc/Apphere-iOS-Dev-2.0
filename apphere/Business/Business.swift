@@ -9,8 +9,8 @@
 import UIKit
 
 struct Business {
-    let photo: UIImage
     let name: String
+    let photo: String
     let promotion: String
     let activeCustomerCount: Int
     let dailyCustomerCount: Int
@@ -21,6 +21,7 @@ struct Business {
     let state: String
     let zip: String
     let phoneNumber: String?
+    let url: String?
     
     var cityStateZip: String {
         return "\(city), \(state) \(zip)"

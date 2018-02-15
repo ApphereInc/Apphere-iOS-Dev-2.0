@@ -12,7 +12,7 @@ class BusinessDetailViewController: UIViewController {
     var business: Business!
     
     override func viewDidLoad() {
-        photoView.image                 = business.photo
+        photoView.image                 = UIImage(named: business.photo)
         nameLabel.text                  = business.name.uppercased()
         promotionLabel.text             = business.promotion
         activeCustomerCountLabel.text   = String(business.activeCustomerCount)
