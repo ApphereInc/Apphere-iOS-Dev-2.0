@@ -22,14 +22,23 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiYXBwaGVyZSIsImEiOiJjamJjMHhpYWoxZmRvMzNyamF1eWxhamxhIn0.1Et-sEhTyd3uIpVxKyPNjg</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
 	<key>NSLocationAlwaysAndWhenInUsageDescription</key>
-	<string>We&apos;ll show you cool things near you in the app. With the &quot;always&quot; option,
-        we can also alert you via notifications if you don&apos;t have the app open.</string>
+	<string>We'll show you cool things near you in the app. With the "always" option,
+        we can also alert you via notifications if you don't have the app open.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We&apos;ll show you cool things near you in the app, and alert you via
-        notifications if you don&apos;t have the app open.</string>
+	<string>We'll show you cool things near you in the app, and alert you via
+        notifications if you don't have the app open.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We&apos;ll show you cool things near you in the app.</string>
+	<string>We'll show you cool things near you in the app.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
@@ -67,14 +76,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSAllowsArbitraryLoadsInWebContent</key>
-		<true/>
-	</dict>
-	<key>MGLMapboxAccessToken</key>
-	<string>pk.eyJ1IjoiYXBwaGVyZSIsImEiOiJjamJjMHhpYWoxZmRvMzNyamF1eWxhamxhIn0.1Et-sEhTyd3uIpVxKyPNjg</string>
 </dict>
 </plist>
