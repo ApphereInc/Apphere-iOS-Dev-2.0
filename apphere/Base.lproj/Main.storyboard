@@ -183,21 +183,13 @@ Developer: Derek Sheldon</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN4-Og-biA">
-<<<<<<< HEAD
-                                                    <rect key="frame" x="10" y="110" width="280" height="18"/>
-=======
-                                                    <rect key="frame" x="10" y="107.5" width="280" height="18"/>
->>>>>>> f7e9014a8d01e25170bf201395630333881f8298
+                                                    <rect key="frame" x="10" y="108" width="280" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyu-Tu-CXS" customClass="Label" customModule="apphere" customModuleProvider="target">
-<<<<<<< HEAD
-                                                    <rect key="frame" x="10" y="128.5" width="280" height="89"/>
-=======
-                                                    <rect key="frame" x="10" y="127.5" width="280" height="89"/>
->>>>>>> f7e9014a8d01e25170bf201395630333881f8298
+                                                    <rect key="frame" x="10" y="128" width="280" height="89"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="BUSINESS NAME">
                                                             <attributes>
@@ -335,22 +327,14 @@ Developer: Derek Sheldon</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-<<<<<<< HEAD
-                                        <rect key="frame" x="10" y="111.5" width="280" height="18"/>
-=======
-                                        <rect key="frame" x="10" y="109" width="280" height="18"/>
->>>>>>> f7e9014a8d01e25170bf201395630333881f8298
+                                        <rect key="frame" x="10" y="109.5" width="280" height="18"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-<<<<<<< HEAD
                                         <rect key="frame" x="10" y="129.5" width="280" height="86.5"/>
-=======
-                                        <rect key="frame" x="10" y="129" width="280" height="87"/>
->>>>>>> f7e9014a8d01e25170bf201395630333881f8298
                                         <attributedString key="attributedText">
                                             <fragment content="BUSINESS NAME">
                                                 <attributes>
