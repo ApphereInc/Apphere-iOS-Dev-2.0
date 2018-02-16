@@ -21,25 +21,25 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             return
         }
         
-        tabBarView.isHidden = true
-        transitionContext.containerView.addSubview(tabBarView)
+        //tabBarView.isHidden = true
+        transitionContext.containerView.insertSubview(tabBarView, at: 0)
 
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-            businessDetailViewController.containerTopConstraint.constant =  self.selectedBusinessCellFrame.origin.y + 20.0
-            businessDetailViewController.containerLeadingConstraint.constant = 10.0
-            businessDetailViewController.containerTrailingConstraint.constant = -10.0
+            businessDetailViewController.view.backgroundColor = .clear
+            businessDetailViewController.containerTopConstraint.constant =  self.selectedBusinessCellFrame.minY
+            businessDetailViewController.containerWidthConstraint.constant = self.selectedBusinessCellFrame.width
             businessDetailView.layoutIfNeeded()
             
             businessDetailViewController.photoView.layer.cornerRadius = 14.0
         }, completion: { (_) in
-            tabBarView.isHidden = false
-            businessDetailView.removeFromSuperview()
+            //tabBarView.isHidden = false
+            //businessDetailView.removeFromSuperview()
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.2
+        return 0.7
     }
     
 }

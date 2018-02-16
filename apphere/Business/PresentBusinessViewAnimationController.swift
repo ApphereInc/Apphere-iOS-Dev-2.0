@@ -21,17 +21,15 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         }
         
         transitionContext.containerView.addSubview(businessDetailView)
-        businessDetailViewController.containerTopConstraint.constant = selectedBusinessCellFrame.origin.y + 20.0
-        businessDetailViewController.containerLeadingConstraint.constant = 10.0
-        businessDetailViewController.containerTrailingConstraint.constant = -10.0
+        businessDetailViewController.containerTopConstraint.constant = selectedBusinessCellFrame.minY
+        businessDetailViewController.containerWidthConstraint.constant = selectedBusinessCellFrame.width
         businessDetailView.layoutIfNeeded()
         
         businessDetailViewController.photoView.layer.cornerRadius = 14.0
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
             businessDetailViewController.containerTopConstraint.constant = 0.0
-            businessDetailViewController.containerLeadingConstraint.constant = 0.0
-            businessDetailViewController.containerTrailingConstraint.constant = 0.0
+            businessDetailViewController.containerWidthConstraint.constant = businessDetailViewController.view.superview!.frame.width
             businessDetailView.layoutIfNeeded()
             
             businessDetailViewController.photoView.layer.cornerRadius = 0.0
@@ -41,6 +39,6 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.1
+        return 0.7
     }
 }

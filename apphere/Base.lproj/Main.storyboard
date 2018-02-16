@@ -309,29 +309,29 @@ Developer: Derek Sheldon</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtD-6W-098" userLabel="Container">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="37.5" y="0.0" width="300" height="667"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-sE-iJ9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="344"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="344" id="Ygl-Uv-Uql"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                        <rect key="frame" x="10" y="104" width="355" height="18"/>
+                                        <rect key="frame" x="10" y="104.5" width="280" height="18"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="BUSINESS NAME" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq">
-                                        <rect key="frame" x="10" y="122" width="355" height="101"/>
+                                        <rect key="frame" x="10" y="122.5" width="280" height="101"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XaY-qc-YSF" userLabel="Active Stack View">
-                                        <rect key="frame" x="287.5" y="261.5" width="67.5" height="62.5"/>
+                                        <rect key="frame" x="212.5" y="261.5" width="67.5" height="62.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evY-Nv-baR">
                                                 <rect key="frame" x="6" y="0.0" width="55.5" height="48"/>
@@ -348,7 +348,7 @@ Developer: Derek Sheldon</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3w2-5h-qRQ" userLabel="Address Stack View">
-                                        <rect key="frame" x="118.5" y="364" width="138.5" height="82"/>
+                                        <rect key="frame" x="81" y="364" width="138.5" height="82"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Address 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-4M-axC">
                                                 <rect key="frame" x="29" y="0.0" width="80.5" height="20.5"/>
@@ -377,7 +377,7 @@ Developer: Derek Sheldon</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zNZ-se-hoS" userLabel="Customer Counts Stack View">
-                                        <rect key="frame" x="78.5" y="466" width="218" height="53"/>
+                                        <rect key="frame" x="41" y="466" width="218" height="53"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HWf-KJ-cCD" userLabel="Daily Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="89" height="53"/>
@@ -416,7 +416,7 @@ Developer: Derek Sheldon</string>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o7-eQ-Hs9" userLabel="Close Button">
-                                        <rect key="frame" x="326" y="5" width="44" height="44"/>
+                                        <rect key="frame" x="251" y="5" width="44" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="8d5-ZM-CIF"/>
@@ -446,6 +446,7 @@ Developer: Derek Sheldon</string>
                                     <constraint firstAttribute="trailing" secondItem="5ZE-sE-iJ9" secondAttribute="trailing" id="LbZ-UZ-FnE"/>
                                     <constraint firstItem="5ZE-sE-iJ9" firstAttribute="leading" secondItem="GtD-6W-098" secondAttribute="leading" id="Ts8-oF-rLj"/>
                                     <constraint firstItem="3w2-5h-qRQ" firstAttribute="top" secondItem="5ZE-sE-iJ9" secondAttribute="bottom" constant="20" id="TtD-4a-7E7"/>
+                                    <constraint firstAttribute="width" constant="300" id="gLC-b0-AHu"/>
                                     <constraint firstItem="zNZ-se-hoS" firstAttribute="top" secondItem="3w2-5h-qRQ" secondAttribute="bottom" constant="20" id="hF9-KM-otT"/>
                                     <constraint firstItem="5ZE-sE-iJ9" firstAttribute="bottom" secondItem="XaY-qc-YSF" secondAttribute="bottom" constant="20" id="hIb-Bu-IwG"/>
                                     <constraint firstAttribute="trailing" secondItem="8o7-eQ-Hs9" secondAttribute="trailing" constant="5" id="lZN-0R-QM5"/>
@@ -459,9 +460,8 @@ Developer: Derek Sheldon</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GtD-6W-098" firstAttribute="top" secondItem="OmI-1S-9g8" secondAttribute="top" id="78v-Ev-MJO"/>
-                            <constraint firstItem="GtD-6W-098" firstAttribute="leading" secondItem="OmI-1S-9g8" secondAttribute="leading" id="oZ7-4l-exB"/>
+                            <constraint firstItem="GtD-6W-098" firstAttribute="centerX" secondItem="Fpy-mn-DcO" secondAttribute="centerX" id="nis-8k-ptQ"/>
                             <constraint firstAttribute="bottom" secondItem="GtD-6W-098" secondAttribute="bottom" id="pRg-tx-4KF"/>
-                            <constraint firstItem="GtD-6W-098" firstAttribute="trailing" secondItem="OmI-1S-9g8" secondAttribute="trailing" id="u52-vj-hIr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fpy-mn-DcO"/>
                     </view>
@@ -471,9 +471,8 @@ Developer: Derek Sheldon</string>
                         <outlet property="address2Label" destination="Bdn-Ns-cIS" id="98l-p6-QgR"/>
                         <outlet property="cityStateZipLabel" destination="QA9-kz-pl6" id="ijj-AG-PPK"/>
                         <outlet property="containerBottomConstraint" destination="pRg-tx-4KF" id="I25-1U-Pcr"/>
-                        <outlet property="containerLeadingConstraint" destination="oZ7-4l-exB" id="G0k-zp-9PS"/>
                         <outlet property="containerTopConstraint" destination="78v-Ev-MJO" id="QIa-3a-1jN"/>
-                        <outlet property="containerTrailingConstraint" destination="u52-vj-hIr" id="bRR-Am-cqu"/>
+                        <outlet property="containerWidthConstraint" destination="gLC-b0-AHu" id="fBG-me-ZWq"/>
                         <outlet property="dailyCustomerCountLabel" destination="AyQ-jq-f0j" id="GcA-Gt-Jaj"/>
                         <outlet property="nameLabel" destination="usv-VJ-bwq" id="rbf-AR-cgl"/>
                         <outlet property="phoneNumberLabel" destination="ceq-HX-4A0" id="kMa-LN-x3w"/>

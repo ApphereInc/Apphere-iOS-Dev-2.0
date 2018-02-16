@@ -9,6 +9,11 @@
 import UIKit
 
 class BusinessListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //definesPresentationContext = true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "businessDetail" {
             let cell = sender as! BusinessCell
