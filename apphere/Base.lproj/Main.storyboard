@@ -142,6 +142,7 @@ Developer: Derek Sheldon</string>
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -161,7 +162,7 @@ Developer: Derek Sheldon</string>
         <!--Business List View Controller-->
         <scene sceneID="FYs-ts-ggw">
             <objects>
-                <viewController id="La9-D8-5uU" customClass="BusinessListViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="La9-D8-5uU" customClass="BusinessListViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LTk-w2-tFT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,6 +284,7 @@ Developer: Derek Sheldon</string>
                         <viewLayoutGuide key="safeArea" id="c8w-zz-5kT"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="UBn-9G-Zs9"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="p0n-iP-3Ch" id="VWw-kY-toO"/>
                         <outlet property="searchDisplayController" destination="7cj-nR-N7d" id="vxn-CM-drq"/>
@@ -305,11 +307,11 @@ Developer: Derek Sheldon</string>
             <objects>
                 <viewController storyboardIdentifier="businessDetail" hidesBottomBarWhenPushed="YES" id="gcm-cc-Ct0" customClass="BusinessDetailViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OmI-1S-9g8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtD-6W-098" userLabel="Container">
-                                <rect key="frame" x="37.5" y="0.0" width="300" height="667"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtD-6W-098" userLabel="Container">
+                                <rect key="frame" x="37.5" y="0.0" width="300" height="618"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-sE-iJ9">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
@@ -457,7 +459,7 @@ Developer: Derek Sheldon</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.53476089239120483" green="0.33745265007019043" blue="0.9311138391494751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GtD-6W-098" firstAttribute="top" secondItem="OmI-1S-9g8" secondAttribute="top" id="78v-Ev-MJO"/>
                             <constraint firstItem="GtD-6W-098" firstAttribute="centerX" secondItem="Fpy-mn-DcO" secondAttribute="centerX" id="nis-8k-ptQ"/>
@@ -465,11 +467,13 @@ Developer: Derek Sheldon</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fpy-mn-DcO"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="activeCustomerCountLabel" destination="evY-Nv-baR" id="GgL-B5-aaP"/>
                         <outlet property="address1Label" destination="9fa-4M-axC" id="pzC-7l-mct"/>
                         <outlet property="address2Label" destination="Bdn-Ns-cIS" id="98l-p6-QgR"/>
                         <outlet property="cityStateZipLabel" destination="QA9-kz-pl6" id="ijj-AG-PPK"/>
+                        <outlet property="closeButton" destination="8o7-eQ-Hs9" id="5kX-w6-ELh"/>
                         <outlet property="containerBottomConstraint" destination="pRg-tx-4KF" id="I25-1U-Pcr"/>
                         <outlet property="containerTopConstraint" destination="78v-Ev-MJO" id="QIa-3a-1jN"/>
                         <outlet property="containerWidthConstraint" destination="gLC-b0-AHu" id="fBG-me-ZWq"/>

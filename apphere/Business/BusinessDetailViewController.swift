@@ -23,12 +23,14 @@ class BusinessDetailViewController: UIViewController {
         update(label: address2Label,    withText: business.address2)
         update(label: cityStateZipLabel,withText: business.cityStateZip)
         update(label: phoneNumberLabel, withText: business.phoneNumber)
+        self.view.window?.windowLevel = UIWindowLevelStatusBar
     }
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
+    @IBOutlet weak var closeButton: UIButton!
     @IBAction func closeButtonTapped() {
         dismiss(animated: true, completion: nil)
     }
