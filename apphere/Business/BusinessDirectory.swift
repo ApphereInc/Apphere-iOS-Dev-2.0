@@ -161,6 +161,21 @@ class BusinessDirectory {
             url: "http://www.readingpublicmuseum.org/"
         ),
         Business(
+            name: "Lisa Tiger of Century 21 Gold",
+            photo: "lisa",
+            promotion: "free home consultation",
+            activeCustomerCount: 20,
+            dailyCustomerCount: 62,
+            totalCustomerCount: 4467,
+            address1: "3970 Perkiomen Ave",
+            address2: nil,
+            city: "Reading",
+            state: "PA",
+            zip: "19606",
+            phoneNumber: "(610) 207-6186",
+            url: "https://www.lisatigerhomes.com/"
+        ),
+        Business(
             name: "Tina’s Salon",
             photo: "tina",
             promotion: "15% off all burgers",

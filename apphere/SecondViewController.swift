@@ -19,6 +19,7 @@ class SecondViewController: UIViewController {
         webView.load(URLRequest(url: url!))
         
         
+        
     }
     
     
