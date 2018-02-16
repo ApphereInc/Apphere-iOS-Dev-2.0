@@ -41,6 +41,21 @@ class BusinessDirectory {
             url: "https://www.sweetrideicecream.com/"
         ),
         Business(
+            name: "5th and Penn Street",
+            photo: "sweet",
+            promotion: "enjoy reading",
+            activeCustomerCount: 12,
+            dailyCustomerCount: 48,
+            totalCustomerCount: 2020,
+            address1: "5th and Penn Street",
+            address2: nil,
+            city: "Reading",
+            state: "PA",
+            zip: "19611",
+            phoneNumber: "(484) 987-7338",
+            url: "https://www.sweetrideicecream.com/"
+        ),
+        Business(
             name: "Judy’s On Cherry",
             photo: "sweet",
             promotion: "15% off all burgers",
