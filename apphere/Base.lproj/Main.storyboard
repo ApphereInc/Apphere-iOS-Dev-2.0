@@ -183,13 +183,13 @@ Developer: Derek Sheldon</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN4-Og-biA">
-                                                    <rect key="frame" x="10" y="104" width="280" height="18"/>
+                                                    <rect key="frame" x="10" y="107.5" width="280" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyu-Tu-CXS" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="122.5" width="280" height="100.5"/>
+                                                    <rect key="frame" x="10" y="127.5" width="280" height="89"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="BUSINESS NAME">
                                                             <attributes>
@@ -237,7 +237,7 @@ Developer: Derek Sheldon</string>
                                             <constraint firstItem="Cyu-Tu-CXS" firstAttribute="leading" secondItem="tuY-EE-hgc" secondAttribute="leading" constant="10" id="f4d-47-X5Y"/>
                                             <constraint firstAttribute="trailing" secondItem="1aF-x4-tG4" secondAttribute="trailing" id="nUi-xk-wHD"/>
                                             <constraint firstAttribute="trailing" secondItem="e1G-DQ-SZn" secondAttribute="trailing" constant="20" id="nn9-yp-1dB"/>
-                                            <constraint firstItem="Cyu-Tu-CXS" firstAttribute="top" secondItem="bN4-Og-biA" secondAttribute="bottom" id="qKU-7q-21G"/>
+                                            <constraint firstItem="Cyu-Tu-CXS" firstAttribute="top" secondItem="bN4-Og-biA" secondAttribute="bottom" constant="2" id="qKU-7q-21G"/>
                                             <constraint firstItem="Cyu-Tu-CXS" firstAttribute="centerY" secondItem="tuY-EE-hgc" secondAttribute="centerY" id="xhe-DX-bez"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -327,14 +327,14 @@ Developer: Derek Sheldon</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                        <rect key="frame" x="10" y="105.5" width="280" height="18"/>
+                                        <rect key="frame" x="10" y="109" width="280" height="18"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="123.5" width="280" height="98"/>
+                                        <rect key="frame" x="10" y="129" width="280" height="87"/>
                                         <attributedString key="attributedText">
                                             <fragment content="BUSINESS NAME">
                                                 <attributes>
@@ -461,7 +461,7 @@ Developer: Derek Sheldon</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="3w2-5h-qRQ" firstAttribute="centerX" secondItem="GtD-6W-098" secondAttribute="centerX" id="15N-aI-d61"/>
-                                    <constraint firstItem="usv-VJ-bwq" firstAttribute="top" secondItem="DeM-69-JUw" secondAttribute="bottom" id="56I-uw-qr5"/>
+                                    <constraint firstItem="usv-VJ-bwq" firstAttribute="top" secondItem="DeM-69-JUw" secondAttribute="bottom" constant="2" id="56I-uw-qr5"/>
                                     <constraint firstItem="8o7-eQ-Hs9" firstAttribute="top" secondItem="GtD-6W-098" secondAttribute="top" constant="5" id="5Se-Ks-jsh"/>
                                     <constraint firstItem="zNZ-se-hoS" firstAttribute="centerX" secondItem="GtD-6W-098" secondAttribute="centerX" id="6nJ-2Q-yk3"/>
                                     <constraint firstItem="5ZE-sE-iJ9" firstAttribute="trailing" secondItem="usv-VJ-bwq" secondAttribute="trailing" constant="10" id="IC1-D4-o7e"/>
