@@ -11,7 +11,7 @@ import UIKit
 // Adapted from https://github.com/phillfarrugia/appstore-clone
 
 class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
-    var selectedBusinessCellFrame: CGRect = .zero
+    var selectedBusinessCellFrameInWindow: CGRect = .zero
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let businessDetailViewController = transitionContext.viewController(forKey: .from) as? BusinessDetailViewController,
@@ -21,13 +21,13 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             return
         }
         
-        //tabBarView.isHidden = true
+        let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
         transitionContext.containerView.insertSubview(tabBarView, at: 0)
 
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
             businessDetailViewController.view.backgroundColor = .clear
-            businessDetailViewController.containerTopConstraint.constant =  self.selectedBusinessCellFrame.minY
-            businessDetailViewController.containerWidthConstraint.constant = self.selectedBusinessCellFrame.width
+            businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
+            businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
             businessDetailView.layoutIfNeeded()
             
             businessDetailViewController.photoView.layer.cornerRadius = 14.0

@@ -11,7 +11,7 @@ import UIKit
 // Adapted from https://github.com/phillfarrugia/appstore-clone
 
 class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
-    var selectedBusinessCellFrame: CGRect = .zero
+    var selectedBusinessCellFrameInWindow: CGRect = .zero
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let businessDetailViewController = transitionContext.viewController(forKey: .to) as? BusinessDetailViewController,
@@ -21,8 +21,10 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         }
         
         transitionContext.containerView.addSubview(businessDetailView)
-        businessDetailViewController.containerTopConstraint.constant = selectedBusinessCellFrame.minY
-        businessDetailViewController.containerWidthConstraint.constant = selectedBusinessCellFrame.width
+
+        let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
+        businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
+        businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
         businessDetailView.layoutIfNeeded()
         
         businessDetailViewController.photoView.layer.cornerRadius = 14.0
