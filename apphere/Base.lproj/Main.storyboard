@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -321,20 +322,20 @@ Developer: Derek Sheldon</string>
                                 <rect key="frame" x="37.5" y="0.0" width="300" height="618"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-sE-iJ9">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="360"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="344" id="Ygl-Uv-Uql"/>
+                                            <constraint firstAttribute="width" secondItem="5ZE-sE-iJ9" secondAttribute="height" multiplier="1:1.2" id="Zky-TI-9i5"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                        <rect key="frame" x="10" y="108.5" width="280" height="18"/>
+                                        <rect key="frame" x="10" y="115.5" width="280" height="18"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="128.5" width="280" height="89"/>
+                                        <rect key="frame" x="10" y="135.5" width="280" height="89"/>
                                         <attributedString key="attributedText">
                                             <fragment content="BUSINESS NAME">
                                                 <attributes>
@@ -352,7 +353,7 @@ Developer: Derek Sheldon</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XaY-qc-YSF" userLabel="Active Stack View">
-                                        <rect key="frame" x="212.5" y="261.5" width="67.5" height="62.5"/>
+                                        <rect key="frame" x="212.5" y="277.5" width="67.5" height="62.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evY-Nv-baR">
                                                 <rect key="frame" x="6" y="0.0" width="55.5" height="48"/>
@@ -369,7 +370,7 @@ Developer: Derek Sheldon</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3w2-5h-qRQ" userLabel="Address Stack View">
-                                        <rect key="frame" x="81" y="364" width="138.5" height="82"/>
+                                        <rect key="frame" x="81" y="380" width="138.5" height="82"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Address 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-4M-axC">
                                                 <rect key="frame" x="29" y="0.0" width="80.5" height="20.5"/>
@@ -398,7 +399,7 @@ Developer: Derek Sheldon</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zNZ-se-hoS" userLabel="Customer Counts Stack View">
-                                        <rect key="frame" x="41" y="466" width="218" height="53"/>
+                                        <rect key="frame" x="41" y="482" width="218" height="53"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HWf-KJ-cCD" userLabel="Daily Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="89" height="53"/>

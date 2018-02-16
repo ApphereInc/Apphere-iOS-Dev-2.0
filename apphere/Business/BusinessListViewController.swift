@@ -30,6 +30,13 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         return .lightContent
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let width = view.frame.width - 30.0
+        layout.itemSize = CGSize(width: width, height: width * 1.2)
+    }
+    
     // MARK: - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
