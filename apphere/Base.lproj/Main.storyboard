@@ -242,7 +242,7 @@ Developer: Derek Sheldon</string>
                                             <outlet property="nameLabel" destination="Cyu-Tu-CXS" id="YuF-gP-hjo"/>
                                             <outlet property="photoView" destination="1aF-x4-tG4" id="T6v-he-v0o"/>
                                             <outlet property="promotionLabel" destination="bN4-Og-biA" id="RK6-py-pdV"/>
-                                            <segue destination="gcm-cc-Ct0" kind="presentation" identifier="businessDetail" modalPresentationStyle="fullScreen" id="epW-2K-SZ3"/>
+                                            <segue destination="gcm-cc-Ct0" kind="show" identifier="businessDetail" id="epW-2K-SZ3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -303,7 +303,7 @@ Developer: Derek Sheldon</string>
         <!--Business Detail View Controller-->
         <scene sceneID="Eu3-25-2j8">
             <objects>
-                <viewController storyboardIdentifier="businessDetail" id="gcm-cc-Ct0" customClass="BusinessDetailViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="businessDetail" hidesBottomBarWhenPushed="YES" id="gcm-cc-Ct0" customClass="BusinessDetailViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OmI-1S-9g8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,14 +318,14 @@ Developer: Derek Sheldon</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                        <rect key="frame" x="10" y="104.5" width="280" height="18"/>
+                                        <rect key="frame" x="10" y="103.5" width="280" height="18"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="BUSINESS NAME" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq">
-                                        <rect key="frame" x="10" y="122.5" width="280" height="101"/>
+                                        <rect key="frame" x="10" y="121.5" width="280" height="101"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
