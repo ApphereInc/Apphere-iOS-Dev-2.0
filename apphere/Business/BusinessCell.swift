@@ -18,6 +18,12 @@ class BusinessCell: UICollectionViewCell {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.masksToBounds = true
+        layer.shadowOpacity = 0.5
+    }
+    
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var promotionLabel: UILabel!
