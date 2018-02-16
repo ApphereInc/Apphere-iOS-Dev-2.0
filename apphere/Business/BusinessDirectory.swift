@@ -12,7 +12,7 @@ class BusinessDirectory {
     static var businesses: [Business] = [
         Business(
             name: "Santander Arena",
-            photo: "sweet",
+            photo: "san",
             promotion: "free holiday scoop",
             activeCustomerCount: 12,
             dailyCustomerCount: 48,
@@ -42,7 +42,7 @@ class BusinessDirectory {
         ),
         Business(
             name: "5th and Penn Street",
-            photo: "sweet",
+            photo: "5",
             promotion: "enjoy reading",
             activeCustomerCount: 12,
             dailyCustomerCount: 48,
@@ -57,7 +57,7 @@ class BusinessDirectory {
         ),
         Business(
             name: "Judy’s On Cherry",
-            photo: "sweet",
+            photo: "judy",
             promotion: "15% off all burgers",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
@@ -72,7 +72,7 @@ class BusinessDirectory {
         ),
         Business(
             name: "Winedown Cafe",
-            photo: "sweet",
+            photo: "wine",
             promotion: "15% off all burgers",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
@@ -87,7 +87,7 @@ class BusinessDirectory {
         ),
         Business(
             name: "West Reading Tavern",
-            photo: "sweet",
+            photo: "west",
             promotion: "15% off all burgers",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
@@ -102,7 +102,7 @@ class BusinessDirectory {
         ),
         Business(
             name: "Muddy Creek Soap",
-            photo: "sweet",
+            photo: "muddy",
             promotion: "15% off all burgers",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
@@ -117,7 +117,7 @@ class BusinessDirectory {
         ),
         Business(
             name: "Goggle Works",
-            photo: "sweet",
+            photo: "g",
             promotion: "15% off all burgers",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
@@ -132,7 +132,7 @@ class BusinessDirectory {
         ),
         Business(
             name: "Benchwarmers Coffee",
-            photo: "sweet",
+            photo: "cafe",
             promotion: "15% off all burgers",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
@@ -147,7 +147,7 @@ class BusinessDirectory {
         ),
         Business(
             name: "Reading Public Museum",
-            photo: "sweet",
+            photo: "rm",
             promotion: "15% off all burgers",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
@@ -162,7 +162,7 @@ class BusinessDirectory {
         ),
         Business(
             name: "Tina’s Salon",
-            photo: "sweet",
+            photo: "tina",
             promotion: "15% off all burgers",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
