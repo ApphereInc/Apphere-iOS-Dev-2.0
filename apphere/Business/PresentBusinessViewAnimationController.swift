@@ -23,31 +23,32 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         transitionContext.containerView.addSubview(businessDetailView)
 
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
-        print(cellFrame.height)
-        businessDetailViewController.containerTopConstraint.constant = cellFrame.origin.y
+        businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
+        businessDetailViewController.containerBottomConstraint.constant = businessDetailView.frame.height - (cellFrame.origin.y + cellFrame.height)
         businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
-        businessDetailViewController.containerBottomConstraint.constant =  businessDetailView.frame.height - (cellFrame.origin.y + cellFrame.height)
         businessDetailViewController.closeButton.alpha = 0.0
+        businessDetailViewController.isStatusBarHidden = false
         businessDetailView.layoutIfNeeded()
         
         businessDetailView.backgroundColor = .clear
         businessDetailViewController.photoView.layer.cornerRadius = 14.0
         
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             businessDetailViewController.containerTopConstraint.constant = 0.0
-            businessDetailViewController.containerWidthConstraint.constant = businessDetailViewController.view.superview!.frame.width
             businessDetailViewController.containerBottomConstraint.constant = 0.0
+            businessDetailViewController.containerWidthConstraint.constant = businessDetailViewController.view.superview!.frame.width
             businessDetailViewController.closeButton.alpha = 0.5
-            businessDetailView.layoutIfNeeded()
-            
             businessDetailView.backgroundColor = .white
             businessDetailViewController.photoView.layer.cornerRadius = 0.0
+            businessDetailView.layoutIfNeeded()
+            businessDetailViewController.isStatusBarHidden = true
+            businessDetailViewController.setNeedsStatusBarAppearanceUpdate()
         }, completion: { (_) in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.6
+        return 0.4
     }
 }

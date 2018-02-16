@@ -24,21 +24,21 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
         transitionContext.containerView.insertSubview(toView, at: 0)
         businessDetailView.backgroundColor = UIColor.clear
-       UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
-            businessDetailViewController.containerTopConstraint.constant = cellFrame.origin.y
+        
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
+            businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
+            businessDetailViewController.containerBottomConstraint.constant = businessDetailView.frame.height - (cellFrame.origin.y + cellFrame.height)
             businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
-            businessDetailViewController.containerBottomConstraint.constant =  businessDetailView.frame.height - (cellFrame.origin.y + cellFrame.height)
             businessDetailViewController.closeButton.alpha = 0
-            businessDetailView.layoutIfNeeded()
-            
             businessDetailViewController.photoView.layer.cornerRadius = 14.0
+            businessDetailView.layoutIfNeeded()
         }, completion: { (_) in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.7
+        return 0.4
     }
     
 }
