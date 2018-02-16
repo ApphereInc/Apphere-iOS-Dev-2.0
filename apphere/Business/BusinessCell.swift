@@ -20,8 +20,9 @@ class BusinessCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.masksToBounds = true
         layer.shadowOpacity = 0.5
+        layer.shadowRadius = 10.0
+        layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
     }
     
     @IBOutlet weak var photoView: UIImageView!
