@@ -27,6 +27,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
         businessDetailView.layoutIfNeeded()
         
+        businessDetailView.backgroundColor = .clear
         businessDetailViewController.photoView.layer.cornerRadius = 14.0
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
@@ -34,6 +35,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.containerWidthConstraint.constant = businessDetailViewController.view.superview!.frame.width
             businessDetailView.layoutIfNeeded()
             
+            businessDetailView.backgroundColor = .white
             businessDetailViewController.photoView.layer.cornerRadius = 0.0
         }, completion: { (_) in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)

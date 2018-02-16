@@ -16,24 +16,22 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let businessDetailViewController = transitionContext.viewController(forKey: .from) as? BusinessDetailViewController,
               let businessDetailView = transitionContext.view(forKey: .from),
-              let tabBarView = transitionContext.view(forKey: .to)
+              let toView = transitionContext.view(forKey: .to)
         else {
             return
         }
         
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
-        transitionContext.containerView.insertSubview(tabBarView, at: 0)
+        transitionContext.containerView.insertSubview(toView, at: 0)
 
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-            businessDetailViewController.view.backgroundColor = .clear
             businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
             businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
             businessDetailView.layoutIfNeeded()
             
+            businessDetailView.backgroundColor = .clear
             businessDetailViewController.photoView.layer.cornerRadius = 14.0
         }, completion: { (_) in
-            //tabBarView.isHidden = false
-            //businessDetailView.removeFromSuperview()
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
