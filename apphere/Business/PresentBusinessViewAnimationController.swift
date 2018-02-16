@@ -27,7 +27,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         businessDetailViewController.containerTopConstraint.constant = cellFrame.origin.y
         businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
         businessDetailViewController.containerBottomConstraint.constant =  businessDetailView.frame.height - (cellFrame.origin.y + cellFrame.height)
-        businessDetailViewController.closeButton.alpha = 0
+        businessDetailViewController.closeButton.alpha = 0.0
         businessDetailView.layoutIfNeeded()
         
         businessDetailView.backgroundColor = .clear
@@ -37,7 +37,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.containerTopConstraint.constant = 0.0
             businessDetailViewController.containerWidthConstraint.constant = businessDetailViewController.view.superview!.frame.width
             businessDetailViewController.containerBottomConstraint.constant = 0.0
-            businessDetailViewController.closeButton.alpha = 1
+            businessDetailViewController.closeButton.alpha = 0.7
             businessDetailView.layoutIfNeeded()
             
             businessDetailView.backgroundColor = .white
