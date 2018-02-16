@@ -13,7 +13,7 @@ class BusinessDirectory {
         Business(
             name: "Santander Arena",
             photo: "san",
-            promotion: "free holiday scoop",
+            promotion: "free reading royals hat",
             activeCustomerCount: 12,
             dailyCustomerCount: 48,
             totalCustomerCount: 2020,
@@ -28,7 +28,7 @@ class BusinessDirectory {
         Business(
             name: "Sweet Ride Ice Cream",
             photo: "sweet",
-            promotion: "free holiday scoop",
+            promotion: "free small vanilla scoop",
             activeCustomerCount: 12,
             dailyCustomerCount: 48,
             totalCustomerCount: 2020,
@@ -43,7 +43,7 @@ class BusinessDirectory {
         Business(
             name: "5th and Penn Street",
             photo: "5",
-            promotion: "enjoy reading",
+            promotion: "learn about reading",
             activeCustomerCount: 12,
             dailyCustomerCount: 48,
             totalCustomerCount: 2020,
@@ -58,7 +58,7 @@ class BusinessDirectory {
         Business(
             name: "Judy’s On Cherry",
             photo: "judy",
-            promotion: "15% off all burgers",
+            promotion: "10% off $50 order",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -73,7 +73,7 @@ class BusinessDirectory {
         Business(
             name: "Winedown Cafe",
             photo: "wine",
-            promotion: "15% off all burgers",
+            promotion: "free house cab sav",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -88,7 +88,7 @@ class BusinessDirectory {
         Business(
             name: "West Reading Tavern",
             photo: "west",
-            promotion: "15% off all burgers",
+            promotion: "free small pint of ale",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -103,7 +103,7 @@ class BusinessDirectory {
         Business(
             name: "Muddy Creek Soap",
             photo: "muddy",
-            promotion: "15% off all burgers",
+            promotion: "Buy 2 get one free",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -118,7 +118,7 @@ class BusinessDirectory {
         Business(
             name: "Goggle Works",
             photo: "g",
-            promotion: "15% off all burgers",
+            promotion: "free bumper sticker",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -131,9 +131,9 @@ class BusinessDirectory {
             url: "https://goggleworks.org"
         ),
         Business(
-            name: "Benchwarmers Coffee",
+            name: "Bench   warmers Coffee",
             photo: "cafe",
-            promotion: "15% off all burgers",
+            promotion: "free small cafe mocha",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -148,7 +148,7 @@ class BusinessDirectory {
         Business(
             name: "Reading Public Museum",
             photo: "rm",
-            promotion: "15% off all burgers",
+            promotion: "10% off admission",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -178,7 +178,7 @@ class BusinessDirectory {
         Business(
             name: "Tina’s Salon",
             photo: "tina",
-            promotion: "15% off all burgers",
+            promotion: "free coloring with perm",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
