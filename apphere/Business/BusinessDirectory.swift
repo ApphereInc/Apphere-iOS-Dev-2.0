@@ -162,7 +162,7 @@ class BusinessDirectory {
         ),
         Business(
             name: "Lisa Tiger of Century 21 Gold",
-            photo: "lisa",
+            photo: "lisa2",
             promotion: "free home consultation",
             activeCustomerCount: 20,
             dailyCustomerCount: 62,
