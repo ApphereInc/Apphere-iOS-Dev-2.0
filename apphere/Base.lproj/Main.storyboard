@@ -166,7 +166,7 @@ Developer: Derek Sheldon</string>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p0n-iP-3Ch">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="ov9-Oj-hqU">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="ov9-Oj-hqU">
                                     <size key="itemSize" width="300" height="344"/>
                                     <size key="headerReferenceSize" width="0.0" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -184,13 +184,13 @@ Developer: Derek Sheldon</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN4-Og-biA">
-                                                    <rect key="frame" x="10" y="108" width="280" height="18"/>
+                                                    <rect key="frame" x="13" y="103.5" width="277" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyu-Tu-CXS" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="128" width="280" height="89"/>
+                                                    <rect key="frame" x="10" y="127.5" width="280" height="89"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="BUSINESS NAME">
                                                             <attributes>
@@ -229,7 +229,7 @@ Developer: Derek Sheldon</string>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="1aF-x4-tG4" firstAttribute="top" secondItem="tuY-EE-hgc" secondAttribute="top" id="5RP-fZ-gYz"/>
-                                            <constraint firstItem="bN4-Og-biA" firstAttribute="leading" secondItem="Cyu-Tu-CXS" secondAttribute="leading" id="Atg-8w-Kjq"/>
+                                            <constraint firstItem="bN4-Og-biA" firstAttribute="leading" secondItem="Cyu-Tu-CXS" secondAttribute="leading" constant="3" id="Atg-8w-Kjq"/>
                                             <constraint firstAttribute="bottom" secondItem="e1G-DQ-SZn" secondAttribute="bottom" constant="20" id="CRf-5l-mgE"/>
                                             <constraint firstItem="bN4-Og-biA" firstAttribute="trailing" secondItem="Cyu-Tu-CXS" secondAttribute="trailing" id="CU7-rE-xLa"/>
                                             <constraint firstItem="1aF-x4-tG4" firstAttribute="leading" secondItem="tuY-EE-hgc" secondAttribute="leading" id="Ea9-9f-BIe"/>
@@ -238,7 +238,7 @@ Developer: Derek Sheldon</string>
                                             <constraint firstItem="Cyu-Tu-CXS" firstAttribute="leading" secondItem="tuY-EE-hgc" secondAttribute="leading" constant="10" id="f4d-47-X5Y"/>
                                             <constraint firstAttribute="trailing" secondItem="1aF-x4-tG4" secondAttribute="trailing" id="nUi-xk-wHD"/>
                                             <constraint firstAttribute="trailing" secondItem="e1G-DQ-SZn" secondAttribute="trailing" constant="20" id="nn9-yp-1dB"/>
-                                            <constraint firstItem="Cyu-Tu-CXS" firstAttribute="top" secondItem="bN4-Og-biA" secondAttribute="bottom" constant="2" id="qKU-7q-21G"/>
+                                            <constraint firstItem="Cyu-Tu-CXS" firstAttribute="top" secondItem="bN4-Og-biA" secondAttribute="bottom" constant="6" id="qKU-7q-21G"/>
                                             <constraint firstItem="Cyu-Tu-CXS" firstAttribute="centerY" secondItem="tuY-EE-hgc" secondAttribute="centerY" id="xhe-DX-bez"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -260,7 +260,7 @@ Developer: Derek Sheldon</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="MONTH 00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-ab-1tK">
-                                            <rect key="frame" x="10" y="0.0" width="355" height="50"/>
+                                            <rect key="frame" x="16" y="0.0" width="349" height="50"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                             <color key="textColor" red="0.50716221332550049" green="0.34449067711830139" blue="0.89811784029006958" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -269,7 +269,7 @@ Developer: Derek Sheldon</string>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="SB7-ab-1tK" secondAttribute="trailing" constant="10" id="4JY-WD-kI5"/>
                                         <constraint firstItem="SB7-ab-1tK" firstAttribute="top" secondItem="t7d-uA-trr" secondAttribute="top" id="Wv2-ss-QGP"/>
-                                        <constraint firstItem="SB7-ab-1tK" firstAttribute="leading" secondItem="t7d-uA-trr" secondAttribute="leading" constant="10" id="bo3-i4-9Mq"/>
+                                        <constraint firstItem="SB7-ab-1tK" firstAttribute="leading" secondItem="t7d-uA-trr" secondAttribute="leading" constant="16" id="bo3-i4-9Mq"/>
                                         <constraint firstAttribute="bottom" secondItem="SB7-ab-1tK" secondAttribute="bottom" id="gRa-bz-EAs"/>
                                     </constraints>
                                     <connections>
@@ -328,14 +328,14 @@ Developer: Derek Sheldon</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                        <rect key="frame" x="10" y="115.5" width="280" height="18"/>
+                                        <rect key="frame" x="10" y="116" width="280" height="18"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="135.5" width="280" height="89"/>
+                                        <rect key="frame" x="10" y="136" width="280" height="89"/>
                                         <attributedString key="attributedText">
                                             <fragment content="BUSINESS NAME">
                                                 <attributes>
