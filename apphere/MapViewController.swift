@@ -11,7 +11,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "mapbox://styles/apphere/cjdr2g2px1yml2rqux8wa9qhi")
+        let url = URL(string: "mapbox://styles/apphere/cjdr2yc171z3w2rqubv2nlzcf")
         let mapView = MGLMapView(frame: view.bounds, styleURL: url)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.setCenter(CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928), zoomLevel: 13.1, animated: false)
