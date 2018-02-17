@@ -184,7 +184,7 @@ Developer: Derek Sheldon</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN4-Og-biA">
-                                                    <rect key="frame" x="13" y="103.5" width="277" height="18"/>
+                                                    <rect key="frame" x="12" y="103.5" width="278" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -229,7 +229,7 @@ Developer: Derek Sheldon</string>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="1aF-x4-tG4" firstAttribute="top" secondItem="tuY-EE-hgc" secondAttribute="top" id="5RP-fZ-gYz"/>
-                                            <constraint firstItem="bN4-Og-biA" firstAttribute="leading" secondItem="Cyu-Tu-CXS" secondAttribute="leading" constant="3" id="Atg-8w-Kjq"/>
+                                            <constraint firstItem="bN4-Og-biA" firstAttribute="leading" secondItem="Cyu-Tu-CXS" secondAttribute="leading" constant="2" id="Atg-8w-Kjq"/>
                                             <constraint firstAttribute="bottom" secondItem="e1G-DQ-SZn" secondAttribute="bottom" constant="20" id="CRf-5l-mgE"/>
                                             <constraint firstItem="bN4-Og-biA" firstAttribute="trailing" secondItem="Cyu-Tu-CXS" secondAttribute="trailing" id="CU7-rE-xLa"/>
                                             <constraint firstItem="1aF-x4-tG4" firstAttribute="leading" secondItem="tuY-EE-hgc" secondAttribute="leading" id="Ea9-9f-BIe"/>
