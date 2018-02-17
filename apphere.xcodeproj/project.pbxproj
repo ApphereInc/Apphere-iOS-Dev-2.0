@@ -28,6 +28,7 @@
 		EA4D2D04203502F60081116A /* BusinessDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4D2D03203502F60081116A /* BusinessDirectory.swift */; };
 		EA67368B20378AD5003BA73A /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67368A20378AD5003BA73A /* Label.swift */; };
 		EA6A474A202B7A2600455766 /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */; };
+		EA6C603D2038D571005EA190 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C603C2038D571005EA190 /* CloseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		EA4D2D03203502F60081116A /* BusinessDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDirectory.swift; sourceTree = "<group>"; };
 		EA67368A20378AD5003BA73A /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
+		EA6C603C2038D571005EA190 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		EAF4F8C2202B790500FEA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "apphere/Base.lproj/Old Storyboard.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 				2C05C7141FDBDF5700D1DBE9 /* SecondViewController.swift */,
 				2CC8CBA91FE7DA1500A0D598 /* MapViewController.swift */,
 				EA67368A20378AD5003BA73A /* Label.swift */,
+				EA6C603C2038D571005EA190 /* CloseButton.swift */,
 				2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */,
 				2CD1B8541FD3C4F200179D26 /* Main.storyboard */,
 				2CD1B8591FD3C4F200179D26 /* LaunchScreen.storyboard */,
@@ -573,6 +576,7 @@
 				2CD1B84F1FD3C4F200179D26 /* AppDelegate.swift in Sources */,
 				EA22D016202E1339006C2861 /* PresentBusinessViewAnimationController.swift in Sources */,
 				EA22D015202E1339006C2861 /* DismissBusinessViewAnimationController.swift in Sources */,
+				EA6C603D2038D571005EA190 /* CloseButton.swift in Sources */,
 				2CC8CBAA1FE7DA1500A0D598 /* MapViewController.swift in Sources */,
 				EA67368B20378AD5003BA73A /* Label.swift in Sources */,
 				EA6A474A202B7A2600455766 /* BusinessDetailViewController.swift in Sources */,

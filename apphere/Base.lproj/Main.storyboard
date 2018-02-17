@@ -184,13 +184,13 @@ Developer: Derek Sheldon</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN4-Og-biA">
-                                                    <rect key="frame" x="12" y="103.5" width="278" height="18"/>
+                                                    <rect key="frame" x="12" y="104" width="278" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyu-Tu-CXS" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="127.5" width="280" height="89"/>
+                                                    <rect key="frame" x="10" y="128" width="280" height="89"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="BUSINESS NAME">
                                                             <attributes>
@@ -437,23 +437,18 @@ Developer: Derek Sheldon</string>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o7-eQ-Hs9" userLabel="Close Button">
-                                        <rect key="frame" x="251" y="5" width="44" height="44"/>
+                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o7-eQ-Hs9" userLabel="Close Button" customClass="CloseButton" customModule="apphere" customModuleProvider="target">
+                                        <rect key="frame" x="255" y="15" width="30" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="8d5-ZM-CIF"/>
-                                            <constraint firstAttribute="width" constant="44" id="OED-3U-ily"/>
+                                            <constraint firstAttribute="width" secondItem="8o7-eQ-Hs9" secondAttribute="height" multiplier="1:1" id="5mU-Gf-7fY"/>
+                                            <constraint firstAttribute="width" constant="30" id="OED-3U-ily"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="X">
+                                        <state key="normal" title="✖️">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="22"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="closeButtonTapped" destination="gcm-cc-Ct0" eventType="touchUpInside" id="Ns7-jR-VVL"/>
                                         </connections>
@@ -463,7 +458,7 @@ Developer: Derek Sheldon</string>
                                 <constraints>
                                     <constraint firstItem="3w2-5h-qRQ" firstAttribute="centerX" secondItem="GtD-6W-098" secondAttribute="centerX" id="15N-aI-d61"/>
                                     <constraint firstItem="usv-VJ-bwq" firstAttribute="top" secondItem="DeM-69-JUw" secondAttribute="bottom" constant="6" id="56I-uw-qr5"/>
-                                    <constraint firstItem="8o7-eQ-Hs9" firstAttribute="top" secondItem="GtD-6W-098" secondAttribute="top" constant="5" id="5Se-Ks-jsh"/>
+                                    <constraint firstItem="8o7-eQ-Hs9" firstAttribute="top" secondItem="GtD-6W-098" secondAttribute="top" constant="15" id="5Se-Ks-jsh"/>
                                     <constraint firstItem="zNZ-se-hoS" firstAttribute="centerX" secondItem="GtD-6W-098" secondAttribute="centerX" id="6nJ-2Q-yk3"/>
                                     <constraint firstItem="5ZE-sE-iJ9" firstAttribute="trailing" secondItem="usv-VJ-bwq" secondAttribute="trailing" constant="10" id="IC1-D4-o7e"/>
                                     <constraint firstItem="5ZE-sE-iJ9" firstAttribute="top" secondItem="GtD-6W-098" secondAttribute="top" id="IP0-7Q-Z8H"/>
@@ -474,7 +469,7 @@ Developer: Derek Sheldon</string>
                                     <constraint firstAttribute="width" constant="300" id="gLC-b0-AHu"/>
                                     <constraint firstItem="zNZ-se-hoS" firstAttribute="top" secondItem="3w2-5h-qRQ" secondAttribute="bottom" constant="20" id="hF9-KM-otT"/>
                                     <constraint firstItem="5ZE-sE-iJ9" firstAttribute="bottom" secondItem="XaY-qc-YSF" secondAttribute="bottom" constant="20" id="hIb-Bu-IwG"/>
-                                    <constraint firstAttribute="trailing" secondItem="8o7-eQ-Hs9" secondAttribute="trailing" constant="5" id="lZN-0R-QM5"/>
+                                    <constraint firstAttribute="trailing" secondItem="8o7-eQ-Hs9" secondAttribute="trailing" constant="15" id="lZN-0R-QM5"/>
                                     <constraint firstItem="usv-VJ-bwq" firstAttribute="centerY" secondItem="5ZE-sE-iJ9" secondAttribute="centerY" id="qEg-OM-ewV"/>
                                     <constraint firstItem="DeM-69-JUw" firstAttribute="trailing" secondItem="usv-VJ-bwq" secondAttribute="trailing" id="w2F-tB-gYd"/>
                                     <constraint firstItem="DeM-69-JUw" firstAttribute="leading" secondItem="usv-VJ-bwq" secondAttribute="leading" id="yvZ-JW-Xnu"/>
