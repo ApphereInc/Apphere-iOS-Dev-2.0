@@ -26,6 +26,16 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         }
     }
     
+    var isStatusBarHidden = false
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .fade
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

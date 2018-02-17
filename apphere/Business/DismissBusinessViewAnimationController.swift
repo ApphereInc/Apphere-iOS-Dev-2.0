@@ -15,23 +15,23 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let businessDetailViewController = transitionContext.viewController(forKey: .from) as? BusinessDetailViewController,
-              let businessDetailView = transitionContext.view(forKey: .from),
-              let toView = transitionContext.view(forKey: .to)
+              let tabBarController = transitionContext.viewController(forKey: .to) as? UITabBarController
+              //let businessListViewController = tabBarController.viewControllers?.first as? BusinessListViewController
         else {
             return
         }
         
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
-        transitionContext.containerView.insertSubview(toView, at: 0)
-        businessDetailView.backgroundColor = UIColor.clear
+        transitionContext.containerView.insertSubview(tabBarController.view, at: 0)
+        businessDetailViewController.view.backgroundColor = UIColor.clear
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
-            businessDetailViewController.containerBottomConstraint.constant = businessDetailView.frame.height - (cellFrame.origin.y + cellFrame.height)
+            businessDetailViewController.containerBottomConstraint.constant = businessDetailViewController.view.frame.height - (cellFrame.minY + cellFrame.height)
             businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
             businessDetailViewController.closeButton.alpha = 0
             businessDetailViewController.photoView.layer.cornerRadius = 14.0
-            businessDetailView.layoutIfNeeded()
+            businessDetailViewController.view.layoutIfNeeded()
         }, completion: { (_) in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })

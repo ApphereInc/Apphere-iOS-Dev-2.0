@@ -29,6 +29,7 @@
 		EA67368B20378AD5003BA73A /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67368A20378AD5003BA73A /* Label.swift */; };
 		EA6A474A202B7A2600455766 /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */; };
 		EA6C603D2038D571005EA190 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C603C2038D571005EA190 /* CloseButton.swift */; };
+		EA6C603F2038D800005EA190 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EA6C603E2038D800005EA190 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		EA67368A20378AD5003BA73A /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
 		EA6C603C2038D571005EA190 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		EA6C603E2038D800005EA190 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EAF4F8C2202B790500FEA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "apphere/Base.lproj/Old Storyboard.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 		2CD1B8421FD3C4F200179D26 = {
 			isa = PBXGroup;
 			children = (
+				EA6C603E2038D800005EA190 /* README.md */,
 				2CD1B84D1FD3C4F200179D26 /* apphere */,
 				2CD1B8641FD3C4F200179D26 /* apphereTests */,
 				2CD1B86F1FD3C4F200179D26 /* apphereUITests */,
@@ -355,6 +358,7 @@
 			files = (
 				2CD1B85B1FD3C4F200179D26 /* LaunchScreen.storyboard in Resources */,
 				2CD1B8581FD3C4F200179D26 /* Assets.xcassets in Resources */,
+				EA6C603F2038D800005EA190 /* README.md in Resources */,
 				2CD1B8561FD3C4F200179D26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

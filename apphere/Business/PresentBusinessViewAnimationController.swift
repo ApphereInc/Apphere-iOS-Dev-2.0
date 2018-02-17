@@ -14,23 +14,22 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
     var selectedBusinessCellFrameInWindow: CGRect = .zero
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let businessDetailViewController = transitionContext.viewController(forKey: .to) as? BusinessDetailViewController,
-              let businessDetailView = transitionContext.view(forKey: .to)
+        guard let businessDetailViewController = transitionContext.viewController(forKey: .to) as? BusinessDetailViewController
         else {
             return
         }
         
-        transitionContext.containerView.addSubview(businessDetailView)
+        transitionContext.containerView.addSubview(businessDetailViewController.view)
 
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
         businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
-        businessDetailViewController.containerBottomConstraint.constant = businessDetailView.frame.height - (cellFrame.origin.y + cellFrame.height)
+        businessDetailViewController.containerBottomConstraint.constant = businessDetailViewController.view.frame.height - (cellFrame.minY + cellFrame.height)
         businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
         businessDetailViewController.closeButton.alpha = 0.0
         businessDetailViewController.isStatusBarHidden = false
-        businessDetailView.layoutIfNeeded()
+        businessDetailViewController.view.layoutIfNeeded()
         
-        businessDetailView.backgroundColor = .clear
+        businessDetailViewController.view.backgroundColor = .clear
         businessDetailViewController.photoView.layer.cornerRadius = 14.0
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
@@ -38,9 +37,9 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.containerBottomConstraint.constant = 0.0
             businessDetailViewController.containerWidthConstraint.constant = businessDetailViewController.view.superview!.frame.width
             businessDetailViewController.closeButton.alpha = 0.7
-            businessDetailView.backgroundColor = .white
+            businessDetailViewController.view.backgroundColor = .white
             businessDetailViewController.photoView.layer.cornerRadius = 0.0
-            businessDetailView.layoutIfNeeded()
+            businessDetailViewController.view.layoutIfNeeded()
             businessDetailViewController.isStatusBarHidden = true
             businessDetailViewController.setNeedsStatusBarAppearanceUpdate()
         }, completion: { (_) in
