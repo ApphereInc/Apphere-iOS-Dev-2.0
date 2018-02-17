@@ -20,3 +20,9 @@ Development of native iOS application for Apphere
 ### URL
 * HTMl/CSS content
 * Update Link
+
+### Landing
+* Logo animation 
+
+###
+* Finalize Business UI design
