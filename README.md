@@ -24,5 +24,5 @@ Development of native iOS application for Apphere
 ### Landing
 * Logo animation 
 
-###
+### Business UI
 * Finalize Business UI design
