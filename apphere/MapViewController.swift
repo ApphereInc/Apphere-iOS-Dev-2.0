@@ -11,15 +11,15 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "mapbox://styles/apphere/cjbdcrmr980592spm5icfebby")
+        let url = URL(string: "mapbox://styles/apphere/cjdr2g2px1yml2rqux8wa9qhi")
         let mapView = MGLMapView(frame: view.bounds, styleURL: url)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.34, longitude: -75.92), zoomLevel: 11, animated: false)
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928), zoomLevel: 13.1, animated: false)
         view.addSubview(mapView)
         
         
         let hello = MGLPointAnnotation()
-        hello.coordinate = CLLocationCoordinate2D(latitude: 40.34, longitude: -75.92)
+        hello.coordinate = CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928)
         hello.title = "Hello Reading"
         hello.subtitle = "It's automagical"
         
@@ -37,5 +37,8 @@ class MapViewController: UIViewController {
         return true
         
         
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
