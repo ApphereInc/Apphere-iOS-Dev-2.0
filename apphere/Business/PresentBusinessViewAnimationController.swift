@@ -37,7 +37,6 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.containerBottomConstraint.constant = 0.0
             businessDetailViewController.containerWidthConstraint.constant = businessDetailViewController.view.superview!.frame.width
             businessDetailViewController.closeButton.alpha = 0.7
-            businessDetailViewController.view.backgroundColor = .white
             businessDetailViewController.photoView.layer.cornerRadius = 0.0
             businessDetailViewController.view.layoutIfNeeded()
             businessDetailViewController.isStatusBarHidden = true

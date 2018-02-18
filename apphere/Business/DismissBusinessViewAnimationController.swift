@@ -23,7 +23,6 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
         transitionContext.containerView.insertSubview(tabBarController.view, at: 0)
-        businessDetailViewController.view.backgroundColor = UIColor.clear
         businessListViewController.isStatusBarHidden = true
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
