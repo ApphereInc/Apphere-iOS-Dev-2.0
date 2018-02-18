@@ -11,33 +11,15 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "mapbox://styles/apphere/cjdr4qknl22qz2rqmlg3zvmdb")
+        let url = URL(string: "mapbox://styles/apphere/cjds1dz312xl62so1erbtwmgm")
         let mapView = MGLMapView(frame: view.bounds, styleURL: url)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928), zoomLevel: 13.1, animated: false)
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928), zoomLevel: 13.5, animated: false)
         view.addSubview(mapView)
         
-        
-        let hello = MGLPointAnnotation()
-        hello.coordinate = CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928)
-        hello.title = "Hello Reading"
-        hello.subtitle = "It's automagical"
-        
-        // Add marker `hello` to the map.
-        mapView.addAnnotation(hello)
+    
     }
     
-    // Use the default marker. See also: our view annotation or custom marker examples.
-    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
-        return nil
-    }
-    
-    // Allow callout view to appear when an annotation is tapped.
-    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
-        return true
-        
-        
-    }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
