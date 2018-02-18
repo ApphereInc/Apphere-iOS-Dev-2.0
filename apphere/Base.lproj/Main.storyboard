@@ -173,7 +173,7 @@ Developer: Derek Sheldon</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="business" id="tuY-EE-hgc" userLabel="Business Cell" customClass="BusinessCell" customModule="apphere" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="business" id="tuY-EE-hgc" userLabel="Business Cell" customClass="BusinessCell" customModule="apphere" customModuleProvider="target">
                                         <rect key="frame" x="37.5" y="50" width="300" height="344"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -241,11 +241,6 @@ Developer: Derek Sheldon</string>
                                             <constraint firstItem="Cyu-Tu-CXS" firstAttribute="top" secondItem="bN4-Og-biA" secondAttribute="bottom" constant="6" id="qKU-7q-21G"/>
                                             <constraint firstItem="Cyu-Tu-CXS" firstAttribute="centerY" secondItem="tuY-EE-hgc" secondAttribute="centerY" id="xhe-DX-bez"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="activeCustomerCountLabel" destination="1eQ-sD-ias" id="mmT-Ie-XCd"/>
                                             <outlet property="nameLabel" destination="Cyu-Tu-CXS" id="YuF-gP-hjo"/>
@@ -328,14 +323,14 @@ Developer: Derek Sheldon</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                        <rect key="frame" x="10" y="112" width="280" height="18"/>
+                                        <rect key="frame" x="10" y="111.5" width="280" height="18"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="136" width="280" height="89"/>
+                                        <rect key="frame" x="10" y="135.5" width="280" height="89"/>
                                         <attributedString key="attributedText">
                                             <fragment content="BUSINESS NAME">
                                                 <attributes>

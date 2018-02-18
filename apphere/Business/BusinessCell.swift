@@ -20,6 +20,13 @@ class BusinessCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        backgroundColor = .clear
+        
+        contentView.layer.cornerRadius = 20.0
+        contentView.layer.masksToBounds = true
+        
+        layer.masksToBounds = false
         layer.shadowOpacity = 0.5
         layer.shadowRadius = 10.0
         layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
