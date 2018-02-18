@@ -21,8 +21,9 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
             businessViewController.business = BusinessDirectory.businesses[indexPath.item]
             businessViewController.transitioningDelegate = self
             let cellFrameInWindow = cell.convert(cell.bounds, to: nil)
-            presentBusinessViewAnimationController.selectedBusinessCellFrameInWindow = cellFrameInWindow
-            dismissBusinessViewAnimationController.selectedBusinessCellFrameInWindow = cellFrameInWindow
+            presentController.selectedBusinessCellFrameInWindow = cellFrameInWindow
+            dismissController.selectedBusinessCellFrameInWindow = cellFrameInWindow
+            swipeInteractiveTransition = SwipeInteractiveTransition(viewController: businessViewController)
         }
     }
     
@@ -68,11 +69,19 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     // MARK: - UIViewControllerTransitioningDelegate
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return presentBusinessViewAnimationController
+        return presentController
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return dismissBusinessViewAnimationController
+        return dismissController
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        if swipeInteractiveTransition!.interactionInProgress {
+            return swipeInteractiveTransition
+        }
+
+        return nil
     }
     
     // MARK: - Outlets
@@ -81,6 +90,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     
     // MARK: - Properties
     
-    let presentBusinessViewAnimationController = PresentBusinessViewAnimationController()
-    let dismissBusinessViewAnimationController = DismissBusinessViewAnimationController()
+    let presentController = PresentBusinessViewAnimationController()
+    let dismissController = DismissBusinessViewAnimationController()
+    var swipeInteractiveTransition: SwipeInteractiveTransition?
 }
