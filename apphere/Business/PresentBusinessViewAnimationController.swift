@@ -20,7 +20,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         }
         
         transitionContext.containerView.addSubview(businessDetailViewController.view)
-
+        let businessViewWidth = businessDetailViewController.view.superview!.frame.width
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
         businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
         businessDetailViewController.containerBottomConstraint.constant = businessDetailViewController.view.frame.height - (cellFrame.minY + cellFrame.height)
@@ -35,7 +35,8 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             businessDetailViewController.containerTopConstraint.constant = 0.0
             businessDetailViewController.containerBottomConstraint.constant = 0.0
-            businessDetailViewController.containerWidthConstraint.constant = businessDetailViewController.view.superview!.frame.width
+            businessDetailViewController.containerWidthConstraint.constant = businessViewWidth
+            businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (businessViewWidth - cellFrame.width) / 2
             businessDetailViewController.closeButton.alpha = 0.7
             businessDetailViewController.photoView.layer.cornerRadius = 0.0
             businessDetailViewController.view.layoutIfNeeded()

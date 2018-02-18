@@ -59,6 +59,7 @@ class BusinessDetailViewController: UIViewController {
     @IBOutlet weak var activeCustomerCountLabel: UILabel!
     @IBOutlet weak var dailyCustomerCountLabel: UILabel!
     @IBOutlet weak var totalCustomerCountLabel: UILabel!
+    @IBOutlet weak var nameLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerWidthConstraint: NSLayoutConstraint!
