@@ -10,6 +10,7 @@ Development of native iOS application for Apphere
 ### Wishlist
 * BlurTabBar and change Opacity like AppStore
 * Add Bounce to Expand and Close Animation
+* Alternate text color for light backs on cards. (nil or true)
 
 
 ## Derek Todo

@@ -10,11 +10,11 @@
 		0F5E9F13F4775A144B0EE51A /* Pods_apphereTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD1BECA63D0FD0D4BBBEC00 /* Pods_apphereTests.framework */; };
 		2C05C7151FDBDF5700D1DBE9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C05C7141FDBDF5700D1DBE9 /* SecondViewController.swift */; };
 		2C3A13CC1FE5BBF60041410C /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A13CB1FE5BBF60041410C /* BusinessListViewController.swift */; };
+		2C543CC2203ACF8E00600EDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C543CC1203ACF8E00600EDC /* Assets.xcassets */; };
 		2CC8CBAA1FE7DA1500A0D598 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8CBA91FE7DA1500A0D598 /* MapViewController.swift */; };
 		2CD1B84F1FD3C4F200179D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */; };
 		2CD1B8511FD3C4F200179D26 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1B8501FD3C4F200179D26 /* FirstViewController.swift */; };
 		2CD1B8561FD3C4F200179D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CD1B8541FD3C4F200179D26 /* Main.storyboard */; };
-		2CD1B8581FD3C4F200179D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD1B8571FD3C4F200179D26 /* Assets.xcassets */; };
 		2CD1B85B1FD3C4F200179D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CD1B8591FD3C4F200179D26 /* LaunchScreen.storyboard */; };
 		2CD1B8661FD3C4F200179D26 /* apphereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1B8651FD3C4F200179D26 /* apphereTests.swift */; };
 		2CD1B8711FD3C4F200179D26 /* apphereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1B8701FD3C4F200179D26 /* apphereUITests.swift */; };
@@ -66,12 +66,12 @@
 		1FD1BECA63D0FD0D4BBBEC00 /* Pods_apphereTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apphereTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C05C7141FDBDF5700D1DBE9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2C3A13CB1FE5BBF60041410C /* BusinessListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListViewController.swift; sourceTree = "<group>"; };
+		2C543CC1203ACF8E00600EDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CC8CBA91FE7DA1500A0D598 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2CD1B84B1FD3C4F200179D26 /* apphere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apphere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CD1B8501FD3C4F200179D26 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		2CD1B8551FD3C4F200179D26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2CD1B8571FD3C4F200179D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CD1B85A1FD3C4F200179D26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CD1B85C1FD3C4F200179D26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD1B8611FD3C4F200179D26 /* apphereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apphereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,8 +165,8 @@
 				2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */,
 				2CD1B8541FD3C4F200179D26 /* Main.storyboard */,
 				2CD1B8591FD3C4F200179D26 /* LaunchScreen.storyboard */,
+				2C543CC1203ACF8E00600EDC /* Assets.xcassets */,
 				2CD1B85C1FD3C4F200179D26 /* Info.plist */,
-				2CD1B8571FD3C4F200179D26 /* Assets.xcassets */,
 				EA22D011202DE73E006C2861 /* Old */,
 			);
 			path = apphere;
@@ -360,8 +360,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD1B85B1FD3C4F200179D26 /* LaunchScreen.storyboard in Resources */,
-				2CD1B8581FD3C4F200179D26 /* Assets.xcassets in Resources */,
 				EA6C603F2038D800005EA190 /* README.md in Resources */,
+				2C543CC2203ACF8E00600EDC /* Assets.xcassets in Resources */,
 				2CD1B8561FD3C4F200179D26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
