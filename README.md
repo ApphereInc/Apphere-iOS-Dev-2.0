@@ -4,13 +4,18 @@ Development of native iOS application for Apphere
 ## Tony Todo
 
 ### Transition
-* Swipe down to dismiss business detail
-* Keep business name text in same position as card expands
+* Swipe down to dismiss business detail (COMPLETE )
+* Keep business name text in same position as card expands (COMPLETE)
+
+### Wishlist
+* BlurTabBar and change Opacity like AppStore
+* Add Bounce to Expand and Close Animation
+
 
 ## Derek Todo
 
 ### Map
-* Color and appearance. Updated API on final
+* Color and appearance. Updated API on final (Complete)
 * Data points with Jed
 
 ### Promotion Popup
@@ -18,10 +23,10 @@ Development of native iOS application for Apphere
 
 ### URL
 * HTMl/CSS content
-* Update Link
+* Update Link (May change to native vs URL)
 
 ### Landing
 * Logo animation 
 
 ### Business UI
-* Finalize Business UI design
+* Finalize Business UI design (90% Complete)
