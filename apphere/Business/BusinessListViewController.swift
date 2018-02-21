@@ -23,7 +23,6 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
             let cellFrameInWindow = cell.convert(cell.bounds, to: nil)
             presentController.selectedBusinessCellFrameInWindow = cellFrameInWindow
             dismissController.selectedBusinessCellFrameInWindow = cellFrameInWindow
-            swipeInteractiveTransition = SwipeInteractiveTransition(viewController: businessViewController)
         }
     }
     
@@ -76,14 +75,6 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         return dismissController
     }
     
-    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        if swipeInteractiveTransition!.interactionInProgress {
-            return swipeInteractiveTransition
-        }
-
-        return nil
-    }
-    
     // MARK: - Outlets
     
     @IBOutlet var collectionView: UICollectionView!
@@ -92,5 +83,4 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     
     let presentController = PresentBusinessViewAnimationController()
     let dismissController = DismissBusinessViewAnimationController()
-    var swipeInteractiveTransition: SwipeInteractiveTransition?
 }
