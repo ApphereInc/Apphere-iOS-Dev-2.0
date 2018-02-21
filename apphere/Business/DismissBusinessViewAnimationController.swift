@@ -25,14 +25,15 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         transitionContext.containerView.insertSubview(tabBarController.view, at: 0)
         businessListViewController.isStatusBarHidden = true
         
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: {
+            businessDetailViewController.view.layer.setAffineTransform(.identity)
             businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
             businessDetailViewController.containerBottomConstraint.constant = businessDetailViewController.view.frame.height - (cellFrame.minY + cellFrame.height)
             businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
             businessDetailViewController.nameLeadingConstraint.constant = 10.0
+            businessDetailViewController.view.layoutIfNeeded()
             businessDetailViewController.closeButton.alpha = 0
             businessDetailViewController.photoView.layer.cornerRadius = 14.0
-            businessDetailViewController.view.layoutIfNeeded()
             businessListViewController.isStatusBarHidden = false
             businessListViewController.setNeedsStatusBarAppearanceUpdate()
         }, completion: { (_) in
@@ -43,5 +44,4 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.4
     }
-    
 }

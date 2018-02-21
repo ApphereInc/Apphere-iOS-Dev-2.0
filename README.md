@@ -4,8 +4,7 @@ Development of native iOS application for Apphere
 ## Tony Todo
 
 ### Transition
-* Swipe down to dismiss business detail
-* Keep business name text in same position as card expands
+* Swiping animation needs to be changed to zoom card during swipe, then run dismiss animation normally, just as app store does. Otherwise cards that are sitting too low or high in list do not track correctly. This will take some work, but without it the dismiss interaction will not be acceptable.
 
 ## Derek Todo
 
