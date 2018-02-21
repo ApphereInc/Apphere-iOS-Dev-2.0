@@ -4,8 +4,7 @@ Development of native iOS application for Apphere
 ## Tony Todo
 
 ### Transition
-* Swipe down to dismiss business detail (COMPLETE )
-* Keep business name text in same position as card expands (COMPLETE)
+* Slide tab bar out of way on present and slide back on dismiss, like app store
 
 ### Wishlist
 * BlurTabBar and change Opacity like AppStore
