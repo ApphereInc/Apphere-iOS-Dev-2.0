@@ -21,17 +21,20 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             return
         }
         
+        let affineTransform = businessDetailViewController.view.layer.affineTransform()
+        businessDetailViewController.view.layer.setAffineTransform(.identity)
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
+        businessDetailViewController.view.layer.setAffineTransform(affineTransform)
         transitionContext.containerView.insertSubview(tabBarController.view, at: 0)
         businessListViewController.isStatusBarHidden = true
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: {
-            businessDetailViewController.view.layer.setAffineTransform(.identity)
             businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
-            businessDetailViewController.containerBottomConstraint.constant = businessDetailViewController.view.frame.height - (cellFrame.minY + cellFrame.height)
+            businessDetailViewController.containerHeightConstraint.constant = cellFrame.height
             businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
             businessDetailViewController.nameLeadingConstraint.constant = 10.0
             businessDetailViewController.view.layoutIfNeeded()
+            businessDetailViewController.view.layer.setAffineTransform(.identity)
             businessDetailViewController.closeButton.alpha = 0
             businessDetailViewController.photoView.layer.cornerRadius = 14.0
             businessListViewController.isStatusBarHidden = false
@@ -42,6 +45,6 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.4
+        return 0.2
     }
 }

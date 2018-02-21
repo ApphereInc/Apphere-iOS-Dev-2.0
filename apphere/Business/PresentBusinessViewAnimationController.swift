@@ -20,11 +20,11 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         }
         
         transitionContext.containerView.addSubview(businessDetailViewController.view)
-        let businessViewWidth = businessDetailViewController.view.superview!.frame.width
+        let businessDetailViewFrame = businessDetailViewController.view.superview!.frame
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
         businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
-        businessDetailViewController.containerBottomConstraint.constant = businessDetailViewController.view.frame.height - (cellFrame.minY + cellFrame.height)
         businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
+        businessDetailViewController.containerHeightConstraint.constant = cellFrame.height
         businessDetailViewController.closeButton.alpha = 0.0
         businessDetailViewController.isStatusBarHidden = false
         businessDetailViewController.view.layoutIfNeeded()
@@ -34,9 +34,9 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             businessDetailViewController.containerTopConstraint.constant = 0.0
-            businessDetailViewController.containerBottomConstraint.constant = 0.0
-            businessDetailViewController.containerWidthConstraint.constant = businessViewWidth
-            businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (businessViewWidth - cellFrame.width) / 2
+            businessDetailViewController.containerWidthConstraint.constant = businessDetailViewFrame.width
+            businessDetailViewController.containerHeightConstraint.constant = businessDetailViewFrame.height
+            businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (businessDetailViewFrame.width - cellFrame.width) / 2
             businessDetailViewController.closeButton.alpha = 0.7
             businessDetailViewController.photoView.layer.cornerRadius = 0.0
             businessDetailViewController.view.layoutIfNeeded()

@@ -184,13 +184,13 @@ Developer: Derek Sheldon</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN4-Og-biA">
-                                                    <rect key="frame" x="12" y="104" width="278" height="18"/>
+                                                    <rect key="frame" x="12" y="104.5" width="278" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyu-Tu-CXS" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="128" width="280" height="89"/>
+                                                    <rect key="frame" x="10" y="128.5" width="280" height="89"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="BUSINESS NAME">
                                                             <attributes>
@@ -323,14 +323,14 @@ Developer: Derek Sheldon</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                        <rect key="frame" x="12" y="111.5" width="278" height="18"/>
+                                        <rect key="frame" x="12" y="112" width="278" height="18"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="135.5" width="280" height="89"/>
+                                        <rect key="frame" x="10" y="136" width="280" height="89"/>
                                         <attributedString key="attributedText">
                                             <fragment content="BUSINESS NAME">
                                                 <attributes>
@@ -479,6 +479,7 @@ Developer: Derek Sheldon</string>
                                     <constraint firstItem="usv-VJ-bwq" firstAttribute="centerY" secondItem="5ZE-sE-iJ9" secondAttribute="centerY" id="qEg-OM-ewV"/>
                                     <constraint firstItem="cFW-c4-bxa" firstAttribute="leading" secondItem="GtD-6W-098" secondAttribute="leading" id="sso-HN-Te2"/>
                                     <constraint firstItem="DeM-69-JUw" firstAttribute="trailing" secondItem="usv-VJ-bwq" secondAttribute="trailing" id="w2F-tB-gYd"/>
+                                    <constraint firstAttribute="height" constant="618" id="wQG-iY-FBE"/>
                                     <constraint firstItem="DeM-69-JUw" firstAttribute="leading" secondItem="usv-VJ-bwq" secondAttribute="leading" constant="2" id="yvZ-JW-Xnu"/>
                                     <constraint firstItem="5ZE-sE-iJ9" firstAttribute="trailing" secondItem="XaY-qc-YSF" secondAttribute="trailing" constant="20" id="zXy-BC-ljK"/>
                                 </constraints>
@@ -488,7 +489,6 @@ Developer: Derek Sheldon</string>
                         <constraints>
                             <constraint firstItem="GtD-6W-098" firstAttribute="top" secondItem="OmI-1S-9g8" secondAttribute="top" id="78v-Ev-MJO"/>
                             <constraint firstItem="GtD-6W-098" firstAttribute="centerX" secondItem="Fpy-mn-DcO" secondAttribute="centerX" id="nis-8k-ptQ"/>
-                            <constraint firstAttribute="bottom" secondItem="GtD-6W-098" secondAttribute="bottom" id="pRg-tx-4KF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fpy-mn-DcO"/>
                     </view>
@@ -499,7 +499,7 @@ Developer: Derek Sheldon</string>
                         <outlet property="address2Label" destination="Bdn-Ns-cIS" id="98l-p6-QgR"/>
                         <outlet property="cityStateZipLabel" destination="QA9-kz-pl6" id="ijj-AG-PPK"/>
                         <outlet property="closeButton" destination="8o7-eQ-Hs9" id="5kX-w6-ELh"/>
-                        <outlet property="containerBottomConstraint" destination="pRg-tx-4KF" id="I25-1U-Pcr"/>
+                        <outlet property="containerHeightConstraint" destination="wQG-iY-FBE" id="TtS-wU-LyG"/>
                         <outlet property="containerTopConstraint" destination="78v-Ev-MJO" id="QIa-3a-1jN"/>
                         <outlet property="containerWidthConstraint" destination="gLC-b0-AHu" id="fBG-me-ZWq"/>
                         <outlet property="dailyCustomerCountLabel" destination="AyQ-jq-f0j" id="GcA-Gt-Jaj"/>
