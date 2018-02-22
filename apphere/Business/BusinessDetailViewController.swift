@@ -19,6 +19,9 @@ class BusinessDetailViewController: UIViewController {
         dailyCustomerCountLabel.text    = String(business.dailyCustomerCount)
         totalCustomerCountLabel.text    = String(business.totalCustomerCount)
         
+        nameLabel.textColor = business.textColor
+        promotionLabel.textColor = business.textColor
+        
         update(label: address1Label,    withText: business.address1)
         update(label: address2Label,    withText: business.address2)
         update(label: cityStateZipLabel,withText: business.cityStateZip)

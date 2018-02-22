@@ -4,13 +4,11 @@ Development of native iOS application for Apphere
 ## Tony Todo
 
 ### Transition
-* Slide tab bar out of way on present and slide back on dismiss, like app store
 * Bounce the dismiss animation
+* Slide tab bar out of way on present and slide back on dismiss, like app store
 
 ### Wishlist
 * Add Bounce to Expand and Close Animation
-* Alternate text color for light backs on cards. (nil or true)
-
 
 ## Derek Todo
 

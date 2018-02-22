@@ -15,6 +15,9 @@ class BusinessCell: UICollectionViewCell {
             nameLabel.text                  = business.name.uppercased()
             promotionLabel.text             = business.promotion.uppercased()
             activeCustomerCountLabel.text   = String(business.activeCustomerCount)
+            
+            nameLabel.textColor = business.textColor
+            promotionLabel.textColor = business.textColor
         }
     }
     

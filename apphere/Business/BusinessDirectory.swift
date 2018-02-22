@@ -23,7 +23,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19602",
             phoneNumber: "(610) 898-7469",
-            url: "https://www.santander-arena.com/"
+            url: "https://www.santander-arena.com/",
+            textStyle: .light
         ),
         Business(
             name: "Sweet Ride Ice Cream",
@@ -38,7 +39,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(484) 987-7338",
-            url: "https://www.sweetrideicecream.com/"
+            url: "https://www.sweetrideicecream.com/",
+            textStyle: .dark
         ),
         Business(
             name: "5th and Penn Street",
@@ -53,7 +55,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(484) 987-7338",
-            url: "https://www.sweetrideicecream.com/"
+            url: "https://www.sweetrideicecream.com/",
+            textStyle: .light
         ),
         Business(
             name: "Judy’s On Cherry",
@@ -68,7 +71,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19602",
             phoneNumber: "(610) 374-8511",
-            url: "http://judysoncherry.com/"
+            url: "http://judysoncherry.com/",
+            textStyle: .light
         ),
         Business(
             name: "Winedown Cafe",
@@ -83,7 +87,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 373-4907",
-            url: "http://winedowncafe.net/"
+            url: "http://winedowncafe.net/",
+            textStyle: .light
         ),
         Business(
             name: "West Reading Tavern",
@@ -98,7 +103,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 376-9232",
-            url: "http://westreadingtavern.com/"
+            url: "http://westreadingtavern.com/",
+            textStyle: .light
         ),
         Business(
             name: "Muddy Creek Soap",
@@ -113,7 +119,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 816-7474",
-            url: "http://www.muddycreeksoapcompany.com/"
+            url: "http://www.muddycreeksoapcompany.com/",
+            textStyle: .light
         ),
         Business(
             name: "Goggle Works",
@@ -128,7 +135,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19601",
             phoneNumber: "(610) 374-4600",
-            url: "https://goggleworks.org"
+            url: "https://goggleworks.org",
+            textStyle: .light
         ),
         Business(
             name: "Bench   warmers Coffee",
@@ -143,7 +151,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 374-2326",
-            url: "https://www.benchwarmerscoffee.com/"
+            url: "https://www.benchwarmerscoffee.com/",
+            textStyle: .light
         ),
         Business(
             name: "Reading Public Museum",
@@ -158,7 +167,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 371-5850",
-            url: "http://www.readingpublicmuseum.org/"
+            url: "http://www.readingpublicmuseum.org/",
+            textStyle: .light
         ),
         Business(
             name: "Lisa Tiger Century 21",
@@ -173,7 +183,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19606",
             phoneNumber: "(610) 207-6186",
-            url: "https://www.lisatigerhomes.com/"
+            url: "https://www.lisatigerhomes.com/",
+            textStyle: .light
         ),
         Business(
             name: "Tina’s Salon & Day Spa",
@@ -188,7 +199,8 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 374-5991",
-            url: "http://gototinas.com/"
+            url: "http://gototinas.com/",
+            textStyle: .light
         )
     ]
 }
