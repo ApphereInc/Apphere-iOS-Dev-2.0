@@ -5,10 +5,21 @@ Development of native iOS application for Apphere
 
 ### Transition
 * Bounce the dismiss animation
-* Slide tab bar out of way on present and slide back on dismiss, like app store
-
-### Wishlist
+* Slide tab bar out of way on present and slide back on dismiss, like app store.
 * Add Bounce to Expand and Close Animation
+
+### UI
+* Change Tab bar icon active and inactive color
+* Tab bar is not translucent/blurred as indicated.
+
+### Tony Notes to Derek
+
+
+### Derek Notes to Tony
+* Pleae move the numbered count of the today/grand total to a vertical vs horzonital and postioned and text size as found at the static rendering of the business blow out screen.... https://xd.adobe.com/spec/d2260d55-938d-43a0-b42d-ede5ccbfffc2
+* Next week we must move on to Estimote intergration and the prop pop up controller. Jed will be helping if possible, and working on the Map (through API Mapbox)
+* The Last week we will touch up UI if need be and finalize businessViewController data and run bug tests.
+* We can schedule a Facetime meeting to talk about the future and the GM of Apphere. 
 
 ## Derek Todo
 

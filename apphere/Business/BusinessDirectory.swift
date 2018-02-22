@@ -40,7 +40,7 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
-            textStyle: .dark
+            textStyle: .light
         ),
         Business(
             name: "5th and Penn Street",
