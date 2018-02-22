@@ -5,9 +5,9 @@ Development of native iOS application for Apphere
 
 ### Transition
 * Slide tab bar out of way on present and slide back on dismiss, like app store
+* Bounce the dismiss animation
 
 ### Wishlist
-* BlurTabBar and change Opacity like AppStore
 * Add Bounce to Expand and Close Animation
 * Alternate text color for light backs on cards. (nil or true)
 

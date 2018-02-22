@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Cs7-0c-Lg1">
@@ -28,12 +28,12 @@
                             <textView autoresizesSubviews="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbN-oW-e9c">
                                 <rect key="frame" x="20" y="209" width="345" height="520"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Apphere is building the first multi city-scale platform leveraging iBeacon technology to provide extensive informational data and utility tools to businesses both large and small. Apphere while operating under the SaaS B2B model, Apphere is centered and focused on the consumer experience by creating a rich feature platform for our daily consumers. We connect people to places and places to people, automagically.                                                                     
+                                <string key="text">Apphere is building the first multi city-scale platform leveraging iBeacon technology to provide extensive informational data and utility tools to businesses both large and small. Apphere while operating under the SaaS B2B model, Apphere is centered and focused on the consumer experience by creating a rich feature platform for our daily consumers. We connect people to places and places to people, automagically.                                                                     
 We’re changing how people interact with the world around them. Consumers will discover and capture detailed exciting information around them automagically. Our users can frequent any local businesses or public place and we simply appear. Our users are not required to complete any manual actionables other than carrying a smartphone with them. It’s simply magic. 
 Apphere will impact every business and touch every consumer in the US. Our first major test will transpire in Reading, PA 2018. Developed by Apphere, Inc.
 
 © Apphere, Inc
-Developer: Derek Sheldon</mutableString>
+Developer: Derek Sheldon</string>
                                 <color key="textColor" red="0.74494865916421871" green="0.75630135464966841" blue="0.76532140544041449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -69,7 +69,7 @@ Developer: Derek Sheldon</mutableString>
             <objects>
                 <viewController id="4Wi-Pg-A2U" customClass="MapViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ZS-nH-Tep">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Vsm-3R-aIi"/>
@@ -97,11 +97,11 @@ Developer: Derek Sheldon</mutableString>
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fk7-zT-wvt">
-                                <rect key="frame" x="0.0" y="22" width="375" height="707"/>
+                                <rect key="frame" x="0.0" y="22" width="375" height="790"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -135,10 +135,10 @@ Developer: Derek Sheldon</mutableString>
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="barTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.97999999999999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="0.53476089240000002" green="0.33745265009999997" blue="0.93111383910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
@@ -157,11 +157,11 @@ Developer: Derek Sheldon</mutableString>
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="La9-D8-5uU" customClass="BusinessListViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LTk-w2-tFT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p0n-iP-3Ch">
-                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="ov9-Oj-hqU">
                                     <size key="itemSize" width="300" height="344"/>
@@ -181,13 +181,13 @@ Developer: Derek Sheldon</mutableString>
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN4-Og-biA">
-                                                    <rect key="frame" x="12" y="104.5" width="278" height="18"/>
+                                                    <rect key="frame" x="12" y="103.66666666666667" width="278" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyu-Tu-CXS" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="128.5" width="280" height="89"/>
+                                                    <rect key="frame" x="10" y="127.66666666666666" width="280" height="88.666666666666657"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="BUSINESS NAME">
                                                             <attributes>
@@ -252,7 +252,7 @@ Developer: Derek Sheldon</mutableString>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="MONTH 00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-ab-1tK">
-                                            <rect key="frame" x="16" y="0.0" width="388" height="50"/>
+                                            <rect key="frame" x="16" y="0.0" width="349" height="50"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                             <color key="textColor" red="0.50716221332550049" green="0.34449067711830139" blue="0.89811784029006958" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -279,7 +279,7 @@ Developer: Derek Sheldon</mutableString>
                             <constraint firstItem="c8w-zz-5kT" firstAttribute="trailing" secondItem="p0n-iP-3Ch" secondAttribute="trailing" id="9Oc-gX-0NI"/>
                             <constraint firstItem="p0n-iP-3Ch" firstAttribute="top" secondItem="c8w-zz-5kT" secondAttribute="top" id="ZZE-Mm-OZC"/>
                             <constraint firstItem="p0n-iP-3Ch" firstAttribute="leading" secondItem="c8w-zz-5kT" secondAttribute="leading" id="jyZ-Ud-VvX"/>
-                            <constraint firstItem="c8w-zz-5kT" firstAttribute="bottom" secondItem="p0n-iP-3Ch" secondAttribute="bottom" id="mzw-Kj-eXk"/>
+                            <constraint firstAttribute="bottom" secondItem="p0n-iP-3Ch" secondAttribute="bottom" id="mzw-Kj-eXk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c8w-zz-5kT"/>
                     </view>
@@ -307,11 +307,11 @@ Developer: Derek Sheldon</mutableString>
             <objects>
                 <viewController storyboardIdentifier="businessDetail" hidesBottomBarWhenPushed="YES" id="gcm-cc-Ct0" customClass="BusinessDetailViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OmI-1S-9g8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtD-6W-098" userLabel="Container">
-                                <rect key="frame" x="37.666666666666657" y="0.0" width="300" height="729"/>
+                                <rect key="frame" x="37.666666666666657" y="0.0" width="300" height="618"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-sE-iJ9">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="360"/>
@@ -320,14 +320,14 @@ Developer: Derek Sheldon</mutableString>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                        <rect key="frame" x="12" y="112" width="278" height="18"/>
+                                        <rect key="frame" x="12" y="112.33333333333333" width="278" height="17.999999999999986"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="136" width="280" height="89"/>
+                                        <rect key="frame" x="10" y="136.33333333333334" width="280" height="88.666666666666657"/>
                                         <attributedString key="attributedText">
                                             <fragment content="BUSINESS NAME">
                                                 <attributes>
@@ -362,7 +362,7 @@ Developer: Derek Sheldon</mutableString>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFW-c4-bxa" userLabel="Bottom View">
-                                        <rect key="frame" x="0.0" y="360" width="300" height="369"/>
+                                        <rect key="frame" x="0.0" y="360" width="300" height="258"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3w2-5h-qRQ" userLabel="Address Stack View">
                                                 <rect key="frame" x="90.000000000000014" y="148" width="138.33333333333337" height="81.333333333333314"/>
