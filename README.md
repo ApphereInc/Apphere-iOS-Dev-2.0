@@ -9,6 +9,7 @@ Development of native iOS application for Apphere
 
 ### UI
 * Change Tab bar icon active and inactive color
+* Reduce transparency of Tab bar more...(great work!)
 
 ### Tony Notes to Derek
 
