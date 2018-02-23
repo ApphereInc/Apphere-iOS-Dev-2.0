@@ -4,8 +4,8 @@ Development of native iOS application for Apphere
 ## Tony Todo
 
 ### Transition
-* Bounce the dismiss animation
-* Slide tab bar out of way on present and slide back on dismiss, like app store.
+* Bounce the present and dismiss transitions, like app store
+* Slide tab bar out of way on present and slide back on dismiss, like app store
 * Add Bounce to Expand and Close Animation
 
 ### UI

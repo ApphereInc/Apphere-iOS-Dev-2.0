@@ -13,6 +13,19 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         super.viewDidLoad()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+  
+        guard let indexPath = collectionView.indexPathsForSelectedItems?.first,
+              let cell = collectionView.cellForItem(at: indexPath)
+        else {
+            return
+        }
+        
+        cell.contentView.layer.setAffineTransform(.identity)
+        collectionView.deselectItem(at: indexPath, animated: false)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "businessDetail" {
             let cell = sender as! BusinessCell
@@ -63,6 +76,38 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! BusinessListHeaderView
         header.date = Date()
         return header
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) else {
+            return
+        }
+        
+        UIView.animate(withDuration: 0.1) {
+            cell.contentView.layer.setAffineTransform(CGAffineTransform(scaleX: 0.95, y: 0.95))
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) else {
+            return
+        }
+        
+        UIView.animate(withDuration: 0.1) {
+            cell.contentView.layer.setAffineTransform(.identity)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) else {
+            return
+        }
+
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: .beginFromCurrentState, animations: {
+            cell.contentView.layer.setAffineTransform(CGAffineTransform(scaleX: 0.95, y: 0.95))
+        }, completion: { _ in
+            self.performSegue(withIdentifier: "businessDetail", sender: cell)
+        })
     }
     
     // MARK: - UIViewControllerTransitioningDelegate

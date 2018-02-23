@@ -243,7 +243,6 @@ Developer: Derek Sheldon</string>
                                             <outlet property="nameLabel" destination="Cyu-Tu-CXS" id="YuF-gP-hjo"/>
                                             <outlet property="photoView" destination="1aF-x4-tG4" id="T6v-he-v0o"/>
                                             <outlet property="promotionLabel" destination="bN4-Og-biA" id="RK6-py-pdV"/>
-                                            <segue destination="gcm-cc-Ct0" kind="show" identifier="businessDetail" id="epW-2K-SZ3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -288,6 +287,7 @@ Developer: Derek Sheldon</string>
                     <connections>
                         <outlet property="collectionView" destination="p0n-iP-3Ch" id="VWw-kY-toO"/>
                         <outlet property="searchDisplayController" destination="7cj-nR-N7d" id="vxn-CM-drq"/>
+                        <segue destination="gcm-cc-Ct0" kind="show" identifier="businessDetail" id="Fd3-jV-g8U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQB-Bb-pBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -393,8 +393,8 @@ Developer: Derek Sheldon</string>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zNZ-se-hoS" userLabel="Customer Counts Stack View">
-                                                <rect key="frame" x="41" y="48" width="218" height="52.666666666666657"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zNZ-se-hoS" userLabel="Customer Counts Stack View">
+                                                <rect key="frame" x="41" y="39.333333333333314" width="218" height="52.666666666666657"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HWf-KJ-cCD" userLabel="Daily Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="89" height="52.666666666666664"/>
@@ -496,6 +496,7 @@ Developer: Derek Sheldon</string>
                         <outlet property="address2Label" destination="Bdn-Ns-cIS" id="98l-p6-QgR"/>
                         <outlet property="cityStateZipLabel" destination="QA9-kz-pl6" id="ijj-AG-PPK"/>
                         <outlet property="closeButton" destination="8o7-eQ-Hs9" id="5kX-w6-ELh"/>
+                        <outlet property="container" destination="GtD-6W-098" id="Q7j-En-V7m"/>
                         <outlet property="containerHeightConstraint" destination="wQG-iY-FBE" id="TtS-wU-LyG"/>
                         <outlet property="containerTopConstraint" destination="78v-Ev-MJO" id="QIa-3a-1jN"/>
                         <outlet property="containerWidthConstraint" destination="gLC-b0-AHu" id="fBG-me-ZWq"/>

@@ -90,6 +90,7 @@ class BusinessDetailViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var container: UIView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var address1Label: UILabel!
