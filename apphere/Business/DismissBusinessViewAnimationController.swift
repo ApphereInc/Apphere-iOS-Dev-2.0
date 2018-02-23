@@ -28,8 +28,8 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         transitionContext.containerView.insertSubview(tabBarController.view, at: 0)
         businessListViewController.isStatusBarHidden = true
         
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: {
-            businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: {
+            businessDetailViewController.containerTopConstraint.constant = cellFrame.minY + 10.0
             businessDetailViewController.containerHeightConstraint.constant = cellFrame.height
             businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
             businessDetailViewController.nameLeadingConstraint.constant = 10.0
@@ -39,12 +39,18 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.photoView.layer.cornerRadius = 14.0
             businessListViewController.isStatusBarHidden = false
             businessListViewController.setNeedsStatusBarAppearanceUpdate()
-        }, completion: { (_) in
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.2, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: [.beginFromCurrentState], animations: {
+                businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
+                businessDetailViewController.view.layoutIfNeeded()
+            },
+            completion: { _ in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
         })
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.2
+        return 0.5
     }
 }

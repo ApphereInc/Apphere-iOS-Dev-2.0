@@ -26,7 +26,7 @@ class BusinessCell: UICollectionViewCell {
         
         backgroundColor = .clear
         
-        contentView.layer.cornerRadius = 20.0
+        contentView.layer.cornerRadius = 14.0
         contentView.layer.masksToBounds = true
         
         layer.masksToBounds = false

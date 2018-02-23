@@ -32,8 +32,8 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         businessDetailViewController.view.backgroundColor = .clear
         businessDetailViewController.photoView.layer.cornerRadius = 14.0
         
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
-            businessDetailViewController.containerTopConstraint.constant = 0.0
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+            businessDetailViewController.containerTopConstraint.constant = -10.0
             businessDetailViewController.containerWidthConstraint.constant = businessDetailViewFrame.width
             businessDetailViewController.containerHeightConstraint.constant = businessDetailViewFrame.height
             businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (businessDetailViewFrame.width - cellFrame.width) / 2
@@ -43,12 +43,18 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.container.layer.transform = CATransform3DIdentity
             businessDetailViewController.isStatusBarHidden = true
             businessDetailViewController.setNeedsStatusBarAppearanceUpdate()
-        }, completion: { (_) in
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: [.beginFromCurrentState], animations: {
+                businessDetailViewController.containerTopConstraint.constant = 0.0
+                businessDetailViewController.view.layoutIfNeeded()
+            },
+            completion: { _ in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
         })
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.4
+        return 0.7
     }
 }
