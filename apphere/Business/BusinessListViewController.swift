@@ -9,29 +9,28 @@
 import UIKit
 
 class BusinessListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate {
+    public var activeIndexPath: IndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
   
-        guard let indexPath = collectionView.indexPathsForSelectedItems?.first,
-              let cell = collectionView.cellForItem(at: indexPath)
-        else {
-            return
+        if let indexPath = activeIndexPath,
+           let cell = collectionView.cellForItem(at: indexPath)
+        {
+            cell.contentView.layer.setAffineTransform(.identity)
         }
-        
-        cell.contentView.layer.setAffineTransform(.identity)
-        collectionView.deselectItem(at: indexPath, animated: false)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "businessDetail" {
             let cell = sender as! BusinessCell
-            let indexPath = collectionView.indexPath(for: cell)!
+            activeIndexPath = collectionView.indexPath(for: cell)!
             let businessViewController = segue.destination as! BusinessDetailViewController
-            businessViewController.business = BusinessDirectory.businesses[indexPath.item]
+            businessViewController.business = BusinessDirectory.businesses[activeIndexPath!.item]
             businessViewController.transitioningDelegate = self
             let cellFrameInWindow = cell.convert(cell.bounds, to: nil)
             presentController.selectedBusinessCellFrameInWindow = cellFrameInWindow
@@ -106,6 +105,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .beginFromCurrentState, animations: {
             cell.contentView.layer.setAffineTransform(CGAffineTransform(scaleX: 0.95, y: 0.95))
         }, completion: { _ in
+            collectionView.deselectItem(at: indexPath, animated: false)
             self.performSegue(withIdentifier: "businessDetail", sender: cell)
         })
     }

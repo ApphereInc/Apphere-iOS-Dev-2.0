@@ -28,7 +28,17 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         transitionContext.containerView.insertSubview(tabBarController.view, at: 0)
         businessListViewController.isStatusBarHidden = true
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: {
+        let cell: UICollectionViewCell?
+        
+        if let indexPath = businessListViewController.activeIndexPath {
+            cell = businessListViewController.collectionView.cellForItem(at: indexPath)
+        } else {
+            cell = nil
+        }
+        
+        cell?.isHidden = true
+        
+        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseInOut, .beginFromCurrentState], animations: {
             businessDetailViewController.containerTopConstraint.constant = cellFrame.minY + 10.0
             businessDetailViewController.containerHeightConstraint.constant = cellFrame.height
             businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
@@ -40,17 +50,18 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessListViewController.isStatusBarHidden = false
             businessListViewController.setNeedsStatusBarAppearanceUpdate()
         }, completion: { _ in
-            UIView.animate(withDuration: 0.2, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: [.beginFromCurrentState], animations: {
+            UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: [.beginFromCurrentState], animations: {
                 businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
                 businessDetailViewController.view.layoutIfNeeded()
             },
             completion: { _ in
+                cell?.isHidden = false
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             })
         })
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.5
+        return 0.7
     }
 }
