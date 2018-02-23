@@ -30,6 +30,7 @@
 		EA6A474A202B7A2600455766 /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */; };
 		EA6C603D2038D571005EA190 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C603C2038D571005EA190 /* CloseButton.swift */; };
 		EA6C603F2038D800005EA190 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EA6C603E2038D800005EA190 /* README.md */; };
+		EAB244DD2040AAA800FF29F1 /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB244DC2040AAA800FF29F1 /* Beacons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
 		EA6C603C2038D571005EA190 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		EA6C603E2038D800005EA190 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; wrapsLines = 1; };
+		EAB244DC2040AAA800FF29F1 /* Beacons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacons.swift; sourceTree = "<group>"; };
 		EAF4F8C2202B790500FEA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "apphere/Base.lproj/Old Storyboard.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				EA22D012202DE820006C2861 /* Business */,
+				EAB244DC2040AAA800FF29F1 /* Beacons.swift */,
 				2CD1B8501FD3C4F200179D26 /* FirstViewController.swift */,
 				2C05C7141FDBDF5700D1DBE9 /* SecondViewController.swift */,
 				2CC8CBA91FE7DA1500A0D598 /* MapViewController.swift */,
@@ -402,14 +405,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-apphere/Pods-apphere-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/EstimoteMirror/MirrorDisplay.framework",
-				"${PODS_ROOT}/EstimoteMirrorCore/Core/MirrorCoreSDK.framework",
+				"${PODS_ROOT}/EstimoteBluetoothScanning/EstimoteBluetoothScanning/EstimoteBluetoothScanning.framework",
+				"${PODS_ROOT}/EstimoteProximitySDK/EstimoteProximitySDK/EstimoteProximitySDK.framework",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MirrorDisplay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MirrorCoreSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteBluetoothScanning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteProximitySDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +584,7 @@
 				EA22D016202E1339006C2861 /* PresentBusinessViewAnimationController.swift in Sources */,
 				EA22D015202E1339006C2861 /* DismissBusinessViewAnimationController.swift in Sources */,
 				EA6C603D2038D571005EA190 /* CloseButton.swift in Sources */,
+				EAB244DD2040AAA800FF29F1 /* Beacons.swift in Sources */,
 				2CC8CBAA1FE7DA1500A0D598 /* MapViewController.swift in Sources */,
 				EA67368B20378AD5003BA73A /* Label.swift in Sources */,
 				EA6A474A202B7A2600455766 /* BusinessDetailViewController.swift in Sources */,

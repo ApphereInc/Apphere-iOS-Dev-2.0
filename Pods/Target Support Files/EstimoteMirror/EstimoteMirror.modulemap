@@ -1,6 +1,0 @@
-framework module MirrorDisplay {
-  umbrella header "EstimoteMirror-umbrella.h"
-
-  export *
-  module * { export * }
-}
