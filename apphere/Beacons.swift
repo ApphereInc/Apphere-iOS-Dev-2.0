@@ -19,7 +19,7 @@ struct Beacon {
     var payload: [String: String]
 }
 
-protocol BeaconDetectorDelegate {
+protocol BeaconDetectorListener {
     func enteredRange(of beacon: Beacon)
     func exitedRange(of beacon: Beacon)
     func inRange(of beacons: [Beacon])
@@ -27,33 +27,37 @@ protocol BeaconDetectorDelegate {
 
 class BeaconDetector {
     static var shared = BeaconDetector()
-    var delegate: BeaconDetectorDelegate?
+    var listener: BeaconDetectorListener?
     
     init() {
-        proximityObserver = EPXProximityObserver(credentials: credentials) { error in
+        observer = EPXProximityObserver(credentials: credentials) { error in
             print("Error creating beacon proximity observer: \(error)")
         }
     }
     
-    func observeBeacon(key: String, value: String, range: Double) {
-        let zone = EPXProximityZone(range: EPXProximityRange.custom(desiredMeanTriggerDistance: range)!,
+    func detectBeacon(withKey key: String, andValue value: String, atDistance distance: Double) {
+        let zone = EPXProximityZone(range: EPXProximityRange.custom(desiredMeanTriggerDistance: distance)!,
                                         attachmentKey: key,
                                         attachmentValue: value)
         
         zone.onEnterAction = { deviceAttachment in
-            self.delegate?.enteredRange(of: Beacon(deviceAttachment: deviceAttachment))
+            self.listener?.enteredRange(of: Beacon(deviceAttachment: deviceAttachment))
         }
         
         zone.onExitAction = { deviceAttachment in
-            self.delegate?.exitedRange(of: Beacon(deviceAttachment: deviceAttachment))
+            self.listener?.exitedRange(of: Beacon(deviceAttachment: deviceAttachment))
         }
         
         zone.onChangeAction = { deviceAttachments in
-            self.delegate?.inRange(of: deviceAttachments.map(Beacon.init))
+            self.listener?.inRange(of: deviceAttachments.map(Beacon.init))
         }
+        
+        zones.append(zone)
+        observer.startObserving(zones)
     }
     
-    private var proximityObserver: EPXProximityObserver
+    private var observer: EPXProximityObserver
+    private var zones = [EPXProximityZone]()
     private let credentials = EPXCloudCredentials(appID: "apphere-p0d", appToken: "09f32257eb15a6937ed7447b110825eb")
 }
 
