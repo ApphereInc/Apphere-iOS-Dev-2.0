@@ -25,6 +25,7 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         businessDetailViewController.view.layer.setAffineTransform(.identity)
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
         businessDetailViewController.view.layer.setAffineTransform(affineTransform)
+        BusinessCell.applyShadow(layer: businessDetailViewController.view.layer)
         transitionContext.containerView.insertSubview(tabBarController.view, at: 0)
         businessListViewController.isStatusBarHidden = true
         

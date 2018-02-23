@@ -28,7 +28,10 @@ class BusinessCell: UICollectionViewCell {
         
         contentView.layer.cornerRadius = 14.0
         contentView.layer.masksToBounds = true
-        
+        BusinessCell.applyShadow(layer: layer)
+    }
+    
+    static func applyShadow(layer: CALayer) {
         layer.masksToBounds = false
         layer.shadowOpacity = 0.5
         layer.shadowRadius = 10.0
