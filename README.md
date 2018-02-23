@@ -4,13 +4,11 @@ Development of native iOS application for Apphere
 ## Tony Todo
 
 ### Transition
-* Bounce the present and dismiss transitions, like app store
+* Keep corners rounded during swipe transition
 * Slide tab bar out of way on present and slide back on dismiss, like app store
-* Add Bounce to Expand and Close Animation
 
 ### UI
 * Change Tab bar icon active and inactive color
-* Tab bar is not translucent/blurred as indicated.
 
 ### Tony Notes to Derek
 
