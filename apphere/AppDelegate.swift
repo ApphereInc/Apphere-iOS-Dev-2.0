@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,12 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Notifications.setUp()
         
-        let zones = BusinessDirectory.businesses.map {
-            return Zone(name: "", key: "business", value: $0.name, radius: 1.0)
+        let zones = BusinessDirectory.businesses.filter{ $0.hasBeacon }.map {
+            return Zone(name: $0.name, key: "business", value: $0.name, radius: 1.0)
         }
         
         BeaconMonitor.shared.monitor(zones: zones)
         BeaconMonitor.shared.listener = self
+        
+        UNUserNotificationCenter.current().delegate = self
         
         return true
     }
@@ -38,6 +41,12 @@ extension AppDelegate: BeaconMonitorListener {
     }
     
     func moved(zone: Zone, beacons: [Beacon]) {}
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+    }
 }
 
 

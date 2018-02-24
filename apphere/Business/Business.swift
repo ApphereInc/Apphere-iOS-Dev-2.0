@@ -27,6 +27,7 @@ struct Business {
     let phoneNumber: String?
     let url: String?
     let textStyle: TextStyle
+    let hasBeacon: Bool
     
     var cityStateZip: String {
         return "\(city), \(state) \(zip)"

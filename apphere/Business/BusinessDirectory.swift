@@ -24,7 +24,8 @@ class BusinessDirectory {
             zip: "19602",
             phoneNumber: "(610) 898-7469",
             url: "https://www.santander-arena.com/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: false
         ),
         Business(
             name: "Sweet Ride Ice Cream",
@@ -40,7 +41,8 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: true
         ),
         Business(
             name: "5th and Penn Street",
@@ -56,7 +58,8 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: false
         ),
         Business(
             name: "Judy’s On Cherry",
@@ -72,7 +75,8 @@ class BusinessDirectory {
             zip: "19602",
             phoneNumber: "(610) 374-8511",
             url: "http://judysoncherry.com/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: false
         ),
         Business(
             name: "Winedown Cafe",
@@ -88,7 +92,8 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 373-4907",
             url: "http://winedowncafe.net/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: true
         ),
         Business(
             name: "West Reading Tavern",
@@ -104,7 +109,8 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 376-9232",
             url: "http://westreadingtavern.com/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: false
         ),
         Business(
             name: "Muddy Creek Soap",
@@ -120,7 +126,8 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 816-7474",
             url: "http://www.muddycreeksoapcompany.com/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: false
         ),
         Business(
             name: "Goggle Works",
@@ -136,7 +143,8 @@ class BusinessDirectory {
             zip: "19601",
             phoneNumber: "(610) 374-4600",
             url: "https://goggleworks.org",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: false
         ),
         Business(
             name: "Bench   warmers Coffee",
@@ -152,7 +160,8 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 374-2326",
             url: "https://www.benchwarmerscoffee.com/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: false
         ),
         Business(
             name: "Reading Public Museum",
@@ -168,7 +177,8 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 371-5850",
             url: "http://www.readingpublicmuseum.org/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: false
         ),
         Business(
             name: "Lisa Tiger Century 21",
@@ -184,7 +194,8 @@ class BusinessDirectory {
             zip: "19606",
             phoneNumber: "(610) 207-6186",
             url: "https://www.lisatigerhomes.com/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: false
         ),
         Business(
             name: "Tina’s Salon & Day Spa",
@@ -200,7 +211,8 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 374-5991",
             url: "http://gototinas.com/",
-            textStyle: .light
+            textStyle: .light,
+            hasBeacon: false
         )
     ]
 }

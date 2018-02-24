@@ -40,7 +40,7 @@ class BeaconMonitor {
     
     init() {
         observer = EPXProximityObserver(credentials: credentials) { error in
-            print("Error creating beacon proximity observer: \(error)")
+            print("Beacon proximity observer error: \(error)")
         }
     }
     
