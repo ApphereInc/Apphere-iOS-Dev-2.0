@@ -13,6 +13,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Notifications.authorize(confirmationViewController: self, completion: {_ in })
     }
     
     override func viewWillAppear(_ animated: Bool) {
