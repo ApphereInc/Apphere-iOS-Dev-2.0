@@ -76,7 +76,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-8511",
             url: "http://judysoncherry.com/",
             textStyle: .light,
-            hasBeacon: false
+            hasBeacon: true
         ),
         Business(
             name: "Winedown Cafe",
