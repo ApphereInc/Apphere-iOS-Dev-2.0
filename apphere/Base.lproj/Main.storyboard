@@ -62,7 +62,7 @@ Developer: Derek Sheldon</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="-457"/>
+            <point key="canvasLocation" x="190" y="380"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="7Mr-KD-nN1">
@@ -90,7 +90,7 @@ Developer: Derek Sheldon</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOz-p6-gyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="99"/>
+            <point key="canvasLocation" x="191" y="-930"/>
         </scene>
         <!--locations-->
         <scene sceneID="wg7-f3-ORb">
@@ -128,7 +128,7 @@ Developer: Derek Sheldon</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="846"/>
+            <point key="canvasLocation" x="182" y="-276"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -150,7 +150,7 @@ Developer: Derek Sheldon</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-900" y="0.0"/>
+            <point key="canvasLocation" x="-1278" y="-183"/>
         </scene>
         <!--Business List View Controller-->
         <scene sceneID="FYs-ts-ggw">
@@ -300,7 +300,7 @@ Developer: Derek Sheldon</string>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-1081" y="787"/>
+            <point key="canvasLocation" x="182" y="-1632"/>
         </scene>
         <!--Business Detail View Controller-->
         <scene sceneID="Eu3-25-2j8">
@@ -511,7 +511,7 @@ Developer: Derek Sheldon</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41Y-yJ-6g4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-156" y="786.65667166416802"/>
+            <point key="canvasLocation" x="1198" y="-1632"/>
         </scene>
     </scenes>
     <resources>

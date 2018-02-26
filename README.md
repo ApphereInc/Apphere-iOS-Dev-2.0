@@ -3,6 +3,8 @@ Development of native iOS application for Apphere
 
 ## Tony Todo
 
+* Fix notifications, force prompt for location
+
 ### Transition
 * Slide tab bar out of way on present and slide back on dismiss, like app store
 
