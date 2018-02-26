@@ -32,6 +32,7 @@ struct Notification {
     var identifier: String
     var title: String
     var message: String
+    var userInfo:  [String: Any]
     var fireTime: FireTime
     var isRepeating: Bool
     var category: String?
@@ -95,7 +96,7 @@ class Notifications {
             trigger = createTimeIntervalTrigger(timeInterval: timeInterval, isRepeating: notification.isRepeating)
         }
         
-        addNotification(identifier: notification.identifier, title: notification.title, message: notification.message, trigger: trigger, category: notification.category)
+        addNotification(identifier: notification.identifier, title: notification.title, message: notification.message, userInfo: notification.userInfo, trigger: trigger, category: notification.category)
     }
     
     static func remove(withIdentifier identifier: String) {
@@ -160,8 +161,8 @@ class Notifications {
         UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
     }
     
-    private static func addNotification(identifier: String, title: String, message: String, trigger: UNNotificationTrigger, category: String? = nil) {
-        let content = createContent(title: title, message: message, category: category)
+    private static func addNotification(identifier: String, title: String, message: String, userInfo: [String: Any], trigger: UNNotificationTrigger, category: String? = nil) {
+        let content = createContent(title: title, message: message, userInfo: userInfo, category: category)
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
         center.add(request) { error in
@@ -183,11 +184,12 @@ class Notifications {
         return UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: isRepeating)
     }
     
-    private static func createContent(title: String, message: String, category: String?) -> UNNotificationContent {
+    private static func createContent(title: String, message: String, userInfo: [String: Any] = [:], category: String?) -> UNNotificationContent {
         let content = UNMutableNotificationContent()
-        content.title = title
-        content.body = message
-        content.sound = UNNotificationSound.default()
+        content.title       = title
+        content.body        = message
+        content.sound       = UNNotificationSound.default()
+        content.userInfo    = userInfo
         
         if let category = category {
             content.categoryIdentifier = category

@@ -31,21 +31,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: BeaconMonitorListener {
     func entered(zone: Zone, beacon: Beacon) {
-        let notification = Notification(identifier: "entered-\(zone.name)", title: "", message: "Entered \(zone.name)", fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
-        Notifications.add(notification: notification)
+        addNotification(for: zone, isEntering: true)
     }
     
     func exited(zone: Zone, beacon: Beacon) {
-        let notification = Notification(identifier: "exited-\(zone.name)", title: "", message: "Exited \(zone.name)", fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
-        Notifications.add(notification: notification)
+        addNotification(for: zone, isEntering: false)
     }
     
     func moved(zone: Zone, beacons: [Beacon]) {}
+    
+    private func addNotification(for zone: Zone, isEntering: Bool) {
+        let identifierPrefix = isEntering ? "entered" : "exited"
+        let messagePrefix = isEntering ? "Entered" : "Exited"
+        let notification = Notification(identifier: "\(identifierPrefix)-\(zone.name)", title: "", message: "\(messagePrefix) \(zone.name)", userInfo: [zone.key: zone.value], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
+        Notifications.add(notification: notification)
+    }
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .badge, .sound])
+        let presentingViewController = window!.rootViewController!
+        let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "promotion") as! PromotionViewController
+        
+        let userInfo = notification.request.content.userInfo as! [String: String]
+        let businessName = userInfo["business"]
+        
+        guard let business = BusinessDirectory.businesses.first(where: { $0.name == businessName }) else {
+            completionHandler([])
+            return
+        }
+        
+        promotionViewController.business = business
+        
+        presentingViewController.present(promotionViewController, animated: true) {
+            completionHandler([])
+        }
     }
 }
 
