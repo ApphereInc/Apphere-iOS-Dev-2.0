@@ -50,7 +50,8 @@ extension AppDelegate: BeaconMonitorListener {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        let presentingViewController = window!.rootViewController!
+        let tabBarController = window!.rootViewController! as! UITabBarController
+        let presentingViewController = tabBarController.selectedViewController!
         let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "promotion") as! PromotionViewController
         
         let userInfo = notification.request.content.userInfo as! [String: String]
@@ -69,4 +70,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
 }
 
+extension UIWindow {
+    open override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            let notification = Notification(identifier: "test", title: "", message: "Testing", userInfo: ["business": BusinessDirectory.businesses.first!.name], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
+            Notifications.add(notification: notification)
+        }
+    }
+}
 
