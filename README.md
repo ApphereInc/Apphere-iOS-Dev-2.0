@@ -2,9 +2,8 @@
 Development of native iOS application for Apphere
 
 ## Tony Todo
-
-* Use business IDs to assign beacons, not names
 * Show promotion view when notification tapped
+* Promotion view layout
 
 ### Transition
 * Slide tab bar out of way on present and slide back on dismiss, like app store

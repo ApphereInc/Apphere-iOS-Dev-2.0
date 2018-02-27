@@ -14,7 +14,7 @@ class PromotionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text      = business.name.uppercased()
-        promotionLabel.text = business.promotion.uppercased()
+        promotionLabel.text = business.promotionName.uppercased()
     }
 
     @IBOutlet weak var nameLabel: UILabel!

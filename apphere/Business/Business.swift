@@ -8,15 +8,33 @@
 
 import UIKit
 
+typealias ColorHex = String
+
+struct StyledText {
+    var text: String
+    var isBold: Bool
+    var color: ColorHex
+}
+
+struct Promotion {
+    var backgroundColor: ColorHex?
+    var backgroundImage: String?
+    var logoImage: String?
+    var headlineText: StyledText?
+    var headlineSubText: StyledText?
+    var featuredImage: String?
+    var featuredText: StyledText?
+}
+
 struct Business {
-    enum TextStyle {
+    enum ContentStyle {
         case light, dark
     }
     
     let id: Int
     let name: String
     let photo: String
-    let promotion: String
+    let promotionName: String
     let activeCustomerCount: Int
     let dailyCustomerCount: Int
     let totalCustomerCount: Int
@@ -27,7 +45,7 @@ struct Business {
     let zip: String
     let phoneNumber: String?
     let url: String?
-    let textStyle: TextStyle
+    let contentStyle: ContentStyle
     let hasBeacon: Bool
     
     var cityStateZip: String {
@@ -35,7 +53,7 @@ struct Business {
     }
     
     var textColor: UIColor {
-        switch textStyle {
+        switch contentStyle {
         case .light:
             return .white
         case .dark:
