@@ -32,6 +32,11 @@ protocol BeaconMonitorListener {
     func entered(zone: Zone, beacon: Beacon)
     func exited(zone: Zone, beacon: Beacon)
     func moved(zone: Zone, beacons: [Beacon])
+    func beaconError(_ error: NSError)
+}
+
+enum BeaconMonitorErrorCode: Int {
+    case noBeaconsForZone = 2 // EPXProximityObserverErrorNoAttachmentsMatchingZone
 }
 
 class BeaconMonitor {
@@ -39,9 +44,7 @@ class BeaconMonitor {
     var listener: BeaconMonitorListener?
     
     init() {
-        observer = EPXProximityObserver(credentials: credentials) { error in
-            print("Beacon proximity observer error: \(error)")
-        }
+
     }
     
     func monitor(zones: [Zone]) {
@@ -70,7 +73,10 @@ class BeaconMonitor {
         observer.startObserving(proximityZones)
     }
     
-    private var observer: EPXProximityObserver
+    private lazy var observer = EPXProximityObserver(credentials: credentials) { error in
+        self.listener?.beaconError(error as NSError)
+    }
+    
     private let credentials = EPXCloudCredentials(appID: "apphere-p0d", appToken: "09f32257eb15a6937ed7447b110825eb")
 }
 

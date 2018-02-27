@@ -110,7 +110,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 376-9232",
             url: "http://westreadingtavern.com/",
             textStyle: .light,
-            hasBeacon: false
+            hasBeacon: true
         ),
         Business(
             name: "Muddy Creek Soap",

@@ -27,6 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    var rootViewController: UIViewController {
+        let tabBarController = window!.rootViewController! as! UITabBarController
+        return tabBarController.selectedViewController!
+    }
 }
 
 extension AppDelegate: BeaconMonitorListener {
@@ -40,6 +45,26 @@ extension AppDelegate: BeaconMonitorListener {
     
     func moved(zone: Zone, beacons: [Beacon]) {}
     
+    func beaconError(_ error: NSError) {
+        let message: String
+        
+        switch error.code {
+        case BeaconMonitorErrorCode.noBeaconsForZone.rawValue:
+            message = "At least one business that is enabled for proximity monitoring has no beacons assigned to it."
+        default:
+            message = error.localizedDescription
+        }
+        
+        let alert = UIAlertController(
+            title: "Beacon Error",
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
+        rootViewController.present(alert, animated: true, completion: nil)
+    }
+    
     private func addNotification(for zone: Zone, isEntering: Bool) {
         let identifierPrefix = isEntering ? "entered" : "exited"
         let messagePrefix = isEntering ? "Entered" : "Exited"
@@ -50,8 +75,7 @@ extension AppDelegate: BeaconMonitorListener {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        let tabBarController = window!.rootViewController! as! UITabBarController
-        let presentingViewController = tabBarController.selectedViewController!
+        let presentingViewController = rootViewController
         let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "promotion") as! PromotionViewController
         
         let userInfo = notification.request.content.userInfo as! [String: String]
