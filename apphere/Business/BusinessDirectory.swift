@@ -11,6 +11,7 @@ import Foundation
 class BusinessDirectory {
     static var businesses: [Business] = [
         Business(
+            id: 1,
             name: "Santander Arena",
             photo: "san",
             promotion: "free reading royals hat",
@@ -28,6 +29,7 @@ class BusinessDirectory {
             hasBeacon: false
         ),
         Business(
+            id: 2,
             name: "Sweet Ride Ice Cream",
             photo: "sweet2",
             promotion: "free small vanilla scoop",
@@ -45,6 +47,7 @@ class BusinessDirectory {
             hasBeacon: true
         ),
         Business(
+            id: 3,
             name: "5th and Penn Street",
             photo: "5",
             promotion: "learn about reading",
@@ -62,6 +65,7 @@ class BusinessDirectory {
             hasBeacon: false
         ),
         Business(
+            id: 4,
             name: "Judy’s On Cherry",
             photo: "judy2",
             promotion: "10% off $50 order",
@@ -79,6 +83,7 @@ class BusinessDirectory {
             hasBeacon: true
         ),
         Business(
+            id: 5,
             name: "Winedown Cafe",
             photo: "wine1",
             promotion: "free house cab sav",
@@ -96,6 +101,7 @@ class BusinessDirectory {
             hasBeacon: true
         ),
         Business(
+            id: 6,
             name: "West Reading Tavern",
             photo: "west2",
             promotion: "free small pint of ale",
@@ -113,6 +119,7 @@ class BusinessDirectory {
             hasBeacon: true
         ),
         Business(
+            id: 7,
             name: "Muddy Creek Soap",
             photo: "soap2",
             promotion: "Buy 2 get one free",
@@ -130,6 +137,7 @@ class BusinessDirectory {
             hasBeacon: false
         ),
         Business(
+            id: 8,
             name: "Goggle Works",
             photo: "g",
             promotion: "free bumper sticker",
@@ -147,7 +155,8 @@ class BusinessDirectory {
             hasBeacon: false
         ),
         Business(
-            name: "Bench   warmers Coffee",
+            id: 9,
+            name: "Benchwarmers Coffee",
             photo: "bench",
             promotion: "free small cafe mocha",
             activeCustomerCount: 12,
@@ -164,6 +173,7 @@ class BusinessDirectory {
             hasBeacon: false
         ),
         Business(
+            id: 10,
             name: "Reading Public Museum",
             photo: "rpm3",
             promotion: "10% off admission",
@@ -181,6 +191,7 @@ class BusinessDirectory {
             hasBeacon: false
         ),
         Business(
+            id: 11,
             name: "Lisa Tiger Century 21",
             photo: "lisa3",
             promotion: "free home consultation",
@@ -198,6 +209,7 @@ class BusinessDirectory {
             hasBeacon: false
         ),
         Business(
+            id: 12,
             name: "Tina’s Salon & Day Spa",
             photo: "hair",
             promotion: "free coloring with perm",

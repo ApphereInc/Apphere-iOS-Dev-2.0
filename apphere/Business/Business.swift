@@ -13,6 +13,7 @@ struct Business {
         case light, dark
     }
     
+    let id: Int
     let name: String
     let photo: String
     let promotion: String

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Notifications.setUp()
         
         let zones = BusinessDirectory.businesses.filter{ $0.hasBeacon }.map {
-            return Zone(name: $0.name, key: "business", value: $0.name, radius: 1.0)
+            return Zone(name: $0.name, key: "business_id", value: String($0.id), radius: 1.0)
         }
         
         BeaconMonitor.shared.monitor(zones: zones)

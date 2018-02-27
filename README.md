@@ -3,9 +3,8 @@ Development of native iOS application for Apphere
 
 ## Tony Todo
 
-* Fix misspelling on "Judy’s On Cherry" in Estimote cloud (DONE)
-* Fix notifications for Derek, force prompt for location if needed
-* Show error alert when hasBeacon is true but cannot be found on cloud
+* Use business IDs to assign beacons, not names
+* Show promotion view when notification tapped
 
 ### Transition
 * Slide tab bar out of way on present and slide back on dismiss, like app store
