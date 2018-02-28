@@ -17,13 +17,14 @@ struct StyledText {
 }
 
 struct Promotion {
+    var title: String
     var backgroundColor: ColorHex?
     var backgroundImage: String?
     var logoImage: String?
-    var headlineText: StyledText?
-    var headlineSubText: StyledText?
+    var upperHeadline: StyledText?
+    var lowerHeadline: StyledText?
     var featuredImage: String?
-    var featuredText: StyledText?
+    var featuredDescription: StyledText?
 }
 
 struct Business {
@@ -34,7 +35,6 @@ struct Business {
     let id: Int
     let name: String
     let photo: String
-    let promotionName: String
     let activeCustomerCount: Int
     let dailyCustomerCount: Int
     let totalCustomerCount: Int
@@ -47,6 +47,7 @@ struct Business {
     let url: String?
     let contentStyle: ContentStyle
     let hasBeacon: Bool
+    let promotion: Promotion
     
     var cityStateZip: String {
         return "\(city), \(state) \(zip)"

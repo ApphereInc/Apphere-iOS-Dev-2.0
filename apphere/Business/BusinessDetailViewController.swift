@@ -14,7 +14,7 @@ class BusinessDetailViewController: UIViewController {
     override func viewDidLoad() {
         photoView.image                 = UIImage(named: business.photo)
         nameLabel.text                  = business.name.uppercased()
-        promotionLabel.text             = business.promotionName.uppercased()
+        promotionLabel.text             = business.promotion.title.uppercased()
         activeCustomerCountLabel.text   = String(business.activeCustomerCount)
         dailyCustomerCountLabel.text    = String(business.dailyCustomerCount)
         totalCustomerCountLabel.text    = String(business.totalCustomerCount)

@@ -14,7 +14,6 @@ class BusinessDirectory {
             id: 1,
             name: "Santander Arena",
             photo: "san",
-            promotionName: "free reading royals hat",
             activeCustomerCount: 598,
             dailyCustomerCount: 48,
             totalCustomerCount: 2020,
@@ -26,13 +25,22 @@ class BusinessDirectory {
             phoneNumber: "(610) 898-7469",
             url: "https://www.santander-arena.com/",
             contentStyle: .light,
-            hasBeacon: false
+            hasBeacon: false,
+            promotion: Promotion(
+                title: "Free Reading Royals Hat",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 2,
             name: "Sweet Ride Ice Cream",
             photo: "sweet2",
-            promotionName: "free small vanilla scoop",
             activeCustomerCount: 12,
             dailyCustomerCount: 48,
             totalCustomerCount: 2020,
@@ -44,13 +52,22 @@ class BusinessDirectory {
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
             contentStyle: .light,
-            hasBeacon: true
+            hasBeacon: true,
+            promotion: Promotion(
+                title: "free small vanilla scoop",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 3,
             name: "5th and Penn Street",
             photo: "5",
-            promotionName: "learn about reading",
             activeCustomerCount: 125,
             dailyCustomerCount: 48,
             totalCustomerCount: 2020,
@@ -62,13 +79,22 @@ class BusinessDirectory {
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
             contentStyle: .light,
-            hasBeacon: false
+            hasBeacon: false,
+            promotion: Promotion(
+                title: "learn about reading",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 4,
             name: "Judy’s On Cherry",
             photo: "judy2",
-            promotionName: "10% off $50 order",
             activeCustomerCount: 31,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -80,13 +106,22 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-8511",
             url: "http://judysoncherry.com/",
             contentStyle: .light,
-            hasBeacon: true
+            hasBeacon: true,
+            promotion: Promotion(
+                title: "10% off $50 order",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 5,
             name: "Winedown Cafe",
             photo: "wine1",
-            promotionName: "free house cab sav",
             activeCustomerCount: 17,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -98,13 +133,22 @@ class BusinessDirectory {
             phoneNumber: "(610) 373-4907",
             url: "http://winedowncafe.net/",
             contentStyle: .light,
-            hasBeacon: true
+            hasBeacon: true,
+            promotion: Promotion(
+                title: "free house cab sav",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 6,
             name: "West Reading Tavern",
             photo: "west2",
-            promotionName: "free small pint of ale",
             activeCustomerCount: 28,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -116,13 +160,22 @@ class BusinessDirectory {
             phoneNumber: "(610) 376-9232",
             url: "http://westreadingtavern.com/",
             contentStyle: .light,
-            hasBeacon: true
+            hasBeacon: true,
+            promotion: Promotion(
+                title: "free small pint of ale",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 7,
             name: "Muddy Creek Soap",
             photo: "soap2",
-            promotionName: "Buy 2 get one free",
             activeCustomerCount: 5,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -134,13 +187,22 @@ class BusinessDirectory {
             phoneNumber: "(610) 816-7474",
             url: "http://www.muddycreeksoapcompany.com/",
             contentStyle: .light,
-            hasBeacon: false
+            hasBeacon: false,
+            promotion: Promotion(
+                title: "Buy 2 get one free",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 8,
             name: "Goggle Works",
             photo: "g",
-            promotionName: "free bumper sticker",
             activeCustomerCount: 36,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -152,13 +214,22 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-4600",
             url: "https://goggleworks.org",
             contentStyle: .light,
-            hasBeacon: false
+            hasBeacon: false,
+            promotion: Promotion(
+                title: "free bumper sticker",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 9,
             name: "Benchwarmers Coffee",
             photo: "bench",
-            promotionName: "free small cafe mocha",
             activeCustomerCount: 12,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -170,13 +241,22 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-2326",
             url: "https://www.benchwarmerscoffee.com/",
             contentStyle: .light,
-            hasBeacon: false
+            hasBeacon: false,
+            promotion: Promotion(
+                title: "free small cafe mocha",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 10,
             name: "Reading Public Museum",
             photo: "rpm3",
-            promotionName: "10% off admission",
             activeCustomerCount: 42,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -188,13 +268,22 @@ class BusinessDirectory {
             phoneNumber: "(610) 371-5850",
             url: "http://www.readingpublicmuseum.org/",
             contentStyle: .light,
-            hasBeacon: false
+            hasBeacon: false,
+            promotion: Promotion(
+                title: "10% off admission",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 11,
             name: "Lisa Tiger Century 21",
             photo: "lisa3",
-            promotionName: "free home consultation",
             activeCustomerCount: 12,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -206,13 +295,22 @@ class BusinessDirectory {
             phoneNumber: "(610) 207-6186",
             url: "https://www.lisatigerhomes.com/",
             contentStyle: .light,
-            hasBeacon: false
+            hasBeacon: false,
+            promotion: Promotion(
+                title: "free home consultation",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         ),
         Business(
             id: 12,
             name: "Tina’s Salon & Day Spa",
             photo: "hair",
-            promotionName: "free coloring with perm",
             activeCustomerCount: 6,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -224,7 +322,17 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-5991",
             url: "http://gototinas.com/",
             contentStyle: .light,
-            hasBeacon: false
+            hasBeacon: false,
+            promotion: Promotion(
+                title: "free coloring with perm",
+                backgroundColor: "#000000",
+                backgroundImage: nil,
+                logoImage: nil,
+                upperHeadline: nil,
+                lowerHeadline: nil,
+                featuredImage: nil,
+                featuredDescription: nil
+            )
         )
     ]
 }
