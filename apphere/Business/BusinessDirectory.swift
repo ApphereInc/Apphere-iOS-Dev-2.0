@@ -28,13 +28,13 @@ class BusinessDirectory {
             hasBeacon: false,
             promotion: Promotion(
                 title: "Free Reading Royals Hat",
-                backgroundColor: "#000000",
+                backgroundColor: "#8856ED",
                 backgroundImage: nil,
                 logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
+                upperHeadline: StyledText(text: "Upper Headline", isBold: true, color: "#FFFFFF"),
+                lowerHeadline: StyledText(text: "Lower Headline", isBold: true, color: "#FFFFFF"),
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: StyledText(text: "Featured Notes", isBold: false, color: "#FFFFFF")
             )
         ),
         Business(
@@ -61,7 +61,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         ),
         Business(
@@ -88,7 +88,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         ),
         Business(
@@ -115,7 +115,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         ),
         Business(
@@ -142,7 +142,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         ),
         Business(
@@ -169,7 +169,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         ),
         Business(
@@ -196,7 +196,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         ),
         Business(
@@ -223,7 +223,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         ),
         Business(
@@ -250,7 +250,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         ),
         Business(
@@ -277,7 +277,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         ),
         Business(
@@ -304,7 +304,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         ),
         Business(
@@ -331,7 +331,7 @@ class BusinessDirectory {
                 upperHeadline: nil,
                 lowerHeadline: nil,
                 featuredImage: nil,
-                featuredDescription: nil
+                featuredNotes: nil
             )
         )
     ]

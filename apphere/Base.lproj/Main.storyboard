@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Apphere-->
         <scene sceneID="hNz-n2-bh7">
@@ -160,46 +165,44 @@ Developer: Derek Sheldon</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pex-rd-rxh">
-                                <rect key="frame" x="22" y="342.66666666666669" width="333" height="18"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-y1-K5U" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="20" y="366.66666666666669" width="335" height="88.666666666666686"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="BUSINESS NAME">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="46" name="Arial-BoldMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.75" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeightMultiple">
-                                        <real key="value" value="0.75"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="3iu-3E-X3a">
+                                <rect key="frame" x="20" y="64" width="335" height="694"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Upper Headline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pex-rd-rxh">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="48"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Lower headline" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-y1-K5U">
+                                        <rect key="frame" x="0.0" y="338.66666666666669" width="335" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Featured notes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-mg-WIN">
+                                        <rect key="frame" x="0.0" y="677" width="335" height="17"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.53476089240000002" green="0.33745265009999997" blue="0.93111383910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.53333333333333333" green="0.33725490196078434" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="c2e-y1-K5U" secondAttribute="trailing" constant="20" id="e78-HQ-eBE"/>
-                            <constraint firstItem="pex-rd-rxh" firstAttribute="leading" secondItem="c2e-y1-K5U" secondAttribute="leading" constant="2" id="eF3-xx-dYB"/>
-                            <constraint firstItem="c2e-y1-K5U" firstAttribute="top" secondItem="pex-rd-rxh" secondAttribute="bottom" constant="6" id="hrf-9T-L9q"/>
-                            <constraint firstItem="c2e-y1-K5U" firstAttribute="centerY" secondItem="zqM-3Y-QR7" secondAttribute="centerY" id="mxC-pu-Ea8"/>
-                            <constraint firstItem="pex-rd-rxh" firstAttribute="trailing" secondItem="c2e-y1-K5U" secondAttribute="trailing" id="rdv-hq-v0U"/>
-                            <constraint firstItem="c2e-y1-K5U" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="20" id="rmC-RB-0XH"/>
+                            <constraint firstItem="3iu-3E-X3a" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="20" id="FfM-HF-anw"/>
+                            <constraint firstItem="zqM-3Y-QR7" firstAttribute="bottom" secondItem="3iu-3E-X3a" secondAttribute="bottom" constant="20" id="bZo-LY-dU1"/>
+                            <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="3iu-3E-X3a" secondAttribute="trailing" constant="20" id="ilI-6n-CJV"/>
+                            <constraint firstItem="3iu-3E-X3a" firstAttribute="top" secondItem="zqM-3Y-QR7" secondAttribute="top" constant="20" id="jxS-5c-fMB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zqM-3Y-QR7"/>
                     </view>
                     <connections>
-                        <outlet property="nameLabel" destination="c2e-y1-K5U" id="hj3-7A-31W"/>
-                        <outlet property="promotionLabel" destination="pex-rd-rxh" id="hMV-8w-U5Z"/>
+                        <outlet property="featuredNotesLabel" destination="rRw-mg-WIN" id="tVm-Qb-rlh"/>
+                        <outlet property="lowerHeadlineLabel" destination="c2e-y1-K5U" id="tVm-i3-n7u"/>
+                        <outlet property="upperHeadlineLabel" destination="pex-rd-rxh" id="Wzw-kj-gZd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VG-tc-Vo2" userLabel="First Responder" sceneMemberID="firstResponder"/>

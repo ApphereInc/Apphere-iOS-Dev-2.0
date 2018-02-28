@@ -24,7 +24,7 @@ struct Promotion {
     var upperHeadline: StyledText?
     var lowerHeadline: StyledText?
     var featuredImage: String?
-    var featuredDescription: StyledText?
+    var featuredNotes: StyledText?
 }
 
 struct Business {
