@@ -9,6 +9,7 @@
 import UIKit
 
 typealias ColorHex = String
+typealias ImageName = String
 
 struct StyledText {
     var text: String
@@ -17,14 +18,13 @@ struct StyledText {
 }
 
 struct Promotion {
-    var title: String
+    var name: String
+    var headline: StyledText
+    var footer: StyledText
     var backgroundColor: ColorHex?
-    var backgroundImage: String?
-    var logoImage: String?
-    var upperHeadline: StyledText?
-    var lowerHeadline: StyledText?
-    var featuredImage: String?
-    var featuredNotes: StyledText?
+    var logo: ImageName?
+    var image: ImageName
+    var isImageFullSize: Bool
 }
 
 struct Business {
@@ -34,7 +34,7 @@ struct Business {
     
     let id: Int
     let name: String
-    let photo: String
+    let photo: ImageName
     let activeCustomerCount: Int
     let dailyCustomerCount: Int
     let totalCustomerCount: Int

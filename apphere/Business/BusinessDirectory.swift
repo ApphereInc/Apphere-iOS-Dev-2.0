@@ -27,14 +27,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: false,
             promotion: Promotion(
-                title: "Free Reading Royals Hat",
+                name: "Free Reading Royals Hat",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#8856ED",
-                backgroundImage: "san",
-                logoImage: "sweet2",
-                upperHeadline: StyledText(text: "Upper Headline", isBold: true, color: "#FFFFFF"),
-                lowerHeadline: StyledText(text: "Lower Headline", isBold: true, color: "#FFFFFF"),
-                featuredImage: "5",
-                featuredNotes: StyledText(text: "Featured Notes", isBold: false, color: "#FFFFFF")
+                logo: "bench",
+                image: "5",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -54,14 +53,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: true,
             promotion: Promotion(
-                title: "free small vanilla scoop",
+                name: "free small vanilla scoop",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -81,14 +79,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: false,
             promotion: Promotion(
-                title: "learn about reading",
+                name: "learn about reading",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -108,14 +105,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: true,
             promotion: Promotion(
-                title: "10% off $50 order",
+                name: "10% off $50 order",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -135,14 +131,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: true,
             promotion: Promotion(
-                title: "free house cab sav",
+                name: "free house cab sav",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -162,14 +157,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: true,
             promotion: Promotion(
-                title: "free small pint of ale",
+                name: "free small pint of ale",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -189,14 +183,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: false,
             promotion: Promotion(
-                title: "Buy 2 get one free",
+                name: "Buy 2 get one free",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -216,14 +209,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: false,
             promotion: Promotion(
-                title: "free bumper sticker",
+                name: "free bumper sticker",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -243,14 +235,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: false,
             promotion: Promotion(
-                title: "free small cafe mocha",
+                name: "free small cafe mocha",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -270,14 +261,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: false,
             promotion: Promotion(
-                title: "10% off admission",
+                name: "10% off admission",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -297,14 +287,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: false,
             promotion: Promotion(
-                title: "free home consultation",
+                name: "free home consultation",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         ),
         Business(
@@ -324,14 +313,13 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: false,
             promotion: Promotion(
-                title: "free coloring with perm",
+                name: "free coloring with perm",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
-                backgroundImage: nil,
-                logoImage: nil,
-                upperHeadline: nil,
-                lowerHeadline: nil,
-                featuredImage: nil,
-                featuredNotes: nil
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
             )
         )
     ]

@@ -17,40 +17,61 @@ class PromotionViewController: UIViewController {
         let promotion = business.promotion
         
         view.backgroundColor = promotion.backgroundColor.map { UIColor($0) } ?? .white
+        configure(label: headlineLabel, styledText: promotion.headline, isUppercase: true)
+        configure(label: footerLabel, styledText: promotion.footer, isUppercase: false)
         
-        setLabelStyledText(upperHeadlineLabel, promotion.upperHeadline, isUppercase: true)
-        setLabelStyledText(lowerHeadlineLabel, promotion.lowerHeadline, isUppercase: true)
-        setLabelStyledText(featuredNotesLabel, promotion.featuredNotes, isUppercase: false)
-        
-        setImageViewImage(backgroundImageView, promotion.backgroundImage)
-        setImageViewImage(logoImageView, promotion.logoImage)
-        setImageViewImage(featuredImageView, promotion.featuredImage)
-    }
-    
-    private func setLabelStyledText(_ label: UILabel, _ styledText: StyledText?, isUppercase: Bool) {
-        if let styledText = styledText {
-            label.text = isUppercase ? styledText.text.uppercased() : styledText.text
-            label.textColor = UIColor(styledText.color)
-            label.font = styledText.isBold ? .boldSystemFont(ofSize: label.font.pointSize) : .systemFont(ofSize: label.font.pointSize)
-            label.isHidden = false
+        if let logo = promotion.logo {
+            configure(imageView: logoImageView, imageName: logo, preserveAspectRatio: true)
         } else {
-            label.isHidden = true
+            logoImageView.isHidden = true
+            headlineTopConstraint.isActive = false
+            headlineLabel.bottomAnchor.constraint(equalTo: footerLabel.topAnchor, constant: -40.0).isActive = true
+        }
+        
+        configure(imageView: imageView, imageName: promotion.image, preserveAspectRatio: !promotion.isImageFullSize)
+        
+        if promotion.isImageFullSize {
+            imageTopConstraint.isActive = false
+            imageLeadingConstraint.constant = 0
+            imageTrailingConstraint.constant = 0
+            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+            imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+            imageView.contentMode = .scaleAspectFill
+            view.sendSubview(toBack: imageView)
         }
     }
     
-    private func setImageViewImage(_ imageView: UIImageView, _ imageName: String?) {
-        if let imageName = imageName {
-            imageView.image = UIImage(named: imageName)
-            imageView.isHidden = false
-        } else {
-            imageView.isHidden = true
+    private func configure(label: UILabel, styledText: StyledText, isUppercase: Bool) {
+        label.text = isUppercase ? styledText.text.uppercased() : styledText.text
+        label.textColor = UIColor(styledText.color)
+        label.font = styledText.isBold ? .boldSystemFont(ofSize: label.font.pointSize) : .systemFont(ofSize: label.font.pointSize)
+    }
+    
+    private func configure(imageView: UIImageView, imageName: String, preserveAspectRatio: Bool) {
+        let image = UIImage(named: imageName)!
+        imageView.image = image
+        
+        if preserveAspectRatio {
+            let aspectRatioConstraint = NSLayoutConstraint(
+                item: imageView,
+                attribute: .width,
+                relatedBy: .equal,
+                toItem: imageView,
+                attribute: .height,
+                multiplier: image.size.width / image.size.height,
+                constant: 0
+            )
+            
+            imageView.addConstraint(aspectRatioConstraint)
         }
     }
-
-    @IBOutlet weak var upperHeadlineLabel: UILabel!
-    @IBOutlet weak var lowerHeadlineLabel: UILabel!
-    @IBOutlet weak var featuredNotesLabel: UILabel!
-    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    @IBOutlet weak var headlineLabel: UILabel!
+    @IBOutlet weak var footerLabel: UILabel!
     @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var featuredImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var headlineTopConstraint: NSLayoutConstraint!
+    @IBOutlet var imageTopConstraint: NSLayoutConstraint!
+    @IBOutlet var imageLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet var imageTrailingConstraint: NSLayoutConstraint!
 }

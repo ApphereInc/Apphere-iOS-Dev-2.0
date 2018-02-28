@@ -79,9 +79,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "promotion") as! PromotionViewController
         
         let userInfo = notification.request.content.userInfo as! [String: String]
-        let businessName = userInfo["business"]
+        let businessId = Int(userInfo["business_id"]!)
         
-        guard let business = BusinessDirectory.businesses.first(where: { $0.name == businessName }) else {
+        guard let business = BusinessDirectory.businesses.first(where: { $0.id == businessId }) else {
             completionHandler([])
             return
         }
@@ -97,7 +97,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 extension UIWindow {
     open override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            let notification = Notification(identifier: "test", title: "", message: "Testing", userInfo: ["business": BusinessDirectory.businesses.first!.name], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
+            let notification = Notification(identifier: "test", title: "", message: "Testing", userInfo: ["business_id": String(BusinessDirectory.businesses.first!.id)], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
             Notifications.add(notification: notification)
         }
     }
