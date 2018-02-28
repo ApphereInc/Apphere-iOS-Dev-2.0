@@ -29,11 +29,11 @@ class BusinessDirectory {
             promotion: Promotion(
                 title: "Free Reading Royals Hat",
                 backgroundColor: "#8856ED",
-                backgroundImage: nil,
-                logoImage: nil,
+                backgroundImage: "san",
+                logoImage: "sweet2",
                 upperHeadline: StyledText(text: "Upper Headline", isBold: true, color: "#FFFFFF"),
                 lowerHeadline: StyledText(text: "Lower Headline", isBold: true, color: "#FFFFFF"),
-                featuredImage: nil,
+                featuredImage: "5",
                 featuredNotes: StyledText(text: "Featured Notes", isBold: false, color: "#FFFFFF")
             )
         ),

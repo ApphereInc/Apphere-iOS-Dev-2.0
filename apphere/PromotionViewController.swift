@@ -21,6 +21,10 @@ class PromotionViewController: UIViewController {
         setLabelStyledText(upperHeadlineLabel, promotion.upperHeadline, isUppercase: true)
         setLabelStyledText(lowerHeadlineLabel, promotion.lowerHeadline, isUppercase: true)
         setLabelStyledText(featuredNotesLabel, promotion.featuredNotes, isUppercase: false)
+        
+        setImageViewImage(backgroundImageView, promotion.backgroundImage)
+        setImageViewImage(logoImageView, promotion.logoImage)
+        setImageViewImage(featuredImageView, promotion.featuredImage)
     }
     
     private func setLabelStyledText(_ label: UILabel, _ styledText: StyledText?, isUppercase: Bool) {
@@ -33,8 +37,20 @@ class PromotionViewController: UIViewController {
             label.isHidden = true
         }
     }
+    
+    private func setImageViewImage(_ imageView: UIImageView, _ imageName: String?) {
+        if let imageName = imageName {
+            imageView.image = UIImage(named: imageName)
+            imageView.isHidden = false
+        } else {
+            imageView.isHidden = true
+        }
+    }
 
     @IBOutlet weak var upperHeadlineLabel: UILabel!
     @IBOutlet weak var lowerHeadlineLabel: UILabel!
     @IBOutlet weak var featuredNotesLabel: UILabel!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var featuredImageView: UIImageView!
 }
