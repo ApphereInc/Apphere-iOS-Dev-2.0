@@ -2,8 +2,6 @@
 Development of native iOS application for Apphere
 
 ## Tony Todo
-* Show promotion view when notification tapped
-* Promotion view layout
 
 ### Transition
 * Slide tab bar out of way on present and slide back on dismiss, like app store
@@ -13,8 +11,17 @@ Development of native iOS application for Apphere
 * Reduce transparency of Tab bar more...(great work!)
 
 ### Promotion
-* x = 20 y=398
+* Show promotion view when notification tapped
+* Logo image: x = 20 y=398
 335 Width 307 Height
+* Arial Black
+* Main images fill avail height, aspect fill
+* Spacing constants in promo
+* Disable exit notifications
+* Only show on promo on entering notification
+* Profiling for entering delay
+* Show Eddystone URL in Safari
+
 
 ### Tony Notes to Derek
 

@@ -19,7 +19,6 @@ class PromotionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let promotion = business.promotion
         
         view.backgroundColor = promotion.backgroundColor.map { UIColor($0) } ?? .white
