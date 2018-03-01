@@ -168,26 +168,6 @@ Developer: Derek Sheldon</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="KiR-oA-h7O">
-                                <rect key="frame" x="39" y="97" width="296" height="179"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="THE PROMOTION HEADLINE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-y1-K5U" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="20" y="284" width="335" height="96.333333333333314"/>
-                                <fontDescription key="fontDescription" name="ArialMTPro-Black" family="Arial MT Pro" pointSize="38"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeightMultiple">
-                                        <real key="value" value="0.75"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Footer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-mg-WIN">
-                                <rect key="frame" x="20" y="741" width="335" height="17"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqI-KT-sC4" userLabel="Close Button" customClass="CloseButton" customModule="apphere" customModuleProvider="target">
                                 <rect key="frame" x="335" y="54" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -204,26 +184,47 @@ Developer: Derek Sheldon</string>
                                     <action selector="closeButtonTapped" destination="WPH-dD-DlL" eventType="touchUpInside" id="f6a-n2-pvA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="vSG-pe-Kon">
-                                <rect key="frame" x="20" y="398" width="335" height="307"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="KiR-oA-h7O">
+                                <rect key="frame" x="40" y="99" width="295" height="200"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="THE PROMOTION HEADLINE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-y1-K5U" customClass="Label" customModule="apphere" customModuleProvider="target">
+                                <rect key="frame" x="20" y="319" width="335" height="115"/>
+                                <fontDescription key="fontDescription" name="ArialMTPro-Black" family="Arial MT Pro" pointSize="38"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeightMultiple">
+                                        <real key="value" value="0.75"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="vSG-pe-Kon">
+                                <rect key="frame" x="20" y="454" width="335" height="247"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Footer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-mg-WIN">
+                                <rect key="frame" x="20" y="741" width="335" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zqM-3Y-QR7" firstAttribute="bottom" secondItem="rRw-mg-WIN" secondAttribute="bottom" constant="20" id="Brz-N7-8pk"/>
                             <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="YqI-KT-sC4" secondAttribute="trailing" constant="10" id="DoS-dK-y3O"/>
+                            <constraint firstItem="rRw-mg-WIN" firstAttribute="top" secondItem="vSG-pe-Kon" secondAttribute="bottom" constant="40" id="KKG-TZ-voC"/>
                             <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="rRw-mg-WIN" secondAttribute="trailing" constant="20.000000000000057" id="N2T-VT-AyC"/>
                             <constraint firstItem="c2e-y1-K5U" firstAttribute="top" secondItem="KiR-oA-h7O" secondAttribute="bottom" constant="20" id="NLs-Nm-cXV"/>
+                            <constraint firstItem="vSG-pe-Kon" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="20" id="P3W-O0-d09"/>
+                            <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="c2e-y1-K5U" secondAttribute="trailing" constant="20" id="PUr-se-wkN"/>
                             <constraint firstItem="YqI-KT-sC4" firstAttribute="top" secondItem="zqM-3Y-QR7" secondAttribute="top" constant="10" id="TQV-hN-X0X"/>
-                            <constraint firstItem="KiR-oA-h7O" firstAttribute="top" secondItem="zqM-3Y-QR7" secondAttribute="top" constant="20" id="XK5-3J-f6W"/>
-                            <constraint firstItem="KiR-oA-h7O" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="20" id="aW2-56-jvJ"/>
-                            <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="KiR-oA-h7O" secondAttribute="trailing" constant="20" id="ePM-Aa-LK5"/>
+                            <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="vSG-pe-Kon" secondAttribute="trailing" constant="20" id="TbB-ru-YVE"/>
+                            <constraint firstItem="KiR-oA-h7O" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="40" id="aW2-56-jvJ"/>
+                            <constraint firstItem="KiR-oA-h7O" firstAttribute="top" secondItem="YqI-KT-sC4" secondAttribute="bottom" constant="15" id="cjQ-XM-xS4"/>
+                            <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="KiR-oA-h7O" secondAttribute="trailing" constant="40" id="ePM-Aa-LK5"/>
                             <constraint firstItem="vSG-pe-Kon" firstAttribute="top" secondItem="c2e-y1-K5U" secondAttribute="bottom" constant="20" id="f93-AH-eO8"/>
                             <constraint firstItem="rRw-mg-WIN" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="20" id="gwe-jH-DcW"/>
-                            <constraint firstItem="c2e-y1-K5U" firstAttribute="trailing" secondItem="KiR-oA-h7O" secondAttribute="trailing" id="ihF-An-SEJ"/>
-                            <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="vSG-pe-Kon" secondAttribute="trailing" constant="20.000000000000057" id="lSU-Cy-ujX"/>
-                            <constraint firstItem="c2e-y1-K5U" firstAttribute="leading" secondItem="KiR-oA-h7O" secondAttribute="leading" id="spS-0f-ZT5"/>
-                            <constraint firstItem="vSG-pe-Kon" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="20" id="tmV-Ek-oNI"/>
+                            <constraint firstItem="c2e-y1-K5U" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="20" id="qQI-vy-ueO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zqM-3Y-QR7"/>
                     </view>
@@ -231,9 +232,10 @@ Developer: Derek Sheldon</string>
                         <outlet property="footerLabel" destination="rRw-mg-WIN" id="99Q-HR-PJu"/>
                         <outlet property="headlineLabel" destination="c2e-y1-K5U" id="ncy-SF-n82"/>
                         <outlet property="headlineTopConstraint" destination="NLs-Nm-cXV" id="Ylk-Be-Rm5"/>
-                        <outlet property="imageLeadingConstraint" destination="tmV-Ek-oNI" id="oQr-h5-2EW"/>
+                        <outlet property="imageBottomConstraint" destination="KKG-TZ-voC" id="pUm-9U-FTN"/>
+                        <outlet property="imageLeadingConstraint" destination="P3W-O0-d09" id="fAr-tM-wHy"/>
                         <outlet property="imageTopConstraint" destination="f93-AH-eO8" id="5Vy-WP-rC6"/>
-                        <outlet property="imageTrailingConstraint" destination="lSU-Cy-ujX" id="cIo-GX-uzk"/>
+                        <outlet property="imageTrailingConstraint" destination="TbB-ru-YVE" id="hg0-Op-hSD"/>
                         <outlet property="imageView" destination="vSG-pe-Kon" id="ud5-lP-c8v"/>
                         <outlet property="logoImageView" destination="KiR-oA-h7O" id="LA7-r4-SCR"/>
                     </connections>

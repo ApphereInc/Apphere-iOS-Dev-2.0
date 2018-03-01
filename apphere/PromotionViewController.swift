@@ -30,15 +30,21 @@ class PromotionViewController: UIViewController {
         } else {
             logoImageView.isHidden = true
             headlineTopConstraint.isActive = false
-            headlineLabel.bottomAnchor.constraint(equalTo: footerLabel.topAnchor, constant: -40.0).isActive = true
             imageTopConstraint.isActive = false
-            imageView.bottomAnchor.constraint(equalTo: headlineLabel.topAnchor, constant: -20.0).isActive = true
+            imageBottomConstraint.isActive = false
+            headlineLabel.bottomAnchor.constraint(equalTo: footerLabel.topAnchor, constant: -40.0).isActive = true
+            
+            if !promotion.isImageFullSize {
+                imageView.topAnchor.constraint(equalTo: logoImageView.topAnchor).isActive = true
+                imageView.bottomAnchor.constraint(equalTo: headlineLabel.topAnchor, constant: -20.0).isActive = true
+            }
         }
         
-        configure(imageView: imageView, imageName: promotion.image, preserveAspectRatio: !promotion.isImageFullSize, addShadow: false)
+        configure(imageView: imageView, imageName: promotion.image, preserveAspectRatio: false, addShadow: false)
         
         if promotion.isImageFullSize {
             imageTopConstraint.isActive = false
+            imageBottomConstraint.isActive = false
             imageLeadingConstraint.constant = 0
             imageTrailingConstraint.constant = 0
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
@@ -88,6 +94,7 @@ class PromotionViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var headlineTopConstraint: NSLayoutConstraint!
     @IBOutlet var imageTopConstraint: NSLayoutConstraint!
+    @IBOutlet var imageBottomConstraint: NSLayoutConstraint!
     @IBOutlet var imageLeadingConstraint: NSLayoutConstraint!
     @IBOutlet var imageTrailingConstraint: NSLayoutConstraint!
 }

@@ -12,11 +12,7 @@ Development of native iOS application for Apphere
 
 ### Promotion
 * Show promotion view when notification tapped
-* Logo image: x = 20 y=398
-335 Width 307 Height
-* Main images fill avail height, aspect fill
 * Spacing constants in promo
-* Only show on promo on entering notification
 * Profiling for entering delay
 * Show Eddystone URL in Safari
 
