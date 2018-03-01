@@ -21,14 +21,14 @@ class PromotionViewController: UIViewController {
         configure(label: footerLabel, styledText: promotion.footer, isUppercase: false)
         
         if let logo = promotion.logo {
-            configure(imageView: logoImageView, imageName: logo, preserveAspectRatio: true)
+            configure(imageView: logoImageView, imageName: logo, preserveAspectRatio: true, addShadow: true)
         } else {
             logoImageView.isHidden = true
             headlineTopConstraint.isActive = false
             headlineLabel.bottomAnchor.constraint(equalTo: footerLabel.topAnchor, constant: -40.0).isActive = true
         }
         
-        configure(imageView: imageView, imageName: promotion.image, preserveAspectRatio: !promotion.isImageFullSize)
+        configure(imageView: imageView, imageName: promotion.image, preserveAspectRatio: !promotion.isImageFullSize, addShadow: false)
         
         if promotion.isImageFullSize {
             imageTopConstraint.isActive = false
@@ -38,6 +38,11 @@ class PromotionViewController: UIViewController {
             imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
             imageView.contentMode = .scaleAspectFill
             view.sendSubview(toBack: imageView)
+        } else {
+            imageView.layer.borderWidth = 2.0
+            imageView.layer.borderColor = UIColor.white.cgColor
+            imageView.layer.shadowOpacity = 0.7
+            imageView.layer.shadowOffset = .init(width: 2.0, height: 2.0)
         }
     }
     
@@ -47,9 +52,9 @@ class PromotionViewController: UIViewController {
         label.font = styledText.isBold ? .boldSystemFont(ofSize: label.font.pointSize) : .systemFont(ofSize: label.font.pointSize)
     }
     
-    private func configure(imageView: UIImageView, imageName: String, preserveAspectRatio: Bool) {
+    private func configure(imageView: UIImageView, imageName: String, preserveAspectRatio: Bool, addShadow: Bool) {
         let image = UIImage(named: imageName)!
-        imageView.image = image
+        imageView.image = addShadow ? image.withShadow(offset: CGSize(width: 2.0, height: 2.0)) : image
         
         if preserveAspectRatio {
             let aspectRatioConstraint = NSLayoutConstraint(

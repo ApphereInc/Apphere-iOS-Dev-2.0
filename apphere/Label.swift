@@ -26,11 +26,14 @@ class Label: UILabel {
     private func updateAttributedText() {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = lineHeightMultiple
+        paragraphStyle.alignment = textAlignment
+        
         attributedText = NSAttributedString(string: text ?? "", attributes: [
             .font: font,
             .paragraphStyle: paragraphStyle,
             .foregroundColor: textColor
         ])
+        
         invalidateIntrinsicContentSize()
     }
     
