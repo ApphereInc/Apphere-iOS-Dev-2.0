@@ -36,13 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: BeaconMonitorListener {
     func entered(zone: Zone, beacon: Beacon) {
-        addNotification(for: zone, isEntering: true)
+        let notification = Notification(identifier: "entered-\(zone.name)", title: "", message: "Entered \(zone.name)", userInfo: [zone.key: zone.value], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
+        Notifications.add(notification: notification)
     }
     
-    func exited(zone: Zone, beacon: Beacon) {
-        addNotification(for: zone, isEntering: false)
-    }
-    
+    func exited(zone: Zone, beacon: Beacon) {}
     func moved(zone: Zone, beacons: [Beacon]) {}
     
     func beaconError(_ error: NSError) {
@@ -63,13 +61,6 @@ extension AppDelegate: BeaconMonitorListener {
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
         rootViewController.present(alert, animated: true, completion: nil)
-    }
-    
-    private func addNotification(for zone: Zone, isEntering: Bool) {
-        let identifierPrefix = isEntering ? "entered" : "exited"
-        let messagePrefix = isEntering ? "Entered" : "Exited"
-        let notification = Notification(identifier: "\(identifierPrefix)-\(zone.name)", title: "", message: "\(messagePrefix) \(zone.name)", userInfo: [zone.key: zone.value], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
-        Notifications.add(notification: notification)
     }
 }
 
