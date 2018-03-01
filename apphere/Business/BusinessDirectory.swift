@@ -28,11 +28,11 @@ class BusinessDirectory {
             hasBeacon: false,
             promotion: Promotion(
                 name: "Free Reading Royals Hat",
-                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
-                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                headline: StyledText(text: "FREE READING ROYALS HAT TODAY ONLY", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "ticket sales and promotions are for entertainment purposes only. we are not sure what we want to say here so I will just keep typing as much as I feel like it.", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#8856ED",
-                logo: "bench",
-                image: "5",
+                logo: "sanlogo",
+                image: "san",
                 isImageFullSize: false
             )
         ),
@@ -106,8 +106,8 @@ class BusinessDirectory {
             hasBeacon: true,
             promotion: Promotion(
                 name: "10% off $50 order",
-                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
-                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                headline: StyledText(text: "10% OFF YOUR MEAL TODAY", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "while supplies last and purchased before 8PM with order. not redeemable on weekends or holidays. does not include extra nuts and whipped cream", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "sweet",

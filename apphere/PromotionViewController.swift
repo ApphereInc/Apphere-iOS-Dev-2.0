@@ -12,8 +12,14 @@ import UIColor_Hex_Swift
 class PromotionViewController: UIViewController {
     var business: Business!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         let promotion = business.promotion
         
         view.backgroundColor = promotion.backgroundColor.map { UIColor($0) } ?? .white
@@ -84,3 +90,6 @@ class PromotionViewController: UIViewController {
     @IBOutlet var imageLeadingConstraint: NSLayoutConstraint!
     @IBOutlet var imageTrailingConstraint: NSLayoutConstraint!
 }
+
+
+
