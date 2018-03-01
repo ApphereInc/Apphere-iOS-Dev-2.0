@@ -155,7 +155,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 376-9232",
             url: "http://westreadingtavern.com/",
             contentStyle: .light,
-            hasBeacon: true,
+            hasBeacon: false,
             promotion: Promotion(
                 name: "free small pint of ale",
                 headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
