@@ -12,6 +12,10 @@ Development of native iOS application for Apphere
 * Change Tab bar icon active and inactive color
 * Reduce transparency of Tab bar more...(great work!)
 
+### Promotion
+* x = 20 y=398
+335 Width 307 Height
+
 ### Tony Notes to Derek
 
 
