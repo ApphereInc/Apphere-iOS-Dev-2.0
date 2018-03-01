@@ -46,6 +46,10 @@ class PromotionViewController: UIViewController {
         }
     }
     
+    @IBAction func closeButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     private func configure(label: UILabel, styledText: StyledText, isUppercase: Bool) {
         label.text = isUppercase ? styledText.text.uppercased() : styledText.text
         label.textColor = UIColor(styledText.color)
@@ -54,7 +58,7 @@ class PromotionViewController: UIViewController {
     
     private func configure(imageView: UIImageView, imageName: String, preserveAspectRatio: Bool, addShadow: Bool) {
         let image = UIImage(named: imageName)!
-        imageView.image = addShadow ? image.withShadow(offset: CGSize(width: 2.0, height: 2.0)) : image
+        imageView.image = addShadow ? image.withShadow(blur: 3.0, offset: CGSize(width: 2.0, height: 2.0)) : image
         
         if preserveAspectRatio {
             let aspectRatioConstraint = NSLayoutConstraint(

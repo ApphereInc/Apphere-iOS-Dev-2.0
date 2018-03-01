@@ -190,12 +190,30 @@ Promotion Headline</string>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqI-KT-sC4" userLabel="Close Button" customClass="CloseButton" customModule="apphere" customModuleProvider="target">
+                                <rect key="frame" x="335" y="54" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="4A1-sV-lTA"/>
+                                    <constraint firstAttribute="width" secondItem="YqI-KT-sC4" secondAttribute="height" multiplier="1:1" id="PYJ-zn-BKu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="✖️">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped" destination="WPH-dD-DlL" eventType="touchUpInside" id="f6a-n2-pvA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zqM-3Y-QR7" firstAttribute="bottom" secondItem="rRw-mg-WIN" secondAttribute="bottom" constant="20" id="Brz-N7-8pk"/>
+                            <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="YqI-KT-sC4" secondAttribute="trailing" constant="10" id="DoS-dK-y3O"/>
                             <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="rRw-mg-WIN" secondAttribute="trailing" constant="20.000000000000057" id="N2T-VT-AyC"/>
                             <constraint firstItem="c2e-y1-K5U" firstAttribute="top" secondItem="KiR-oA-h7O" secondAttribute="bottom" constant="20" id="NLs-Nm-cXV"/>
+                            <constraint firstItem="YqI-KT-sC4" firstAttribute="top" secondItem="zqM-3Y-QR7" secondAttribute="top" constant="10" id="TQV-hN-X0X"/>
                             <constraint firstItem="KiR-oA-h7O" firstAttribute="top" secondItem="zqM-3Y-QR7" secondAttribute="top" constant="20" id="XK5-3J-f6W"/>
                             <constraint firstItem="KiR-oA-h7O" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="20" id="aW2-56-jvJ"/>
                             <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="KiR-oA-h7O" secondAttribute="trailing" constant="20" id="ePM-Aa-LK5"/>
