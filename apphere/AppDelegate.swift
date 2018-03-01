@@ -97,7 +97,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 extension UIWindow {
     open override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            let notification = Notification(identifier: "test", title: "", message: "Testing", userInfo: ["business_id": String(BusinessDirectory.businesses.first!.id)], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
+            let notification = Notification(identifier: "test", title: "", message: "Testing", userInfo: ["business_id": "1"], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
             Notifications.add(notification: notification)
         }
     }

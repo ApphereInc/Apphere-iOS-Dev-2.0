@@ -259,14 +259,14 @@ class BusinessDirectory {
             phoneNumber: "(610) 371-5850",
             url: "http://www.readingpublicmuseum.org/",
             contentStyle: .light,
-            hasBeacon: false,
+            hasBeacon: true,
             promotion: Promotion(
                 name: "10% off admission",
-                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
-                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                headline: StyledText(text: "Reading Public Museum Promo", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Reading Public Museum Footer", isBold: false, color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,
-                image: "sweet",
+                image: "rpm",
                 isImageFullSize: false
             )
         ),

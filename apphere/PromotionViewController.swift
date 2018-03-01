@@ -32,6 +32,8 @@ class PromotionViewController: UIViewController {
             logoImageView.isHidden = true
             headlineTopConstraint.isActive = false
             headlineLabel.bottomAnchor.constraint(equalTo: footerLabel.topAnchor, constant: -40.0).isActive = true
+            imageTopConstraint.isActive = false
+            imageView.bottomAnchor.constraint(equalTo: headlineLabel.topAnchor, constant: -20.0).isActive = true
         }
         
         configure(imageView: imageView, imageName: promotion.image, preserveAspectRatio: !promotion.isImageFullSize, addShadow: false)
