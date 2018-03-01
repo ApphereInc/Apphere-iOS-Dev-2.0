@@ -34,11 +34,11 @@
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>We show you amazing deals and information about the location around you. </string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We'll show you cool things near you in the app. With the "always" option, we can also alert you via notifications if you don't have the app open.</string>
+	<string>We&apos;ll show you cool things near you in the app. With the &quot;always&quot; option, we can also alert you via notifications if you don&apos;t have the app open.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We'll show you cool things near you in the app. With the "always" option, we can also alert you via notifications if you don't have the app open.</string>
+	<string>We&apos;ll show you cool things near you in the app. With the &quot;always&quot; option, we can also alert you via notifications if you don&apos;t have the app open.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We'll show you cool things near you in the app.</string>
+	<string>We&apos;ll show you cool things near you in the app.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
@@ -76,5 +76,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ArialMTPro-Black.otf</string>
+	</array>
 </dict>
 </plist>

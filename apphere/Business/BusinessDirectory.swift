@@ -220,7 +220,7 @@ class BusinessDirectory {
         ),
         Business(
             id: 9,
-            name: "Benchwarmers Coffee",
+            name: "Bench  warmers Coffee",
             photo: "bench",
             activeCustomerCount: 12,
             dailyCustomerCount: 62,
