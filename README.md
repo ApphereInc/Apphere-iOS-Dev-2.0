@@ -13,9 +13,8 @@ Development of native iOS application for Apphere
 ### Promotion
 * Show promotion view when notification tapped
 * Spacing constants in promo
-* Profiling for entering delay
-* Show Eddystone URL in Safari
-
+* Show attachment URL in Safari
+* Find out if we can reduce detection delay
 
 ### Tony Notes to Derek
 

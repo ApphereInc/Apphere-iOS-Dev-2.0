@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: BeaconMonitorListener {
     func entered(zone: Zone, beacon: Beacon) {
-        let notification = Notification(identifier: "entered-\(zone.name)", title: "", message: "Entered \(zone.name)", userInfo: [zone.key: zone.value], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
+        let notification = Notification(identifier: "entered-\(zone.name)", title: "", message: "Open to see a special offer from \(zone.name)", userInfo: [zone.key: zone.value], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
         Notifications.add(notification: notification)
     }
     
