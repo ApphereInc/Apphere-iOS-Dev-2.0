@@ -6,11 +6,13 @@ PODS:
     - EstimoteBluetoothScanning (~> 0.1.0)
   - EstimoteSDK (4.16.2)
   - Mapbox-iOS-SDK (3.7.0)
+  - UIColor_Hex_Swift (4.0.1)
 
 DEPENDENCIES:
   - EstimoteIndoorSDK
   - EstimoteProximitySDK
   - Mapbox-iOS-SDK
+  - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
   EstimoteBluetoothScanning: 666ebad39ccfb80e3644b403413a4f3415fbac57
@@ -18,7 +20,8 @@ SPEC CHECKSUMS:
   EstimoteProximitySDK: 24cf3d6e621e5d50bd4bdd1c5413c34e3a67459a
   EstimoteSDK: 17d0778be064419dd905f41981f831052f4c19ee
   Mapbox-iOS-SDK: 699818d30e1ed4985d3efc6a06c40b90907c586d
+  UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
 
-PODFILE CHECKSUM: 36afc0eaca06b27d83b626c7505b09e63b05cca1
+PODFILE CHECKSUM: bfbb84bc90df938bdc632857d39fd0f2beeba6d7
 
 COCOAPODS: 1.3.1

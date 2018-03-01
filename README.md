@@ -2,8 +2,8 @@
 Development of native iOS application for Apphere
 
 ## Tony Todo
-
-* Fix notifications, force prompt for location
+* Show promotion view when notification tapped
+* Promotion view layout
 
 ### Transition
 * Slide tab bar out of way on present and slide back on dismiss, like app store

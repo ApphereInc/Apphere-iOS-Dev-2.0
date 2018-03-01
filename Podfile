@@ -6,6 +6,7 @@ target 'apphere' do
   pod 'Mapbox-iOS-SDK'
   pod 'EstimoteProximitySDK'
   pod 'EstimoteIndoorSDK'
+  pod 'UIColor_Hex_Swift'
 
   target 'apphereTests' do
     inherit! :search_paths

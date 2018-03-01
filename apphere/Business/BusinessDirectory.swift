@@ -11,9 +11,9 @@ import Foundation
 class BusinessDirectory {
     static var businesses: [Business] = [
         Business(
+            id: 1,
             name: "Santander Arena",
             photo: "san",
-            promotion: "free reading royals hat",
             activeCustomerCount: 598,
             dailyCustomerCount: 48,
             totalCustomerCount: 2020,
@@ -24,13 +24,22 @@ class BusinessDirectory {
             zip: "19602",
             phoneNumber: "(610) 898-7469",
             url: "https://www.santander-arena.com/",
-            textStyle: .light,
-            hasBeacon: false
+            contentStyle: .light,
+            hasBeacon: false,
+            promotion: Promotion(
+                name: "Free Reading Royals Hat",
+                headline: StyledText(text: "FREE READING ROYALS HAT TODAY ONLY", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "ticket sales and promotions are for entertainment purposes only. we are not sure what we want to say here so I will just keep typing as much as I feel like it.", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#8856ED",
+                logo: "sanlogo",
+                image: "san",
+                isImageFullSize: false
+            )
         ),
         Business(
+            id: 2,
             name: "Sweet Ride Ice Cream",
             photo: "sweet2",
-            promotion: "free small vanilla scoop",
             activeCustomerCount: 12,
             dailyCustomerCount: 48,
             totalCustomerCount: 2020,
@@ -41,13 +50,22 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
-            textStyle: .light,
-            hasBeacon: true
+            contentStyle: .light,
+            hasBeacon: true,
+            promotion: Promotion(
+                name: "free small vanilla scoop",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
+            )
         ),
         Business(
+            id: 3,
             name: "5th and Penn Street",
             photo: "5",
-            promotion: "learn about reading",
             activeCustomerCount: 125,
             dailyCustomerCount: 48,
             totalCustomerCount: 2020,
@@ -58,13 +76,22 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
-            textStyle: .light,
-            hasBeacon: false
+            contentStyle: .light,
+            hasBeacon: false,
+            promotion: Promotion(
+                name: "learn about reading",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
+            )
         ),
         Business(
+            id: 4,
             name: "Judy’s On Cherry",
             photo: "judy2",
-            promotion: "10% off $50 order",
             activeCustomerCount: 31,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -75,13 +102,22 @@ class BusinessDirectory {
             zip: "19602",
             phoneNumber: "(610) 374-8511",
             url: "http://judysoncherry.com/",
-            textStyle: .light,
-            hasBeacon: true
+            contentStyle: .light,
+            hasBeacon: true,
+            promotion: Promotion(
+                name: "10% off $50 order",
+                headline: StyledText(text: "10% OFF YOUR MEAL TODAY", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "while supplies last and purchased before 8PM with order. not redeemable on weekends or holidays. does not include extra nuts and whipped cream", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
+            )
         ),
         Business(
+            id: 5,
             name: "Winedown Cafe",
             photo: "wine1",
-            promotion: "free house cab sav",
             activeCustomerCount: 17,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -92,13 +128,22 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 373-4907",
             url: "http://winedowncafe.net/",
-            textStyle: .light,
-            hasBeacon: true
+            contentStyle: .light,
+            hasBeacon: true,
+            promotion: Promotion(
+                name: "free house cab sav",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
+            )
         ),
         Business(
+            id: 6,
             name: "West Reading Tavern",
             photo: "west2",
-            promotion: "free small pint of ale",
             activeCustomerCount: 28,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -109,13 +154,22 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 376-9232",
             url: "http://westreadingtavern.com/",
-            textStyle: .light,
-            hasBeacon: false
+            contentStyle: .light,
+            hasBeacon: false,
+            promotion: Promotion(
+                name: "free small pint of ale",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
+            )
         ),
         Business(
+            id: 7,
             name: "Muddy Creek Soap",
             photo: "soap2",
-            promotion: "Buy 2 get one free",
             activeCustomerCount: 5,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -126,13 +180,22 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 816-7474",
             url: "http://www.muddycreeksoapcompany.com/",
-            textStyle: .light,
-            hasBeacon: false
+            contentStyle: .light,
+            hasBeacon: false,
+            promotion: Promotion(
+                name: "Buy 2 get one free",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
+            )
         ),
         Business(
+            id: 8,
             name: "Goggle Works",
             photo: "g",
-            promotion: "free bumper sticker",
             activeCustomerCount: 36,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -143,13 +206,22 @@ class BusinessDirectory {
             zip: "19601",
             phoneNumber: "(610) 374-4600",
             url: "https://goggleworks.org",
-            textStyle: .light,
-            hasBeacon: false
+            contentStyle: .light,
+            hasBeacon: false,
+            promotion: Promotion(
+                name: "free bumper sticker",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
+            )
         ),
         Business(
-            name: "Bench   warmers Coffee",
+            id: 9,
+            name: "Benchwarmers Coffee",
             photo: "bench",
-            promotion: "free small cafe mocha",
             activeCustomerCount: 12,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -160,13 +232,22 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 374-2326",
             url: "https://www.benchwarmerscoffee.com/",
-            textStyle: .light,
-            hasBeacon: false
+            contentStyle: .light,
+            hasBeacon: false,
+            promotion: Promotion(
+                name: "free small cafe mocha",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
+            )
         ),
         Business(
+            id: 10,
             name: "Reading Public Museum",
             photo: "rpm3",
-            promotion: "10% off admission",
             activeCustomerCount: 42,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -177,13 +258,22 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 371-5850",
             url: "http://www.readingpublicmuseum.org/",
-            textStyle: .light,
-            hasBeacon: false
+            contentStyle: .light,
+            hasBeacon: true,
+            promotion: Promotion(
+                name: "10% off admission",
+                headline: StyledText(text: "Reading Public Museum Promo", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Reading Public Museum Footer", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "rpm",
+                isImageFullSize: false
+            )
         ),
         Business(
+            id: 11,
             name: "Lisa Tiger Century 21",
             photo: "lisa3",
-            promotion: "free home consultation",
             activeCustomerCount: 12,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -194,13 +284,22 @@ class BusinessDirectory {
             zip: "19606",
             phoneNumber: "(610) 207-6186",
             url: "https://www.lisatigerhomes.com/",
-            textStyle: .light,
-            hasBeacon: false
+            contentStyle: .light,
+            hasBeacon: false,
+            promotion: Promotion(
+                name: "free home consultation",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
+            )
         ),
         Business(
+            id: 12,
             name: "Tina’s Salon & Day Spa",
             photo: "hair",
-            promotion: "free coloring with perm",
             activeCustomerCount: 6,
             dailyCustomerCount: 62,
             totalCustomerCount: 4467,
@@ -211,8 +310,17 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(610) 374-5991",
             url: "http://gototinas.com/",
-            textStyle: .light,
-            hasBeacon: false
+            contentStyle: .light,
+            hasBeacon: false,
+            promotion: Promotion(
+                name: "free coloring with perm",
+                headline: StyledText(text: "Headline", isBold: true, color: "#FFFFFF"),
+                footer: StyledText(text: "Footer", isBold: false, color: "#FFFFFF"),
+                backgroundColor: "#000000",
+                logo: nil,
+                image: "sweet",
+                isImageFullSize: false
+            )
         )
     ]
 }
