@@ -39,7 +39,7 @@ class BusinessDirectory {
         Business(
             id: 13,
             name: "Triose, Inc.",
-            photo: "freight",
+            photo: "scrub",
             activeCustomerCount: 45,
             dailyCustomerCount: 27,
             totalCustomerCount: 432,
@@ -53,12 +53,12 @@ class BusinessDirectory {
             contentStyle: .light,
             hasBeacon: true,
             promotion: Promotion(
-                name: "Welcome Triose to Apphere",
-                headline: StyledText(text: "THANK YOU TRIOSE, CARL, IRA and GERRY", color: "#FFFFFF"),
-                footer: StyledText(text: "Derek and Tracy would like to thank you for your commitment to Apphere and we are excited to enter into an exciting new techology with you are partners in what we know is an amazing plaform.", color: "#FFFFFF"),
-                backgroundColor: "#FFFFFF",
-                logo: "tlogo",
-                image: "freight",
+                name: "We Welcome Triose to Apphere",
+                headline: StyledText(text: "We Welcome, CARL, IRA, and GERRY", color: "#FFFFFF"),
+                footer: StyledText(text: "Derek and Tracy would like to thank you for your commitment to Apphere and we are excited to build this exciting new techology with you. welcome partners into this amazing journey.", color: "#FFFFFF"),
+                backgroundColor: "#1c3f94",
+                logo: "tlogo2",
+                image: "ci",
                 isImageFullSize: false
             )
         ),
@@ -130,7 +130,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-8511",
             url: "http://judysoncherry.com/",
             contentStyle: .light,
-            hasBeacon: true,
+            hasBeacon: false,
             promotion: Promotion(
                 name: "10% off $50 order",
                 headline: StyledText(text: "10% OFF YOUR MEAL TODAY", color: "#FFFFFF"),
