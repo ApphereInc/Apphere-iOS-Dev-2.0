@@ -37,6 +37,33 @@ class BusinessDirectory {
             )
         ),
         Business(
+            id: 13,
+            name: "Triose, Inc.",
+            photo: "freight",
+            activeCustomerCount: 45,
+            dailyCustomerCount: 27,
+            totalCustomerCount: 432,
+            address1: "2001 State Hill Rd",
+            address2: "Suite 205",
+            city: "Reading",
+            state: "PA",
+            zip: "19610",
+            phoneNumber: "(866) 241-2268",
+            url: "https://www.triose.com/",
+            contentStyle: .light,
+            hasBeacon: true,
+            promotion: Promotion(
+                name: "Welcome Triose to Apphere",
+                headline: StyledText(text: "THANK YOU TRIOSE, CARL, IRA and GERRY", color: "#FFFFFF"),
+                footer: StyledText(text: "ticket sales and promotions are for entertainment purposes only. we are not sure what we want to say here so I will just keep typing as much as I feel like it.", color: "#FFFFFF"),
+                backgroundColor: "#FFFFFF",
+                logo: "tlogo",
+                image: "freight",
+                isImageFullSize: false
+            )
+        ),
+
+        Business(
             id: 2,
             name: "Sweet Ride Ice Cream",
             photo: "sweet2",
