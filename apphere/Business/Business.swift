@@ -13,7 +13,6 @@ typealias ImageName = String
 
 struct StyledText {
     var text: String
-    var isBold: Bool
     var color: ColorHex
 }
 

@@ -80,7 +80,6 @@ class PromotionViewController: UIViewController {
     private func configure(label: UILabel, styledText: StyledText, isUppercase: Bool) {
         label.text = isUppercase ? styledText.text.uppercased() : styledText.text
         label.textColor = UIColor(styledText.color)
-        label.font = styledText.isBold ? .boldSystemFont(ofSize: label.font.pointSize) : .systemFont(ofSize: label.font.pointSize)
     }
     
     private func configure(imageView: UIImageView, imageName: String, preserveAspectRatio: Bool, addShadow: Bool) {
