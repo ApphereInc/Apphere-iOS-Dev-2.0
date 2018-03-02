@@ -55,7 +55,7 @@ class BusinessDirectory {
             promotion: Promotion(
                 name: "free small vanilla scoop",
                 headline: StyledText(text: "enjoy one free ice cream sundae", color: "#FFFFFF"),
-                footer: StyledText(text: "while supplies las and purchased before 8PA with order. not redeemable on weekend or holidays. does not include extra cherry or whipped cream.", color: "#FFFFFF"),
+                footer: StyledText(text: "while supplies last and purchased before 8PA with order. not redeemable on weekend or holidays. does not include extra cherry or whipped cream.", color: "#FFFFFF"),
                 backgroundColor: "#ACD0E4",
                 logo: "sweetlogo",
                 image: "sweet2",
