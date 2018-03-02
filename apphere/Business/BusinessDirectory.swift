@@ -54,11 +54,11 @@ class BusinessDirectory {
             hasBeacon: true,
             promotion: Promotion(
                 name: "free small vanilla scoop",
-                headline: StyledText(text: "Headline", color: "#FFFFFF"),
-                footer: StyledText(text: "Footer", color: "#FFFFFF"),
-                backgroundColor: "#000000",
-                logo: nil,
-                image: "sweet",
+                headline: StyledText(text: "enjoy one free ice cream sundae", color: "#FFFFFF"),
+                footer: StyledText(text: "while supplies las and purchased before 8PA with order. not redeemable on weekend or holidays. does not include extra cherry or whipped cream.", color: "#FFFFFF"),
+                backgroundColor: "#ACD0E4",
+                logo: "sweetlogo",
+                image: "sweet2",
                 isImageFullSize: false
             )
         ),
