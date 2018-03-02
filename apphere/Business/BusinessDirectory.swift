@@ -55,7 +55,7 @@ class BusinessDirectory {
             promotion: Promotion(
                 name: "Welcome Triose to Apphere",
                 headline: StyledText(text: "THANK YOU TRIOSE, CARL, IRA and GERRY", color: "#FFFFFF"),
-                footer: StyledText(text: "ticket sales and promotions are for entertainment purposes only. we are not sure what we want to say here so I will just keep typing as much as I feel like it.", color: "#FFFFFF"),
+                footer: StyledText(text: "Derek and Tracy would like to thank you for your commitment to Apphere and we are excited to enter into an exciting new techology with you are partners in what we know is an amazing plaform.", color: "#FFFFFF"),
                 backgroundColor: "#FFFFFF",
                 logo: "tlogo",
                 image: "freight",
