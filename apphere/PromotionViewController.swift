@@ -10,6 +10,18 @@ import UIKit
 import UIColor_Hex_Swift
 
 class PromotionViewController: UIViewController {
+    let spaceBetweenHeadlineAndFooterWhenNoLogo: CGFloat    = 40.0
+    let spaceBetweenHeadlineAndImageWhenNoLogo: CGFloat     = 20.0
+    let imageBorderColor: UIColor                           = .white
+    let imageBorderWidth: CGFloat                           = 2.0
+    let imageShadowColor: UIColor                           = .black
+    let imageShadowOpacity: Float                           = 0.7
+    let imageShadowOffset                                   = CGSize(width: 2.0, height: 2.0)
+    let imageShadowBlur: CGFloat                            = 3.0
+    let logoShadowColor: UIColor                            = .black
+    let logoShadowOffset                                    = CGSize(width: 2.0, height: 2.0)
+    let logoShadowBlur: CGFloat                             = 3.0
+    
     var business: Business!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -32,11 +44,11 @@ class PromotionViewController: UIViewController {
             headlineTopConstraint.isActive = false
             imageTopConstraint.isActive = false
             imageBottomConstraint.isActive = false
-            headlineLabel.bottomAnchor.constraint(equalTo: footerLabel.topAnchor, constant: -40.0).isActive = true
+            headlineLabel.bottomAnchor.constraint(equalTo: footerLabel.topAnchor, constant: -spaceBetweenHeadlineAndFooterWhenNoLogo).isActive = true
             
             if !promotion.isImageFullSize {
                 imageView.topAnchor.constraint(equalTo: logoImageView.topAnchor).isActive = true
-                imageView.bottomAnchor.constraint(equalTo: headlineLabel.topAnchor, constant: -20.0).isActive = true
+                imageView.bottomAnchor.constraint(equalTo: headlineLabel.topAnchor, constant: -spaceBetweenHeadlineAndImageWhenNoLogo).isActive = true
             }
         }
         
@@ -52,10 +64,12 @@ class PromotionViewController: UIViewController {
             imageView.contentMode = .scaleAspectFill
             view.sendSubview(toBack: imageView)
         } else {
-            imageView.layer.borderWidth = 2.0
-            imageView.layer.borderColor = UIColor.white.cgColor
-            imageView.layer.shadowOpacity = 0.7
-            imageView.layer.shadowOffset = .init(width: 2.0, height: 2.0)
+            imageView.layer.borderWidth     = imageBorderWidth
+            imageView.layer.borderColor     = imageBorderColor.cgColor
+            imageView.layer.shadowColor     = imageShadowColor.cgColor
+            imageView.layer.shadowOpacity   = imageShadowOpacity
+            imageView.layer.shadowOffset    = imageShadowOffset
+            imageView.layer.shadowRadius    = imageShadowBlur
         }
     }
     
@@ -71,7 +85,7 @@ class PromotionViewController: UIViewController {
     
     private func configure(imageView: UIImageView, imageName: String, preserveAspectRatio: Bool, addShadow: Bool) {
         let image = UIImage(named: imageName)!
-        imageView.image = addShadow ? image.withShadow(blur: 3.0, offset: CGSize(width: 2.0, height: 2.0)) : image
+        imageView.image = addShadow ? image.withShadow(blur: logoShadowBlur, color: logoShadowColor, offset: logoShadowOffset) : image
         
         if preserveAspectRatio {
             let aspectRatioConstraint = NSLayoutConstraint(

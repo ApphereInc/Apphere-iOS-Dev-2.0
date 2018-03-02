@@ -11,7 +11,6 @@ Development of native iOS application for Apphere
 * Reduce transparency of Tab bar more...(great work!)
 
 ### Promotion
-* Spacing constants in promo
 * Find out if we can reduce detection delay
 
 ### Tony Notes to Derek
