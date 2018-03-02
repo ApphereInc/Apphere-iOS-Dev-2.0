@@ -11,9 +11,7 @@ Development of native iOS application for Apphere
 * Reduce transparency of Tab bar more...(great work!)
 
 ### Promotion
-* Show promotion view when notification tapped
 * Spacing constants in promo
-* Show attachment URL in Safari
 * Find out if we can reduce detection delay
 
 ### Tony Notes to Derek

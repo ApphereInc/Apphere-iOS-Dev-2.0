@@ -37,7 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: BeaconMonitorListener {
     
     func entered(zone: Zone, beacon: Beacon) {
-        let notification = Notification(identifier: "entered-\(zone.name)", title: "", message: "Open to see a special offer from \(zone.name)", userInfo: [zone.key: zone.value], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
+        let notification = Notification(
+            identifier: "entered-\(zone.name)",
+            title: "", message: "Open to see a special offer from \(zone.name)",
+            userInfo: beacon.payload,
+            fireTime: .timeInterval(1.0),
+            isRepeating: false,
+            category: nil
+        )
+        
         Notifications.add(notification: notification)
     }
     
@@ -78,10 +86,16 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     private func showPromotionView(for notification: UNNotification, animated: Bool) {
+        let userInfo = notification.request.content.userInfo as! [String: String]
+        
+        if let urlString = userInfo["url"], let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            return
+        }
+        
         let presentingViewController = rootViewController
         let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "promotion") as! PromotionViewController
         
-        let userInfo = notification.request.content.userInfo as! [String: String]
         let businessId = Int(userInfo["business_id"]!)
         
         guard let business = BusinessDirectory.businesses.first(where: { $0.id == businessId }) else {
@@ -96,7 +110,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 extension UIWindow {
     open override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            let notification = Notification(identifier: "test", title: "", message: "Testing", userInfo: ["business_id": "8"], fireTime: .timeInterval(3.0), isRepeating: false, category: nil)
+            let notification = Notification(identifier: "test", title: "", message: "Testing", userInfo: ["business_id": "1", "url": "http://example.com"], fireTime: .timeInterval(3.0), isRepeating: false, category: nil)
             Notifications.add(notification: notification)
         }
     }
