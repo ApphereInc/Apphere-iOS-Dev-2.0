@@ -21,18 +21,10 @@ struct Beacon {
 
 typealias Meters = Double
 
-struct Zone {
-    let name: String
-    let key: String
-    let value: String
-    let radius: Meters
-    let proximityUUID: String?
-}
-
 protocol BeaconMonitorListener {
-    func entered(zone: Zone, beacon: Beacon)
-    func exited(zone: Zone, beacon: Beacon)
-    func moved(zone: Zone, beacons: [Beacon])
+    func entered(business: Business, beacon: Beacon)
+    func exited(business: Business, beacon: Beacon)
+    func moved(business: Business, beacons: [Beacon])
     func beaconError(_ error: NSError)
 }
 
@@ -50,41 +42,37 @@ class BeaconMonitor {
         ESTAnalyticsManager.enableMonitoringAnalytics(true)
     }
     
-    func monitor(zones: [Zone]) {
-        let proximityZones = zones.map { zone -> EPXProximityZone in
+    func monitor(businesses: [Business], radius: Meters) {
+        let proximityZones = businesses.map { business -> EPXProximityZone in
             let proximityZone = EPXProximityZone(
-                range: EPXProximityRange.custom(desiredMeanTriggerDistance: zone.radius)!,
-                attachmentKey: zone.key,
-                attachmentValue: zone.value
+                range: EPXProximityRange.custom(desiredMeanTriggerDistance: radius)!,
+                attachmentKey: "business_id",
+                attachmentValue: String(business.id)
             )
             
             proximityZone.onEnterAction = { deviceAttachment in
-                self.listener?.entered(zone: zone, beacon: Beacon(deviceAttachment: deviceAttachment))
+                self.listener?.entered(business: business, beacon: Beacon(deviceAttachment: deviceAttachment))
             }
             
             proximityZone.onExitAction = { deviceAttachment in
-                self.listener?.exited(zone: zone, beacon: Beacon(deviceAttachment: deviceAttachment))
+                self.listener?.exited(business: business, beacon: Beacon(deviceAttachment: deviceAttachment))
             }
             
             proximityZone.onChangeAction = { deviceAttachments in
-                self.listener?.moved(zone: zone, beacons: deviceAttachments.map(Beacon.init))
+                self.listener?.moved(business: business, beacons: deviceAttachments.map(Beacon.init))
+            }
+            
+            if let proximityUUID = business.proximityUUID {
+                beaconManager.startRangingBeacons(in: CLBeaconRegion(
+                    proximityUUID: UUID(uuidString: proximityUUID)!,
+                    identifier: String(business.id)
+                ))
             }
             
             return proximityZone
         }
 
         observer.startObserving(proximityZones)
-        
-        for zone in zones {
-            guard let proximityUUID = zone.proximityUUID else {
-                continue
-            }
-
-            beaconManager.startRangingBeacons(in: CLBeaconRegion(
-                proximityUUID: UUID(uuidString: proximityUUID)!,
-                identifier: zone.name
-            ))
-        }
     }
     
     private lazy var observer = EPXProximityObserver(credentials: EPXCloudCredentials(appID: appId, appToken: appToken)) { error in

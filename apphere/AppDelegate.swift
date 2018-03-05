@@ -16,11 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Notifications.setUp()
         
-        let zones = BusinessDirectory.businesses.filter{ $0.hasBeacon }.map {
-            return Zone(name: $0.name, key: "business_id", value: String($0.id), radius: 1.0, proximityUUID: $0.proximityUUID)
-        }
-        
-        BeaconMonitor.shared.monitor(zones: zones)
+        let businessesWithBeacons = BusinessDirectory.businesses.filter{ $0.hasBeacon }
+        BeaconMonitor.shared.monitor(businesses: businessesWithBeacons, radius: 1.0)
         BeaconMonitor.shared.listener = self
         
         UNUserNotificationCenter.current().delegate = self
@@ -36,10 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: BeaconMonitorListener {
     
-    func entered(zone: Zone, beacon: Beacon) {
+    func entered(business: Business, beacon: Beacon) {
         let notification = Notification(
-            identifier: "entered-\(zone.name)",
-            title: "", message: "Open to see a special offer from \(zone.name)",
+            identifier: "entered-\(business.id)",
+            title: "", message: "Open to see a special offer from \(business.name)",
             userInfo: beacon.payload,
             fireTime: .timeInterval(1.0),
             isRepeating: false,
@@ -49,8 +46,8 @@ extension AppDelegate: BeaconMonitorListener {
         Notifications.add(notification: notification)
     }
     
-    func exited(zone: Zone, beacon: Beacon) {}
-    func moved(zone: Zone, beacons: [Beacon]) {}
+    func exited(business: Business, beacon: Beacon) {}
+    func moved(business: Business, beacons: [Beacon]) {}
     
     func beaconError(_ error: NSError) {
         let message: String
