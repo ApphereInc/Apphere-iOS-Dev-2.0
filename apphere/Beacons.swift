@@ -45,9 +45,9 @@ class BeaconMonitor {
     var listener: BeaconMonitorListener?
     
     init() {
-        ESTConfig.setupAppID(appID, andAppToken: appToken)
-        ESTConfig.enableRangingAnalytics(true)
-        ESTConfig.enableMonitoringAnalytics(true)
+        ESTConfig.setupAppID(appId, andAppToken: appToken)
+        ESTAnalyticsManager.enableRangingAnalytics(true)
+        ESTAnalyticsManager.enableMonitoringAnalytics(true)
     }
     
     func monitor(zones: [Zone]) {
