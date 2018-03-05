@@ -26,6 +26,7 @@ class BusinessDirectory {
             url: "https://www.santander-arena.com/",
             contentStyle: .light,
             hasBeacon: false,
+            proximityUUID: "41786AA2-86D6-F55A-0515-EACFD49E1378",
             promotion: Promotion(
                 name: "Free Reading Royals Hat",
                 headline: StyledText(text: "FREE READING ROYALS HAT TODAY ONLY", color: "#FFFFFF"),
@@ -52,6 +53,7 @@ class BusinessDirectory {
             url: "https://www.triose.com/",
             contentStyle: .light,
             hasBeacon: true,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "We Welcome Triose to Apphere",
                 headline: StyledText(text: "We Welcome, CARL, IRA, and GERRY", color: "#FFFFFF"),
@@ -79,6 +81,7 @@ class BusinessDirectory {
             url: "https://www.sweetrideicecream.com/",
             contentStyle: .light,
             hasBeacon: true,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "free small vanilla scoop",
                 headline: StyledText(text: "enjoy one free ice cream sundae", color: "#FFFFFF"),
@@ -105,6 +108,7 @@ class BusinessDirectory {
             url: "https://www.sweetrideicecream.com/",
             contentStyle: .light,
             hasBeacon: false,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "learn about reading",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -131,6 +135,7 @@ class BusinessDirectory {
             url: "http://judysoncherry.com/",
             contentStyle: .light,
             hasBeacon: false,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "10% off $50 order",
                 headline: StyledText(text: "10% OFF YOUR MEAL TODAY", color: "#FFFFFF"),
@@ -157,6 +162,7 @@ class BusinessDirectory {
             url: "http://winedowncafe.net/",
             contentStyle: .light,
             hasBeacon: true,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "free house cab sav",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -183,6 +189,7 @@ class BusinessDirectory {
             url: "http://westreadingtavern.com/",
             contentStyle: .light,
             hasBeacon: false,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "free small pint of ale",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -209,6 +216,7 @@ class BusinessDirectory {
             url: "http://www.muddycreeksoapcompany.com/",
             contentStyle: .light,
             hasBeacon: false,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "Buy 2 get one free",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -235,6 +243,7 @@ class BusinessDirectory {
             url: "https://goggleworks.org",
             contentStyle: .light,
             hasBeacon: false,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "free bumper sticker",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -261,6 +270,7 @@ class BusinessDirectory {
             url: "https://www.benchwarmerscoffee.com/",
             contentStyle: .light,
             hasBeacon: false,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "free small cafe mocha",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -287,6 +297,7 @@ class BusinessDirectory {
             url: "http://www.readingpublicmuseum.org/",
             contentStyle: .light,
             hasBeacon: true,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "10% off admission",
                 headline: StyledText(text: "Reading Public Museum Promo", color: "#FFFFFF"),
@@ -313,6 +324,7 @@ class BusinessDirectory {
             url: "https://www.lisatigerhomes.com/",
             contentStyle: .light,
             hasBeacon: false,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "free home consultation",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -339,6 +351,7 @@ class BusinessDirectory {
             url: "http://gototinas.com/",
             contentStyle: .light,
             hasBeacon: false,
+            proximityUUID: nil,
             promotion: Promotion(
                 name: "free coloring with perm",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),

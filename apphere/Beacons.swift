@@ -26,6 +26,7 @@ struct Zone {
     let key: String
     let value: String
     let radius: Meters
+    let proximityUUID: String?
 }
 
 protocol BeaconMonitorListener {
@@ -44,7 +45,9 @@ class BeaconMonitor {
     var listener: BeaconMonitorListener?
     
     init() {
-
+        ESTConfig.setupAppID(appID, andAppToken: appToken)
+        ESTConfig.enableRangingAnalytics(true)
+        ESTConfig.enableMonitoringAnalytics(true)
     }
     
     func monitor(zones: [Zone]) {
@@ -71,12 +74,26 @@ class BeaconMonitor {
         }
 
         observer.startObserving(proximityZones)
+        
+        for zone in zones {
+            guard let proximityUUID = zone.proximityUUID else {
+                continue
+            }
+
+            beaconManager.startRangingBeacons(in: CLBeaconRegion(
+                proximityUUID: UUID(uuidString: proximityUUID)!,
+                identifier: zone.name
+            ))
+        }
     }
     
-    private lazy var observer = EPXProximityObserver(credentials: credentials) { error in
+    private lazy var observer = EPXProximityObserver(credentials: EPXCloudCredentials(appID: appId, appToken: appToken)) { error in
         self.listener?.beaconError(error as NSError)
     }
     
-    private let credentials = EPXCloudCredentials(appID: "apphere-p0d", appToken: "09f32257eb15a6937ed7447b110825eb")
+    private let beaconManager = ESTBeaconManager()
+    
+    private let appId = "apphere-p0d"
+    private let appToken = "09f32257eb15a6937ed7447b110825eb"
 }
 
