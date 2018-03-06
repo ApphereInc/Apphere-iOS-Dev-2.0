@@ -28,15 +28,15 @@ protocol BeaconMonitorListener {
     func beaconError(_ error: NSError)
 }
 
-enum BeaconMonitorErrorCode: Int {
-    case noBeaconsForZone = 2 // EPXProximityObserverErrorNoAttachmentsMatchingZone
-}
-
-class BeaconMonitor {
+@objc class BeaconMonitor: NSObject, ESTBeaconManagerDelegate {
     static var shared = BeaconMonitor()
     var listener: BeaconMonitorListener?
     
-    init() {
+    override init() {
+        super.init()
+        ESTLogger.setConsoleLogLevel(ESTLogLevelVerbose)
+        beaconManager.delegate = self
+        beaconManager.requestAlwaysAuthorization()
         ESTConfig.setupAppID(appId, andAppToken: appToken)
         ESTAnalyticsManager.enableRangingAnalytics(true)
         ESTAnalyticsManager.enableMonitoringAnalytics(true)
@@ -74,6 +74,14 @@ class BeaconMonitor {
 
         observer.startObserving(proximityZones)
     }
+    
+    // MARK: Beacon Manager Delegate
+    
+    func beaconManager(_ manager: Any, monitoringDidFailFor region: CLBeaconRegion?, withError error: Error) {
+        self.listener?.beaconError(error as NSError)
+    }
+    
+    // MARK: Private
     
     private lazy var observer = EPXProximityObserver(credentials: EPXCloudCredentials(appID: appId, appToken: appToken)) { error in
         self.listener?.beaconError(error as NSError)

@@ -50,18 +50,9 @@ extension AppDelegate: BeaconMonitorListener {
     func moved(business: Business, beacons: [Beacon]) {}
     
     func beaconError(_ error: NSError) {
-        let message: String
-        
-        switch error.code {
-        case BeaconMonitorErrorCode.noBeaconsForZone.rawValue:
-            message = "At least one business that is enabled for proximity monitoring has no beacons assigned to it."
-        default:
-            message = error.localizedDescription
-        }
-        
         let alert = UIAlertController(
             title: "Beacon Error",
-            message: message,
+            message: error.localizedDescription,
             preferredStyle: .alert
         )
         
