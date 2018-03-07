@@ -4,8 +4,6 @@ target 'apphere' do
   use_frameworks!
 
   pod 'Mapbox-iOS-SDK'
-  pod 'EstimoteProximitySDK'
-  pod 'EstimoteIndoorSDK'
   pod 'UIColor_Hex_Swift'
   pod 'Firebase/Core'
 
