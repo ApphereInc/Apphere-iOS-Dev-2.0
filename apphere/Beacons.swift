@@ -37,9 +37,6 @@ protocol BeaconMonitorListener {
         ESTLogger.setConsoleLogLevel(ESTLogLevelVerbose)
         beaconManager.delegate = self
         beaconManager.requestAlwaysAuthorization()
-        ESTConfig.setupAppID(appId, andAppToken: appToken)
-        ESTAnalyticsManager.enableRangingAnalytics(true)
-        ESTAnalyticsManager.enableMonitoringAnalytics(true)
     }
     
     func monitor(businesses: [Business], radius: Meters) {
