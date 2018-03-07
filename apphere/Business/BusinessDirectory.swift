@@ -35,7 +35,6 @@ class BusinessDirectory {
             phoneNumber: "(610) 898-7469",
             url: "https://www.santander-arena.com/",
             contentStyle: .light,
-            hasBeacon: false,
             proximityUUID: "41786AA2-86D6-F55A-0515-EACFD49E1378",
             promotion: Promotion(
                 name: "Free Reading Royals Hat",
@@ -63,7 +62,6 @@ class BusinessDirectory {
             phoneNumber: "(866) 241-2268",
             url: "https://www.triose.com/",
             contentStyle: .light,
-            hasBeacon: true,
             proximityUUID: nil,
             promotion: Promotion(
                 name: "We Welcome Triose to Apphere",
@@ -92,7 +90,6 @@ class BusinessDirectory {
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
             contentStyle: .light,
-            hasBeacon: true,
             proximityUUID: nil,
             promotion: Promotion(
                 name: "free small vanilla scoop",
@@ -120,7 +117,6 @@ class BusinessDirectory {
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
             contentStyle: .light,
-            hasBeacon: false,
             proximityUUID: nil,
             promotion: Promotion(
                 name: "learn about reading",
@@ -148,8 +144,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-8511",
             url: "http://judysoncherry.com/",
             contentStyle: .light,
-            hasBeacon: false,
-            proximityUUID: nil,
+proximityUUID: nil,
             promotion: Promotion(
                 name: "10% off $50 order",
                 headline: StyledText(text: "10% OFF YOUR MEAL TODAY", color: "#FFFFFF"),
@@ -176,7 +171,6 @@ class BusinessDirectory {
             phoneNumber: "(610) 373-4907",
             url: "http://winedowncafe.net/",
             contentStyle: .light,
-            hasBeacon: true,
             proximityUUID: nil,
             promotion: Promotion(
                 name: "free house cab sav",
@@ -204,8 +198,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 376-9232",
             url: "http://westreadingtavern.com/",
             contentStyle: .light,
-            hasBeacon: false,
-            proximityUUID: nil,
+proximityUUID: nil,
             promotion: Promotion(
                 name: "free small pint of ale",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -232,8 +225,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 816-7474",
             url: "http://www.muddycreeksoapcompany.com/",
             contentStyle: .light,
-            hasBeacon: false,
-            proximityUUID: nil,
+proximityUUID: nil,
             promotion: Promotion(
                 name: "Buy 2 get one free",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -260,8 +252,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-4600",
             url: "https://goggleworks.org",
             contentStyle: .light,
-            hasBeacon: false,
-            proximityUUID: nil,
+proximityUUID: nil,
             promotion: Promotion(
                 name: "free bumper sticker",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -288,8 +279,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-2326",
             url: "https://www.benchwarmerscoffee.com/",
             contentStyle: .light,
-            hasBeacon: false,
-            proximityUUID: nil,
+proximityUUID: nil,
             promotion: Promotion(
                 name: "free small cafe mocha",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -316,7 +306,6 @@ class BusinessDirectory {
             phoneNumber: "(610) 371-5850",
             url: "http://www.readingpublicmuseum.org/",
             contentStyle: .light,
-            hasBeacon: true,
             proximityUUID: nil,
             promotion: Promotion(
                 name: "10% off admission",
@@ -344,8 +333,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 207-6186",
             url: "https://www.lisatigerhomes.com/",
             contentStyle: .light,
-            hasBeacon: false,
-            proximityUUID: nil,
+proximityUUID: nil,
             promotion: Promotion(
                 name: "free home consultation",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -372,7 +360,6 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-5991",
             url: "http://gototinas.com/",
             contentStyle: .light,
-            hasBeacon: false,
             proximityUUID: nil,
             promotion: Promotion(
                 name: "free coloring with perm",

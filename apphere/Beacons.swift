@@ -19,10 +19,10 @@ protocol BeaconMonitorListener {
     static var shared = BeaconMonitor()
     var listener: BeaconMonitorListener?
     
-    override init() {
-        super.init()
-        locationManager.delegate = self
-        locationManager.requestAlwaysAuthorization()
+    static func configure() {
+        shared.locationManager = CLLocationManager()
+        shared.locationManager.delegate = shared
+        shared.locationManager.requestAlwaysAuthorization()
     }
     
     func monitor(businesses: [Business]) {
@@ -55,13 +55,17 @@ protocol BeaconMonitorListener {
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        self.listener?.monitoringFailed(error: error as NSError)
+    }
+    
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
         self.listener?.monitoringFailed(error: error as NSError)
     }
     
     // MARK: Private
     
-    private let locationManager = CLLocationManager()
+    private var locationManager: CLLocationManager!
     private var regions = [CLBeaconRegion]()
     
     private func business(from region: CLRegion) -> Business? {

@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        BeaconMonitor.configure()
         Notifications.setUp()
         
-        let businessesWithBeacons = BusinessDirectory.businesses.filter{ $0.hasBeacon }
-        BeaconMonitor.shared.monitor(businesses: businessesWithBeacons)
+        BeaconMonitor.shared.monitor(businesses: BusinessDirectory.businesses)
         BeaconMonitor.shared.listener = self
         
         UNUserNotificationCenter.current().delegate = self
