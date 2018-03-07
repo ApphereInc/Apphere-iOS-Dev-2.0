@@ -7,6 +7,7 @@ target 'apphere' do
   pod 'EstimoteProximitySDK'
   pod 'EstimoteIndoorSDK'
   pod 'UIColor_Hex_Swift'
+  pod 'Firebase/Core'
 
   target 'apphereTests' do
     inherit! :search_paths
