@@ -9,6 +9,16 @@
 import Foundation
 
 class BusinessDirectory {
+    static func get(withUUID uuid: UUID) -> Business? {
+        return businesses.first { business in
+            if let uuidString = business.proximityUUID, let businessUUID = UUID(uuidString: uuidString) {
+                return uuid == businessUUID
+            }
+            
+            return false
+        }
+    }
+    
     static var businesses: [Business] = [
         Business(
             id: 1,
@@ -34,7 +44,8 @@ class BusinessDirectory {
                 backgroundColor: "#8856ED",
                 logo: "sanlogo",
                 image: "san",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -61,7 +72,8 @@ class BusinessDirectory {
                 backgroundColor: "#1c3f94",
                 logo: "tlogo2",
                 image: "ci",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
 
@@ -89,7 +101,8 @@ class BusinessDirectory {
                 backgroundColor: "#ACD0E4",
                 logo: "sweetlogo",
                 image: "sweet2",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -116,7 +129,8 @@ class BusinessDirectory {
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "sweet",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -143,7 +157,8 @@ class BusinessDirectory {
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "sweet",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -170,7 +185,8 @@ class BusinessDirectory {
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "sweet",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -197,7 +213,8 @@ class BusinessDirectory {
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "sweet",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -224,7 +241,8 @@ class BusinessDirectory {
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "sweet",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -251,7 +269,8 @@ class BusinessDirectory {
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "sweet",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -278,7 +297,8 @@ class BusinessDirectory {
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "sweet",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -305,7 +325,8 @@ class BusinessDirectory {
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "rpm",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -332,7 +353,8 @@ class BusinessDirectory {
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "sweet",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         ),
         Business(
@@ -359,7 +381,8 @@ class BusinessDirectory {
                 backgroundColor: "#000000",
                 logo: nil,
                 image: "sweet",
-                isImageFullSize: false
+                isImageFullSize: false,
+                url: nil
             )
         )
     ]

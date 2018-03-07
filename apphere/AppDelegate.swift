@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Notifications.setUp()
         
         let businessesWithBeacons = BusinessDirectory.businesses.filter{ $0.hasBeacon }
-        BeaconMonitor.shared.monitor(businesses: businessesWithBeacons, radius: 1.0)
+        BeaconMonitor.shared.monitor(businesses: businessesWithBeacons)
         BeaconMonitor.shared.listener = self
         
         UNUserNotificationCenter.current().delegate = self
@@ -34,12 +34,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: BeaconMonitorListener {
-    
-    func entered(business: Business, beacon: Beacon) {
+    func entered(business: Business) {
+        var userInfo = [String: String]()
+        
+        userInfo["business_id"] = String(business.id)
+        
+        if let url = business.promotion.url {
+            userInfo["url"] = url
+        }
+        
         let notification = Notification(
             identifier: "entered-\(business.id)",
             title: "", message: "Open to see a special offer from \(business.name)",
-            userInfo: beacon.payload,
+            userInfo: userInfo,
             fireTime: .timeInterval(1.0),
             isRepeating: false,
             category: nil
@@ -48,10 +55,9 @@ extension AppDelegate: BeaconMonitorListener {
         Notifications.add(notification: notification)
     }
     
-    func exited(business: Business, beacon: Beacon) {}
-    func moved(business: Business, beacons: [Beacon]) {}
+    func exited(business: Business) {}
     
-    func beaconError(_ error: NSError) {
+    func monitoringFailed(error: NSError) {
         let alert = UIAlertController(
             title: "Beacon Error",
             message: error.localizedDescription,

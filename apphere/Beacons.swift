@@ -7,86 +7,69 @@
 //
 
 import Foundation
-import EstimoteProximitySDK
-
-struct Beacon {
-    init(deviceAttachment: EPXDeviceAttachment) {
-        id = deviceAttachment.deviceIdentifier
-        payload = deviceAttachment.payload as! [String: String]
-    }
-    
-    var id: String
-    var payload: [String: String]
-}
-
-typealias Meters = Double
+import CoreLocation
 
 protocol BeaconMonitorListener {
-    func entered(business: Business, beacon: Beacon)
-    func exited(business: Business, beacon: Beacon)
-    func moved(business: Business, beacons: [Beacon])
-    func beaconError(_ error: NSError)
+    func entered(business: Business)
+    func exited(business: Business)
+    func monitoringFailed(error: NSError)
 }
 
-@objc class BeaconMonitor: NSObject, ESTBeaconManagerDelegate {
+@objc class BeaconMonitor: NSObject, CLLocationManagerDelegate {
     static var shared = BeaconMonitor()
     var listener: BeaconMonitorListener?
     
     override init() {
         super.init()
-        ESTLogger.setConsoleLogLevel(ESTLogLevelVerbose)
-        beaconManager.delegate = self
-        beaconManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
     }
     
-    func monitor(businesses: [Business], radius: Meters) {
-        let proximityZones = businesses.map { business -> EPXProximityZone in
-            let proximityZone = EPXProximityZone(
-                range: EPXProximityRange.custom(desiredMeanTriggerDistance: radius)!,
-                attachmentKey: "business_id",
-                attachmentValue: String(business.id)
+    func monitor(businesses: [Business]) {
+        regions = businesses.flatMap { business -> CLBeaconRegion? in
+            guard let proximityUUID = business.proximityUUID else {
+                return nil
+            }
+            
+            let region = CLBeaconRegion(
+                proximityUUID: UUID(uuidString: proximityUUID)!,
+                identifier: String(business.id)
             )
             
-            proximityZone.onEnterAction = { deviceAttachment in
-                self.listener?.entered(business: business, beacon: Beacon(deviceAttachment: deviceAttachment))
-            }
-            
-            proximityZone.onExitAction = { deviceAttachment in
-                self.listener?.exited(business: business, beacon: Beacon(deviceAttachment: deviceAttachment))
-            }
-            
-            proximityZone.onChangeAction = { deviceAttachments in
-                self.listener?.moved(business: business, beacons: deviceAttachments.map(Beacon.init))
-            }
-            
-            if let proximityUUID = business.proximityUUID {
-                beaconManager.startRangingBeacons(in: CLBeaconRegion(
-                    proximityUUID: UUID(uuidString: proximityUUID)!,
-                    identifier: String(business.id)
-                ))
-            }
-            
-            return proximityZone
+            locationManager.startMonitoring(for: region)
+            return region
         }
-
-        observer.startObserving(proximityZones)
     }
     
-    // MARK: Beacon Manager Delegate
+    // MARK: Location Manager Delegate
     
-    func beaconManager(_ manager: Any, monitoringDidFailFor region: CLBeaconRegion?, withError error: Error) {
-        self.listener?.beaconError(error as NSError)
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        if let business = self.business(from: region) {
+            self.listener?.entered(business: business)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        if let business = self.business(from: region) {
+            self.listener?.exited(business: business)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
+        self.listener?.monitoringFailed(error: error as NSError)
     }
     
     // MARK: Private
     
-    private lazy var observer = EPXProximityObserver(credentials: EPXCloudCredentials(appID: appId, appToken: appToken)) { error in
-        self.listener?.beaconError(error as NSError)
+    private let locationManager = CLLocationManager()
+    private var regions = [CLBeaconRegion]()
+    
+    private func business(from region: CLRegion) -> Business? {
+        if let region = region as? CLBeaconRegion, let business = BusinessDirectory.get(withUUID: region.proximityUUID) {
+            return business
+        }
+        
+        return nil
     }
-    
-    private let beaconManager = ESTBeaconManager()
-    
-    private let appId = "apphere-p0d"
-    private let appToken = "09f32257eb15a6937ed7447b110825eb"
 }
 

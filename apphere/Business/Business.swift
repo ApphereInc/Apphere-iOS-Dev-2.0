@@ -24,6 +24,7 @@ struct Promotion {
     var logo: ImageName?
     var image: ImageName
     var isImageFullSize: Bool
+    var url: String?
 }
 
 struct Business {
