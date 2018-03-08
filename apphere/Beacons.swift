@@ -19,40 +19,78 @@ protocol BeaconMonitorListener {
     static var shared = BeaconMonitor()
     var listener: BeaconMonitorListener?
     
-    static func configure() {
-        shared.locationManager = CLLocationManager()
-        shared.locationManager.delegate = shared
-        shared.locationManager.requestAlwaysAuthorization()
-    }
-    
-    func monitor(businesses: [Business]) {
-        regions = businesses.flatMap { business -> CLBeaconRegion? in
-            guard let proximityUUID = business.proximityUUID else {
-                return nil
-            }
-            
-            let region = CLBeaconRegion(
-                proximityUUID: UUID(uuidString: proximityUUID)!,
-                identifier: String(business.id)
-            )
-            
-            locationManager.startMonitoring(for: region)
-            return region
-        }
+    func configure() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        
+        beaconRegion = CLBeaconRegion(
+            proximityUUID: proximityUUID,
+            identifier: "apphere"
+        )
+        
+        print("Start monitoring")
+        locationManager.startMonitoring(for: beaconRegion)
     }
     
     // MARK: Location Manager Delegate
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        if let business = self.business(from: region) {
-            self.listener?.entered(business: business)
+        print(#function)
+        
+        guard region.identifier == beaconRegion.identifier else {
+            print("Not our region")
+            return
+        }
+        
+        guard CLLocationManager.isRangingAvailable() else {
+            print("Ranging not available")
+            return
+        }
+        
+        print("Start ranging")
+        
+        if !isRanging {
+            manager.startRangingBeacons(in: beaconRegion)
+            isRanging = true
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        if let business = self.business(from: region) {
-            self.listener?.exited(business: business)
+        print(#function)
+        
+        guard region.identifier == beaconRegion.identifier else {
+            print("Not our region")
+            return
         }
+        
+        print("Stop ranging")
+        
+        if isRanging {
+            manager.stopRangingBeacons(in: beaconRegion)
+            isRanging = false
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+        print(#function)
+        
+        guard region.identifier == beaconRegion.identifier else {
+            print("Not our region")
+            return
+        }
+        
+        if let nearestBeacon = beacons.first, nearestBeacon.proximity != .far {
+            print("Found nearby beacon")
+            activeBeacon = nearestBeacon
+        } else {
+            print("No nearby beacons")
+            activeBeacon = nil
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, rangingBeaconsDidFailFor region: CLBeaconRegion, withError error: Error) {
+        self.listener?.monitoringFailed(error: error as NSError)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -63,17 +101,77 @@ protocol BeaconMonitorListener {
         self.listener?.monitoringFailed(error: error as NSError)
     }
     
+    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
+        print(#function)
+        
+        guard region.identifier == beaconRegion.identifier else {
+            print("Not our region")
+            return
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        print(#function)
+        
+        guard region.identifier == beaconRegion.identifier else {
+            print("Not our region")
+            return
+        }
+        
+        print(state.rawValue == 1 ? "inside" : "outside")
+        
+        switch state {
+        case .inside:
+            if !isRanging {
+                manager.startRangingBeacons(in: beaconRegion)
+                isRanging = true
+            }
+        default:
+            if isRanging {
+                manager.stopRangingBeacons(in: beaconRegion)
+                isRanging = false
+            }
+        }
+    }
+    
     // MARK: Private
     
     private var locationManager: CLLocationManager!
-    private var regions = [CLBeaconRegion]()
     
-    private func business(from region: CLRegion) -> Business? {
-        if let region = region as? CLBeaconRegion, let business = BusinessDirectory.get(withUUID: region.proximityUUID) {
+    private var beaconRegion: CLBeaconRegion!
+    private var isRanging = false
+    
+    private var activeBeacon: CLBeacon? {
+        didSet {
+            if activeBeacon?.major == oldValue?.major {
+                return
+            }
+            
+            if let oldActiveBeacon = oldValue, let oldActiveBusiness = business(from: oldActiveBeacon) {
+                print("exited")
+                listener?.exited(business: oldActiveBusiness)
+            }
+            
+            if let activeBeacon = self.activeBeacon, let activeBusiness = business(from: activeBeacon) {
+                print("entered")
+                listener?.entered(business: activeBusiness)
+            }
+        }
+    }
+    
+    private func business(from beacon: CLBeacon) -> Business? {
+        print(#function, beacon.major)
+        
+        if let business = BusinessDirectory.get(withID: beacon.major) {
+            print(business.name)
             return business
         }
         
+        print("Not found")
         return nil
     }
+    
+    private let proximityUUID = UUID(uuidString: "41786AA2-86D6-F55A-0515-EACFD49E1378")!
 }
+
 

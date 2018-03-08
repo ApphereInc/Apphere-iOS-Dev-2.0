@@ -16,11 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        BeaconMonitor.configure()
-        Notifications.setUp()
-        
-        BeaconMonitor.shared.monitor(businesses: BusinessDirectory.businesses)
+        BeaconMonitor.shared.configure()
         BeaconMonitor.shared.listener = self
+        Notifications.setUp()
         
         UNUserNotificationCenter.current().delegate = self
         
@@ -35,6 +33,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: BeaconMonitorListener {
     func entered(business: Business) {
+        DispatchQueue.main.async {
+            self.notify(with: business)
+        }
+    }
+    
+    func exited(business: Business) {}
+    
+    func monitoringFailed(error: NSError) {
+        DispatchQueue.main.async {
+            self.showError(error)
+        }
+    }
+    
+    private func notify(with business: Business) {
         var userInfo = [String: String]()
         
         userInfo["business_id"] = String(business.id)
@@ -55,9 +67,7 @@ extension AppDelegate: BeaconMonitorListener {
         Notifications.add(notification: notification)
     }
     
-    func exited(business: Business) {}
-    
-    func monitoringFailed(error: NSError) {
+    private func showError(_ error: NSError) {
         let alert = UIAlertController(
             title: "Beacon Error",
             message: error.localizedDescription,

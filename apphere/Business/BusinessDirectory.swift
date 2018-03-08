@@ -9,14 +9,12 @@
 import Foundation
 
 class BusinessDirectory {
-    static func get(withUUID uuid: UUID) -> Business? {
-        return businesses.first { business in
-            if let uuidString = business.proximityUUID, let businessUUID = UUID(uuidString: uuidString) {
-                return uuid == businessUUID
-            }
-            
-            return false
-        }
+    static func get(withID id: NSNumber) -> Business? {
+        return get(withID: id.intValue)
+    }
+    
+    static func get(withID id: Int) -> Business? {
+        return businesses.first { $0.id == id }
     }
     
     static var businesses: [Business] = [
@@ -35,7 +33,6 @@ class BusinessDirectory {
             phoneNumber: "(610) 898-7469",
             url: "https://www.santander-arena.com/",
             contentStyle: .light,
-            proximityUUID: "41786AA2-86D6-F55A-0515-EACFD49E1378",
             promotion: Promotion(
                 name: "Free Reading Royals Hat",
                 headline: StyledText(text: "FREE READING ROYALS HAT TODAY ONLY", color: "#FFFFFF"),
@@ -62,7 +59,6 @@ class BusinessDirectory {
             phoneNumber: "(866) 241-2268",
             url: "https://www.triose.com/",
             contentStyle: .light,
-            proximityUUID: nil,
             promotion: Promotion(
                 name: "We Welcome Triose to Apphere",
                 headline: StyledText(text: "We Welcome, CARL, IRA, and GERRY", color: "#FFFFFF"),
@@ -90,7 +86,6 @@ class BusinessDirectory {
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
             contentStyle: .light,
-            proximityUUID: nil,
             promotion: Promotion(
                 name: "free small vanilla scoop",
                 headline: StyledText(text: "enjoy one free ice cream sundae", color: "#FFFFFF"),
@@ -117,7 +112,6 @@ class BusinessDirectory {
             phoneNumber: "(484) 987-7338",
             url: "https://www.sweetrideicecream.com/",
             contentStyle: .light,
-            proximityUUID: nil,
             promotion: Promotion(
                 name: "learn about reading",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -144,8 +138,7 @@ class BusinessDirectory {
             phoneNumber: "(610) 374-8511",
             url: "http://judysoncherry.com/",
             contentStyle: .light,
-proximityUUID: nil,
-            promotion: Promotion(
+promotion: Promotion(
                 name: "10% off $50 order",
                 headline: StyledText(text: "10% OFF YOUR MEAL TODAY", color: "#FFFFFF"),
                 footer: StyledText(text: "while supplies last and purchased before 8PM with order. not redeemable on weekends or holidays. does not include extra nuts and whipped cream", color: "#FFFFFF"),
@@ -171,7 +164,6 @@ proximityUUID: nil,
             phoneNumber: "(610) 373-4907",
             url: "http://winedowncafe.net/",
             contentStyle: .light,
-            proximityUUID: nil,
             promotion: Promotion(
                 name: "free house cab sav",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -198,8 +190,7 @@ proximityUUID: nil,
             phoneNumber: "(610) 376-9232",
             url: "http://westreadingtavern.com/",
             contentStyle: .light,
-proximityUUID: nil,
-            promotion: Promotion(
+promotion: Promotion(
                 name: "free small pint of ale",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -225,8 +216,7 @@ proximityUUID: nil,
             phoneNumber: "(610) 816-7474",
             url: "http://www.muddycreeksoapcompany.com/",
             contentStyle: .light,
-proximityUUID: nil,
-            promotion: Promotion(
+promotion: Promotion(
                 name: "Buy 2 get one free",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -252,8 +242,7 @@ proximityUUID: nil,
             phoneNumber: "(610) 374-4600",
             url: "https://goggleworks.org",
             contentStyle: .light,
-proximityUUID: nil,
-            promotion: Promotion(
+promotion: Promotion(
                 name: "free bumper sticker",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -279,8 +268,7 @@ proximityUUID: nil,
             phoneNumber: "(610) 374-2326",
             url: "https://www.benchwarmerscoffee.com/",
             contentStyle: .light,
-proximityUUID: nil,
-            promotion: Promotion(
+promotion: Promotion(
                 name: "free small cafe mocha",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -306,7 +294,6 @@ proximityUUID: nil,
             phoneNumber: "(610) 371-5850",
             url: "http://www.readingpublicmuseum.org/",
             contentStyle: .light,
-            proximityUUID: nil,
             promotion: Promotion(
                 name: "10% off admission",
                 headline: StyledText(text: "Reading Public Museum Promo", color: "#FFFFFF"),
@@ -333,8 +320,7 @@ proximityUUID: nil,
             phoneNumber: "(610) 207-6186",
             url: "https://www.lisatigerhomes.com/",
             contentStyle: .light,
-proximityUUID: nil,
-            promotion: Promotion(
+promotion: Promotion(
                 name: "free home consultation",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -360,7 +346,6 @@ proximityUUID: nil,
             phoneNumber: "(610) 374-5991",
             url: "http://gototinas.com/",
             contentStyle: .light,
-            proximityUUID: nil,
             promotion: Promotion(
                 name: "free coloring with perm",
                 headline: StyledText(text: "Headline", color: "#FFFFFF"),

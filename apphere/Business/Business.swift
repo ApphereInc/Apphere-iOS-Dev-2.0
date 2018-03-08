@@ -46,7 +46,6 @@ struct Business {
     let phoneNumber: String?
     let url: String?
     let contentStyle: ContentStyle
-    let proximityUUID: String?
     let promotion: Promotion
     
     var cityStateZip: String {
