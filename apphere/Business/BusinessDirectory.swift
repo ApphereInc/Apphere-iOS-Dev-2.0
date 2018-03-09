@@ -114,7 +114,7 @@ class BusinessDirectory {
             contentStyle: .light,
             promotion: Promotion(
                 name: "learn about reading",
-                headline: StyledText(text: "Headline", color: "#FFFFFF"),
+                headline: StyledText(text: "5th and Penn Street", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,

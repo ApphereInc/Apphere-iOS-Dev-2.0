@@ -31,61 +31,77 @@ protocol BeaconMonitorListener {
         
         print("Start monitoring")
         locationManager.startMonitoring(for: beaconRegion)
+        locationManager.requestState(for: beaconRegion)
     }
     
     // MARK: Location Manager Delegate
-    
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        print(#function)
-        
-        guard region.identifier == beaconRegion.identifier else {
-            print("Not our region")
-            return
-        }
-        
-        guard CLLocationManager.isRangingAvailable() else {
-            print("Ranging not available")
-            return
-        }
-        
-        print("Start ranging")
-        
-        if !isRanging {
-            manager.startRangingBeacons(in: beaconRegion)
-            isRanging = true
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        print(#function)
-        
-        guard region.identifier == beaconRegion.identifier else {
-            print("Not our region")
-            return
-        }
-        
-        print("Stop ranging")
-        
-        if isRanging {
-            manager.stopRangingBeacons(in: beaconRegion)
-            isRanging = false
-        }
-    }
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         print(#function)
         
         guard region.identifier == beaconRegion.identifier else {
-            print("Not our region")
             return
         }
         
-        if let nearestBeacon = beacons.first, nearestBeacon.proximity != .far {
-            print("Found nearby beacon")
-            activeBeacon = nearestBeacon
+        for beacon in beacons {
+            let proximityString: String
+            
+            switch beacon.proximity {
+            case .immediate:
+                proximityString = "immediate"
+            case .near:
+                proximityString = "near"
+            case .far:
+                proximityString = "far"
+            case .unknown:
+                proximityString = "unknown"
+            }
+            
+            print("Beacon major=", beacon.major.intValue, " accuracy=", beacon.accuracy, " proximity=", proximityString)
+        }
+        
+        if let nearestBeacon = beacons.first {
+            print("Nearest beacon, major = \(nearestBeacon.major.intValue)")
+            
+            switch nearestBeacon.proximity {
+            case .immediate, .near:
+                print("Beacon is near or immediate, major = \(nearestBeacon.major.intValue)")
+                activeBeacon = nearestBeacon
+            case .far:
+                print("Beacon is far, major = \(nearestBeacon.major.intValue)")
+                activeBeacon = nil
+            case .unknown:
+                print("Beacon proximity is unknown, major = \(nearestBeacon.major.intValue)")
+            }
         } else {
-            print("No nearby beacons")
+            print("No beacons nearby")
             activeBeacon = nil
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        print(#function)
+        
+        guard region.identifier == beaconRegion.identifier else {
+            return
+        }
+        
+        if state == .inside {
+            print("Moved inside of region")
+            
+            if !isRanging {
+                print("Start ranging")
+                manager.startRangingBeacons(in: beaconRegion)
+                isRanging = true
+            }
+        } else {
+            print("Moved outside of region")
+            
+            if isRanging {
+                print("Stop ranging")
+                manager.stopRangingBeacons(in: beaconRegion)
+                isRanging = false
+            }
         }
     }
     
@@ -99,39 +115,6 @@ protocol BeaconMonitorListener {
     
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
         self.listener?.monitoringFailed(error: error as NSError)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-        print(#function)
-        
-        guard region.identifier == beaconRegion.identifier else {
-            print("Not our region")
-            return
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
-        print(#function)
-        
-        guard region.identifier == beaconRegion.identifier else {
-            print("Not our region")
-            return
-        }
-        
-        print(state.rawValue == 1 ? "inside" : "outside")
-        
-        switch state {
-        case .inside:
-            if !isRanging {
-                manager.startRangingBeacons(in: beaconRegion)
-                isRanging = true
-            }
-        default:
-            if isRanging {
-                manager.stopRangingBeacons(in: beaconRegion)
-                isRanging = false
-            }
-        }
     }
     
     // MARK: Private
@@ -148,26 +131,23 @@ protocol BeaconMonitorListener {
             }
             
             if let oldActiveBeacon = oldValue, let oldActiveBusiness = business(from: oldActiveBeacon) {
-                print("exited")
+                print("Exited \(oldActiveBusiness.name), major = \(oldActiveBeacon.major.intValue)")
                 listener?.exited(business: oldActiveBusiness)
             }
             
             if let activeBeacon = self.activeBeacon, let activeBusiness = business(from: activeBeacon) {
-                print("entered")
+                print("Entered \(activeBusiness.name), major = \(activeBeacon.major.intValue)")
                 listener?.entered(business: activeBusiness)
             }
         }
     }
     
     private func business(from beacon: CLBeacon) -> Business? {
-        print(#function, beacon.major)
-        
         if let business = BusinessDirectory.get(withID: beacon.major) {
-            print(business.name)
             return business
         }
         
-        print("Not found")
+        print("Business not found for major = \(beacon.major)")
         return nil
     }
     

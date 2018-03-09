@@ -100,6 +100,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
         
         let presentingViewController = rootViewController
+        
+        if presentingViewController.presentedViewController != nil {
+            return
+        }
+        
         let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "promotion") as! PromotionViewController
         
         guard let businessIdString = userInfo["business_id"],
