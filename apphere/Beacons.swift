@@ -22,12 +22,15 @@ protocol BeaconMonitorListener {
     func configure() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
+        locationManager.allowsBackgroundLocationUpdates = true
         locationManager.requestAlwaysAuthorization()
         
         beaconRegion = CLBeaconRegion(
             proximityUUID: proximityUUID,
             identifier: "apphere"
         )
+        
+        beaconRegion.notifyEntryStateOnDisplay = true
         
         print("Start monitoring")
         locationManager.startMonitoring(for: beaconRegion)
