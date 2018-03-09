@@ -30,8 +30,6 @@ protocol BeaconMonitorListener {
             identifier: "apphere"
         )
         
-        beaconRegion.notifyEntryStateOnDisplay = true
-        
         print("Start monitoring")
         locationManager.startMonitoring(for: beaconRegion)
         locationManager.requestState(for: beaconRegion)
