@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F5E9F13F4775A144B0EE51A /* Pods_apphereTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD1BECA63D0FD0D4BBBEC00 /* Pods_apphereTests.framework */; };
+		244E397E2055E0FF00829D79 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E397D2055E0FF00829D79 /* ThirdViewController.swift */; };
 		2C05C7151FDBDF5700D1DBE9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C05C7141FDBDF5700D1DBE9 /* SecondViewController.swift */; };
 		2C3A13CC1FE5BBF60041410C /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A13CB1FE5BBF60041410C /* BusinessListViewController.swift */; };
 		2C543CC2203ACF8E00600EDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C543CC1203ACF8E00600EDC /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		1FD1BECA63D0FD0D4BBBEC00 /* Pods_apphereTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apphereTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		244E397D2055E0FF00829D79 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		2C05C7141FDBDF5700D1DBE9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2C3A13CB1FE5BBF60041410C /* BusinessListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListViewController.swift; sourceTree = "<group>"; };
 		2C543CC1203ACF8E00600EDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				EA22D012202DE820006C2861 /* Business */,
 				2CD1B8501FD3C4F200179D26 /* FirstViewController.swift */,
+				244E397D2055E0FF00829D79 /* ThirdViewController.swift */,
 				2C05C7141FDBDF5700D1DBE9 /* SecondViewController.swift */,
 				2CC8CBA91FE7DA1500A0D598 /* MapViewController.swift */,
 				EAB244DC2040AAA800FF29F1 /* Beacons.swift */,
@@ -594,6 +597,7 @@
 				2CD1B84F1FD3C4F200179D26 /* AppDelegate.swift in Sources */,
 				EA22D016202E1339006C2861 /* PresentBusinessViewAnimationController.swift in Sources */,
 				EA22D015202E1339006C2861 /* DismissBusinessViewAnimationController.swift in Sources */,
+				244E397E2055E0FF00829D79 /* ThirdViewController.swift in Sources */,
 				EA6C603D2038D571005EA190 /* CloseButton.swift in Sources */,
 				EAB244DD2040AAA800FF29F1 /* Beacons.swift in Sources */,
 				2CC8CBAA1FE7DA1500A0D598 /* MapViewController.swift in Sources */,
