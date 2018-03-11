@@ -22,7 +22,6 @@ protocol BeaconMonitorListener {
     func configure() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        locationManager.allowsBackgroundLocationUpdates = true
         locationManager.requestAlwaysAuthorization()
         
         beaconRegion = CLBeaconRegion(
