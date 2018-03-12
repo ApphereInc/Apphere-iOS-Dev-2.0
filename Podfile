@@ -7,6 +7,7 @@ target 'apphere' do
   pod 'UIColor_Hex_Swift'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'CodableFirebase'
 
   target 'apphereTests' do
     inherit! :search_paths
