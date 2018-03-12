@@ -55,7 +55,9 @@ class Database {
             case .enter:
                 business.activeCustomerCount += 1
             case .exit:
-                business.activeCustomerCount -= 1
+                if business.activeCustomerCount > 0 {
+                    business.activeCustomerCount -= 1
+                }
             }
             
             let newBusinessData = try! FirestoreEncoder().encode(business)
