@@ -16,10 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        BeaconMonitor.shared.configure()
-        BeaconMonitor.shared.listener = self
-        Notifications.setUp()
         
+        #if !IOS_SIMULATOR
+            BeaconMonitor.shared.configure()
+            BeaconMonitor.shared.listener = self
+        #endif
+        
+        Notifications.setUp()
         UNUserNotificationCenter.current().delegate = self
         
         return true
@@ -36,13 +39,27 @@ extension AppDelegate: BeaconMonitorListener {
         DispatchQueue.main.async {
             self.notify(with: business)
         }
+        
+        addEventToDatabase(for: business, ofType: .enter)
     }
     
-    func exited(business: Business) {}
+    func exited(business: Business) {
+        addEventToDatabase(for: business, ofType: .exit)
+    }
     
     func monitoringFailed(error: NSError) {
         DispatchQueue.main.async {
             self.showError(error)
+        }
+    }
+    
+    private func addEventToDatabase(for business: Business, ofType type: Database.Event.EventType) {
+        let event = Database.Event(type: type, date: Date(), businessId: String(business.id))
+        
+        Database.shared.add(event: event) { _, error in
+            if let error = error {
+                self.showError(error as NSError)
+            }
         }
     }
     
@@ -69,7 +86,7 @@ extension AppDelegate: BeaconMonitorListener {
     
     private func showError(_ error: NSError) {
         let alert = UIAlertController(
-            title: "Beacon Error",
+            title: "Error",
             message: error.localizedDescription,
             preferredStyle: .alert
         )
@@ -122,8 +139,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 extension UIWindow {
     open override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            let notification = Notification(identifier: "test", title: "", message: "Testing", userInfo: ["business_id": "1"], fireTime: .timeInterval(1.0), isRepeating: false, category: nil)
-            Notifications.add(notification: notification)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let business = BusinessDirectory.businesses.first!
+            
+            appDelegate.entered(business: business)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+                appDelegate.exited(business: business)
+            }
         }
     }
 }

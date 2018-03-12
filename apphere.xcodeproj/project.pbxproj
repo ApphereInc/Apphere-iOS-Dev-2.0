@@ -828,6 +828,7 @@
 					"$(PROJECT_DIR)/apphere",
 				);
 				NEW_SETTING = "";
+				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "-D IOS_SIMULATOR";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apphereinc.mvp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;

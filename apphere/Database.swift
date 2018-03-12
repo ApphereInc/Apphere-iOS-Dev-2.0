@@ -37,18 +37,17 @@ class Database {
             let businessDocument = self.db.collection("businesses").document(event.businessId)
             let businessSnapshot: DocumentSnapshot
             
-            do {
-                try businessSnapshot = transaction.getDocument(businessDocument)
-            } catch let fetchError as NSError {
-                errorPointer?.pointee = fetchError
-                return nil
-            }
-            
             var business: Business
             
-            if let oldBusinessData = businessSnapshot.data() {
-                business = try! FirestoreDecoder().decode(Business.self, from: oldBusinessData)
-            } else {
+            do {
+                try businessSnapshot = transaction.getDocument(businessDocument)
+                
+                if let oldBusinessData = businessSnapshot.data() {
+                    business = try! FirestoreDecoder().decode(Business.self, from: oldBusinessData)
+                } else {
+                    business = Business()
+                }
+            } catch {
                 business = Business()
             }
             
@@ -66,7 +65,7 @@ class Database {
             let eventDocument = self.db.collection("events").document()
             transaction.setData(eventData, forDocument: eventDocument)
             
-            return nil
+            return business
         }, completion: completion)
     }
     
