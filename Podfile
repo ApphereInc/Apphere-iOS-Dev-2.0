@@ -6,6 +6,7 @@ target 'apphere' do
   pod 'Mapbox-iOS-SDK'
   pod 'UIColor_Hex_Swift'
   pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 
   target 'apphereTests' do
     inherit! :search_paths
