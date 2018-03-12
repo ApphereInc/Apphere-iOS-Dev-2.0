@@ -164,7 +164,7 @@ Developer: Derek Sheldon</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOF-Vu-9WO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893.60000000000002" y="-268.22660098522169"/>
+            <point key="canvasLocation" x="673" y="-183"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -440,14 +440,14 @@ Promotion Headline</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                        <rect key="frame" x="12" y="112" width="278" height="18"/>
+                                        <rect key="frame" x="12" y="112.33333333333333" width="278" height="17.999999999999986"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="136" width="280" height="89"/>
+                                        <rect key="frame" x="10" y="136.33333333333334" width="280" height="88.666666666666657"/>
                                         <attributedString key="attributedText">
                                             <fragment content="BUSINESS NAME">
                                                 <attributes>
@@ -640,6 +640,6 @@ Promotion Headline</string>
         <image name="west" width="550" height="412"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bpm-SG-0o4"/>
+        <segue reference="9UE-WC-lta"/>
     </inferredMetricsTieBreakers>
 </document>
