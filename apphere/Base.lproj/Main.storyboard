@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -75,7 +75,7 @@ Developer: Derek Sheldon</string>
         <!--Page View Controller-->
         <scene sceneID="s2z-4k-rLJ">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="wn1-vw-aRD" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="wn1-vw-aRD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5T-t0-g7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="918" y="-276"/>
@@ -83,17 +83,23 @@ Developer: Derek Sheldon</string>
         <!--View Controller-->
         <scene sceneID="GuP-B3-D3C">
             <objects>
-                <viewController id="eLb-iU-j7y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="featured1" id="eLb-iU-j7y" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1kb-2i-s2b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eTx-TY-VmH">
-                                <rect key="frame" x="98" y="728" width="146" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY7-hp-gG7">
+                                <rect key="frame" x="147" y="396" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wY7-hp-gG7" firstAttribute="centerX" secondItem="1kb-2i-s2b" secondAttribute="centerX" id="iDY-NM-fiR"/>
+                            <constraint firstItem="wY7-hp-gG7" firstAttribute="centerY" secondItem="1kb-2i-s2b" secondAttribute="centerY" id="woU-ML-SEu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dax-3W-mPH"/>
                     </view>
                 </viewController>
@@ -104,17 +110,23 @@ Developer: Derek Sheldon</string>
         <!--View Controller-->
         <scene sceneID="Wdc-wT-4kr">
             <objects>
-                <viewController id="p0P-ZH-73j" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="featured2" id="p0P-ZH-73j" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p4h-Ba-zld">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-hf-dtY">
-                                <rect key="frame" x="115" y="722" width="123" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezT-dr-yey">
+                                <rect key="frame" x="146" y="396" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ezT-dr-yey" firstAttribute="centerY" secondItem="p4h-Ba-zld" secondAttribute="centerY" id="T7V-u8-l5m"/>
+                            <constraint firstItem="ezT-dr-yey" firstAttribute="centerX" secondItem="p4h-Ba-zld" secondAttribute="centerX" id="ZDf-AW-SXf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gbT-yb-7jx"/>
                     </view>
                 </viewController>
@@ -150,7 +162,7 @@ Developer: Derek Sheldon</string>
             </objects>
             <point key="canvasLocation" x="191" y="-930"/>
         </scene>
-        <!--locations-->
+        <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,35 +170,27 @@ Developer: Derek Sheldon</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fk7-zT-wvt">
-                                <rect key="frame" x="0.0" y="22" width="375" height="790"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="YES"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-32-nvx">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <connections>
+                                    <segue destination="wn1-vw-aRD" kind="embed" identifier="pageView" id="tdu-VR-3Dq"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.53333333329999999" green="0.33725490200000002" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Fk7-zT-wvt" firstAttribute="bottom" secondItem="QS5-Rx-YEW" secondAttribute="bottom" id="Cng-BG-OpA"/>
-                            <constraint firstItem="Fk7-zT-wvt" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailing" id="PmZ-wW-pyQ"/>
-                            <constraint firstItem="Fk7-zT-wvt" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Tp5-Ex-raS"/>
-                            <constraint firstItem="Fk7-zT-wvt" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="22" id="kGg-Cs-y7m"/>
+                            <constraint firstItem="HRF-32-nvx" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="0DG-1c-BfO"/>
+                            <constraint firstItem="HRF-32-nvx" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailing" id="BnM-GI-aUE"/>
+                            <constraint firstItem="HRF-32-nvx" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Mdd-cc-BaM"/>
+                            <constraint firstItem="HRF-32-nvx" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="gWC-my-mud"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="cPa-gy-q4n"/>
-                    <navigationItem key="navigationItem" title="locations" largeTitleDisplayMode="always" id="aqw-DR-aQh">
-                        <barButtonItem key="backBarButtonItem" title="back" id="wQl-bI-xBZ"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="webView" destination="Fk7-zT-wvt" id="qTg-H7-h2v"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182" y="-276"/>
+            <point key="canvasLocation" x="181.59999999999999" y="-276.35467980295567"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="f7L-ne-sdr">
@@ -400,7 +404,7 @@ Developer: Derek Sheldon</string>
                                 <rect key="frame" x="40" y="99" width="295" height="200"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="THE PROMOTION HEADLINE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-y1-K5U" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="20" y="319" width="335" height="131.33333333333337"/>
+                                <rect key="frame" x="20" y="319" width="335" height="162"/>
                                 <fontDescription key="fontDescription" name="Arial-Black" family="Arial Black" pointSize="38"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -412,7 +416,7 @@ Developer: Derek Sheldon</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="vSG-pe-Kon">
-                                <rect key="frame" x="20" y="470.33333333333331" width="335" height="230.66666666666669"/>
+                                <rect key="frame" x="20" y="501" width="335" height="200"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Footer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-mg-WIN">
                                 <rect key="frame" x="20" y="741" width="335" height="17"/>
@@ -485,13 +489,13 @@ Developer: Derek Sheldon</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="344"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN4-Og-biA">
-                                                    <rect key="frame" x="12" y="103.66666666666667" width="278" height="18"/>
+                                                    <rect key="frame" x="12" y="109.33333333333333" width="278" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyu-Tu-CXS" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="127.66666666666666" width="280" height="88.666666666666657"/>
+                                                    <rect key="frame" x="10" y="133.33333333333334" width="280" height="77.333333333333343"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="BUSINESS NAME">
                                                             <attributes>
@@ -624,14 +628,14 @@ Developer: Derek Sheldon</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                        <rect key="frame" x="12" y="112.33333333333333" width="278" height="17.999999999999986"/>
+                                        <rect key="frame" x="12" y="118" width="278" height="18"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="136.33333333333334" width="280" height="88.666666666666657"/>
+                                        <rect key="frame" x="10" y="142" width="280" height="77.333333333333314"/>
                                         <attributedString key="attributedText">
                                             <fragment content="BUSINESS NAME">
                                                 <attributes>
