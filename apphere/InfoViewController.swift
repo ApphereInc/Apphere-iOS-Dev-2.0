@@ -12,6 +12,9 @@ class InfoViewController: PagedViewController {
     override func pageIdentifiers() -> [String] {
         return ["info1", "info2", "info3", "info4"]
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 

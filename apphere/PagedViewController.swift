@@ -13,6 +13,10 @@ class PagedViewController: UIViewController, UIPageViewControllerDataSource, UIP
         return []
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "pageView" {
             pageControllers = pageIdentifiers().map { storyboard!.instantiateViewController(withIdentifier: $0) }
@@ -57,4 +61,5 @@ class PagedViewController: UIViewController, UIPageViewControllerDataSource, UIP
     
     var pageControllers: [UIViewController]!
 }
+
 

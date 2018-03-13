@@ -12,5 +12,8 @@ class FeaturedViewController: PagedViewController {
     override func pageIdentifiers() -> [String] {
         return ["featured1", "featured2"]
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
