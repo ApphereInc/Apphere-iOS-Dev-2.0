@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  PagedViewController.swift
 //  apphere
 //
 //  Created by Derek Sheldon on 12/3/17.
@@ -7,16 +7,15 @@
 //
 
 import UIKit
-import WebKit
 
-class SecondViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class PagedViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    func pageIdentifiers() -> [String] {
+        return []
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "pageView" {
-            pageControllers = [
-                storyboard!.instantiateViewController(withIdentifier: "featured1"),
-                storyboard!.instantiateViewController(withIdentifier: "featured2")
-            ]
-
+            pageControllers = pageIdentifiers().map { storyboard!.instantiateViewController(withIdentifier: $0) }
             let pageViewController = segue.destination as! UIPageViewController
             pageViewController.dataSource = self
             pageViewController.delegate = self
