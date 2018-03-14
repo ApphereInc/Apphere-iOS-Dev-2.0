@@ -14,10 +14,21 @@ class BusinessCell: UICollectionViewCell {
             photoView.image                 = UIImage(named: business.photo)
             nameLabel.text                  = business.name.uppercased()
             promotionLabel.text             = business.promotion.name.uppercased()
-            activeCustomerCountLabel.text   = String(business.activeCustomerCount)
-            
+            activeCustomerCountLabel.text   = "-"
+           
             nameLabel.textColor = business.textColor
             promotionLabel.textColor = business.textColor
+            
+            Database.shared.getCustomerCounts(businessId: String(business.id)) { customerCounts, error in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        appDelegate.showError(error as NSError)
+                    }
+                    
+                    self.activeCustomerCountLabel.text  = String(customerCounts!.active)
+                }
+            }
         }
     }
     

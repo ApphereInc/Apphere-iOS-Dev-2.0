@@ -32,6 +32,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = window!.rootViewController! as! UITabBarController
         return tabBarController.selectedViewController!
     }
+    
+    func showError(_ error: NSError) {
+        let alert = UIAlertController(
+            title: "Error",
+            message: error.localizedDescription,
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
+        rootViewController.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension AppDelegate: BeaconMonitorListener {
@@ -82,17 +93,6 @@ extension AppDelegate: BeaconMonitorListener {
         )
         
         Notifications.add(notification: notification)
-    }
-    
-    private func showError(_ error: NSError) {
-        let alert = UIAlertController(
-            title: "Error",
-            message: error.localizedDescription,
-            preferredStyle: .alert
-        )
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
-        rootViewController.present(alert, animated: true, completion: nil)
     }
 }
 
