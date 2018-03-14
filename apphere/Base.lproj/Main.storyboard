@@ -74,13 +74,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="triosefeat" translatesAutoresizingMaskIntoConstraints="NO" id="fWF-ef-DIH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triosefeat" translatesAutoresizingMaskIntoConstraints="NO" id="fWF-ef-DIH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fWF-ef-DIH" firstAttribute="top" secondItem="1kb-2i-s2b" secondAttribute="top" id="8U9-ai-ZFh"/>
+                            <constraint firstItem="fWF-ef-DIH" firstAttribute="centerY" secondItem="wY7-hp-gG7" secondAttribute="centerY" id="Ku0-gH-FAh"/>
+                            <constraint firstItem="fWF-ef-DIH" firstAttribute="centerX" secondItem="wY7-hp-gG7" secondAttribute="centerX" id="NZ9-Op-06f"/>
+                            <constraint firstItem="fWF-ef-DIH" firstAttribute="leading" secondItem="1kb-2i-s2b" secondAttribute="leading" id="a1b-LJ-Zup"/>
                             <constraint firstItem="wY7-hp-gG7" firstAttribute="centerX" secondItem="1kb-2i-s2b" secondAttribute="centerX" id="iDY-NM-fiR"/>
                             <constraint firstItem="wY7-hp-gG7" firstAttribute="centerY" secondItem="1kb-2i-s2b" secondAttribute="centerY" id="woU-ML-SEu"/>
                         </constraints>
