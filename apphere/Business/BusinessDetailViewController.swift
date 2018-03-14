@@ -15,9 +15,9 @@ class BusinessDetailViewController: UIViewController {
         photoView.image                 = UIImage(named: business.photo)
         nameLabel.text                  = business.name.uppercased()
         promotionLabel.text             = business.promotion.name.uppercased()
-        activeCustomerCountLabel.text   = String(business.activeCustomerCount)
-        dailyCustomerCountLabel.text    = String(business.dailyCustomerCount)
-        totalCustomerCountLabel.text    = String(business.totalCustomerCount)
+//        activeCustomerCountLabel.text   = String(business.activeCustomerCount)
+//        dailyCustomerCountLabel.text    = String(business.dailyCustomerCount)
+//        totalCustomerCountLabel.text    = String(business.totalCustomerCount)
         
         nameLabel.textColor = business.textColor
         promotionLabel.textColor = business.textColor

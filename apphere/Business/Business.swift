@@ -35,9 +35,6 @@ struct Business {
     let id: Int
     let name: String
     let photo: ImageName
-    let activeCustomerCount: Int
-    let dailyCustomerCount: Int
-    let totalCustomerCount: Int
     let address1: String?
     let address2: String?
     let city: String

@@ -14,7 +14,7 @@ class BusinessCell: UICollectionViewCell {
             photoView.image                 = UIImage(named: business.photo)
             nameLabel.text                  = business.name.uppercased()
             promotionLabel.text             = business.promotion.name.uppercased()
-            activeCustomerCountLabel.text   = String(business.activeCustomerCount)
+            //activeCustomerCountLabel.text   = String(business.activeCustomerCount)
             
             nameLabel.textColor = business.textColor
             promotionLabel.textColor = business.textColor
