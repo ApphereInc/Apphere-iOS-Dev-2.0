@@ -15,10 +15,10 @@ class BusinessDetailViewController: UIViewController {
         photoView.image                 = UIImage(named: business.photo)
         nameLabel.text                  = business.name.uppercased()
         promotionLabel.text             = business.promotion.name.uppercased()
-//        activeCustomerCountLabel.text   = String(business.activeCustomerCount)
-//        dailyCustomerCountLabel.text    = String(business.dailyCustomerCount)
-//        totalCustomerCountLabel.text    = String(business.totalCustomerCount)
-        
+        activeCustomerCountLabel.text   = "-"
+        dailyCustomerCountLabel.text    = "-"
+        totalCustomerCountLabel.text    = "-"
+
         nameLabel.textColor = business.textColor
         promotionLabel.textColor = business.textColor
         
@@ -29,6 +29,19 @@ class BusinessDetailViewController: UIViewController {
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognized(_:)))
         view.addGestureRecognizer(panGestureRecognizer)
+        
+        Database.shared.getCustomerCounts(businessId: String(business.id)) { customerCounts, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.showError(error as NSError)
+                }
+                
+                self.activeCustomerCountLabel.text   = String(customerCounts!.active)
+                self.dailyCustomerCountLabel.text    = String(customerCounts!.daily)
+                self.totalCustomerCountLabel.text    = String(customerCounts!.total)
+            }
+        }
     }
     
     var isStatusBarHidden = false
