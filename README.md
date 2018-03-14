@@ -22,8 +22,10 @@ Development of native iOS application for Apphere
 5. PageControllers, INFO and Featured to return to the first page when pressing the correlating tab icon.
 6. PageControllers need full-screen images.
 7. Buildout of BusinessDetailView.
-9. Add NEST API and WEBVIEW to Bussiness Detail.
-10. Add ability to add just a "card" to main Business List (home-screen) with text below and no business detail.
-8. Custom Icons placed in TabBar.
-9. Bug and Crash
+8. Add NEST API and WEBVIEW to Bussiness Detail.
+9. Add ability to add just a "card" to main Business List (home-screen) with text below and no business detail.
+10. Map stars and Animation
+11. Custom Icons placed in TabBar.
+12. Landing GIF animation placement.
+13. Bug and Crash
 
