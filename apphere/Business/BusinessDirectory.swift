@@ -21,6 +21,7 @@ class BusinessDirectory {
         Business(
             id: 1,
             name: "Santander Arena",
+            description: "TODO: add description",
             photo: "san",
             address1: "700 Penn St",
             address2: nil,
@@ -44,6 +45,7 @@ class BusinessDirectory {
         Business(
             id: 13,
             name: "Triose, Inc.",
+            description: "TODO: add description",
             photo: "scrub",
             address1: "2001 State Hill Rd",
             address2: "Suite 205",
@@ -68,6 +70,7 @@ class BusinessDirectory {
         Business(
             id: 2,
             name: "Sweet Ride Ice Cream",
+            description: "TODO: add description",
             photo: "sweet2",
             address1: "542 Penn Ave",
             address2: nil,
@@ -91,6 +94,7 @@ class BusinessDirectory {
         Business(
             id: 3,
             name: "5th and Penn Street",
+            description: "TODO: add description",
             photo: "5",
             address1: "5th and Penn Street",
             address2: nil,
@@ -114,6 +118,7 @@ class BusinessDirectory {
         Business(
             id: 4,
             name: "Judy’s On Cherry",
+            description: "TODO: add description",
             photo: "judy2",
             address1: "332 Cherry St",
             address2: nil,
@@ -137,6 +142,7 @@ promotion: Promotion(
         Business(
             id: 5,
             name: "Winedown Cafe",
+            description: "TODO: add description",
             photo: "wine1",
             address1: "622 Penn Ave",
             address2: nil,
@@ -160,6 +166,7 @@ promotion: Promotion(
         Business(
             id: 6,
             name: "West Reading Tavern",
+            description: "TODO: add description",
             photo: "west2",
             address1: "606 Penn Ave",
             address2: nil,
@@ -183,6 +190,7 @@ promotion: Promotion(
         Business(
             id: 7,
             name: "Muddy Creek Soap",
+            description: "TODO: add description",
             photo: "soap2",
             address1: "608 Penn Ave",
             address2: nil,
@@ -206,6 +214,7 @@ promotion: Promotion(
         Business(
             id: 8,
             name: "Goggle Works",
+            description: "TODO: add description",
             photo: "g",
             address1: "201 Washington St",
             address2: nil,
@@ -229,6 +238,7 @@ promotion: Promotion(
         Business(
             id: 9,
             name: "Bench  warmers Coffee",
+            description: "TODO: add description",
             photo: "bench",
             address1: "400 Penn Ave",
             address2: nil,
@@ -252,6 +262,7 @@ promotion: Promotion(
         Business(
             id: 10,
             name: "Reading Public Museum",
+            description: "TODO: add description",
             photo: "rpm3",
             address1: "500 Museum Rd",
             address2: nil,
@@ -275,6 +286,7 @@ promotion: Promotion(
         Business(
             id: 11,
             name: "Lisa Tiger Century 21",
+            description: "TODO: add description",
             photo: "lisa3",
             address1: "3970 Perkiomen Ave",
             address2: nil,
@@ -298,6 +310,7 @@ promotion: Promotion(
         Business(
             id: 12,
             name: "Tina’s Salon & Day Spa",
+            description: "TODO: add description",
             photo: "hair",
             address1: "404 Penn Ave",
             address2: nil,

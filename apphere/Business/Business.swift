@@ -34,6 +34,7 @@ struct Business {
     
     let id: Int
     let name: String
+    let description: String
     let photo: ImageName
     let address1: String?
     let address2: String?

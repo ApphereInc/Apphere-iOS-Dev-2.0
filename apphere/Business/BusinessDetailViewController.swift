@@ -29,6 +29,7 @@ class BusinessDetailViewController: UIViewController {
         update(label: address2Label,    withText: business.address2)
         update(label: cityStateZipLabel,withText: business.cityStateZip)
         update(label: phoneNumberLabel, withText: business.phoneNumber)
+        update(label: descriptionLabel, withText: business.description)
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognized(_:)))
         view.addGestureRecognizer(panGestureRecognizer)
@@ -121,6 +122,7 @@ class BusinessDetailViewController: UIViewController {
     @IBOutlet weak var address2Label: UILabel!
     @IBOutlet weak var cityStateZipLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var urlButton: UIButton!
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var promotionLabel: UILabel!

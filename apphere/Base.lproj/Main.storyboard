@@ -588,7 +588,7 @@ Developer: Derek Sheldon</string>
             <objects>
                 <viewController storyboardIdentifier="businessDetail" hidesBottomBarWhenPushed="YES" id="gcm-cc-Ct0" customClass="BusinessDetailViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OmI-1S-9g8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtD-6W-098" userLabel="Container">
@@ -646,7 +646,7 @@ Developer: Derek Sheldon</string>
                                         <rect key="frame" x="0.0" y="360" width="300" height="440"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFW-c4-bxa" userLabel="Bottom View">
-                                                <rect key="frame" x="-0.66666666666665719" y="0.0" width="300" height="382.33333333333331"/>
+                                                <rect key="frame" x="-0.66666666666665719" y="0.0" width="300" height="421.33333333333331"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zNZ-se-hoS" userLabel="Customer Counts Stack View">
                                                         <rect key="frame" x="170.33333333333334" y="25" width="109.66666666666666" height="156.66666666666666"/>
@@ -687,8 +687,19 @@ Developer: Derek Sheldon</string>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwY-EV-IlJ" customClass="Label" customModule="apphere" customModuleProvider="target">
+                                                        <rect key="frame" x="103.33333333333334" y="206.66666666666663" width="93.666666666666657" height="19"/>
+                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeightMultiple">
+                                                                <real key="value" value="0.75"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3w2-5h-qRQ" userLabel="Address Stack View">
-                                                        <rect key="frame" x="75.333333333333329" y="206.66666666666663" width="150.66666666666669" height="98.666666666666686"/>
+                                                        <rect key="frame" x="75.333333333333329" y="245.6666666666666" width="150.66666666666669" height="98.666666666666657"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Address 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-4M-axC">
                                                                 <rect key="frame" x="22.000000000000007" y="0.0" width="106.66666666666669" height="24.666666666666668"/>
@@ -717,7 +728,7 @@ Developer: Derek Sheldon</string>
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jb-Mb-db7">
-                                                        <rect key="frame" x="127.66666666666666" y="325.33333333333337" width="46" height="37"/>
+                                                        <rect key="frame" x="127.66666666666666" y="364.33333333333337" width="46" height="37"/>
                                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="URL"/>
@@ -731,8 +742,10 @@ Developer: Derek Sheldon</string>
                                                     <constraint firstAttribute="bottom" secondItem="9jb-Mb-db7" secondAttribute="bottom" constant="20" id="1EP-lR-x1c"/>
                                                     <constraint firstItem="zNZ-se-hoS" firstAttribute="top" secondItem="cFW-c4-bxa" secondAttribute="top" constant="25" id="37h-sZ-I7D"/>
                                                     <constraint firstItem="9jb-Mb-db7" firstAttribute="centerX" secondItem="cFW-c4-bxa" secondAttribute="centerX" id="4aG-UE-rLg"/>
+                                                    <constraint firstItem="3w2-5h-qRQ" firstAttribute="top" secondItem="MwY-EV-IlJ" secondAttribute="bottom" constant="20" id="8vj-ho-jQ2"/>
+                                                    <constraint firstItem="MwY-EV-IlJ" firstAttribute="top" secondItem="zNZ-se-hoS" secondAttribute="bottom" constant="25" id="Ff0-rq-xPW"/>
+                                                    <constraint firstItem="MwY-EV-IlJ" firstAttribute="centerX" secondItem="cFW-c4-bxa" secondAttribute="centerX" id="Xjg-Rf-465"/>
                                                     <constraint firstItem="9jb-Mb-db7" firstAttribute="top" secondItem="3w2-5h-qRQ" secondAttribute="bottom" constant="20" id="bRc-tv-z4j"/>
-                                                    <constraint firstItem="3w2-5h-qRQ" firstAttribute="top" secondItem="zNZ-se-hoS" secondAttribute="bottom" constant="25" id="l8v-Ul-rXD"/>
                                                     <constraint firstItem="3w2-5h-qRQ" firstAttribute="centerX" secondItem="cFW-c4-bxa" secondAttribute="centerX" id="pWl-Tn-R3f"/>
                                                 </constraints>
                                             </view>
@@ -795,6 +808,7 @@ Developer: Derek Sheldon</string>
                         <viewLayoutGuide key="safeArea" id="Fpy-mn-DcO"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <size key="freeformSize" width="375" height="900"/>
                     <connections>
                         <outlet property="activeCustomerCountLabel" destination="evY-Nv-baR" id="GgL-B5-aaP"/>
                         <outlet property="address1Label" destination="9fa-4M-axC" id="pzC-7l-mct"/>
@@ -806,6 +820,7 @@ Developer: Derek Sheldon</string>
                         <outlet property="containerTopConstraint" destination="78v-Ev-MJO" id="QIa-3a-1jN"/>
                         <outlet property="containerWidthConstraint" destination="gLC-b0-AHu" id="fBG-me-ZWq"/>
                         <outlet property="dailyCustomerCountLabel" destination="AyQ-jq-f0j" id="GcA-Gt-Jaj"/>
+                        <outlet property="descriptionLabel" destination="MwY-EV-IlJ" id="ENd-4C-khn"/>
                         <outlet property="nameLabel" destination="usv-VJ-bwq" id="rbf-AR-cgl"/>
                         <outlet property="nameLeadingConstraint" destination="JEX-6b-a0Y" id="uWE-Kt-bTN"/>
                         <outlet property="phoneNumberLabel" destination="ceq-HX-4A0" id="kMa-LN-x3w"/>
