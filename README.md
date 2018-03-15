@@ -3,7 +3,7 @@ Development of native iOS application for Apphere
 
 ## Tony Todo
 ### Business Detail View
-* Add scrolling, other elements(?), description
+* Description, "mini-photo view", stars, bars
 
 ## Derek Todo
 
