@@ -3,7 +3,7 @@ Development of native iOS application for Apphere
 
 ## Tony Todo
 ### Business Detail View
-* Add scrolling, other elements(?), description, and active count cache
+* Add scrolling, other elements(?), description
 
 ## Derek Todo
 

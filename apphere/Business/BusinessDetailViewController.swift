@@ -10,18 +10,20 @@ import UIKit
 
 class BusinessDetailViewController: UIViewController {
     var business: Business!
+    var customerCounts: Database.CustomerCounts?
     
     override func viewDidLoad() {
         photoView.image                 = UIImage(named: business.photo)
         nameLabel.text                  = business.name.uppercased()
         promotionLabel.text             = business.promotion.name.uppercased()
-        activeCustomerCountLabel.text   = "-"
-        dailyCustomerCountLabel.text    = "-"
-        totalCustomerCountLabel.text    = "-"
 
         nameLabel.textColor = business.textColor
         promotionLabel.textColor = business.textColor
         urlButton.setTitle(business.url.host, for: .normal)
+        
+        update(label: activeCustomerCountLabel, withCount: customerCounts?.active)
+        update(label: dailyCustomerCountLabel,  withCount: customerCounts?.daily)
+        update(label: totalCustomerCountLabel,  withCount: customerCounts?.total)
         
         update(label: address1Label,    withText: business.address1)
         update(label: address2Label,    withText: business.address2)
@@ -106,6 +108,10 @@ class BusinessDetailViewController: UIViewController {
         } else {
             label.isHidden = true
         }
+    }
+    
+    private func update(label: UILabel, withCount count: Int?) {
+        label.text = count.map(String.init) ?? "-"
     }
     
     @IBOutlet weak var container: UIView!
