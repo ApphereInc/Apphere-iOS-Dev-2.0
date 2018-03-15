@@ -21,6 +21,7 @@ class BusinessDetailViewController: UIViewController {
 
         nameLabel.textColor = business.textColor
         promotionLabel.textColor = business.textColor
+        urlButton.setTitle(business.url, for: .normal)
         
         update(label: address1Label,    withText: business.address1)
         update(label: address2Label,    withText: business.address2)
@@ -110,6 +111,7 @@ class BusinessDetailViewController: UIViewController {
     @IBOutlet weak var address2Label: UILabel!
     @IBOutlet weak var cityStateZipLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var urlButton: UIButton!
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var promotionLabel: UILabel!
     @IBOutlet weak var activeCustomerCountLabel: UILabel!
