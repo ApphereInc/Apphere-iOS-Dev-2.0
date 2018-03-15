@@ -21,7 +21,7 @@ class BusinessDetailViewController: UIViewController {
 
         nameLabel.textColor = business.textColor
         promotionLabel.textColor = business.textColor
-        urlButton.setTitle(business.url, for: .normal)
+        urlButton.setTitle(business.url.host, for: .normal)
         
         update(label: address1Label,    withText: business.address1)
         update(label: address2Label,    withText: business.address2)
@@ -91,6 +91,10 @@ class BusinessDetailViewController: UIViewController {
     
     @IBAction func closeButtonTapped() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func urlButtonTapped() {
+        UIApplication.shared.open(business.url, options: [:], completionHandler: nil)
     }
     
     private var swipeAnimator: UIViewPropertyAnimator?

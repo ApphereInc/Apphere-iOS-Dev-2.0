@@ -41,7 +41,7 @@ struct Business {
     let state: String
     let zip: String
     let phoneNumber: String?
-    let url: String?
+    let url: URL
     let contentStyle: ContentStyle
     let promotion: Promotion
     

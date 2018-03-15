@@ -28,7 +28,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19602",
             phoneNumber: "(610) 898-7469",
-            url: "https://www.santander-arena.com/",
+            url: URL(string: "https://www.santander-arena.com/")!,
             contentStyle: .light,
             promotion: Promotion(
                 name: "Free Reading Royals Hat",
@@ -51,7 +51,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19610",
             phoneNumber: "(866) 241-2268",
-            url: "https://www.triose.com/",
+            url: URL(string: "https://www.triose.com/")!,
             contentStyle: .light,
             promotion: Promotion(
                 name: "We Welcome Triose to Apphere",
@@ -75,7 +75,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(484) 987-7338",
-            url: "https://www.sweetrideicecream.com/",
+            url: URL(string: "https://www.sweetrideicecream.com/")!,
             contentStyle: .light,
             promotion: Promotion(
                 name: "free small vanilla scoop",
@@ -98,7 +98,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(484) 987-7338",
-            url: "https://www.sweetrideicecream.com/",
+            url: URL(string: "https://www.sweetrideicecream.com/")!,
             contentStyle: .light,
             promotion: Promotion(
                 name: "learn about reading",
@@ -121,7 +121,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19602",
             phoneNumber: "(610) 374-8511",
-            url: "http://judysoncherry.com/",
+            url: URL(string: "http://judysoncherry.com/")!,
             contentStyle: .light,
 promotion: Promotion(
                 name: "10% off $50 order",
@@ -144,7 +144,7 @@ promotion: Promotion(
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 373-4907",
-            url: "http://winedowncafe.net/",
+            url: URL(string: "http://winedowncafe.net/")!,
             contentStyle: .light,
             promotion: Promotion(
                 name: "free house cab sav",
@@ -167,7 +167,7 @@ promotion: Promotion(
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 376-9232",
-            url: "http://westreadingtavern.com/",
+            url: URL(string: "http://westreadingtavern.com/")!,
             contentStyle: .light,
 promotion: Promotion(
                 name: "free small pint of ale",
@@ -190,7 +190,7 @@ promotion: Promotion(
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 816-7474",
-            url: "http://www.muddycreeksoapcompany.com/",
+            url: URL(string: "http://www.muddycreeksoapcompany.com/")!,
             contentStyle: .light,
 promotion: Promotion(
                 name: "Buy 2 get one free",
@@ -213,7 +213,7 @@ promotion: Promotion(
             state: "PA",
             zip: "19601",
             phoneNumber: "(610) 374-4600",
-            url: "https://goggleworks.org",
+            url: URL(string: "https://goggleworks.org")!,
             contentStyle: .light,
 promotion: Promotion(
                 name: "free bumper sticker",
@@ -236,7 +236,7 @@ promotion: Promotion(
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 374-2326",
-            url: "https://www.benchwarmerscoffee.com/",
+            url: URL(string: "https://www.benchwarmerscoffee.com/")!,
             contentStyle: .light,
 promotion: Promotion(
                 name: "free small cafe mocha",
@@ -259,7 +259,7 @@ promotion: Promotion(
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 371-5850",
-            url: "http://www.readingpublicmuseum.org/",
+            url: URL(string: "http://www.readingpublicmuseum.org/")!,
             contentStyle: .light,
             promotion: Promotion(
                 name: "10% off admission",
@@ -282,7 +282,7 @@ promotion: Promotion(
             state: "PA",
             zip: "19606",
             phoneNumber: "(610) 207-6186",
-            url: "https://www.lisatigerhomes.com/",
+            url: URL(string: "https://www.lisatigerhomes.com/")!,
             contentStyle: .light,
 promotion: Promotion(
                 name: "free home consultation",
@@ -305,7 +305,7 @@ promotion: Promotion(
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 374-5991",
-            url: "http://gototinas.com/",
+            url: URL(string: "http://gototinas.com/")!,
             contentStyle: .light,
             promotion: Promotion(
                 name: "free coloring with perm",
