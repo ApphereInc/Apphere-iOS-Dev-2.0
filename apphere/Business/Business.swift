@@ -34,6 +34,7 @@ struct Business {
     
     let id: Int
     let name: String
+    let description: String
     let photo: ImageName
     let address1: String?
     let address2: String?
@@ -41,7 +42,7 @@ struct Business {
     let state: String
     let zip: String
     let phoneNumber: String?
-    let url: String?
+    let url: URL
     let contentStyle: ContentStyle
     let promotion: Promotion
     

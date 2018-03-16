@@ -10,22 +10,26 @@ import UIKit
 
 class BusinessDetailViewController: UIViewController {
     var business: Business!
+    var customerCounts: Database.CustomerCounts?
     
     override func viewDidLoad() {
         photoView.image                 = UIImage(named: business.photo)
         nameLabel.text                  = business.name.uppercased()
         promotionLabel.text             = business.promotion.name.uppercased()
-        activeCustomerCountLabel.text   = "-"
-        dailyCustomerCountLabel.text    = "-"
-        totalCustomerCountLabel.text    = "-"
 
         nameLabel.textColor = business.textColor
         promotionLabel.textColor = business.textColor
+        urlButton.setTitle(business.url.host, for: .normal)
+        
+        update(label: activeCustomerCountLabel, withCount: customerCounts?.active)
+        update(label: dailyCustomerCountLabel,  withCount: customerCounts?.daily)
+        update(label: totalCustomerCountLabel,  withCount: customerCounts?.total)
         
         update(label: address1Label,    withText: business.address1)
         update(label: address2Label,    withText: business.address2)
         update(label: cityStateZipLabel,withText: business.cityStateZip)
         update(label: phoneNumberLabel, withText: business.phoneNumber)
+        update(label: descriptionLabel, withText: business.description)
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognized(_:)))
         view.addGestureRecognizer(panGestureRecognizer)
@@ -92,6 +96,10 @@ class BusinessDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func urlButtonTapped() {
+        UIApplication.shared.open(business.url, options: [:], completionHandler: nil)
+    }
+    
     private var swipeAnimator: UIViewPropertyAnimator?
     
     private func update(label: UILabel, withText text: String?) {
@@ -103,6 +111,10 @@ class BusinessDetailViewController: UIViewController {
         }
     }
     
+    private func update(label: UILabel, withCount count: Int?) {
+        label.text = count.map(String.init) ?? "-"
+    }
+    
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -110,6 +122,8 @@ class BusinessDetailViewController: UIViewController {
     @IBOutlet weak var address2Label: UILabel!
     @IBOutlet weak var cityStateZipLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var urlButton: UIButton!
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var promotionLabel: UILabel!
     @IBOutlet weak var activeCustomerCountLabel: UILabel!

@@ -21,6 +21,8 @@ class BusinessCell: UICollectionViewCell {
             
             Database.shared.getCustomerCounts(businessId: String(business.id)) { customerCounts, error in
                 DispatchQueue.main.async {
+                    self.customerCounts = customerCounts
+                    
                     if let error = error {
                         let appDelegate = UIApplication.shared.delegate as! AppDelegate
                         appDelegate.showError(error as NSError)
@@ -31,6 +33,8 @@ class BusinessCell: UICollectionViewCell {
             }
         }
     }
+    
+    var customerCounts: Database.CustomerCounts?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,6 +52,7 @@ class BusinessCell: UICollectionViewCell {
         layer.shadowRadius = 10.0
         layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
     }
+    
     
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
