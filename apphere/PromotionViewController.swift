@@ -78,6 +78,36 @@ class PromotionViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func panGestureRecognized(_ gesture: UIPanGestureRecognizer) {
+        // http://www.thorntech.com/2016/02/ios-tutorial-close-modal-dragging/
+        
+        let translation = gesture.translation(in: view).y
+        let progress = min(max(translation / view.bounds.height, 0.0), 1.0)
+        let interactor = ModalInteractor.shared
+        
+        switch gesture.state {
+        case .began:
+            interactor.hasStarted = true
+            dismiss(animated: true, completion: nil)
+        case .changed:
+            interactor.shouldFinish = (translation > 100.0)
+            interactor.update(progress)
+        case .ended:
+            interactor.hasStarted = false
+            
+            if interactor.shouldFinish {
+                interactor.finish()
+            } else {
+                interactor.cancel()
+            }
+        case .cancelled:
+            interactor.hasStarted = false
+            interactor.cancel()
+        default:
+            break
+        }
+    }
+    
     private func configure(label: UILabel, styledText: StyledText, isUppercase: Bool) {
         label.text = isUppercase ? styledText.text.uppercased() : styledText.text
         label.textColor = UIColor(styledText.color)

@@ -416,6 +416,9 @@ Developer: Derek Sheldon</string>
                             <constraint firstItem="c2e-y1-K5U" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="20" id="qQI-vy-ueO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zqM-3Y-QR7"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lmU-Ti-8nW" appends="YES" id="E9C-he-H2n"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="footerLabel" destination="rRw-mg-WIN" id="99Q-HR-PJu"/>
@@ -430,6 +433,11 @@ Developer: Derek Sheldon</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VG-tc-Vo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="lmU-Ti-8nW">
+                    <connections>
+                        <action selector="panGestureRecognized:" destination="WPH-dD-DlL" id="lqA-DR-FcE"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1279.2" y="510.59113300492612"/>
         </scene>
@@ -646,7 +654,7 @@ Developer: Derek Sheldon</string>
                                         <rect key="frame" x="0.0" y="360" width="300" height="440"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFW-c4-bxa" userLabel="Bottom View">
-                                                <rect key="frame" x="-0.66666666666665719" y="0.0" width="300" height="421.33333333333331"/>
+                                                <rect key="frame" x="-0.66666666666665719" y="0.0" width="300" height="421"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zNZ-se-hoS" userLabel="Customer Counts Stack View">
                                                         <rect key="frame" x="170.33333333333334" y="25" width="109.66666666666666" height="156.66666666666666"/>
@@ -688,7 +696,7 @@ Developer: Derek Sheldon</string>
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwY-EV-IlJ" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                                        <rect key="frame" x="103.33333333333334" y="206.66666666666663" width="93.666666666666657" height="19"/>
+                                                        <rect key="frame" x="103.33333333333334" y="206.66666666666663" width="93.666666666666657" height="18.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -699,7 +707,7 @@ Developer: Derek Sheldon</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3w2-5h-qRQ" userLabel="Address Stack View">
-                                                        <rect key="frame" x="75.333333333333329" y="245.6666666666666" width="150.66666666666669" height="98.666666666666657"/>
+                                                        <rect key="frame" x="75.333333333333329" y="245.33333333333334" width="150.66666666666669" height="98.666666666666657"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Address 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-4M-axC">
                                                                 <rect key="frame" x="22.000000000000007" y="0.0" width="106.66666666666669" height="24.666666666666668"/>
@@ -708,13 +716,13 @@ Developer: Derek Sheldon</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Address 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdn-Ns-cIS">
-                                                                <rect key="frame" x="22.000000000000007" y="24.666666666666742" width="106.66666666666669" height="24.666666666666671"/>
+                                                                <rect key="frame" x="22.000000000000007" y="24.666666666666629" width="106.66666666666669" height="24.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="City, ST 00000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA9-kz-pl6">
-                                                                <rect key="frame" x="1.6666666666666714" y="49.333333333333371" width="147.66666666666663" height="24.666666666666671"/>
+                                                                <rect key="frame" x="1.6666666666666714" y="49.333333333333258" width="147.66666666666663" height="24.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -728,7 +736,7 @@ Developer: Derek Sheldon</string>
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jb-Mb-db7">
-                                                        <rect key="frame" x="127.66666666666666" y="364.33333333333337" width="46" height="37"/>
+                                                        <rect key="frame" x="127.66666666666666" y="364" width="46" height="37"/>
                                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="URL"/>

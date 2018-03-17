@@ -123,6 +123,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
         
         let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "promotion") as! PromotionViewController
+        promotionViewController.transitioningDelegate = ModalTransitioningDelegate.shared
         
         guard let businessIdString = userInfo["business_id"],
               let businessId = Int(businessIdString),

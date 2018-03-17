@@ -24,6 +24,7 @@
 		E50CB028372812DC52179166 /* Pods_apphereUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A2627E04DA46F7E9CF7BC /* Pods_apphereUITests.framework */; };
 		EA22D015202E1339006C2861 /* DismissBusinessViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22D013202E1339006C2861 /* DismissBusinessViewAnimationController.swift */; };
 		EA22D016202E1339006C2861 /* PresentBusinessViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22D014202E1339006C2861 /* PresentBusinessViewAnimationController.swift */; };
+		EA42F05D205C8D6C00070BCF /* ModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */; };
 		EA4A5970202A53AF0062ACF4 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */; };
 		EA4A5972202A5BDE0062ACF4 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5971202A5BDE0062ACF4 /* Business.swift */; };
 		EA4A5974202A68020062ACF4 /* BusinessListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */; };
@@ -100,6 +101,7 @@
 		CAD841BEA5874BB9F1D25DA6 /* Pods_apphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA22D013202E1339006C2861 /* DismissBusinessViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissBusinessViewAnimationController.swift; sourceTree = "<group>"; };
 		EA22D014202E1339006C2861 /* PresentBusinessViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentBusinessViewAnimationController.swift; sourceTree = "<group>"; };
+		EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModalDismissAnimator.swift; path = apphere/ModalDismissAnimator.swift; sourceTree = "<group>"; };
 		EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		EA4A5971202A5BDE0062ACF4 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessListHeaderView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		2CD1B8421FD3C4F200179D26 = {
 			isa = PBXGroup;
 			children = (
+				EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */,
 				EA6C603E2038D800005EA190 /* README.md */,
 				2CD1B84D1FD3C4F200179D26 /* apphere */,
 				2CD1B8641FD3C4F200179D26 /* apphereTests */,
@@ -625,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C05C7151FDBDF5700D1DBE9 /* FeaturedViewController.swift in Sources */,
+				EA42F05D205C8D6C00070BCF /* ModalDismissAnimator.swift in Sources */,
 				2CD1B84F1FD3C4F200179D26 /* AppDelegate.swift in Sources */,
 				EA22D016202E1339006C2861 /* PresentBusinessViewAnimationController.swift in Sources */,
 				EA22D015202E1339006C2861 /* DismissBusinessViewAnimationController.swift in Sources */,
