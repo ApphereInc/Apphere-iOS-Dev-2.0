@@ -48,7 +48,6 @@ class ModalTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegat
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        print("ModalInteractor.shared.hasStarted=", ModalInteractor.shared.hasStarted)
         return ModalInteractor.shared.hasStarted ? ModalInteractor.shared : nil
     }
 }
