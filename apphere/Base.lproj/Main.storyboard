@@ -358,7 +358,7 @@ Developer: Derek Sheldon</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqI-KT-sC4" userLabel="Close Button" customClass="CloseButton" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="335" y="54" width="30" height="30"/>
+                                <rect key="frame" x="330" y="15" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="4A1-sV-lTA"/>
@@ -374,10 +374,10 @@ Developer: Derek Sheldon</string>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="KiR-oA-h7O">
-                                <rect key="frame" x="40" y="99" width="295" height="200"/>
+                                <rect key="frame" x="40" y="60" width="295" height="200"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="THE PROMOTION HEADLINE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-y1-K5U" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="20" y="319" width="335" height="131.33333333333337"/>
+                                <rect key="frame" x="20" y="280" width="335" height="131.33333333333337"/>
                                 <fontDescription key="fontDescription" name="Arial-Black" family="Arial Black" pointSize="38"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -389,7 +389,7 @@ Developer: Derek Sheldon</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="vSG-pe-Kon">
-                                <rect key="frame" x="20" y="470.33333333333331" width="335" height="230.66666666666669"/>
+                                <rect key="frame" x="20" y="431.33333333333326" width="335" height="269.66666666666674"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Footer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-mg-WIN">
                                 <rect key="frame" x="20" y="741" width="335" height="17"/>
@@ -400,13 +400,13 @@ Developer: Derek Sheldon</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zqM-3Y-QR7" firstAttribute="bottom" secondItem="rRw-mg-WIN" secondAttribute="bottom" constant="20" id="Brz-N7-8pk"/>
-                            <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="YqI-KT-sC4" secondAttribute="trailing" constant="10" id="DoS-dK-y3O"/>
+                            <constraint firstAttribute="trailing" secondItem="YqI-KT-sC4" secondAttribute="trailing" constant="15" id="DoS-dK-y3O"/>
                             <constraint firstItem="rRw-mg-WIN" firstAttribute="top" secondItem="vSG-pe-Kon" secondAttribute="bottom" constant="40" id="KKG-TZ-voC"/>
                             <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="rRw-mg-WIN" secondAttribute="trailing" constant="20.000000000000057" id="N2T-VT-AyC"/>
                             <constraint firstItem="c2e-y1-K5U" firstAttribute="top" secondItem="KiR-oA-h7O" secondAttribute="bottom" constant="20" id="NLs-Nm-cXV"/>
                             <constraint firstItem="vSG-pe-Kon" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="20" id="P3W-O0-d09"/>
                             <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="c2e-y1-K5U" secondAttribute="trailing" constant="20" id="PUr-se-wkN"/>
-                            <constraint firstItem="YqI-KT-sC4" firstAttribute="top" secondItem="zqM-3Y-QR7" secondAttribute="top" constant="10" id="TQV-hN-X0X"/>
+                            <constraint firstItem="YqI-KT-sC4" firstAttribute="top" secondItem="OaJ-Eh-4CA" secondAttribute="top" constant="15" id="TQV-hN-X0X"/>
                             <constraint firstItem="zqM-3Y-QR7" firstAttribute="trailing" secondItem="vSG-pe-Kon" secondAttribute="trailing" constant="20" id="TbB-ru-YVE"/>
                             <constraint firstItem="KiR-oA-h7O" firstAttribute="leading" secondItem="zqM-3Y-QR7" secondAttribute="leading" constant="40" id="aW2-56-jvJ"/>
                             <constraint firstItem="KiR-oA-h7O" firstAttribute="top" secondItem="YqI-KT-sC4" secondAttribute="bottom" constant="15" id="cjQ-XM-xS4"/>

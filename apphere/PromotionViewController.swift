@@ -9,7 +9,7 @@
 import UIKit
 import UIColor_Hex_Swift
 
-class PromotionViewController: UIViewController {
+class PromotionViewController: UIViewController, StatusBarHideable {
     let spaceBetweenHeadlineAndFooterWhenNoLogo: CGFloat    = 40.0
     let spaceBetweenHeadlineAndImageWhenNoLogo: CGFloat     = 20.0
     let imageBorderColor: UIColor                           = .white
@@ -72,6 +72,16 @@ class PromotionViewController: UIViewController {
             imageView.layer.shadowOffset    = imageShadowOffset
             imageView.layer.shadowRadius    = imageShadowBlur
         }
+    }
+    
+    var isStatusBarHidden = true
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .fade
     }
     
     @IBAction func closeButtonTapped() {

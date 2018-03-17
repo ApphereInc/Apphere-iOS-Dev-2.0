@@ -10,6 +10,10 @@ import UIKit
 
 // http://www.thorntech.com/2016/02/ios-tutorial-close-modal-dragging/
 
+protocol StatusBarHideable: class {
+    var isStatusBarHidden: Bool { get set }
+}
+
 class ModalDismissAnimator : NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.6
@@ -32,6 +36,11 @@ class ModalDismissAnimator : NSObject, UIViewControllerAnimatedTransitioning {
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext),
         animations: {
+            if let vc = toVC as? StatusBarHideable {
+                vc.isStatusBarHidden = false
+                toVC.setNeedsStatusBarAppearanceUpdate()
+            }
+            
             fromVC.view.frame = finalFrame
         },
         completion: { _ in

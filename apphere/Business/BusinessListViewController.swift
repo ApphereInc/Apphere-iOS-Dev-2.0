@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate {
+class BusinessListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate, StatusBarHideable {
     public var activeIndexPath: IndexPath?
     
     override func viewDidLoad() {

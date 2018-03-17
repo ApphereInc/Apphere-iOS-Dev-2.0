@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessDetailViewController: UIViewController {
+class BusinessDetailViewController: UIViewController, StatusBarHideable {
     var business: Business!
     var customerCounts: Database.CustomerCounts?
     
