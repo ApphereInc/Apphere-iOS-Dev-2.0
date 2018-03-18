@@ -4,6 +4,7 @@ Development of native iOS application for Apphere
 ## Tony Todo
 ### Business Detail View
 * Description, "mini-photo view", stars, bars
+* Change Business Detail VC from just bottom scroll to entire scroll. Sorry I had to see it in action before making a final on it. 
 
 ## Derek Todo
 
@@ -15,9 +16,7 @@ Development of native iOS application for Apphere
 * Logo animation 
 
 ## TODO REMANING
-1. Business data linkup from iBeacons to Firebase
-2. Swipe added to dismiss PromoController.
-3. Adjust X close of PromoController to match BusinessController.
+
 4. Add ExitController.
 5. PageControllers, INFO and Featured to return to the first page when pressing the correlating tab icon.
 6. PageControllers need full-screen images.
