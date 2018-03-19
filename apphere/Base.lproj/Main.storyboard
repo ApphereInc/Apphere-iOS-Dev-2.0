@@ -444,10 +444,10 @@ Developer: Derek Sheldon</string>
             </objects>
             <point key="canvasLocation" x="-1734" y="507"/>
         </scene>
-        <!--View Controller-->
+        <!--Exit View Controller-->
         <scene sceneID="ike-lo-5ho">
             <objects>
-                <viewController storyboardIdentifier="exit" id="KVP-ZX-qKZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exit" id="KVP-ZX-qKZ" customClass="ExitViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sbx-Ck-sTU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
