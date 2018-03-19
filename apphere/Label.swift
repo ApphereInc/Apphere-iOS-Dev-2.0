@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 class Label: UILabel {
     override var intrinsicContentSize: CGSize {
         var size = super.intrinsicContentSize
@@ -25,13 +25,22 @@ class Label: UILabel {
     
     override var text: String? {
         didSet {
+            if isUpdatingAttributedText {
+                return
+            }
+            
+            isUpdatingAttributedText = true
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineHeightMultiple = lineHeightMultiple
             let newAttributedText = attributedText?.mutableCopy() as! NSMutableAttributedString
             newAttributedText.addAttributes([.paragraphStyle: paragraphStyle], range: NSRange(location: 0, length: attributedText?.length ?? 0))
             attributedText = newAttributedText
+            isUpdatingAttributedText = false
+            
+            invalidateIntrinsicContentSize()
         }
     }
 
     var lineHeightMultiple: CGFloat = 0.0
+    var isUpdatingAttributedText = false
 }
