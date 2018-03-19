@@ -8,6 +8,20 @@
 
 import UIKit
 
-class ExitViewController: UIViewController {
-
+class ExitViewController: UIViewController, StatusBarHideable {
+    var business: Business!
+    
+    var isStatusBarHidden = true
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .fade
+    }
+    
+    @IBAction func closeButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
 }

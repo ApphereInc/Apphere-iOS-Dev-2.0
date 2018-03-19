@@ -48,13 +48,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: BeaconMonitorListener {
     func entered(business: Business) {
         DispatchQueue.main.async {
-            self.notify(with: business)
+            self.notify(with: business, forEventType: .enter)
         }
         
         addEventToDatabase(for: business, ofType: .enter)
     }
     
     func exited(business: Business) {
+        DispatchQueue.main.async {
+            self.notify(with: business, forEventType: .exit)
+        }
+        
         addEventToDatabase(for: business, ofType: .exit)
     }
     
@@ -74,18 +78,32 @@ extension AppDelegate: BeaconMonitorListener {
         }
     }
     
-    private func notify(with business: Business) {
+    private func notify(with business: Business, forEventType eventType: Database.Event.EventType) {
         var userInfo = [String: String]()
         
         userInfo["business_id"] = String(business.id)
+        userInfo["event_type"] = String(eventType.rawValue)
         
         if let url = business.promotion.url {
             userInfo["url"] = url
         }
         
+        let message: String
+        let eventTypeString: String
+        
+        switch eventType {
+        case .enter:
+            eventTypeString = "enter"
+            message = "Open to see a special offer from \(business.name)"
+        case .exit:
+            eventTypeString = "exit"
+            message = "Thank for you for visiting \(business.name)"
+        }
+        
         let notification = Notification(
-            identifier: "entered-\(business.id)",
-            title: "", message: "Open to see a special offer from \(business.name)",
+            identifier: "\(eventTypeString)-\(business.id)",
+            title: "",
+            message: message,
             userInfo: userInfo,
             fireTime: .timeInterval(1.0),
             isRepeating: false,
@@ -98,20 +116,46 @@ extension AppDelegate: BeaconMonitorListener {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        showPromotionView(for: notification, animated: true)
+        showNotificationView(notification: notification, animated: true)
         completionHandler([])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
-            showPromotionView(for: response.notification, animated: false)
+           showNotificationView(notification: response.notification, animated: false)
         }
     }
     
-    private func showPromotionView(for notification: UNNotification, animated: Bool) {
+    private func showNotificationView(notification: UNNotification, animated: Bool) {
         let userInfo = notification.request.content.userInfo as! [String: String]
         
-        if let urlString = userInfo["url"], let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+        guard let eventTypeString = userInfo["event_type"],
+            let eventTypeNumber = Int(eventTypeString),
+            let eventType = Database.Event.EventType(rawValue: eventTypeNumber)
+            else {
+                return
+        }
+        
+        guard let businessIdString = userInfo["business_id"],
+            let businessId = Int(businessIdString),
+            let business = BusinessDirectory.businesses.first(where: { $0.id == businessId })
+        else {
+            return
+        }
+        
+        let url = userInfo["url"].flatMap { URL(string: $0) }
+        
+        switch eventType {
+        case .enter:
+            showPromotionView(business: business, url: url, animated: animated)
+        case .exit:
+            showExitView(business: business, animated: animated)
+            break
+        }
+    }
+    
+    private func showPromotionView(business: Business, url: URL?, animated: Bool) {
+        if let url = url, UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
             return
         }
@@ -125,12 +169,19 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "promotion") as! PromotionViewController
         promotionViewController.transitioningDelegate = ModalTransitioningDelegate.shared
         
-        guard let businessIdString = userInfo["business_id"],
-              let businessId = Int(businessIdString),
-              let business = BusinessDirectory.businesses.first(where: { $0.id == businessId })
-        else {
+        promotionViewController.business = business
+        presentingViewController.present(promotionViewController, animated: animated, completion: nil)
+    }
+    
+    private func showExitView(business: Business, animated: Bool) {
+        let presentingViewController = rootViewController
+        
+        if presentingViewController.presentedViewController != nil {
             return
         }
+        
+        let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "exit") as! ExitViewController
+        promotionViewController.transitioningDelegate = ModalTransitioningDelegate.shared
         
         promotionViewController.business = business
         presentingViewController.present(promotionViewController, animated: animated, completion: nil)
