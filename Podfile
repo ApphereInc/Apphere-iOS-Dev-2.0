@@ -8,6 +8,7 @@ target 'apphere' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'CodableFirebase'
+  pod 'Cosmos'
 
   target 'apphereTests' do
     inherit! :search_paths
