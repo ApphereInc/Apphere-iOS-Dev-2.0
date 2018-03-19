@@ -23,16 +23,28 @@ class Label: UILabel {
         }
     }
     
+    override var attributedText: NSAttributedString? {
+        didSet {
+            updateAttributedText()
+        }
+    }
+    
     private func updateAttributedText() {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = lineHeightMultiple
-        paragraphStyle.alignment = textAlignment
+        if isUpdatingAttributedText {
+            return
+        }
         
-        attributedText = NSAttributedString(string: text ?? "", attributes: [
-            .font: font,
-            .paragraphStyle: paragraphStyle,
-            .foregroundColor: textColor
-        ])
+        isUpdatingAttributedText = true
+        let currentAttributedText = attributedText ?? NSAttributedString(string: text ?? "")
+        let currentParagraphStyle = attributedText?.attribute(.paragraphStyle, at: 0, effectiveRange: nil) as? NSParagraphStyle
+        let paragraphStyle = (currentParagraphStyle ?? NSParagraphStyle()).mutableCopy() as! NSMutableParagraphStyle
+        paragraphStyle.lineHeightMultiple = lineHeightMultiple
+        
+        let newAttributedText = currentAttributedText.mutableCopy() as! NSMutableAttributedString
+        newAttributedText.addAttributes([.paragraphStyle: paragraphStyle], range: NSRange(location: 0, length: currentAttributedText.length))
+        
+        attributedText = newAttributedText
+        isUpdatingAttributedText = false
         
         invalidateIntrinsicContentSize()
     }
@@ -42,4 +54,6 @@ class Label: UILabel {
             updateAttributedText()
         }
     }
+    
+    var isUpdatingAttributedText = false
 }
