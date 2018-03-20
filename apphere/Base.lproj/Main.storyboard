@@ -171,10 +171,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit-bg" translatesAutoresizingMaskIntoConstraints="NO" id="HbI-ID-KoD" userLabel="Background Image">
+                                <rect key="frame" x="0.0" y="0.0" width="800" height="480"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T3J-Xm-42a">
-                                <rect key="frame" x="0.0" y="85" width="0.0" height="375"/>
+                                <rect key="frame" x="0.0" y="85" width="760" height="375"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpG-id-8WQ" customClass="Label" customModule="apphere" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="760" height="222"/>
                                         <attributedString key="attributedText">
                                             <fragment content="THANK">
                                                 <attributes>
@@ -225,10 +229,10 @@ VISITING</string>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-5U-Nsz" userLabel="Rating Stack View">
-                                        <rect key="frame" x="0.0" y="151.5" width="0.0" height="72.5"/>
+                                        <rect key="frame" x="0.0" y="244" width="760" height="72.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PLEASE RATE YOUR EXPERIENCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPV-MN-lal" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="760" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -236,14 +240,14 @@ VISITING</string>
                                                 <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-z6-9dQ" customClass="CosmosView" customModule="Cosmos">
-                                                <rect key="frame" x="0.0" y="20.5" width="0.0" height="52"/>
+                                                <rect key="frame" x="0.0" y="20.5" width="760" height="52"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="1An-47-sgc"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                                        <real key="value" value="4"/>
+                                                        <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
                                                         <integer key="value" value="5"/>
@@ -251,30 +255,14 @@ VISITING</string>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="starSize">
                                                         <real key="value" value="52"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
-                                                        <color key="value" red="0.53333333329999999" green="0.33725490200000002" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
-                                                        <color key="value" red="0.72549019609999998" green="0.72941176470000002" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyBorderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="filledBorderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star-filled"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star-empty"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brl-e9-4Sz" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="375" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="338" width="760" height="37"/>
                                         <attributedString key="attributedText">
                                             <fragment content="please take a moment to ">
                                                 <attributes>
@@ -335,7 +323,7 @@ VISITING</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bs-Aj-r94" userLabel="Close Button" customClass="CloseButton" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="35" width="30" height="30"/>
+                                <rect key="frame" x="515" y="35" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="HfK-1Y-hiy"/>
@@ -351,14 +339,18 @@ VISITING</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.53333333329999999" green="0.33725490200000002" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FfK-2y-9ST" firstAttribute="trailing" secondItem="T3J-Xm-42a" secondAttribute="trailing" constant="20" id="Bri-NR-hZe"/>
                             <constraint firstItem="FfK-2y-9ST" firstAttribute="trailing" secondItem="9Bs-Aj-r94" secondAttribute="trailing" constant="15" id="D3X-5e-0CT"/>
                             <constraint firstItem="FfK-2y-9ST" firstAttribute="bottom" secondItem="T3J-Xm-42a" secondAttribute="bottom" constant="20" id="J1W-JB-k8L"/>
+                            <constraint firstItem="HbI-ID-KoD" firstAttribute="top" secondItem="sbx-Ck-sTU" secondAttribute="top" id="Ux0-Nh-v2N"/>
                             <constraint firstItem="T3J-Xm-42a" firstAttribute="leading" secondItem="FfK-2y-9ST" secondAttribute="leading" constant="20" id="YI7-vv-efz"/>
                             <constraint firstItem="T3J-Xm-42a" firstAttribute="top" secondItem="9Bs-Aj-r94" secondAttribute="bottom" constant="20" id="ca4-Lq-ZRB"/>
+                            <constraint firstItem="HbI-ID-KoD" firstAttribute="leading" secondItem="sbx-Ck-sTU" secondAttribute="leading" id="f1j-0i-ijl"/>
                             <constraint firstItem="9Bs-Aj-r94" firstAttribute="top" secondItem="FfK-2y-9ST" secondAttribute="top" constant="15" id="pP2-sK-mb3"/>
+                            <constraint firstAttribute="trailing" secondItem="HbI-ID-KoD" secondAttribute="trailing" id="w1D-Lw-Hfh"/>
+                            <constraint firstAttribute="bottom" secondItem="HbI-ID-KoD" secondAttribute="bottom" id="zJs-kz-jR7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FfK-2y-9ST"/>
                         <connections>
@@ -789,6 +781,9 @@ VISITING</string>
         </scene>
     </scenes>
     <resources>
+        <image name="exit-bg" width="800" height="600"/>
+        <image name="star-empty" width="53" height="49"/>
+        <image name="star-filled" width="53" height="49"/>
         <image name="sweet" width="550" height="363"/>
     </resources>
 </document>
