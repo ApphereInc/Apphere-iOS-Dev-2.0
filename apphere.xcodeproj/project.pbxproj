@@ -42,6 +42,7 @@
 		EAB244DF2040B5C400FF29F1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB244DE2040B5C400FF29F1 /* Notifications.swift */; };
 		EAF806502056AC98002A89F4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF8064F2056AC98002A89F4 /* Database.swift */; };
 		EAFFA81620617C6300BD5AB3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFFA81520617C5A00BD5AB3 /* Info.storyboard */; };
+		EAFFA81820617CEA00BD5AB3 /* Featured.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		EAF4F8C2202B790500FEA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "apphere/Base.lproj/Old Storyboard.storyboard"; sourceTree = "<group>"; };
 		EAF8064F2056AC98002A89F4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		EAFFA81520617C5A00BD5AB3 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Info.storyboard; path = "/Users/tony/Source/apphere/Apphere-iOS-Dev-2.0/apphere/Info.storyboard"; sourceTree = "<absolute>"; };
+		EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Featured.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 		2CD1B84D1FD3C4F200179D26 /* apphere */ = {
 			isa = PBXGroup;
 			children = (
+				EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */,
 				EA22D012202DE820006C2861 /* Business */,
 				2CD1B8501FD3C4F200179D26 /* InfoViewController.swift */,
 				2C05C7141FDBDF5700D1DBE9 /* FeaturedViewController.swift */,
@@ -392,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFFA81820617CEA00BD5AB3 /* Featured.storyboard in Resources */,
 				2CD1B85B1FD3C4F200179D26 /* LaunchScreen.storyboard in Resources */,
 				EA6C603F2038D800005EA190 /* README.md in Resources */,
 				EAFFA81620617C6300BD5AB3 /* Info.storyboard in Resources */,

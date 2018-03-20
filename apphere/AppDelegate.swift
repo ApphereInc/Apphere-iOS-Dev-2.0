@@ -166,7 +166,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             return
         }
         
-        let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "promotion") as! PromotionViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let promotionViewController = storyboard.instantiateViewController(withIdentifier: "promotion") as! PromotionViewController
         promotionViewController.transitioningDelegate = ModalTransitioningDelegate.shared
         
         promotionViewController.business = business
@@ -180,7 +181,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             return
         }
         
-        let promotionViewController = presentingViewController.storyboard!.instantiateViewController(withIdentifier: "exit") as! ExitViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let promotionViewController = storyboard.instantiateViewController(withIdentifier: "exit") as! ExitViewController
         promotionViewController.transitioningDelegate = ModalTransitioningDelegate.shared
         
         promotionViewController.business = business
