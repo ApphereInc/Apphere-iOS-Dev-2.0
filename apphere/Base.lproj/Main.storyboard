@@ -767,73 +767,25 @@ VISITING</string>
             </objects>
             <point key="canvasLocation" x="1196" y="-1632"/>
         </scene>
-        <!--UIViewController-9pv-A4-QxB-->
+        <!--Info View Controller-->
         <scene sceneID="wJV-bq-4ie">
             <objects>
-                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="UIViewController-9pv-A4-QxB" id="QwD-OS-4c5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="370-4d-jrz"/>
+                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="UIViewController-9pv-A4-QxB" id="QwD-OS-4c5" userLabel="Info View Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="370-4d-jrz"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Svd-nY-R5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189.59999999999999" y="379.80295566502463"/>
+            <point key="canvasLocation" x="254" y="113"/>
         </scene>
-        <!--info4-->
-        <scene sceneID="igh-LJ-iJN">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="info4" storyboardName="Info" referencedIdentifier="info4" id="2Jr-nZ-PgI" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rDo-MT-13n" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3652" y="379.80295566502463"/>
-        </scene>
-        <!--info1-->
-        <scene sceneID="bAA-Wh-8qQ">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="info1" storyboardName="Info" referencedIdentifier="info1" id="PTP-0I-CGE" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z51-A8-Djo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1607" y="380"/>
-        </scene>
-        <!--info2-->
-        <scene sceneID="06I-Cn-xgl">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="info2" storyboardName="Info" referencedIdentifier="info2" id="DnL-hR-zKX" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0TT-57-TfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2269.5999999999999" y="379.80295566502463"/>
-        </scene>
-        <!--info3-->
-        <scene sceneID="Auz-t9-Oyw">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="info3" storyboardName="Info" referencedIdentifier="info3" id="65i-eR-zto" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Dt-eP-gTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2958" y="380"/>
-        </scene>
-        <!--UIViewController-8rJ-Kc-sve-->
+        <!--Featured View Controller-->
         <scene sceneID="bWe-sh-aNo">
             <objects>
-                <viewControllerPlaceholder storyboardName="Featured" referencedIdentifier="UIViewController-8rJ-Kc-sve" id="XPJ-dO-egJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aEi-Vc-gXy"/>
+                <viewControllerPlaceholder storyboardName="Featured" referencedIdentifier="UIViewController-8rJ-Kc-sve" id="XPJ-dO-egJ" userLabel="Featured View Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="aEi-Vc-gXy"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hz-9V-2PC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="181.59999999999999" y="-276.35467980295567"/>
-        </scene>
-        <!--featured1-->
-        <scene sceneID="bU0-6q-esJ">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="featured1" storyboardName="Featured" referencedIdentifier="featured1" id="1Ka-Dj-yxC" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Bo-Hp-x20" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1676" y="-276.35467980295567"/>
-        </scene>
-        <!--featured2-->
-        <scene sceneID="b4V-Ui-n9b">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="featured2" storyboardName="Featured" referencedIdentifier="featured2" id="V00-TH-m1Y" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8u2-SN-EWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2446" y="-278"/>
         </scene>
     </scenes>
     <resources>
