@@ -42,31 +42,7 @@ class BusinessDirectory {
                 url: nil
             )
         ),
-        Business(
-            id: 13,
-            name: "Triose, Inc.",
-            description: "TODO: add description",
-            photo: "scrub",
-            address1: "2001 State Hill Rd",
-            address2: "Suite 205",
-            city: "Reading",
-            state: "PA",
-            zip: "19610",
-            phoneNumber: "(866) 241-2268",
-            url: URL(string: "https://www.triose.com/")!,
-            contentStyle: .light,
-            promotion: Promotion(
-                name: "We Welcome Triose to Apphere",
-                headline: StyledText(text: "We Welcome, CARL, IRA, and GERRY", color: "#FFFFFF"),
-                footer: StyledText(text: "Derek and Tracy would like to thank you for your commitment to Apphere and we are excited to build this exciting new techology with you. welcome partners into this amazing journey.", color: "#FFFFFF"),
-                backgroundColor: "#1c3f94",
-                logo: "tlogo2",
-                image: "ci",
-                isImageFullSize: false,
-                url: nil
-            )
-        ),
-
+       
         Business(
             id: 2,
             name: "Sweet Ride Ice Cream",
@@ -282,54 +258,7 @@ promotion: Promotion(
                 isImageFullSize: false,
                 url: nil
             )
-        ),
-        Business(
-            id: 11,
-            name: "Lisa Tiger Century 21",
-            description: "TODO: add description",
-            photo: "lisa3",
-            address1: "3970 Perkiomen Ave",
-            address2: nil,
-            city: "Reading",
-            state: "PA",
-            zip: "19606",
-            phoneNumber: "(610) 207-6186",
-            url: URL(string: "https://www.lisatigerhomes.com/")!,
-            contentStyle: .light,
-promotion: Promotion(
-                name: "free home consultation",
-                headline: StyledText(text: "Headline", color: "#FFFFFF"),
-                footer: StyledText(text: "Footer", color: "#FFFFFF"),
-                backgroundColor: "#000000",
-                logo: nil,
-                image: "sweet",
-                isImageFullSize: false,
-                url: nil
-            )
-        ),
-        Business(
-            id: 12,
-            name: "Tina’s Salon & Day Spa",
-            description: "TODO: add description",
-            photo: "hair",
-            address1: "404 Penn Ave",
-            address2: nil,
-            city: "Reading",
-            state: "PA",
-            zip: "19611",
-            phoneNumber: "(610) 374-5991",
-            url: URL(string: "http://gototinas.com/")!,
-            contentStyle: .light,
-            promotion: Promotion(
-                name: "free coloring with perm",
-                headline: StyledText(text: "Headline", color: "#FFFFFF"),
-                footer: StyledText(text: "Footer", color: "#FFFFFF"),
-                backgroundColor: "#000000",
-                logo: nil,
-                image: "sweet",
-                isImageFullSize: false,
-                url: nil
-            )
         )
+    
     ]
 }

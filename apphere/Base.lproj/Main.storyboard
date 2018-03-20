@@ -227,9 +227,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-F8-yn7">
                                 <rect key="frame" x="16" y="44" width="343" height="734"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">2222
+                                <mutableString key="text">Apphere for Users
 
-Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -260,9 +260,9 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cq8-nJ-eWZ">
                                 <rect key="frame" x="16" y="44" width="343" height="734"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">3333
+                                <mutableString key="text">Apphere for Businesses
 
-Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -290,14 +290,8 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="woQ-wO-rNz">
-                                <rect key="frame" x="0.0" y="44" width="375" height="125"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="Cee-eK-OuM"/>
-                                </constraints>
-                            </imageView>
                             <textView autoresizesSubviews="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWh-pL-eKW">
-                                <rect key="frame" x="16" y="179" width="345" height="539.33333333333337"/>
+                                <rect key="frame" x="16" y="238" width="345" height="539"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Apphere is building the first multi city-scale platform leveraging iBeacon technology to provide extensive informational data and utility tools to businesses both large and small. Apphere while operating under the SaaS B2B model, Apphere is centered and focused on the consumer experience by creating a rich feature platform for our daily consumers. We connect people to places and places to people, automagically.                                                                     
 We’re changing how people interact with the world around them. Consumers will discover and capture detailed exciting information around them automagically. Our users can frequent any local businesses or public place and we simply appear. Our users are not required to complete any manual actionables other than carrying a smartphone with them. It’s simply magic. 
@@ -309,23 +303,29 @@ Developer: Derek Sheldon</string>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="woQ-wO-rNz">
+                                <rect key="frame" x="1" y="79" width="375" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="YvV-j5-eYD"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mWh-pL-eKW" firstAttribute="leading" secondItem="SFJ-Iw-O7e" secondAttribute="leading" constant="16" id="4jK-JC-AqH"/>
-                            <constraint firstItem="SFJ-Iw-O7e" firstAttribute="trailing" secondItem="mWh-pL-eKW" secondAttribute="trailing" constant="14" id="Nin-Gy-p4Q"/>
-                            <constraint firstItem="woQ-wO-rNz" firstAttribute="top" secondItem="SFJ-Iw-O7e" secondAttribute="top" id="QF1-u0-HwF"/>
-                            <constraint firstItem="SFJ-Iw-O7e" firstAttribute="bottom" secondItem="mWh-pL-eKW" secondAttribute="bottom" constant="59.666666666666629" id="cIg-0f-xOc"/>
-                            <constraint firstItem="woQ-wO-rNz" firstAttribute="leading" secondItem="SFJ-Iw-O7e" secondAttribute="leading" id="coU-a7-JZh"/>
-                            <constraint firstItem="SFJ-Iw-O7e" firstAttribute="trailing" secondItem="woQ-wO-rNz" secondAttribute="trailing" id="d9l-xC-oe5"/>
-                            <constraint firstItem="mWh-pL-eKW" firstAttribute="top" secondItem="woQ-wO-rNz" secondAttribute="bottom" constant="10" id="t6G-9i-nVU"/>
+                            <constraint firstItem="mWh-pL-eKW" firstAttribute="leading" secondItem="OGC-Pc-wol" secondAttribute="leadingMargin" id="4ec-K2-mLn"/>
+                            <constraint firstItem="woQ-wO-rNz" firstAttribute="leading" secondItem="SFJ-Iw-O7e" secondAttribute="leading" constant="1" id="EZn-jf-LTL"/>
+                            <constraint firstItem="SFJ-Iw-O7e" firstAttribute="trailing" secondItem="mWh-pL-eKW" secondAttribute="trailing" constant="14" id="Kn8-70-ICl"/>
+                            <constraint firstItem="woQ-wO-rNz" firstAttribute="centerX" secondItem="mWh-pL-eKW" secondAttribute="centerX" id="P7M-Bj-bEK"/>
+                            <constraint firstItem="mWh-pL-eKW" firstAttribute="top" secondItem="woQ-wO-rNz" secondAttribute="bottom" constant="34" id="eLZ-KA-XOh"/>
+                            <constraint firstItem="woQ-wO-rNz" firstAttribute="top" secondItem="SFJ-Iw-O7e" secondAttribute="top" constant="35" id="iNO-O2-FZA"/>
+                            <constraint firstItem="SFJ-Iw-O7e" firstAttribute="bottom" secondItem="mWh-pL-eKW" secondAttribute="bottom" constant="1" id="wzt-iq-GfY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SFJ-Iw-O7e"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTv-pX-S4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3652" y="380"/>
+            <point key="canvasLocation" x="3652" y="379.80295566502463"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
