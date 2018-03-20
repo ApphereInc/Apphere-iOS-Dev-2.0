@@ -182,6 +182,7 @@
 				EA6AF6FE205850C5002BE69E /* PagedViewController.swift */,
 				2CC8CBA91FE7DA1500A0D598 /* MapViewController.swift */,
 				EAADDF802044A54800D8B78C /* PromotionViewController.swift */,
+				EA4C2E4020606964004BB856 /* ExitViewController.swift */,
 				EAB244DC2040AAA800FF29F1 /* Beacons.swift */,
 				EAF8064F2056AC98002A89F4 /* Database.swift */,
 				EAB244DE2040B5C400FF29F1 /* Notifications.swift */,
@@ -198,7 +199,6 @@
 				2CD1B85C1FD3C4F200179D26 /* Info.plist */,
 				EA22D011202DE73E006C2861 /* Old */,
 				EA95E4EB20477F6C00EE98DE /* UIImage.swift */,
-				EA4C2E4020606964004BB856 /* ExitViewController.swift */,
 			);
 			path = apphere;
 			sourceTree = "<group>";

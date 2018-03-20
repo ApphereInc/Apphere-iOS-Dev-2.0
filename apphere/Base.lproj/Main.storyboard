@@ -433,14 +433,11 @@ Developer: Derek Sheldon</string>
                         <outlet property="imageTrailingConstraint" destination="TbB-ru-YVE" id="hg0-Op-hSD"/>
                         <outlet property="imageView" destination="vSG-pe-Kon" id="ud5-lP-c8v"/>
                         <outlet property="logoImageView" destination="KiR-oA-h7O" id="LA7-r4-SCR"/>
+                        <outlet property="panGestureRecognizer" destination="lmU-Ti-8nW" id="6ii-Te-VQW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VG-tc-Vo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="lmU-Ti-8nW">
-                    <connections>
-                        <action selector="panGestureRecognized:" destination="WPH-dD-DlL" id="lqA-DR-FcE"/>
-                    </connections>
-                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="lmU-Ti-8nW"/>
             </objects>
             <point key="canvasLocation" x="-1734" y="507"/>
         </scene>
@@ -629,9 +626,16 @@ VISITING</string>
                             <constraint firstItem="FfK-2y-9ST" firstAttribute="trailing" secondItem="bPV-MN-lal" secondAttribute="trailing" constant="16" id="z9k-2l-7Wf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FfK-2y-9ST"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="IjY-tw-Ked" appends="YES" id="l5G-IQ-Jqv"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="panGestureRecognizer" destination="IjY-tw-Ked" id="usG-ct-jg5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gO0-pU-Moj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="IjY-tw-Ked"/>
             </objects>
             <point key="canvasLocation" x="-1079.2" y="504.67980295566502"/>
         </scene>

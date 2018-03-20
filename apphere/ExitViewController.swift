@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExitViewController: UIViewController, StatusBarHideable {
+class ExitViewController: UIViewController, StatusBarHideable, Pannable {
     var business: Business!
     
     var isStatusBarHidden = true
@@ -24,4 +24,6 @@ class ExitViewController: UIViewController, StatusBarHideable {
     @IBAction func closeButtonTapped() {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBOutlet weak var panGestureRecognizer: UIPanGestureRecognizer?
 }
