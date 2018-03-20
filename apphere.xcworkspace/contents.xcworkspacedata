@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/tony/Source/apphere/Apphere-iOS-Dev-2.0/apphere/Info.storyboard">
+   </FileRef>
+   <FileRef
       location = "group:apphere.xcodeproj">
    </FileRef>
    <FileRef

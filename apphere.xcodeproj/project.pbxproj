@@ -41,6 +41,7 @@
 		EAB244DD2040AAA800FF29F1 /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB244DC2040AAA800FF29F1 /* Beacons.swift */; };
 		EAB244DF2040B5C400FF29F1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB244DE2040B5C400FF29F1 /* Notifications.swift */; };
 		EAF806502056AC98002A89F4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF8064F2056AC98002A89F4 /* Database.swift */; };
+		EAFFA81620617C6300BD5AB3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFFA81520617C5A00BD5AB3 /* Info.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		EAB244DE2040B5C400FF29F1 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		EAF4F8C2202B790500FEA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "apphere/Base.lproj/Old Storyboard.storyboard"; sourceTree = "<group>"; };
 		EAF8064F2056AC98002A89F4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		EAFFA81520617C5A00BD5AB3 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Info.storyboard; path = "/Users/tony/Source/apphere/Apphere-iOS-Dev-2.0/apphere/Info.storyboard"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */,
 				2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */,
 				2CD1B8541FD3C4F200179D26 /* Main.storyboard */,
+				EAFFA81520617C5A00BD5AB3 /* Info.storyboard */,
 				2CD1B8591FD3C4F200179D26 /* LaunchScreen.storyboard */,
 				2C543CC1203ACF8E00600EDC /* Assets.xcassets */,
 				243CF5C92048A87A007A55CD /* ArialMTPro-Black.otf */,
@@ -391,6 +394,7 @@
 			files = (
 				2CD1B85B1FD3C4F200179D26 /* LaunchScreen.storyboard in Resources */,
 				EA6C603F2038D800005EA190 /* README.md in Resources */,
+				EAFFA81620617C6300BD5AB3 /* Info.storyboard in Resources */,
 				2C543CC2203ACF8E00600EDC /* Assets.xcassets in Resources */,
 				2CD1B8561FD3C4F200179D26 /* Main.storyboard in Resources */,
 				243CF5CA2048A87A007A55CD /* ArialMTPro-Black.otf in Resources */,
