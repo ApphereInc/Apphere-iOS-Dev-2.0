@@ -23,6 +23,7 @@ class PagedViewController: UIViewController, UIPageViewControllerDataSource, UIP
             pageViewController = segue.destination as! UIPageViewController
             pageViewController.dataSource = self
             pageViewController.delegate = self
+            pageControl?.numberOfPages = pageControllers.count
         }
     }
     
@@ -55,20 +56,26 @@ class PagedViewController: UIViewController, UIPageViewControllerDataSource, UIP
         return pageControllers[index + 1]
     }
     
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return pageControllers.count
-    }
-    
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        guard let viewControllers = pageViewController.viewControllers,
+              let viewController = viewControllers.first,
+              let index = pageControllers.index(of: viewController)
+        else {
+            return
+        }
+        
+        pageControl?.currentPage = index
     }
     
     private func resetPageViewController() {
         pageViewController.setViewControllers([pageControllers[0]], direction: .forward, animated: false, completion: nil)
+        pageControl?.currentPage = 0
     }
     
     var pageViewController: UIPageViewController!
     var pageControllers: [UIViewController]!
+    
+    @IBOutlet weak var pageControl: UIPageControl?
 }
 
 
