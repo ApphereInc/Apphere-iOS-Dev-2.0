@@ -20,11 +20,15 @@ class PagedViewController: UIViewController, UIPageViewControllerDataSource, UIP
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "pageView" {
             pageControllers = pageIdentifiers().map { storyboard!.instantiateViewController(withIdentifier: $0) }
-            let pageViewController = segue.destination as! UIPageViewController
+            pageViewController = segue.destination as! UIPageViewController
             pageViewController.dataSource = self
             pageViewController.delegate = self
-            pageViewController.setViewControllers([pageControllers[0]], direction: .forward, animated: false, completion: nil)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        resetPageViewController()
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -59,6 +63,11 @@ class PagedViewController: UIViewController, UIPageViewControllerDataSource, UIP
         return 0
     }
     
+    private func resetPageViewController() {
+        pageViewController.setViewControllers([pageControllers[0]], direction: .forward, animated: false, completion: nil)
+    }
+    
+    var pageViewController: UIPageViewController!
     var pageControllers: [UIViewController]!
 }
 
