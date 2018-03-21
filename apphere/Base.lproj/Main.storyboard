@@ -174,7 +174,7 @@
                             <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit-bg" translatesAutoresizingMaskIntoConstraints="NO" id="HbI-ID-KoD" userLabel="Background Image">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T3J-Xm-42a">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T3J-Xm-42a">
                                 <rect key="frame" x="20" y="65" width="335" height="727"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpG-id-8WQ" customClass="Label" customModule="apphere" customModuleProvider="target">
@@ -232,10 +232,10 @@ VISITING</string>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-5U-Nsz" userLabel="Rating Stack View">
-                                        <rect key="frame" x="0.0" y="392" width="335" height="92.333333333333314"/>
+                                        <rect key="frame" x="27.666666666666657" y="392" width="280" height="92.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PLEASE RATE YOUR EXPERIENCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPV-MN-lal">
-                                                <rect key="frame" x="37" y="0.0" width="261" height="20.333333333333332"/>
+                                                <rect key="frame" x="9.3333333333333428" y="0.0" width="261" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -243,7 +243,7 @@ VISITING</string>
                                                 <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-z6-9dQ" customClass="CosmosView" customModule="Cosmos">
-                                                <rect key="frame" x="27.666666666666657" y="40.333333333333314" width="280" height="52"/>
+                                                <rect key="frame" x="0.0" y="40.333333333333314" width="280" height="52"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="1An-47-sgc"/>
@@ -466,7 +466,7 @@ VISITING</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="MONTH 00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-ab-1tK">
-                                            <rect key="frame" x="16" y="0.0" width="388" height="50"/>
+                                            <rect key="frame" x="16" y="0.0" width="349" height="50"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                             <color key="textColor" red="0.50716221332550049" green="0.34449067711830139" blue="0.89811784029006958" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
