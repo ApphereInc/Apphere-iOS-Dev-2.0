@@ -180,7 +180,6 @@
 		2CD1B84D1FD3C4F200179D26 /* apphere */ = {
 			isa = PBXGroup;
 			children = (
-				EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */,
 				EA22D012202DE820006C2861 /* Business */,
 				2CD1B8501FD3C4F200179D26 /* InfoViewController.swift */,
 				2C05C7141FDBDF5700D1DBE9 /* FeaturedViewController.swift */,
@@ -197,6 +196,7 @@
 				2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */,
 				2CD1B8541FD3C4F200179D26 /* Main.storyboard */,
 				EAFFA81520617C5A00BD5AB3 /* Info.storyboard */,
+				EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */,
 				2CD1B8591FD3C4F200179D26 /* LaunchScreen.storyboard */,
 				2C543CC1203ACF8E00600EDC /* Assets.xcassets */,
 				243CF5C92048A87A007A55CD /* ArialMTPro-Black.otf */,
