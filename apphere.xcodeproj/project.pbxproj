@@ -31,6 +31,7 @@
 		EA4C2E4120606964004BB856 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4C2E4020606964004BB856 /* ExitViewController.swift */; };
 		EA4D2D04203502F60081116A /* BusinessDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4D2D03203502F60081116A /* BusinessDirectory.swift */; };
 		EA5D2383205082380058B4E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA5D2382205082370058B4E7 /* GoogleService-Info.plist */; };
+		EA5F6BC72062C73200E0D087 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5F6BC62062C6C100E0D087 /* Info.storyboard */; };
 		EA67368B20378AD5003BA73A /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67368A20378AD5003BA73A /* Label.swift */; };
 		EA6A474A202B7A2600455766 /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */; };
 		EA6AF6FF205850C5002BE69E /* PagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AF6FE205850C5002BE69E /* PagedViewController.swift */; };
@@ -41,7 +42,6 @@
 		EAB244DD2040AAA800FF29F1 /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB244DC2040AAA800FF29F1 /* Beacons.swift */; };
 		EAB244DF2040B5C400FF29F1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB244DE2040B5C400FF29F1 /* Notifications.swift */; };
 		EAF806502056AC98002A89F4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF8064F2056AC98002A89F4 /* Database.swift */; };
-		EAFFA81620617C6300BD5AB3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFFA81520617C5A00BD5AB3 /* Info.storyboard */; };
 		EAFFA81820617CEA00BD5AB3 /* Featured.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +111,7 @@
 		EA4C2E4020606964004BB856 /* ExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		EA4D2D03203502F60081116A /* BusinessDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDirectory.swift; sourceTree = "<group>"; };
 		EA5D2382205082370058B4E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EA5F6BC62062C6C100E0D087 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		EA67368A20378AD5003BA73A /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
 		EA6AF6FE205850C5002BE69E /* PagedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +123,6 @@
 		EAB244DE2040B5C400FF29F1 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		EAF4F8C2202B790500FEA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "apphere/Base.lproj/Old Storyboard.storyboard"; sourceTree = "<group>"; };
 		EAF8064F2056AC98002A89F4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		EAFFA81520617C5A00BD5AB3 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Info.storyboard; path = "/Users/tony/Source/apphere/Apphere-iOS-Dev-2.0/apphere/Info.storyboard"; sourceTree = "<absolute>"; };
 		EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Featured.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,11 +191,12 @@
 				EAF8064F2056AC98002A89F4 /* Database.swift */,
 				EAB244DE2040B5C400FF29F1 /* Notifications.swift */,
 				EA67368A20378AD5003BA73A /* Label.swift */,
+				EA95E4EB20477F6C00EE98DE /* UIImage.swift */,
+				2CD1B8541FD3C4F200179D26 /* Main.storyboard */,
 				EA6C603C2038D571005EA190 /* CloseButton.swift */,
 				EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */,
 				2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */,
-				2CD1B8541FD3C4F200179D26 /* Main.storyboard */,
-				EAFFA81520617C5A00BD5AB3 /* Info.storyboard */,
+				EA5F6BC62062C6C100E0D087 /* Info.storyboard */,
 				EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */,
 				2CD1B8591FD3C4F200179D26 /* LaunchScreen.storyboard */,
 				2C543CC1203ACF8E00600EDC /* Assets.xcassets */,
@@ -204,7 +205,6 @@
 				EA5D2382205082370058B4E7 /* GoogleService-Info.plist */,
 				2CD1B85C1FD3C4F200179D26 /* Info.plist */,
 				EA22D011202DE73E006C2861 /* Old */,
-				EA95E4EB20477F6C00EE98DE /* UIImage.swift */,
 			);
 			path = apphere;
 			sourceTree = "<group>";
@@ -395,10 +395,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5F6BC72062C73200E0D087 /* Info.storyboard in Resources */,
 				EAFFA81820617CEA00BD5AB3 /* Featured.storyboard in Resources */,
 				2CD1B85B1FD3C4F200179D26 /* LaunchScreen.storyboard in Resources */,
 				EA6C603F2038D800005EA190 /* README.md in Resources */,
-				EAFFA81620617C6300BD5AB3 /* Info.storyboard in Resources */,
 				2C543CC2203ACF8E00600EDC /* Assets.xcassets in Resources */,
 				2CD1B8561FD3C4F200179D26 /* Main.storyboard in Resources */,
 				243CF5CA2048A87A007A55CD /* ArialMTPro-Black.otf in Resources */,
