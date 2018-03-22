@@ -67,7 +67,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bench" translatesAutoresizingMaskIntoConstraints="NO" id="af2-Sy-JoX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starx" translatesAutoresizingMaskIntoConstraints="NO" id="af2-Sy-JoX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -93,6 +93,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphonedude" translatesAutoresizingMaskIntoConstraints="NO" id="wFg-Zn-lUD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.50634342430000001" green="0.34765821699999999" blue="0.89808589220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-F8-yn7">
                                 <rect key="frame" x="16" y="40" width="343" height="627"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,7 +110,11 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="wFg-Zn-lUD" firstAttribute="top" secondItem="Acq-Xr-dJi" secondAttribute="top" id="CIe-WA-iDj"/>
                             <constraint firstItem="dZR-F8-yn7" firstAttribute="trailing" secondItem="Acq-Xr-dJi" secondAttribute="trailingMargin" id="I14-oV-nXL"/>
+                            <constraint firstItem="wFg-Zn-lUD" firstAttribute="centerX" secondItem="dZR-F8-yn7" secondAttribute="centerX" id="IDk-Vs-sIt"/>
+                            <constraint firstItem="wFg-Zn-lUD" firstAttribute="leading" secondItem="Acq-Xr-dJi" secondAttribute="leading" id="Pz0-w6-rZp"/>
+                            <constraint firstItem="wFg-Zn-lUD" firstAttribute="bottom" secondItem="a1h-2g-AfI" secondAttribute="bottom" id="VSE-n9-zff"/>
                             <constraint firstItem="dZR-F8-yn7" firstAttribute="leading" secondItem="Acq-Xr-dJi" secondAttribute="leadingMargin" id="cl4-uD-UWh"/>
                             <constraint firstItem="dZR-F8-yn7" firstAttribute="top" secondItem="a1h-2g-AfI" secondAttribute="top" constant="20" id="gcU-1M-k1y"/>
                             <constraint firstItem="dZR-F8-yn7" firstAttribute="bottom" secondItem="a1h-2g-AfI" secondAttribute="bottom" id="lSo-ZM-x68"/>
@@ -116,7 +124,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdP-vf-WHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2269.5999999999999" y="379.80295566502463"/>
+            <point key="canvasLocation" x="2269.5999999999999" y="379.16041979010498"/>
         </scene>
         <!--Info Page 3-->
         <scene sceneID="2pX-wO-M6V">
@@ -126,12 +134,16 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biz" translatesAutoresizingMaskIntoConstraints="NO" id="jfU-D3-G6P">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.50634342430000001" green="0.34765821699999999" blue="0.89808589220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cq8-nJ-eWZ">
                                 <rect key="frame" x="16" y="40" width="343" height="627"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Apphere for Businesses
+                                <mutableString key="text">Apphere for Businesses
 
-Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -139,8 +151,12 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="jfU-D3-G6P" firstAttribute="top" secondItem="ZjZ-CE-dcu" secondAttribute="top" id="9D1-lp-Wnb"/>
+                            <constraint firstItem="jfU-D3-G6P" firstAttribute="leading" secondItem="ZjZ-CE-dcu" secondAttribute="leading" id="9of-RO-Peb"/>
                             <constraint firstItem="cq8-nJ-eWZ" firstAttribute="trailing" secondItem="ZjZ-CE-dcu" secondAttribute="trailingMargin" id="EU8-ld-Rkc"/>
                             <constraint firstItem="cq8-nJ-eWZ" firstAttribute="bottom" secondItem="g0h-eb-62K" secondAttribute="bottom" id="GNB-1p-gBe"/>
+                            <constraint firstItem="jfU-D3-G6P" firstAttribute="bottom" secondItem="cq8-nJ-eWZ" secondAttribute="bottom" id="cd6-dc-mai"/>
+                            <constraint firstItem="jfU-D3-G6P" firstAttribute="centerX" secondItem="cq8-nJ-eWZ" secondAttribute="centerX" id="jfO-VR-B9z"/>
                             <constraint firstItem="cq8-nJ-eWZ" firstAttribute="top" secondItem="g0h-eb-62K" secondAttribute="top" constant="20" id="pbs-dy-CNY"/>
                             <constraint firstItem="cq8-nJ-eWZ" firstAttribute="leading" secondItem="ZjZ-CE-dcu" secondAttribute="leadingMargin" id="rFL-pa-QQD"/>
                         </constraints>
@@ -149,7 +165,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J07-tV-hYa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2958" y="380"/>
+            <point key="canvasLocation" x="2957.5999999999999" y="379.16041979010498"/>
         </scene>
         <!--Info Page 4-->
         <scene sceneID="QOh-08-oiM">
@@ -160,7 +176,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView autoresizesSubviews="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWh-pL-eKW">
-                                <rect key="frame" x="16" y="195" width="344" height="452"/>
+                                <rect key="frame" x="16" y="185" width="344" height="462"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Apphere is building the first multi city-scale platform leveraging iBeacon technology to provide extensive informational data and utility tools to businesses both large and small. Apphere while operating under the SaaS B2B model, Apphere is centered and focused on the consumer experience by creating a rich feature platform for our daily consumers. We connect people to places and places to people, automagically.                                                                     
 We’re changing how people interact with the world around them. Consumers will discover and capture detailed exciting information around them automagically. Our users can frequent any local businesses or public place and we simply appear. Our users are not required to complete any manual actionables other than carrying a smartphone with them. It’s simply magic. 
@@ -168,7 +184,7 @@ Apphere will impact every business and touch every consumer in the US. Our first
 
 © Apphere, Inc
 Developer: Derek Sheldon</string>
-                                <color key="textColor" red="0.74494865919999997" green="0.75630135460000003" blue="0.76532140540000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
@@ -185,7 +201,7 @@ Developer: Derek Sheldon</string>
                             <constraint firstItem="woQ-wO-rNz" firstAttribute="leading" secondItem="OGC-Pc-wol" secondAttribute="leading" id="EZn-jf-LTL"/>
                             <constraint firstAttribute="trailing" secondItem="mWh-pL-eKW" secondAttribute="trailing" constant="15" id="Kn8-70-ICl"/>
                             <constraint firstItem="woQ-wO-rNz" firstAttribute="centerX" secondItem="mWh-pL-eKW" secondAttribute="centerX" id="P7M-Bj-bEK"/>
-                            <constraint firstItem="mWh-pL-eKW" firstAttribute="top" secondItem="woQ-wO-rNz" secondAttribute="bottom" constant="35" id="eLZ-KA-XOh"/>
+                            <constraint firstItem="mWh-pL-eKW" firstAttribute="top" secondItem="woQ-wO-rNz" secondAttribute="bottom" constant="25" id="eLZ-KA-XOh"/>
                             <constraint firstItem="woQ-wO-rNz" firstAttribute="top" secondItem="OGC-Pc-wol" secondAttribute="top" constant="35" id="iNO-O2-FZA"/>
                             <constraint firstItem="SFJ-Iw-O7e" firstAttribute="bottom" secondItem="mWh-pL-eKW" secondAttribute="bottom" constant="20" id="wzt-iq-GfY"/>
                         </constraints>
@@ -198,7 +214,9 @@ Developer: Derek Sheldon</string>
         </scene>
     </scenes>
     <resources>
-        <image name="bench" width="876" height="493"/>
+        <image name="biz" width="700" height="618"/>
+        <image name="iphonedude" width="1161" height="1000"/>
         <image name="logo" width="898" height="505"/>
+        <image name="starx" width="1125" height="2436"/>
     </resources>
 </document>
