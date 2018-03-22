@@ -45,6 +45,7 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
             businessDetailViewController.photoHeightConstraint.constant = cellFrame.height
             businessDetailViewController.nameLeadingConstraint.constant = 10.0
+            businessDetailViewController.container.isScrollEnabled = false
             businessDetailViewController.view.layoutIfNeeded()
             businessDetailViewController.view.layer.setAffineTransform(.identity)
             businessDetailViewController.closeButton.alpha = 0

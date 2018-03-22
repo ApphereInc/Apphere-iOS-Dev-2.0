@@ -26,6 +26,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
         businessDetailViewController.containerHeightConstraint.constant = cellFrame.height
         businessDetailViewController.photoHeightConstraint.constant = cellFrame.height
+        businessDetailViewController.container.isScrollEnabled = false
         businessDetailViewController.closeButton.alpha = 0.0
         businessDetailViewController.isStatusBarHidden = false
         businessDetailViewController.view.layoutIfNeeded()
@@ -39,6 +40,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.containerHeightConstraint.constant = businessDetailViewFrame.height
             businessDetailViewController.photoHeightConstraint.constant = businessDetailViewFrame.width * (cellFrame.height / cellFrame.width)
             businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (businessDetailViewFrame.width - cellFrame.width) / 2
+            businessDetailViewController.container.isScrollEnabled = true
             businessDetailViewController.closeButton.alpha = 0.7
             businessDetailViewController.container.layer.cornerRadius = 0.0
             businessDetailViewController.view.layoutIfNeeded()

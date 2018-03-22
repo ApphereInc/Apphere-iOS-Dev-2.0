@@ -111,7 +111,7 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable {
         label.text = count.map(String.init) ?? "-"
     }
     
-    @IBOutlet weak var container: UIView!
+    @IBOutlet weak var container: UIScrollView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
