@@ -43,11 +43,13 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.containerTopConstraint.constant = cellFrame.minY + 10.0
             businessDetailViewController.containerHeightConstraint.constant = cellFrame.height
             businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
+            businessDetailViewController.photoHeightConstraint.constant = cellFrame.height
             businessDetailViewController.nameLeadingConstraint.constant = 10.0
+            businessDetailViewController.container.isScrollEnabled = false
             businessDetailViewController.view.layoutIfNeeded()
             businessDetailViewController.view.layer.setAffineTransform(.identity)
             businessDetailViewController.closeButton.alpha = 0
-            businessDetailViewController.photoView.layer.cornerRadius = 14.0
+            businessDetailViewController.container.layer.cornerRadius = 14.0
             businessListViewController.isStatusBarHidden = false
             businessListViewController.setNeedsStatusBarAppearanceUpdate()
         }, completion: { _ in

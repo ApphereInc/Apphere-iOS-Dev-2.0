@@ -24,12 +24,8 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable {
         update(label: activeCustomerCountLabel, withCount: customerCounts?.active)
         update(label: dailyCustomerCountLabel,  withCount: customerCounts?.daily)
         update(label: totalCustomerCountLabel,  withCount: customerCounts?.total)
-        
-        update(label: address1Label,    withText: business.address1)
-        update(label: address2Label,    withText: business.address2)
-        update(label: cityStateZipLabel,withText: business.cityStateZip)
-        update(label: phoneNumberLabel, withText: business.phoneNumber)
-        update(label: descriptionLabel, withText: business.description)
+        update(label: phoneNumberLabel,         withText: business.phoneNumber)
+        update(label: descriptionLabel,         withText: business.description)
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognized(_:)))
         view.addGestureRecognizer(panGestureRecognizer)
@@ -115,12 +111,9 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable {
         label.text = count.map(String.init) ?? "-"
     }
     
-    @IBOutlet weak var container: UIView!
+    @IBOutlet weak var container: UIScrollView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var address1Label: UILabel!
-    @IBOutlet weak var address2Label: UILabel!
-    @IBOutlet weak var cityStateZipLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var urlButton: UIButton!
@@ -133,4 +126,5 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable {
     @IBOutlet weak var containerTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var photoHeightConstraint: NSLayoutConstraint!
 }
