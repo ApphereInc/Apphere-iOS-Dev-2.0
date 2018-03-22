@@ -30,7 +30,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         businessDetailViewController.view.layoutIfNeeded()
         businessDetailViewController.container.layer.setAffineTransform(CGAffineTransform(scaleX: 0.95, y: 0.95))
         businessDetailViewController.view.backgroundColor = .clear
-        businessDetailViewController.photoView.layer.cornerRadius = 14.0
+        businessDetailViewController.container.layer.cornerRadius = 14.0
         
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
             businessDetailViewController.containerTopConstraint.constant = -10.0
@@ -38,7 +38,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.containerHeightConstraint.constant = businessDetailViewFrame.height
             businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (businessDetailViewFrame.width - cellFrame.width) / 2
             businessDetailViewController.closeButton.alpha = 0.7
-            businessDetailViewController.photoView.layer.cornerRadius = 0.0
+            businessDetailViewController.container.layer.cornerRadius = 0.0
             businessDetailViewController.view.layoutIfNeeded()
             businessDetailViewController.container.layer.transform = CATransform3DIdentity
             businessDetailViewController.isStatusBarHidden = true

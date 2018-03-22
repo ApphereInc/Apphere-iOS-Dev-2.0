@@ -545,16 +545,16 @@ VISITING</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wye-Fc-Sdp">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="656.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="636.66666666666663"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-sE-iJ9">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="5ZE-sE-iJ9" secondAttribute="height" multiplier="1:1.2" id="Tdb-Q1-NeW"/>
+                                                    <constraint firstAttribute="width" secondItem="5ZE-sE-iJ9" secondAttribute="height" multiplier="300:344" id="Tdb-Q1-NeW"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="186.33333333333334" width="375" height="77.333333333333343"/>
+                                                <rect key="frame" x="10" y="176.33333333333334" width="375" height="77.333333333333343"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="BUSINESS NAME">
                                                         <attributes>
@@ -567,14 +567,14 @@ VISITING</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                                <rect key="frame" x="12" y="162.33333333333334" width="373" height="18"/>
+                                                <rect key="frame" x="12" y="152.33333333333334" width="373" height="18"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C3Z-Xm-jo3" userLabel="Active Customer Count Stack">
-                                                <rect key="frame" x="267" y="361.66666666666669" width="88" height="68.333333333333314"/>
+                                                <rect key="frame" x="267" y="341.66666666666669" width="88" height="68.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evY-Nv-baR">
                                                         <rect key="frame" x="0.0" y="0.0" width="88" height="50.333333333333336"/>
@@ -591,7 +591,7 @@ VISITING</string>
                                                 </subviews>
                                             </stackView>
                                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-2i-veG" userLabel="Star Rating" customClass="CosmosView" customModule="Cosmos">
-                                                <rect key="frame" x="20" y="408" width="130" height="22"/>
+                                                <rect key="frame" x="20" y="388" width="130" height="22"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -608,7 +608,7 @@ VISITING</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1AY-pl-1jd" userLabel="Description Stack">
-                                                <rect key="frame" x="10" y="480.00000000000006" width="157" height="80.666666666666686"/>
+                                                <rect key="frame" x="10" y="460" width="157" height="80.666666666666629"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwY-EV-IlJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="157" height="17"/>
@@ -639,14 +639,14 @@ VISITING</string>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTp-y1-gvs" userLabel="Divider">
-                                                <rect key="frame" x="187" y="480.00000000000006" width="1" height="156.66666666666669"/>
+                                                <rect key="frame" x="187" y="460.00000000000006" width="1" height="156.66666666666669"/>
                                                 <color key="backgroundColor" red="0.76470588235294112" green="0.71372549019607845" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="1" id="Nat-Au-oWs"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QLF-fD-cbU" userLabel="Other Customer Counts Stack">
-                                                <rect key="frame" x="208" y="480.00000000000006" width="147" height="156.66666666666669"/>
+                                                <rect key="frame" x="208" y="460.00000000000006" width="147" height="156.66666666666669"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="hQd-64-E78" userLabel="Daily Customer Count Stack">
                                                         <rect key="frame" x="37.33333333333335" y="0.0" width="109.66666666666669" height="68.333333333333329"/>
@@ -658,7 +658,7 @@ VISITING</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="VISITS TODAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9v-8n-JnJ">
-                                                                <rect key="frame" x="0.0" y="50.333333333333371" width="109.66666666666667" height="18"/>
+                                                                <rect key="frame" x="0.0" y="50.333333333333314" width="109.66666666666667" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -724,8 +724,12 @@ VISITING</string>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o7-eQ-Hs9" userLabel="Close Button" customClass="CloseButton" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="330" y="15" width="30" height="33"/>
+                                <rect key="frame" x="330" y="15" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8o7-eQ-Hs9" secondAttribute="height" multiplier="1:1" id="05D-uV-bOV"/>
+                                    <constraint firstAttribute="width" constant="30" id="CPn-d6-L4N"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="✖️">
@@ -739,7 +743,7 @@ VISITING</string>
                         <constraints>
                             <constraint firstItem="OiK-Vw-yW4" firstAttribute="top" secondItem="OmI-1S-9g8" secondAttribute="top" id="3cH-fs-e68"/>
                             <constraint firstAttribute="trailing" secondItem="8o7-eQ-Hs9" secondAttribute="trailing" constant="15" id="Ezy-a8-ixt"/>
-                            <constraint firstItem="OiK-Vw-yW4" firstAttribute="leading" secondItem="OmI-1S-9g8" secondAttribute="leading" id="MXJ-7E-PWb"/>
+                            <constraint firstItem="OiK-Vw-yW4" firstAttribute="centerX" secondItem="DMr-2Y-eup" secondAttribute="centerX" id="FFk-WE-nFA"/>
                             <constraint firstItem="8o7-eQ-Hs9" firstAttribute="top" secondItem="OmI-1S-9g8" secondAttribute="top" constant="15" id="QPm-Dv-8XD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DMr-2Y-eup"/>

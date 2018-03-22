@@ -47,7 +47,7 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.view.layoutIfNeeded()
             businessDetailViewController.view.layer.setAffineTransform(.identity)
             businessDetailViewController.closeButton.alpha = 0
-            businessDetailViewController.photoView.layer.cornerRadius = 14.0
+            businessDetailViewController.container.layer.cornerRadius = 14.0
             businessListViewController.isStatusBarHidden = false
             businessListViewController.setNeedsStatusBarAppearanceUpdate()
         }, completion: { _ in
