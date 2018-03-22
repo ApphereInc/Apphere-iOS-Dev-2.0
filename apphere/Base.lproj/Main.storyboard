@@ -544,13 +544,13 @@ VISITING</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-Vw-yW4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wye-Fc-Sdp">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wye-Fc-Sdp" userLabel="Inner View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="636.66666666666663"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-sE-iJ9">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="5ZE-sE-iJ9" secondAttribute="height" multiplier="300:344" id="Tdb-Q1-NeW"/>
+                                                    <constraint firstAttribute="height" constant="430" id="jPM-co-ULd"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
@@ -761,6 +761,7 @@ VISITING</string>
                         <outlet property="nameLabel" destination="usv-VJ-bwq" id="rbf-AR-cgl"/>
                         <outlet property="nameLeadingConstraint" destination="zFe-He-ww1" id="22M-MO-fdw"/>
                         <outlet property="phoneNumberLabel" destination="ceq-HX-4A0" id="kMa-LN-x3w"/>
+                        <outlet property="photoHeightConstraint" destination="jPM-co-ULd" id="nnz-P6-pv2"/>
                         <outlet property="photoView" destination="5ZE-sE-iJ9" id="zg9-gl-xaE"/>
                         <outlet property="promotionLabel" destination="DeM-69-JUw" id="dwp-Ra-Vhc"/>
                         <outlet property="totalCustomerCountLabel" destination="A0e-6M-5Jg" id="9i6-9k-1RT"/>

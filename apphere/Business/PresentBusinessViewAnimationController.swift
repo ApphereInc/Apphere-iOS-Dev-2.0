@@ -25,6 +25,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
         businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
         businessDetailViewController.containerHeightConstraint.constant = cellFrame.height
+        businessDetailViewController.photoHeightConstraint.constant = cellFrame.height
         businessDetailViewController.closeButton.alpha = 0.0
         businessDetailViewController.isStatusBarHidden = false
         businessDetailViewController.view.layoutIfNeeded()
@@ -36,11 +37,12 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.containerTopConstraint.constant = -10.0
             businessDetailViewController.containerWidthConstraint.constant = businessDetailViewFrame.width
             businessDetailViewController.containerHeightConstraint.constant = businessDetailViewFrame.height
+            businessDetailViewController.photoHeightConstraint.constant = businessDetailViewFrame.width * (cellFrame.height / cellFrame.width)
             businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (businessDetailViewFrame.width - cellFrame.width) / 2
             businessDetailViewController.closeButton.alpha = 0.7
             businessDetailViewController.container.layer.cornerRadius = 0.0
             businessDetailViewController.view.layoutIfNeeded()
-            businessDetailViewController.container.layer.transform = CATransform3DIdentity
+            businessDetailViewController.container.layer.setAffineTransform(.identity)
             businessDetailViewController.isStatusBarHidden = true
             businessDetailViewController.setNeedsStatusBarAppearanceUpdate()
         }, completion: { _ in

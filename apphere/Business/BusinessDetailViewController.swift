@@ -126,4 +126,5 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable {
     @IBOutlet weak var containerTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var photoHeightConstraint: NSLayoutConstraint!
 }
