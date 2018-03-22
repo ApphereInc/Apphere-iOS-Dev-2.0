@@ -545,7 +545,7 @@ VISITING</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wye-Fc-Sdp" userLabel="Inner View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="636.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-sE-iJ9">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
@@ -695,7 +695,7 @@ VISITING</string>
                                             <constraint firstItem="MTp-y1-gvs" firstAttribute="leading" secondItem="1AY-pl-1jd" secondAttribute="trailing" constant="20" id="IB0-Se-bIz"/>
                                             <constraint firstItem="DeM-69-JUw" firstAttribute="trailing" secondItem="usv-VJ-bwq" secondAttribute="trailing" id="NCb-Ka-2TR"/>
                                             <constraint firstItem="zJr-2i-veG" firstAttribute="leading" secondItem="5ZE-sE-iJ9" secondAttribute="leading" constant="20" id="OSD-X9-8Dp"/>
-                                            <constraint firstAttribute="bottom" secondItem="QLF-fD-cbU" secondAttribute="bottom" constant="20" id="PQM-SR-Nco"/>
+                                            <constraint firstAttribute="bottom" secondItem="QLF-fD-cbU" secondAttribute="bottom" priority="750" constant="20" id="PQM-SR-Nco"/>
                                             <constraint firstItem="QLF-fD-cbU" firstAttribute="top" secondItem="5ZE-sE-iJ9" secondAttribute="bottom" constant="30" id="R4d-rs-XcX"/>
                                             <constraint firstItem="5ZE-sE-iJ9" firstAttribute="leading" secondItem="wye-Fc-Sdp" secondAttribute="leading" id="SH1-YF-c2Z"/>
                                             <constraint firstItem="MTp-y1-gvs" firstAttribute="centerX" secondItem="wye-Fc-Sdp" secondAttribute="centerX" id="WdC-bf-h84"/>
@@ -721,6 +721,7 @@ VISITING</string>
                                     <constraint firstItem="wye-Fc-Sdp" firstAttribute="width" secondItem="OiK-Vw-yW4" secondAttribute="width" id="NwR-MS-FYz"/>
                                     <constraint firstAttribute="height" constant="700" id="OPu-88-cCW"/>
                                     <constraint firstAttribute="width" constant="375" id="nL7-dM-ajy"/>
+                                    <constraint firstItem="wye-Fc-Sdp" firstAttribute="height" relation="greaterThanOrEqual" secondItem="OiK-Vw-yW4" secondAttribute="height" id="ojm-UB-jm4"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o7-eQ-Hs9" userLabel="Close Button" customClass="CloseButton" customModule="apphere" customModuleProvider="target">
