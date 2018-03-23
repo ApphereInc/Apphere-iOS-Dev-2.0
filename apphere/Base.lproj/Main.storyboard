@@ -482,7 +482,7 @@ VISITING</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="MONTH 00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-ab-1tK">
-                                            <rect key="frame" x="16" y="0.0" width="388" height="50"/>
+                                            <rect key="frame" x="16" y="0.0" width="349" height="50"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                             <color key="textColor" red="0.50716221332550049" green="0.34449067711830139" blue="0.89811784029006958" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -536,12 +536,12 @@ VISITING</string>
         <!--Business Detail View Controller-->
         <scene sceneID="Eu3-25-2j8">
             <objects>
-                <viewController storyboardIdentifier="businessDetail" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="currentContext" hidesBottomBarWhenPushed="YES" id="gcm-cc-Ct0" customClass="BusinessDetailViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="businessDetail" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="gcm-cc-Ct0" customClass="BusinessDetailViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OmI-1S-9g8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-Vw-yW4">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-Vw-yW4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="880"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wye-Fc-Sdp" userLabel="Inner View">
@@ -759,6 +759,7 @@ VISITING</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OiK-Vw-yW4" firstAttribute="top" secondItem="OmI-1S-9g8" secondAttribute="top" id="3cH-fs-e68"/>
                             <constraint firstAttribute="trailing" secondItem="8o7-eQ-Hs9" secondAttribute="trailing" constant="15" id="Ezy-a8-ixt"/>

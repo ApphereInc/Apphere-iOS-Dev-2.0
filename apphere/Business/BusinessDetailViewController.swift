@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessDetailViewController: UIViewController, StatusBarHideable {
+class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestureRecognizerDelegate {
     var business: Business!
     var customerCounts: Database.CustomerCounts?
     
@@ -29,7 +29,8 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable {
         update(label: descriptionLabel,          withText: business.description)
         update(label: promotionDescriptionLabel, withText: business.promotion.description.text)
         
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognized(_:)))
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognized(_:)))
+        panGestureRecognizer.delegate = self
         view.addGestureRecognizer(panGestureRecognizer)
         
         Database.shared.getCustomerCounts(businessId: String(business.id)) { customerCounts, error in
@@ -56,20 +57,32 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable {
         return .fade
     }
     
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return gestureRecognizer == panGestureRecognizer && otherGestureRecognizer == container.panGestureRecognizer
+    }
+    
     @objc func panGestureRecognized(_ gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
+        if container.contentOffset.y > 0.0 {
+            return
+        }
+        
         let translation = gestureRecognizer.translation(in: gestureRecognizer.view!.superview!)
         var progress: CGFloat = (translation.y / 200.0)
         progress = CGFloat(min(max(progress, 0.0), 1.0))
         
         switch gestureRecognizer.state {
         case .began:
-            swipeAnimator = UIViewPropertyAnimator(duration: 0.2, curve: .linear) {
-                self.view.layer.setAffineTransform(CGAffineTransform(scaleX: 0.8, y: 0.8))
-                self.view.layer.cornerRadius = 14.0
-                self.view.layer.masksToBounds = true
-                self.closeButton.alpha = 0.0
-            }
+            break
         case .changed:
+            if swipeAnimator == nil {
+                swipeAnimator = UIViewPropertyAnimator(duration: 0.2, curve: .linear) {
+                    self.view.layer.setAffineTransform(CGAffineTransform(scaleX: 0.8, y: 0.8))
+                    self.view.layer.cornerRadius = 14.0
+                    self.view.layer.masksToBounds = true
+                    self.closeButton.alpha = 0.0
+                }
+            }
+            
             swipeAnimator?.fractionComplete = progress
             
             if progress == 1.0 {
@@ -99,6 +112,7 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable {
     }
     
     private var swipeAnimator: UIViewPropertyAnimator?
+    private var panGestureRecognizer: UIPanGestureRecognizer!
     
     private func update(label: UILabel, withText text: String?) {
         if let text = text {
