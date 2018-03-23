@@ -482,7 +482,7 @@ VISITING</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="MONTH 00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-ab-1tK">
-                                            <rect key="frame" x="16" y="0.0" width="349" height="50"/>
+                                            <rect key="frame" x="16" y="0.0" width="388" height="50"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                             <color key="textColor" red="0.50716221332550049" green="0.34449067711830139" blue="0.89811784029006958" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -541,11 +541,11 @@ VISITING</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-Vw-yW4">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-Vw-yW4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="880"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wye-Fc-Sdp" userLabel="Inner View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="902.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="903"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-sE-iJ9">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
@@ -554,7 +554,7 @@ VISITING</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usv-VJ-bwq" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="176.33333333333334" width="375" height="77.333333333333343"/>
+                                                <rect key="frame" x="10" y="176.66666666666666" width="375" height="77.333333333333343"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="BUSINESS NAME">
                                                         <attributes>
@@ -567,7 +567,7 @@ VISITING</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PROMOTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-69-JUw">
-                                                <rect key="frame" x="12" y="152.33333333333334" width="373" height="18"/>
+                                                <rect key="frame" x="12" y="152.66666666666666" width="373" height="18"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -685,19 +685,19 @@ VISITING</string>
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="1ol-7p-TsN">
-                                                <rect key="frame" x="25" y="657" width="322" height="200"/>
+                                                <rect key="frame" x="25" y="657.33333333333337" width="322" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="2FV-1w-uwJ"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promotion text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mle-9d-5YM">
-                                                <rect key="frame" x="148.66666666666666" y="869" width="77.666666666666657" height="13.666666666666629"/>
+                                                <rect key="frame" x="149" y="869.33333333333337" width="77.666666666666686" height="13.666666666666629"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.53333333329999999" green="0.33725490200000002" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="1AY-pl-1jd" firstAttribute="top" secondItem="QLF-fD-cbU" secondAttribute="top" id="2nY-BO-GeR"/>
                                             <constraint firstItem="usv-VJ-bwq" firstAttribute="top" secondItem="DeM-69-JUw" secondAttribute="bottom" constant="6" id="74c-1M-q3V"/>
@@ -730,6 +730,7 @@ VISITING</string>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.33725490200000002" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="wye-Fc-Sdp" firstAttribute="leading" secondItem="OiK-Vw-yW4" secondAttribute="leading" id="1bU-kA-517"/>
                                     <constraint firstAttribute="bottom" secondItem="wye-Fc-Sdp" secondAttribute="bottom" id="3KF-jz-liY"/>
