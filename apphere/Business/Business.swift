@@ -18,7 +18,7 @@ struct StyledText {
 
 struct Promotion {
     var name: String
-    var headline: StyledText
+    var description: StyledText
     var footer: StyledText
     var backgroundColor: ColorHex?
     var logo: ImageName?

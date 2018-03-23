@@ -35,7 +35,7 @@ class PromotionViewController: UIViewController, StatusBarHideable, Pannable {
         let promotion = business.promotion
         
         view.backgroundColor = promotion.backgroundColor.map { UIColor($0) } ?? .white
-        configure(label: headlineLabel, styledText: promotion.headline, isUppercase: true)
+        configure(label: headlineLabel, styledText: promotion.description, isUppercase: true)
         configure(label: footerLabel, styledText: promotion.footer, isUppercase: false)
         
         if let logo = promotion.logo {

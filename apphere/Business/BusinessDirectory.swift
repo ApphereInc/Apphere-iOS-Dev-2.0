@@ -33,7 +33,7 @@ class BusinessDirectory {
             contentStyle: .light,
             promotion: Promotion(
                 name: "Free Reading Royals Hat",
-                headline: StyledText(text: "FREE READING ROYALS HAT TODAY ONLY", color: "#FFFFFF"),
+                description: StyledText(text: "FREE READING ROYALS HAT TODAY ONLY", color: "#FFFFFF"),
                 footer: StyledText(text: "ticket sales and promotions are for entertainment purposes only. we are not sure what we want to say here so I will just keep typing as much as I feel like it.", color: "#FFFFFF"),
                 backgroundColor: "#8856ED",
                 logo: "sanlogo",
@@ -58,7 +58,7 @@ class BusinessDirectory {
             contentStyle: .light,
             promotion: Promotion(
                 name: "free small vanilla scoop",
-                headline: StyledText(text: "enjoy one free ice cream sundae", color: "#FFFFFF"),
+                description: StyledText(text: "enjoy one free ice cream sundae", color: "#FFFFFF"),
                 footer: StyledText(text: "while supplies last and purchased before 8PA with order. not redeemable on weekend or holidays. does not include extra cherry or whipped cream.", color: "#FFFFFF"),
                 backgroundColor: "#ACD0E4",
                 logo: "sweetlogo",
@@ -82,7 +82,7 @@ class BusinessDirectory {
             contentStyle: .light,
             promotion: Promotion(
                 name: "learn about reading",
-                headline: StyledText(text: "5th and Penn Street", color: "#FFFFFF"),
+                description: StyledText(text: "5th and Penn Street", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,
@@ -106,7 +106,7 @@ class BusinessDirectory {
             contentStyle: .light,
 promotion: Promotion(
                 name: "10% off $50 order",
-                headline: StyledText(text: "10% OFF YOUR MEAL TODAY", color: "#FFFFFF"),
+                description: StyledText(text: "10% OFF YOUR MEAL TODAY", color: "#FFFFFF"),
                 footer: StyledText(text: "while supplies last and purchased before 8PM with order. not redeemable on weekends or holidays. does not include extra nuts and whipped cream", color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,
@@ -130,7 +130,7 @@ promotion: Promotion(
             contentStyle: .light,
             promotion: Promotion(
                 name: "free house cab sav",
-                headline: StyledText(text: "Headline", color: "#FFFFFF"),
+                description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,
@@ -154,7 +154,7 @@ promotion: Promotion(
             contentStyle: .light,
 promotion: Promotion(
                 name: "free small pint of ale",
-                headline: StyledText(text: "Headline", color: "#FFFFFF"),
+                description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,
@@ -178,7 +178,7 @@ promotion: Promotion(
             contentStyle: .light,
 promotion: Promotion(
                 name: "Buy 2 get one free",
-                headline: StyledText(text: "Headline", color: "#FFFFFF"),
+                description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,
@@ -202,7 +202,7 @@ promotion: Promotion(
             contentStyle: .light,
 promotion: Promotion(
                 name: "free bumper sticker",
-                headline: StyledText(text: "Headline", color: "#FFFFFF"),
+                description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,
@@ -226,7 +226,7 @@ promotion: Promotion(
             contentStyle: .light,
 promotion: Promotion(
                 name: "free small cafe mocha",
-                headline: StyledText(text: "Headline", color: "#FFFFFF"),
+                description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,
@@ -250,7 +250,7 @@ promotion: Promotion(
             contentStyle: .light,
             promotion: Promotion(
                 name: "10% off admission",
-                headline: StyledText(text: "Reading Public Museum Promo", color: "#FFFFFF"),
+                description: StyledText(text: "Reading Public Museum Promo", color: "#FFFFFF"),
                 footer: StyledText(text: "Reading Public Museum Footer", color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,

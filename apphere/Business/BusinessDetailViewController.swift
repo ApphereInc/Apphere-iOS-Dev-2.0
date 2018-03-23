@@ -14,18 +14,20 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable {
     
     override func viewDidLoad() {
         photoView.image                 = UIImage(named: business.photo)
+        promotionPhotoView.image        = UIImage(named: business.promotion.image)
         nameLabel.text                  = business.name.uppercased()
-        promotionLabel.text             = business.promotion.name.uppercased()
+        promotionNameLabel.text         = business.promotion.name.uppercased()
 
         nameLabel.textColor = business.textColor
-        promotionLabel.textColor = business.textColor
+        promotionNameLabel.textColor = business.textColor
         urlButton.setTitle(business.url.host, for: .normal)
         
-        update(label: activeCustomerCountLabel, withCount: customerCounts?.active)
-        update(label: dailyCustomerCountLabel,  withCount: customerCounts?.daily)
-        update(label: totalCustomerCountLabel,  withCount: customerCounts?.total)
-        update(label: phoneNumberLabel,         withText: business.phoneNumber)
-        update(label: descriptionLabel,         withText: business.description)
+        update(label: activeCustomerCountLabel,  withCount: customerCounts?.active)
+        update(label: dailyCustomerCountLabel,   withCount: customerCounts?.daily)
+        update(label: totalCustomerCountLabel,   withCount: customerCounts?.total)
+        update(label: phoneNumberLabel,          withText: business.phoneNumber)
+        update(label: descriptionLabel,          withText: business.description)
+        update(label: promotionDescriptionLabel, withText: business.promotion.description.text)
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognized(_:)))
         view.addGestureRecognizer(panGestureRecognizer)
@@ -118,10 +120,12 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var urlButton: UIButton!
     @IBOutlet weak var photoView: UIImageView!
-    @IBOutlet weak var promotionLabel: UILabel!
+    @IBOutlet weak var promotionNameLabel: UILabel!
     @IBOutlet weak var activeCustomerCountLabel: UILabel!
     @IBOutlet weak var dailyCustomerCountLabel: UILabel!
     @IBOutlet weak var totalCustomerCountLabel: UILabel!
+    @IBOutlet weak var promotionDescriptionLabel: UILabel!
+    @IBOutlet weak var promotionPhotoView: UIImageView!
     @IBOutlet weak var nameLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!

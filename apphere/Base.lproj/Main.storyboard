@@ -536,16 +536,16 @@ VISITING</string>
         <!--Business Detail View Controller-->
         <scene sceneID="Eu3-25-2j8">
             <objects>
-                <viewController storyboardIdentifier="businessDetail" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="gcm-cc-Ct0" customClass="BusinessDetailViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="businessDetail" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="currentContext" hidesBottomBarWhenPushed="YES" id="gcm-cc-Ct0" customClass="BusinessDetailViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OmI-1S-9g8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-Vw-yW4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-Vw-yW4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="880"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wye-Fc-Sdp" userLabel="Inner View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="902.66666666666663"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-sE-iJ9">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
@@ -608,16 +608,16 @@ VISITING</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1AY-pl-1jd" userLabel="Description Stack">
-                                                <rect key="frame" x="10" y="460" width="157" height="80.666666666666629"/>
+                                                <rect key="frame" x="10" y="460" width="157" height="97.333333333333371"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwY-EV-IlJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="157" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="This is the description of the store" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwY-EV-IlJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="157" height="33.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="geQ-Ps-tfo" userLabel="Details Stack">
-                                                        <rect key="frame" x="0.0" y="37" width="157" height="43.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="53.666666666666629" width="157" height="43.666666666666657"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="(000) 000-0000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceq-HX-4A0">
                                                                 <rect key="frame" x="0.0" y="0.0" width="157" height="15.666666666666666"/>
@@ -626,7 +626,7 @@ VISITING</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jb-Mb-db7">
-                                                                <rect key="frame" x="0.0" y="15.666666666666629" width="157" height="28"/>
+                                                                <rect key="frame" x="0.0" y="15.666666666666742" width="157" height="28"/>
                                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="example.com"/>
@@ -684,6 +684,18 @@ VISITING</string>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="1ol-7p-TsN">
+                                                <rect key="frame" x="25" y="657" width="322" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="2FV-1w-uwJ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promotion text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mle-9d-5YM">
+                                                <rect key="frame" x="148.66666666666666" y="869" width="77.666666666666657" height="13.666666666666629"/>
+                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.53333333329999999" green="0.33725490200000002" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -693,11 +705,14 @@ VISITING</string>
                                             <constraint firstItem="zJr-2i-veG" firstAttribute="bottom" secondItem="C3Z-Xm-jo3" secondAttribute="bottom" id="E8k-K9-p8I"/>
                                             <constraint firstItem="DeM-69-JUw" firstAttribute="leading" secondItem="usv-VJ-bwq" secondAttribute="leading" constant="2" id="Fzh-vE-XHq"/>
                                             <constraint firstItem="MTp-y1-gvs" firstAttribute="leading" secondItem="1AY-pl-1jd" secondAttribute="trailing" constant="20" id="IB0-Se-bIz"/>
+                                            <constraint firstItem="Mle-9d-5YM" firstAttribute="centerX" secondItem="wye-Fc-Sdp" secondAttribute="centerX" id="MNh-V3-rA5"/>
                                             <constraint firstItem="DeM-69-JUw" firstAttribute="trailing" secondItem="usv-VJ-bwq" secondAttribute="trailing" id="NCb-Ka-2TR"/>
                                             <constraint firstItem="zJr-2i-veG" firstAttribute="leading" secondItem="5ZE-sE-iJ9" secondAttribute="leading" constant="20" id="OSD-X9-8Dp"/>
-                                            <constraint firstAttribute="bottom" secondItem="QLF-fD-cbU" secondAttribute="bottom" priority="750" constant="20" id="PQM-SR-Nco"/>
+                                            <constraint firstItem="Mle-9d-5YM" firstAttribute="top" secondItem="1ol-7p-TsN" secondAttribute="bottom" constant="12" id="Qwc-CB-uZf"/>
                                             <constraint firstItem="QLF-fD-cbU" firstAttribute="top" secondItem="5ZE-sE-iJ9" secondAttribute="bottom" constant="30" id="R4d-rs-XcX"/>
                                             <constraint firstItem="5ZE-sE-iJ9" firstAttribute="leading" secondItem="wye-Fc-Sdp" secondAttribute="leading" id="SH1-YF-c2Z"/>
+                                            <constraint firstItem="1ol-7p-TsN" firstAttribute="top" secondItem="QLF-fD-cbU" secondAttribute="bottom" constant="40.333333333333258" id="SsE-yB-Yvm"/>
+                                            <constraint firstAttribute="bottom" secondItem="Mle-9d-5YM" secondAttribute="bottom" priority="900" constant="20" id="Vmg-th-nfP"/>
                                             <constraint firstItem="MTp-y1-gvs" firstAttribute="centerX" secondItem="wye-Fc-Sdp" secondAttribute="centerX" id="WdC-bf-h84"/>
                                             <constraint firstItem="usv-VJ-bwq" firstAttribute="centerY" secondItem="5ZE-sE-iJ9" secondAttribute="centerY" id="Wkx-If-7QD"/>
                                             <constraint firstItem="5ZE-sE-iJ9" firstAttribute="top" secondItem="wye-Fc-Sdp" secondAttribute="top" id="eAd-fQ-xsX"/>
@@ -709,7 +724,9 @@ VISITING</string>
                                             <constraint firstItem="QLF-fD-cbU" firstAttribute="leading" secondItem="MTp-y1-gvs" secondAttribute="trailing" constant="20" id="rii-eV-ESb"/>
                                             <constraint firstItem="5ZE-sE-iJ9" firstAttribute="bottom" secondItem="C3Z-Xm-jo3" secondAttribute="bottom" constant="20" id="spI-QO-R4S"/>
                                             <constraint firstItem="1AY-pl-1jd" firstAttribute="leading" secondItem="usv-VJ-bwq" secondAttribute="leading" id="vrk-lL-P6K"/>
+                                            <constraint firstItem="1ol-7p-TsN" firstAttribute="leading" secondItem="wye-Fc-Sdp" secondAttribute="leading" constant="25" id="xOA-c6-wAG"/>
                                             <constraint firstItem="usv-VJ-bwq" firstAttribute="leading" secondItem="5ZE-sE-iJ9" secondAttribute="leading" constant="10" id="zFe-He-ww1"/>
+                                            <constraint firstAttribute="trailing" secondItem="1ol-7p-TsN" secondAttribute="trailing" constant="28" id="znd-l2-deo"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -719,7 +736,7 @@ VISITING</string>
                                     <constraint firstItem="wye-Fc-Sdp" firstAttribute="top" secondItem="OiK-Vw-yW4" secondAttribute="top" id="4c6-AD-Qp0"/>
                                     <constraint firstAttribute="trailing" secondItem="wye-Fc-Sdp" secondAttribute="trailing" id="AqR-Zr-gWB"/>
                                     <constraint firstItem="wye-Fc-Sdp" firstAttribute="width" secondItem="OiK-Vw-yW4" secondAttribute="width" id="NwR-MS-FYz"/>
-                                    <constraint firstAttribute="height" constant="700" id="OPu-88-cCW"/>
+                                    <constraint firstAttribute="height" constant="880" id="OPu-88-cCW"/>
                                     <constraint firstAttribute="width" constant="375" id="nL7-dM-ajy"/>
                                     <constraint firstItem="wye-Fc-Sdp" firstAttribute="height" relation="greaterThanOrEqual" secondItem="OiK-Vw-yW4" secondAttribute="height" id="ojm-UB-jm4"/>
                                 </constraints>
@@ -750,6 +767,7 @@ VISITING</string>
                         <viewLayoutGuide key="safeArea" id="DMr-2Y-eup"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="activeCustomerCountLabel" destination="evY-Nv-baR" id="GgL-B5-aaP"/>
                         <outlet property="closeButton" destination="8o7-eQ-Hs9" id="5kX-w6-ELh"/>
@@ -764,7 +782,9 @@ VISITING</string>
                         <outlet property="phoneNumberLabel" destination="ceq-HX-4A0" id="kMa-LN-x3w"/>
                         <outlet property="photoHeightConstraint" destination="jPM-co-ULd" id="nnz-P6-pv2"/>
                         <outlet property="photoView" destination="5ZE-sE-iJ9" id="zg9-gl-xaE"/>
-                        <outlet property="promotionLabel" destination="DeM-69-JUw" id="dwp-Ra-Vhc"/>
+                        <outlet property="promotionDescriptionLabel" destination="Mle-9d-5YM" id="3Qr-9v-Ifu"/>
+                        <outlet property="promotionNameLabel" destination="DeM-69-JUw" id="dwp-Ra-Vhc"/>
+                        <outlet property="promotionPhotoView" destination="1ol-7p-TsN" id="KHj-cg-5Xn"/>
                         <outlet property="totalCustomerCountLabel" destination="A0e-6M-5Jg" id="9i6-9k-1RT"/>
                         <outlet property="urlButton" destination="9jb-Mb-db7" id="X5a-H8-W9a"/>
                     </connections>
