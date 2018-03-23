@@ -171,7 +171,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit-bg" translatesAutoresizingMaskIntoConstraints="NO" id="HbI-ID-KoD" userLabel="Background Image">
+                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit-bg" translatesAutoresizingMaskIntoConstraints="NO" id="HbI-ID-KoD" userLabel="Background Image">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T3J-Xm-42a">
@@ -324,6 +324,7 @@ VISITING</string>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" red="0.50634342430000001" green="0.34765821699999999" blue="0.89808589220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bs-Aj-r94" userLabel="Close Button" customClass="CloseButton" customModule="apphere" customModuleProvider="target">
                                 <rect key="frame" x="325" y="15" width="30" height="30"/>
