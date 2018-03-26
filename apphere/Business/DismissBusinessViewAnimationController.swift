@@ -21,6 +21,11 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             return
         }
         
+//        let backgroundView = UIView()
+//        backgroundView.frame = businessDetailViewController.view.frame
+//        backgroundView.backgroundColor = .white
+//        transitionContext.containerView.addSubview(backgroundView)
+//
         let affineTransform = businessDetailViewController.view.layer.affineTransform()
         businessDetailViewController.view.layer.setAffineTransform(.identity)
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)

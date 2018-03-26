@@ -30,6 +30,7 @@ class BusinessDirectory {
             zip: "19602",
             phoneNumber: "(610) 898-7469",
             url: URL(string: "https://www.santander-arena.com/")!,
+            webCamId: "8UAZ9c",
             contentStyle: .light,
             promotion: Promotion(
                 name: "Free Reading Royals Hat",
@@ -55,6 +56,7 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(484) 987-7338",
             url: URL(string: "https://www.sweetrideicecream.com/")!,
+            webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
                 name: "free small vanilla scoop",
@@ -79,6 +81,7 @@ class BusinessDirectory {
             zip: "19611",
             phoneNumber: "(484) 987-7338",
             url: URL(string: "https://www.sweetrideicecream.com/")!,
+            webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
                 name: "learn about reading",
@@ -103,8 +106,9 @@ class BusinessDirectory {
             zip: "19602",
             phoneNumber: "(610) 374-8511",
             url: URL(string: "http://judysoncherry.com/")!,
+            webCamId: nil,
             contentStyle: .light,
-promotion: Promotion(
+            promotion: Promotion(
                 name: "10% off $50 order",
                 description: StyledText(text: "10% OFF YOUR MEAL TODAY", color: "#FFFFFF"),
                 footer: StyledText(text: "while supplies last and purchased before 8PM with order. not redeemable on weekends or holidays. does not include extra nuts and whipped cream", color: "#FFFFFF"),
@@ -127,6 +131,7 @@ promotion: Promotion(
             zip: "19611",
             phoneNumber: "(610) 373-4907",
             url: URL(string: "http://winedowncafe.net/")!,
+            webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
                 name: "free house cab sav",
@@ -151,8 +156,9 @@ promotion: Promotion(
             zip: "19611",
             phoneNumber: "(610) 376-9232",
             url: URL(string: "http://westreadingtavern.com/")!,
+            webCamId: nil,
             contentStyle: .light,
-promotion: Promotion(
+            promotion: Promotion(
                 name: "free small pint of ale",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -175,8 +181,9 @@ promotion: Promotion(
             zip: "19611",
             phoneNumber: "(610) 816-7474",
             url: URL(string: "http://www.muddycreeksoapcompany.com/")!,
+            webCamId: nil,
             contentStyle: .light,
-promotion: Promotion(
+            promotion: Promotion(
                 name: "Buy 2 get one free",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -199,8 +206,9 @@ promotion: Promotion(
             zip: "19601",
             phoneNumber: "(610) 374-4600",
             url: URL(string: "https://goggleworks.org")!,
+            webCamId: nil,
             contentStyle: .light,
-promotion: Promotion(
+            promotion: Promotion(
                 name: "free bumper sticker",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -223,8 +231,9 @@ promotion: Promotion(
             zip: "19611",
             phoneNumber: "(610) 374-2326",
             url: URL(string: "https://www.benchwarmerscoffee.com/")!,
+            webCamId: nil,
             contentStyle: .light,
-promotion: Promotion(
+            promotion: Promotion(
                 name: "free small cafe mocha",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -247,6 +256,7 @@ promotion: Promotion(
             zip: "19611",
             phoneNumber: "(610) 371-5850",
             url: URL(string: "http://www.readingpublicmuseum.org/")!,
+            webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
                 name: "10% off admission",
@@ -259,6 +269,5 @@ promotion: Promotion(
                 url: nil
             )
         )
-    
     ]
 }

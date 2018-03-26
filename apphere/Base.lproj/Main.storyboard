@@ -685,8 +685,16 @@ VISITING</string>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGt-D4-JKc">
+                                                <rect key="frame" x="25" y="657" width="325" height="200.33333333333337"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="1ol-7p-TsN">
-                                                <rect key="frame" x="25" y="657.33333333333337" width="322" height="200"/>
+                                                <rect key="frame" x="25" y="657.33333333333337" width="325" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="2FV-1w-uwJ"/>
                                                 </constraints>
@@ -712,22 +720,26 @@ VISITING</string>
                                             <constraint firstItem="Mle-9d-5YM" firstAttribute="top" secondItem="1ol-7p-TsN" secondAttribute="bottom" constant="12" id="Qwc-CB-uZf"/>
                                             <constraint firstItem="QLF-fD-cbU" firstAttribute="top" secondItem="5ZE-sE-iJ9" secondAttribute="bottom" constant="30" id="R4d-rs-XcX"/>
                                             <constraint firstItem="5ZE-sE-iJ9" firstAttribute="leading" secondItem="wye-Fc-Sdp" secondAttribute="leading" id="SH1-YF-c2Z"/>
-                                            <constraint firstItem="1ol-7p-TsN" firstAttribute="top" secondItem="QLF-fD-cbU" secondAttribute="bottom" constant="40.333333333333258" id="SsE-yB-Yvm"/>
+                                            <constraint firstItem="1ol-7p-TsN" firstAttribute="top" secondItem="QLF-fD-cbU" secondAttribute="bottom" constant="40" id="SsE-yB-Yvm"/>
+                                            <constraint firstItem="wGt-D4-JKc" firstAttribute="top" secondItem="1ol-7p-TsN" secondAttribute="top" id="VYL-QP-Ccu"/>
                                             <constraint firstAttribute="bottom" secondItem="Mle-9d-5YM" secondAttribute="bottom" priority="900" constant="20" id="Vmg-th-nfP"/>
                                             <constraint firstItem="MTp-y1-gvs" firstAttribute="centerX" secondItem="wye-Fc-Sdp" secondAttribute="centerX" id="WdC-bf-h84"/>
                                             <constraint firstItem="usv-VJ-bwq" firstAttribute="centerY" secondItem="5ZE-sE-iJ9" secondAttribute="centerY" id="Wkx-If-7QD"/>
+                                            <constraint firstItem="wGt-D4-JKc" firstAttribute="leading" secondItem="1ol-7p-TsN" secondAttribute="leading" id="YFU-HU-M0Y"/>
                                             <constraint firstItem="5ZE-sE-iJ9" firstAttribute="top" secondItem="wye-Fc-Sdp" secondAttribute="top" id="eAd-fQ-xsX"/>
                                             <constraint firstItem="MTp-y1-gvs" firstAttribute="top" secondItem="QLF-fD-cbU" secondAttribute="top" id="gS6-hV-0db"/>
                                             <constraint firstItem="QLF-fD-cbU" firstAttribute="trailing" secondItem="C3Z-Xm-jo3" secondAttribute="trailing" id="h0W-UX-9Db"/>
                                             <constraint firstAttribute="trailing" secondItem="5ZE-sE-iJ9" secondAttribute="trailing" id="hGm-5S-IPX"/>
                                             <constraint firstItem="usv-VJ-bwq" firstAttribute="trailing" secondItem="5ZE-sE-iJ9" secondAttribute="trailing" constant="10" id="ksy-RF-I89"/>
                                             <constraint firstItem="MTp-y1-gvs" firstAttribute="bottom" secondItem="QLF-fD-cbU" secondAttribute="bottom" id="pzv-3z-ARS"/>
+                                            <constraint firstItem="wGt-D4-JKc" firstAttribute="trailing" secondItem="1ol-7p-TsN" secondAttribute="trailing" id="rXX-6z-YbS"/>
                                             <constraint firstItem="QLF-fD-cbU" firstAttribute="leading" secondItem="MTp-y1-gvs" secondAttribute="trailing" constant="20" id="rii-eV-ESb"/>
+                                            <constraint firstItem="wGt-D4-JKc" firstAttribute="bottom" secondItem="1ol-7p-TsN" secondAttribute="bottom" id="rt4-Qo-hUz"/>
                                             <constraint firstItem="5ZE-sE-iJ9" firstAttribute="bottom" secondItem="C3Z-Xm-jo3" secondAttribute="bottom" constant="20" id="spI-QO-R4S"/>
                                             <constraint firstItem="1AY-pl-1jd" firstAttribute="leading" secondItem="usv-VJ-bwq" secondAttribute="leading" id="vrk-lL-P6K"/>
                                             <constraint firstItem="1ol-7p-TsN" firstAttribute="leading" secondItem="wye-Fc-Sdp" secondAttribute="leading" constant="25" id="xOA-c6-wAG"/>
                                             <constraint firstItem="usv-VJ-bwq" firstAttribute="leading" secondItem="5ZE-sE-iJ9" secondAttribute="leading" constant="10" id="zFe-He-ww1"/>
-                                            <constraint firstAttribute="trailing" secondItem="1ol-7p-TsN" secondAttribute="trailing" constant="28" id="znd-l2-deo"/>
+                                            <constraint firstAttribute="trailing" secondItem="1ol-7p-TsN" secondAttribute="trailing" constant="25" id="znd-l2-deo"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -789,6 +801,7 @@ VISITING</string>
                         <outlet property="promotionPhotoView" destination="1ol-7p-TsN" id="KHj-cg-5Xn"/>
                         <outlet property="totalCustomerCountLabel" destination="A0e-6M-5Jg" id="9i6-9k-1RT"/>
                         <outlet property="urlButton" destination="9jb-Mb-db7" id="X5a-H8-W9a"/>
+                        <outlet property="webCamView" destination="wGt-D4-JKc" id="txN-7V-9kO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41Y-yJ-6g4" userLabel="First Responder" sceneMemberID="firstResponder"/>

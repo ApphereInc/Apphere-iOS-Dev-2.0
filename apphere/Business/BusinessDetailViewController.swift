@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestureRecognizerDelegate {
     var business: Business!
@@ -14,7 +15,6 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
     
     override func viewDidLoad() {
         photoView.image                 = UIImage(named: business.photo)
-        promotionPhotoView.image        = UIImage(named: business.promotion.image)
         nameLabel.text                  = business.name.uppercased()
         promotionNameLabel.text         = business.promotion.name.uppercased()
 
@@ -29,15 +29,26 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
         update(label: descriptionLabel,          withText: business.description)
         update(label: promotionDescriptionLabel, withText: business.promotion.description.text)
         
+        webCamView.isHidden = true
+        promotionPhotoView.isHidden = true
+        
         panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognized(_:)))
         panGestureRecognizer.delegate = self
         view.addGestureRecognizer(panGestureRecognizer)
         
+        if let webCamId = business.webCamId {
+            let html = webCamHtml(webCamId: webCamId)
+            webCamView.loadHTMLString(html, baseURL: nil)
+            webCamView.isHidden = false
+        } else {
+            promotionPhotoView.image = UIImage(named: business.promotion.image)
+            promotionPhotoView.isHidden = false
+        }
+        
         Database.shared.getCustomerCounts(businessId: String(business.id)) { customerCounts, error in
             DispatchQueue.main.async {
                 if let error = error {
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.showError(error as NSError)
+                    self.showError(error)
                 }
                 
                 self.activeCustomerCountLabel.text   = String(customerCounts!.active)
@@ -45,6 +56,12 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
                 self.totalCustomerCountLabel.text    = String(customerCounts!.total)
             }
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+
     }
     
     var isStatusBarHidden = false
@@ -127,6 +144,27 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
         label.text = count.map(String.init) ?? "-"
     }
     
+    private func webCamHtml(webCamId: String) -> String {
+        return """
+        <html>
+        <body bgcolor="black">
+        <iframe
+            type = "text/html"
+            frameborder = "0"
+            width = "100%"
+            height = "100%"
+            src = "http://video.nest.com/embedded/live/\(webCamId)?autoplay=1">
+        </iframe>
+        </body>
+        </html>
+        """
+    }
+    
+    private func showError(_ error: Error) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.showError(error as NSError)
+    }
+    
     @IBOutlet weak var container: UIScrollView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -140,6 +178,7 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
     @IBOutlet weak var totalCustomerCountLabel: UILabel!
     @IBOutlet weak var promotionDescriptionLabel: UILabel!
     @IBOutlet weak var promotionPhotoView: UIImageView!
+    @IBOutlet weak var webCamView: WKWebView!
     @IBOutlet weak var nameLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!
