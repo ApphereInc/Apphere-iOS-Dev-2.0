@@ -153,7 +153,12 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
             frameborder = "0"
             width = "100%"
             height = "100%"
+<<<<<<< HEAD
             src = "https://video.nest.com/embedded/live/\(webCamId)?autoplay=1">
+=======
+            src = "http://video.nest.com/embedded/live/\(webCamId)?autoplay=1&playsinline=1"
+        >
+>>>>>>> e4362a4e0b3483d5140800a85baab1f9dcdc4bf3
         </iframe>
         </body>
         </html>
