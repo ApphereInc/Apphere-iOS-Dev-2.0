@@ -29,8 +29,22 @@ class ExitViewController: UIViewController, StatusBarHideable, Pannable {
         return .fade
     }
     
-    func starRatingChanged(_ rating: Double) {
-        // TODO
+    func starRatingChanged(_ ratingValue: Double) {
+        let rating = Database.Rating(
+            value: Int(ratingValue),
+            date: Date(),
+            businessId: String(business.id),
+            userId: User.current.id
+        )
+        
+        Database.shared.add(rating: rating) { _, error in
+            if let error = error {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.showError(error as NSError)
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func closeButtonTapped() {
