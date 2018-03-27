@@ -29,7 +29,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19602",
             phoneNumber: "(610) 898-7469",
-            url: URL(string: "https://www.santander-arena.com/")!,
+            url: URL(string: "https://santander-arena.com/")!,
             webCamId: "8UAZ9c",
             contentStyle: .light,
             promotion: Promotion(
@@ -55,7 +55,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(484) 987-7338",
-            url: URL(string: "https://www.sweetrideicecream.com/")!,
+            url: URL(string: "https://sweetrideicecream.com/")!,
             webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
@@ -80,7 +80,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(484) 987-7338",
-            url: URL(string: "https://www.sweetrideicecream.com/")!,
+            url: URL(string: "https://sweetrideicecream.com/")!,
             webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
@@ -180,7 +180,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 816-7474",
-            url: URL(string: "http://www.muddycreeksoapcompany.com/")!,
+            url: URL(string: "http://muddycreeksoapcompany.com/")!,
             webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
@@ -230,7 +230,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 374-2326",
-            url: URL(string: "https://www.benchwarmerscoffee.com/")!,
+            url: URL(string: "https://benchwarmerscoffee.com/")!,
             webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
@@ -255,7 +255,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(610) 371-5850",
-            url: URL(string: "http://www.readingpublicmuseum.org/")!,
+            url: URL(string: "http://readingpublicmuseum.org/")!,
             webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
