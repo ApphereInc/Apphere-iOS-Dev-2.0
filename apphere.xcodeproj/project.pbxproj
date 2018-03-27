@@ -33,6 +33,7 @@
 		EA5D2383205082380058B4E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA5D2382205082370058B4E7 /* GoogleService-Info.plist */; };
 		EA5F6BC72062C73200E0D087 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5F6BC62062C6C100E0D087 /* Info.storyboard */; };
 		EA67368B20378AD5003BA73A /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67368A20378AD5003BA73A /* Label.swift */; };
+		EA6778BA206A82FA00A64765 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6778B9206A82FA00A64765 /* User.swift */; };
 		EA6A474A202B7A2600455766 /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */; };
 		EA6AF6FF205850C5002BE69E /* PagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6AF6FE205850C5002BE69E /* PagedViewController.swift */; };
 		EA6C603D2038D571005EA190 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C603C2038D571005EA190 /* CloseButton.swift */; };
@@ -113,6 +114,7 @@
 		EA5D2382205082370058B4E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA5F6BC62062C6C100E0D087 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		EA67368A20378AD5003BA73A /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		EA6778B9206A82FA00A64765 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = "/Users/tony/Source/apphere/Apphere-iOS-Dev-2.0/apphere/User.swift"; sourceTree = "<absolute>"; };
 		EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
 		EA6AF6FE205850C5002BE69E /* PagedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedViewController.swift; sourceTree = "<group>"; };
 		EA6C603C2038D571005EA190 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				EAB244DE2040B5C400FF29F1 /* Notifications.swift */,
 				EA67368A20378AD5003BA73A /* Label.swift */,
 				EA95E4EB20477F6C00EE98DE /* UIImage.swift */,
+				EA6778B9206A82FA00A64765 /* User.swift */,
 				EA6C603C2038D571005EA190 /* CloseButton.swift */,
 				EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */,
 				2CD1B84E1FD3C4F200179D26 /* AppDelegate.swift */,
@@ -662,6 +665,7 @@
 				EA6AF6FF205850C5002BE69E /* PagedViewController.swift in Sources */,
 				EAF806502056AC98002A89F4 /* Database.swift in Sources */,
 				EA4D2D04203502F60081116A /* BusinessDirectory.swift in Sources */,
+				EA6778BA206A82FA00A64765 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

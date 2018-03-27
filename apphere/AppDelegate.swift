@@ -69,7 +69,7 @@ extension AppDelegate: BeaconMonitorListener {
     }
     
     private func addEventToDatabase(for business: Business, ofType type: Database.Event.EventType) {
-        let event = Database.Event(type: type, date: Date(), businessId: String(business.id))
+        let event = Database.Event(type: type, date: Date(), businessId: String(business.id), userId: User.current.id)
         
         Database.shared.add(event: event) { _, error in
             if let error = error {

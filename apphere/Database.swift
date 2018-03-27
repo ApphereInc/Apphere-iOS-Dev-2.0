@@ -22,24 +22,52 @@ class Database {
         let type: EventType
         let date: Date
         let businessId: String
+        let userId: String
         
         enum CodingKeys: String, CodingKey {
-            case type = "type"
-            case date = "date"
+            case type       = "type"
+            case date       = "date"
             case businessId = "business_id"
+            case userId     = "user_id"
+        }
+    }
+    
+    struct Rating: Codable {
+        let value: Int
+        let date: Date
+        let businessId: String
+        let userId: String
+        
+        enum CodingKeys: String, CodingKey {
+            case value      = "value"
+            case date       = "date"
+            case businessId = "business_id"
+            case userId     = "user_id"
         }
     }
     
     struct Business: Codable {
         var activeCustomerCount: Int = 0
         var totalCustomerCount: Int = 0
+        var ratingCount: Int = 0
+        var ratingTotal: Int = 0
         
         enum CodingKeys: String, CodingKey {
             case activeCustomerCount = "active_customer_count"
             case totalCustomerCount  = "total_customer_count"
+            case ratingCount         = "rating_count"
+            case ratingTotal         = "rating_total"
         }
         
         static let daysCollectionPath = "days"
+        
+        var rating: Int {
+            if ratingCount == 0 {
+                return 0
+            }
+            
+            return ratingTotal / ratingCount
+        }
     }
     
     struct Day: Codable {
@@ -94,6 +122,25 @@ class Database {
         }, completion: completion)
     }
     
+    func add(rating: Rating, completion: @escaping (Any?, Error?) -> Void) {
+        db.runTransaction({ (transaction, errorPointer) -> Any? in
+            let businessDocument = self.db.collection("businesses").document(rating.businessId)
+            var business: Business = self.decode(from: businessDocument, using: transaction) ?? Business()
+            
+            business.ratingTotal += rating.value
+            business.ratingCount += 1
+            
+            let newBusinessData = try! FirestoreEncoder().encode(business)
+            transaction.setData(newBusinessData, forDocument: businessDocument)
+            
+            let ratingData = try! FirestoreEncoder().encode(rating)
+            let ratingDocument = self.db.collection("ratings").document()
+            transaction.setData(ratingData, forDocument: ratingDocument)
+            
+            return business
+        }, completion: completion)
+    }
+    
     func getCustomerCounts(businessId: String, completion: @escaping (CustomerCounts?, Error?) -> Void) {
         let businessDocument = self.db.collection("businesses").document(businessId)
         let dayDocument = self.dayDocument(for: businessDocument, at: Date())
@@ -115,6 +162,20 @@ class Database {
                 let day: Day = self.decode(from: daySnapshot!) ?? Day()
                 completion(CustomerCounts(active: business.activeCustomerCount, daily: day.customerCount, total: business.totalCustomerCount), nil)
             }
+        }
+    }
+    
+    func getRating(businessId: String, completion: @escaping (Int?, Error?) -> Void) {
+        let businessDocument = self.db.collection("businesses").document(businessId)
+        
+        businessDocument.getDocument() { businessSnapshot, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            let business: Business = self.decode(from: businessSnapshot!) ?? Business()
+            completion(business.rating, nil)
         }
     }
     

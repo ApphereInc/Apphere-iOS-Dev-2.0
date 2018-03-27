@@ -363,6 +363,7 @@ VISITING</string>
                     </view>
                     <connections>
                         <outlet property="panGestureRecognizer" destination="IjY-tw-Ked" id="usG-ct-jg5"/>
+                        <outlet property="starRatingView" destination="ZcU-z6-9dQ" id="Nxm-yu-CuC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gO0-pU-Moj" userLabel="First Responder" sceneMemberID="firstResponder"/>
