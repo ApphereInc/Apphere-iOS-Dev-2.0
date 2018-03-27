@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class BusinessCell: UICollectionViewCell {
     var business: Business! {
@@ -24,17 +25,29 @@ class BusinessCell: UICollectionViewCell {
                     self.customerCounts = customerCounts
                     
                     if let error = error {
-                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                        appDelegate.showError(error as NSError)
+                        self.showError(error)
                     }
                     
                     self.activeCustomerCountLabel.text  = String(customerCounts!.active)
+                }
+            }
+            
+            Database.shared.getRating(businessId: String(business.id)) { rating, error in
+                DispatchQueue.main.async {
+                    self.rating = rating
+                    
+                    if let error = error {
+                        self.showError(error)
+                    }
+                    
+                    self.starRatingView.rating = Double(rating!)
                 }
             }
         }
     }
     
     var customerCounts: Database.CustomerCounts?
+    var rating: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,9 +66,14 @@ class BusinessCell: UICollectionViewCell {
         layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
     }
     
+    private func showError(_ error: Error) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.showError(error as NSError)
+    }
     
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var promotionLabel: UILabel!
     @IBOutlet weak var activeCustomerCountLabel: UILabel!
+    @IBOutlet weak var starRatingView: CosmosView!
 }

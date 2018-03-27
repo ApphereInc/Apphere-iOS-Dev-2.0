@@ -39,12 +39,16 @@ class ExitViewController: UIViewController, StatusBarHideable, Pannable {
         
         Database.shared.add(rating: rating) { _, error in
             if let error = error {
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.showError(error as NSError)
+                self.showError(error)
             } else {
                 self.dismiss(animated: true, completion: nil)
             }
         }
+    }
+    
+    private func showError(_ error: Error) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.showError(error as NSError)
     }
     
     @IBAction func closeButtonTapped() {

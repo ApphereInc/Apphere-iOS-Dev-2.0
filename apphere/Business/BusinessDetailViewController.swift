@@ -8,10 +8,12 @@
 
 import UIKit
 import WebKit
+import Cosmos
 
 class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestureRecognizerDelegate {
     var business: Business!
     var customerCounts: Database.CustomerCounts?
+    var rating: Int?
     
     override func viewDidLoad() {
         photoView.image                 = UIImage(named: business.photo)
@@ -21,6 +23,7 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
         nameLabel.textColor = business.textColor
         promotionNameLabel.textColor = business.textColor
         urlButton.setTitle(business.url.host, for: .normal)
+        starRatingView.rating = rating.map(Double.init) ?? 0
         
         update(label: activeCustomerCountLabel,  withCount: customerCounts?.active)
         update(label: dailyCustomerCountLabel,   withCount: customerCounts?.daily)
@@ -55,6 +58,16 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
                 self.dailyCustomerCountLabel.text    = String(customerCounts!.daily)
                 self.totalCustomerCountLabel.text    = String(customerCounts!.total)
             }
+        }
+        
+        Database.shared.getRating(businessId: String(business.id)) { rating, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    self.showError(error)
+                }
+                
+                self.starRatingView.rating = Double(rating!)
+             }
         }
     }
     
@@ -180,6 +193,7 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
     @IBOutlet weak var promotionDescriptionLabel: UILabel!
     @IBOutlet weak var promotionPhotoView: UIImageView!
     @IBOutlet weak var webCamView: WKWebView!
+    @IBOutlet weak var starRatingView: CosmosView!
     @IBOutlet weak var nameLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!

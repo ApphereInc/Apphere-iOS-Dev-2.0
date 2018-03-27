@@ -33,6 +33,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
             let businessViewController = segue.destination as! BusinessDetailViewController
             businessViewController.business = BusinessDirectory.businesses[activeIndexPath!.item]
             businessViewController.customerCounts = cell.customerCounts
+            businessViewController.rating = cell.rating
             businessViewController.transitioningDelegate = self
             let cellFrameInWindow = cell.convert(cell.bounds, to: nil)
             presentController.selectedBusinessCellFrameInWindow = cellFrameInWindow
