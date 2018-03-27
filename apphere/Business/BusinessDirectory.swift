@@ -80,7 +80,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(484) 987-7338",
-            url: URL(string: "https://sweetrideicecream.com/")!,
+            url: URL(string: nil,
             webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
