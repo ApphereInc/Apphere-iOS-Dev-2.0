@@ -171,7 +171,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit-bg" translatesAutoresizingMaskIntoConstraints="NO" id="HbI-ID-KoD" userLabel="Background Image">
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit-bg" translatesAutoresizingMaskIntoConstraints="NO" id="HbI-ID-KoD" userLabel="Background Image">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T3J-Xm-42a">
@@ -343,7 +343,7 @@ VISITING</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.47318303740000001" green="0.2716664224" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9Bs-Aj-r94" secondAttribute="trailing" constant="20" id="D3X-5e-0CT"/>
                             <constraint firstAttribute="bottom" secondItem="T3J-Xm-42a" secondAttribute="bottom" constant="20" id="J1W-JB-k8L"/>
