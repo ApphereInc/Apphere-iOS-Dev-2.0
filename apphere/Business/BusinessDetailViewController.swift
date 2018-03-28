@@ -22,8 +22,14 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
 
         nameLabel.textColor = business.textColor
         promotionNameLabel.textColor = business.textColor
-        urlButton.setTitle(business.url.host, for: .normal)
         starRatingView.rating = rating.map(Double.init) ?? 0
+        
+        if let url = business.url {
+            urlButton.setTitle(url.host, for: .normal)
+            urlButton.isHidden = false
+        } else {
+            urlButton.isHidden = true
+        }
         
         update(label: activeCustomerCountLabel,  withCount: customerCounts?.active)
         update(label: dailyCustomerCountLabel,   withCount: customerCounts?.daily)
@@ -138,7 +144,7 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
     }
     
     @IBAction func urlButtonTapped() {
-        UIApplication.shared.open(business.url, options: [:], completionHandler: nil)
+        UIApplication.shared.open(business.url!, options: [:], completionHandler: nil)
     }
     
     private var swipeAnimator: UIViewPropertyAnimator?

@@ -42,7 +42,7 @@ struct Business {
     let state: String
     let zip: String
     let phoneNumber: String?
-    let url: URL
+    let url: URL?
     let webCamId: String?
     let contentStyle: ContentStyle
     let promotion: Promotion

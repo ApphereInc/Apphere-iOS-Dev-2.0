@@ -80,7 +80,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19611",
             phoneNumber: "(484) 987-7338",
-            url: URL(string: "example.com")!, // TODO: need to allow nil URLs
+            url: nil,
             webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
