@@ -45,6 +45,7 @@ struct Business {
     let url: URL?
     let webCamId: String?
     let contentStyle: ContentStyle
+    let location: (Double, Double)
     let promotion: Promotion
     
     var cityStateZip: String {
