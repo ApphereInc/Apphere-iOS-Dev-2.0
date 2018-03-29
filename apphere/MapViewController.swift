@@ -23,15 +23,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
-        mapView.setCenter(readingPennsylvaniaLocation, zoomLevel: zoomLevel, animated: false)
-        
-        let annotations = BusinessDirectory.businesses.map { business -> MGLPointAnnotation in
-            let annotation = MGLPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: business.location.0, longitude: business.location.1)
-            return annotation
-        }
-        
-        mapView.addAnnotations(annotations)
+        mapView.setCenter(centerLocation, zoomLevel: zoomLevel, animated: false)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -39,6 +31,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     }
     
     let styleUrl = URL(string: "mapbox://styles/apphere/cjds1dz312xl62so1erbtwmgm")!
-    let readingPennsylvaniaLocation = CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928)
+    let centerLocation = CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928)
     let zoomLevel = 13.5
 }

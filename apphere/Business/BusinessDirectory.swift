@@ -32,7 +32,6 @@ class BusinessDirectory {
             url: URL(string: "https://santander-arena.com/")!,
             webCamId: "8UAZ9c",
             contentStyle: .light,
-            location: (40.3350301, -75.9233893),
             promotion: Promotion(
                 name: "Free Reading Royals Hat",
                 description: StyledText(text: "FREE READING ROYALS HAT TODAY ONLY", color: "#FFFFFF"),
@@ -59,7 +58,6 @@ class BusinessDirectory {
             url: URL(string: "https://sweetrideicecream.com/")!,
             webCamId: nil,
             contentStyle: .light,
-            location: (40.3354659, -75.9492043),
             promotion: Promotion(
                 name: "free small vanilla scoop",
                 description: StyledText(text: "enjoy one free ice cream sundae", color: "#FFFFFF"),
@@ -85,7 +83,6 @@ class BusinessDirectory {
             url: nil,
             webCamId: nil,
             contentStyle: .light,
-            location: (40.3356686, -75.9476796),
             promotion: Promotion(
                 name: "learn about reading",
                 description: StyledText(text: "5th and Penn Street", color: "#FFFFFF"),
@@ -111,7 +108,6 @@ class BusinessDirectory {
             url: URL(string: "http://judysoncherry.com/")!,
             webCamId: nil,
             contentStyle: .light,
-            location: (40.3343245, -75.9304755),
             promotion: Promotion(
                 name: "10% off $50 order",
                 description: StyledText(text: "10% OFF YOUR MEAL TODAY", color: "#FFFFFF"),
@@ -137,7 +133,6 @@ class BusinessDirectory {
             url: URL(string: "http://winedowncafe.net/")!,
             webCamId: nil,
             contentStyle: .light,
-            location: (40.3356395, -75.9506105),
             promotion: Promotion(
                 name: "free house cab sav",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -163,7 +158,6 @@ class BusinessDirectory {
             url: URL(string: "http://westreadingtavern.com/")!,
             webCamId: nil,
             contentStyle: .light,
-            location: (40.335603, -75.9500775),
             promotion: Promotion(
                 name: "free small pint of ale",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -189,7 +183,6 @@ class BusinessDirectory {
             url: URL(string: "http://muddycreeksoapcompany.com/")!,
             webCamId: nil,
             contentStyle: .light,
-            location: (40.3355988, -75.9501111),
             promotion: Promotion(
                 name: "Buy 2 get one free",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -215,7 +208,6 @@ class BusinessDirectory {
             url: URL(string: "https://goggleworks.org")!,
             webCamId: nil,
             contentStyle: .light,
-            location: (40.3374359, -75.9323977),
             promotion: Promotion(
                 name: "free bumper sticker",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -241,7 +233,6 @@ class BusinessDirectory {
             url: URL(string: "https://benchwarmerscoffee.com/")!,
             webCamId: nil,
             contentStyle: .light,
-            location: (40.3353609, -75.9458203),
             promotion: Promotion(
                 name: "free small cafe mocha",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
@@ -267,7 +258,6 @@ class BusinessDirectory {
             url: URL(string: "http://readingpublicmuseum.org/")!,
             webCamId: nil,
             contentStyle: .light,
-            location: (40.327419, -75.9513208),
             promotion: Promotion(
                 name: "10% off admission",
                 description: StyledText(text: "Reading Public Museum Promo", color: "#FFFFFF"),
