@@ -15,6 +15,15 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
     var customerCounts: Database.CustomerCounts?
     var rating: Int?
     
+    static func show(id: Int, viewController: UIViewController) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let businessDetailViewController = storyboard.instantiateViewController(withIdentifier: "businessDetail") as! BusinessDetailViewController
+        businessDetailViewController.business = BusinessDirectory.get(withID: id)
+        businessDetailViewController.loadViewIfNeeded()
+        PresentBusinessViewAnimationController.configure(businessDetailViewController: businessDetailViewController, frame: viewController.view.superview!.frame, top: 0.0)
+        viewController.show(businessDetailViewController, sender: nil)
+    }
+    
     override func viewDidLoad() {
         photoView.image                 = UIImage(named: business.photo)
         nameLabel.text                  = business.name.uppercased()
@@ -58,6 +67,7 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
             DispatchQueue.main.async {
                 if let error = error {
                     self.showError(error)
+                    return
                 }
                 
                 self.activeCustomerCountLabel.text   = String(customerCounts!.active)

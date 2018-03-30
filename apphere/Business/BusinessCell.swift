@@ -26,6 +26,7 @@ class BusinessCell: UICollectionViewCell {
                     
                     if let error = error {
                         self.showError(error)
+                        return
                     }
                     
                     self.activeCustomerCountLabel.text  = String(customerCounts!.active)
@@ -38,6 +39,7 @@ class BusinessCell: UICollectionViewCell {
                     
                     if let error = error {
                         self.showError(error)
+                        return
                     }
                     
                     self.starRatingView.rating = Double(rating!)
@@ -70,6 +72,8 @@ class BusinessCell: UICollectionViewCell {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.showError(error as NSError)
     }
+    
+    static let size = CGSize(width: 300, height: 344)
     
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

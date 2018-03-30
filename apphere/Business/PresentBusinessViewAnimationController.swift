@@ -20,7 +20,6 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         }
         
         transitionContext.containerView.addSubview(businessDetailViewController.view)
-        let businessDetailViewFrame = businessDetailViewController.view.superview!.frame
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
         businessDetailViewController.containerTopConstraint.constant = cellFrame.minY
         businessDetailViewController.containerWidthConstraint.constant = cellFrame.width
@@ -35,18 +34,8 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         businessDetailViewController.container.layer.cornerRadius = 14.0
         
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
-            businessDetailViewController.containerTopConstraint.constant = -10.0
-            businessDetailViewController.containerWidthConstraint.constant = businessDetailViewFrame.width
-            businessDetailViewController.containerHeightConstraint.constant = businessDetailViewFrame.height
-            businessDetailViewController.photoHeightConstraint.constant = businessDetailViewFrame.width * (cellFrame.height / cellFrame.width)
-            businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (businessDetailViewFrame.width - cellFrame.width) / 2
-            businessDetailViewController.container.isScrollEnabled = true
-            businessDetailViewController.closeButton.alpha = 0.7
-            businessDetailViewController.container.layer.cornerRadius = 0.0
-            businessDetailViewController.view.layoutIfNeeded()
-            businessDetailViewController.container.layer.setAffineTransform(.identity)
-            businessDetailViewController.isStatusBarHidden = true
-            businessDetailViewController.setNeedsStatusBarAppearanceUpdate()
+            let businessDetailViewFrame = businessDetailViewController.view.superview!.frame
+            PresentBusinessViewAnimationController.configure(businessDetailViewController: businessDetailViewController, frame: businessDetailViewFrame, top: -10.0)
         }, completion: { _ in
             UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: [.beginFromCurrentState], animations: {
                 businessDetailViewController.containerTopConstraint.constant = 0.0
@@ -60,5 +49,20 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.7
+    }
+    
+    static func configure(businessDetailViewController: BusinessDetailViewController, frame: CGRect, top: CGFloat) {
+        businessDetailViewController.containerTopConstraint.constant = top
+        businessDetailViewController.containerWidthConstraint.constant = frame.width
+        businessDetailViewController.containerHeightConstraint.constant = frame.height
+        businessDetailViewController.photoHeightConstraint.constant = frame.width * (BusinessCell.size.height / BusinessCell.size.width)
+        businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (frame.width - BusinessCell.size.width) / 2
+        businessDetailViewController.container.isScrollEnabled = true
+        businessDetailViewController.closeButton.alpha = 0.7
+        businessDetailViewController.container.layer.cornerRadius = 0.0
+        businessDetailViewController.view.layoutIfNeeded()
+        businessDetailViewController.container.layer.setAffineTransform(.identity)
+        businessDetailViewController.isStatusBarHidden = true
+        businessDetailViewController.setNeedsStatusBarAppearanceUpdate()
     }
 }

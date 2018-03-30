@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Arial.ttf">
-            <string>ArialMT</string>
-        </array>
-        <array key="ArialBold.ttf">
-            <string>Arial-BoldMT</string>
-        </array>
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="7Mr-KD-nN1">
@@ -42,10 +31,18 @@
                                 <real key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="N9i-fp-2h3" appends="YES" id="GRZ-in-V3y"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="uHs-ge-Lsp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOz-p6-gyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="N9i-fp-2h3">
+                    <connections>
+                        <action selector="mapTapped:" destination="4Wi-Pg-A2U" id="hCN-bG-1FJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="191" y="-930"/>
         </scene>

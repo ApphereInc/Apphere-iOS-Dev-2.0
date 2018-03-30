@@ -11,7 +11,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let mapView = MGLMapView(frame: .zero, styleURL: styleUrl)
+        mapView = MGLMapView(frame: .zero, styleURL: styleUrl)
         mapView.delegate = self
         mapView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(mapView)
@@ -30,6 +30,17 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         return .lightContent
     }
     
+    @IBAction func mapTapped(_ gestureRecognizer: UITapGestureRecognizer) {
+        let point = gestureRecognizer.location(in: mapView)
+        
+        let features = mapView.visibleFeatures(at: point, styleLayerIdentifiers: Set(["apphere-businesses"]))
+        
+        if let feature = features.first, let idString = feature.attribute(forKey: "ID") as? String, let id = Int(idString) {
+            BusinessDetailViewController.show(id: id, viewController: self)
+        }
+    }
+    
+    var mapView: MGLMapView!
     let styleUrl = URL(string: "mapbox://styles/apphere/cjds1dz312xl62so1erbtwmgm")!
     let centerLocation = CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928)
     let zoomLevel = 13.5
