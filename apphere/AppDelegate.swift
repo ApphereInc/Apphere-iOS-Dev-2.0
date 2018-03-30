@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        BeaconMonitor.shared.listeners.append(self)
         
         #if !IOS_SIMULATOR
             BeaconMonitor.shared.configure()
-            BeaconMonitor.shared.listener = self
         #endif
         
         Notifications.setUp()
@@ -196,8 +196,8 @@ extension UIWindow {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let business = BusinessDirectory.businesses.first!
             
-            appDelegate.entered(business: business)
-            
+            BeaconMonitor.shared.listeners.forEach { $0.entered(business: business) }
+
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
                 appDelegate.exited(business: business)
             }

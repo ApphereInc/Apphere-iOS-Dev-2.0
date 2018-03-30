@@ -17,7 +17,7 @@ protocol BeaconMonitorListener {
 
 @objc class BeaconMonitor: NSObject, CLLocationManagerDelegate {
     static var shared = BeaconMonitor()
-    var listener: BeaconMonitorListener?
+    var listeners = [BeaconMonitorListener]()
     
     func configure() {
         locationManager = CLLocationManager()
@@ -106,15 +106,15 @@ protocol BeaconMonitorListener {
     }
     
     func locationManager(_ manager: CLLocationManager, rangingBeaconsDidFailFor region: CLBeaconRegion, withError error: Error) {
-        self.listener?.monitoringFailed(error: error as NSError)
+        listeners.forEach { $0.monitoringFailed(error: error as NSError) }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        self.listener?.monitoringFailed(error: error as NSError)
+        listeners.forEach { $0.monitoringFailed(error: error as NSError) }
     }
     
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
-        self.listener?.monitoringFailed(error: error as NSError)
+        listeners.forEach { $0.monitoringFailed(error: error as NSError) }
     }
     
     // MARK: Private
@@ -132,12 +132,12 @@ protocol BeaconMonitorListener {
             
             if let oldActiveBeacon = oldValue, let oldActiveBusiness = business(from: oldActiveBeacon) {
                 print("Exited \(oldActiveBusiness.name), major = \(oldActiveBeacon.major.intValue)")
-                listener?.exited(business: oldActiveBusiness)
+                listeners.forEach { $0.exited(business: oldActiveBusiness) }
             }
             
             if let activeBeacon = self.activeBeacon, let activeBusiness = business(from: activeBeacon) {
                 print("Entered \(activeBusiness.name), major = \(activeBeacon.major.intValue)")
-                listener?.entered(business: activeBusiness)
+                listeners.forEach { $0.entered(business: activeBusiness) }
             }
         }
     }

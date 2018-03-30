@@ -5,7 +5,9 @@
 //  Created by Derek Sheldon on 12/18/17.
 //  Copyright © 2017 Derek Sheldon. All rights reserved.
 //
+
 import Mapbox
+import Pulsator
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
     override func viewDidLoad() {
@@ -24,6 +26,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         ])
         
         mapView.setCenter(centerLocation, zoomLevel: zoomLevel, animated: false)
+        BeaconMonitor.shared.listeners.append(self)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -35,13 +38,51 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         let features = mapView.visibleFeatures(at: point, styleLayerIdentifiers: Set(["apphere-businesses"]))
         
-        if let feature = features.first, let idString = feature.attribute(forKey: "ID") as? String, let id = Int(idString) {
+        if let id = features.first?.id {
             BusinessDetailViewController.show(id: id, viewController: self)
         }
     }
+    
+    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+        let view = MGLAnnotationView(annotation: annotation, reuseIdentifier: "business")
+        view.layer.addSublayer(Pulsator())
+        return view
+    }
+    
+//    func showPulseAnimation(for feature: MGLPointFeature) {
+//
+//    }
     
     var mapView: MGLMapView!
     let styleUrl = URL(string: "mapbox://styles/apphere/cjds1dz312xl62so1erbtwmgm")!
     let centerLocation = CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928)
     let zoomLevel = 13.5
+}
+
+extension MapViewController: BeaconMonitorListener {
+    func entered(business: Business) {
+        let features = mapView.visibleFeatures(in: view.bounds, styleLayerIdentifiers: Set(["apphere-businesses"]))
+        
+        if let feature = features.first(where: { $0.id == business.id} ) as? MGLPointFeature {
+            mapView.addAnnotation(feature) // TODO: need to detect already-added scenario?
+            let view = mapView.view(for: feature)
+            
+            if let pulsator = view?.layer.sublayers?.first as? Pulsator {
+                pulsator.start()
+            }
+        }
+    }
+    
+    func exited(business: Business) {}
+    func monitoringFailed(error: NSError) {}
+}
+
+extension MGLFeature {
+    var id: Int {
+        if let idString = attribute(forKey: "ID") as? String, let id = Int(idString) {
+            return id
+        }
+        
+        return -1
+    }
 }
