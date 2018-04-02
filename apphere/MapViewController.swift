@@ -29,6 +29,16 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         BeaconMonitor.shared.listeners.append(self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        (UIApplication.shared.delegate as! AppDelegate).shouldShowViewOnBeaconEvent = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        (UIApplication.shared.delegate as! AppDelegate).shouldShowViewOnBeaconEvent = true
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

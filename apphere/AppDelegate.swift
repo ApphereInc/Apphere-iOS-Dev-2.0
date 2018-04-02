@@ -13,6 +13,7 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var shouldShowViewOnBeaconEvent = true
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
@@ -145,12 +146,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         let url = userInfo["url"].flatMap { URL(string: $0) }
         
-        switch eventType {
-        case .enter:
-            showPromotionView(business: business, url: url, animated: animated)
-        case .exit:
-            showExitView(business: business, animated: animated)
-            break
+        if shouldShowViewOnBeaconEvent {
+            switch eventType {
+            case .enter:
+                showPromotionView(business: business, url: url, animated: animated)
+            case .exit:
+                showExitView(business: business, animated: animated)
+            }
         }
     }
     
