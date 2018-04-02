@@ -80,10 +80,9 @@ extension MapViewController: BeaconMonitorListener {
         let features = mapView.visibleFeatures(in: view.bounds, styleLayerIdentifiers: Set(["apphere-businesses"]))
         
         if let feature = features.first(where: { $0.id == business.id} ) as? MGLPointFeature {
-            mapView.addAnnotation(feature) // TODO: need to detect already-added scenario?
-            let view = mapView.view(for: feature)
+            mapView.addAnnotation(feature)
             
-            if let pulsator = view?.layer.sublayers?.first as? Pulsator {
+            if let view = mapView.view(for: feature), let pulsator = view.layer.sublayers?.first as? Pulsator {
                 pulsator.start()
             }
         }
