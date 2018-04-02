@@ -55,18 +55,24 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
         let view = MGLAnnotationView(annotation: annotation, reuseIdentifier: "business")
-        view.layer.addSublayer(Pulsator())
+        view.layer.addSublayer(pulsator())
         return view
     }
-    
-//    func showPulseAnimation(for feature: MGLPointFeature) {
-//
-//    }
     
     var mapView: MGLMapView!
     let styleUrl = URL(string: "mapbox://styles/apphere/cjds1dz312xl62so1erbtwmgm")!
     let centerLocation = CLLocationCoordinate2D(latitude: 40.336, longitude: -75.928)
     let zoomLevel = 13.5
+    
+    private func pulsator() -> Pulsator {
+        let pulsator = Pulsator()
+        pulsator.repeatCount       = 1
+        pulsator.numPulse          = 1
+        pulsator.radius            = 30.0
+        pulsator.animationDuration = 1.0
+        pulsator.backgroundColor   = UIColor.white.cgColor
+        return pulsator
+    }
 }
 
 extension MapViewController: BeaconMonitorListener {
