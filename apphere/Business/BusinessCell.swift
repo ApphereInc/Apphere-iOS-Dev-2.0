@@ -73,7 +73,10 @@ class BusinessCell: UICollectionViewCell {
         appDelegate.showError(error as NSError)
     }
     
-    static let size = CGSize(width: 300, height: 344)
+    static func size(frame: CGRect) -> CGSize {
+        let width = frame.width - 30.0
+        return CGSize(width: width, height: width * 1.2)
+    }
     
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

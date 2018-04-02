@@ -52,11 +52,12 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
     }
     
     static func configure(businessDetailViewController: BusinessDetailViewController, frame: CGRect, top: CGFloat) {
+        let cellSize = BusinessCell.size(frame: frame)
         businessDetailViewController.containerTopConstraint.constant = top
         businessDetailViewController.containerWidthConstraint.constant = frame.width
         businessDetailViewController.containerHeightConstraint.constant = frame.height
-        businessDetailViewController.photoHeightConstraint.constant = frame.width * (BusinessCell.size.height / BusinessCell.size.width)
-        businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (frame.width - BusinessCell.size.width) / 2
+        businessDetailViewController.photoHeightConstraint.constant = frame.width * (cellSize.height / cellSize.width)
+        businessDetailViewController.nameLeadingConstraint.constant = 10.0 + (frame.width - cellSize.width) / 2
         businessDetailViewController.container.isScrollEnabled = true
         businessDetailViewController.closeButton.alpha = 0.7
         businessDetailViewController.container.layer.cornerRadius = 0.0
