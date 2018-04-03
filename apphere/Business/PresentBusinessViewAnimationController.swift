@@ -63,6 +63,7 @@ class PresentBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         businessDetailViewController.container.layer.cornerRadius = 0.0
         businessDetailViewController.view.layoutIfNeeded()
         businessDetailViewController.container.layer.setAffineTransform(.identity)
+        businessDetailViewController.view.backgroundColor = .white
         businessDetailViewController.isStatusBarHidden = true
         businessDetailViewController.setNeedsStatusBarAppearanceUpdate()
     }

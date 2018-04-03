@@ -86,13 +86,7 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
              }
         }
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
 
-    }
-    
     var isStatusBarHidden = false
     
     override var prefersStatusBarHidden: Bool {
@@ -122,9 +116,9 @@ class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestu
         case .changed:
             if swipeAnimator == nil {
                 swipeAnimator = UIViewPropertyAnimator(duration: 0.2, curve: .linear) {
-                    self.view.layer.setAffineTransform(CGAffineTransform(scaleX: 0.8, y: 0.8))
-                    self.view.layer.cornerRadius = 14.0
-                    self.view.layer.masksToBounds = true
+                    self.container.layer.setAffineTransform(CGAffineTransform(scaleX: 0.8, y: 0.8))
+                    self.container.layer.cornerRadius = 14.0
+                    self.container.layer.masksToBounds = true
                     self.closeButton.alpha = 0.0
                 }
             }

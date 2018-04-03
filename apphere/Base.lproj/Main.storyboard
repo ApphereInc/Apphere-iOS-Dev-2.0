@@ -748,6 +748,22 @@ VISITING</string>
                                             <constraint firstAttribute="trailing" secondItem="1ol-7p-TsN" secondAttribute="trailing" constant="25" id="znd-l2-deo"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o7-eQ-Hs9" userLabel="Close Button" customClass="CloseButton" customModule="apphere" customModuleProvider="target">
+                                        <rect key="frame" x="335" y="10" width="30" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8o7-eQ-Hs9" secondAttribute="height" multiplier="1:1" id="05D-uV-bOV"/>
+                                            <constraint firstAttribute="width" constant="30" id="CPn-d6-L4N"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="✖️">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeButtonTapped" destination="gcm-cc-Ct0" eventType="touchUpInside" id="Ns7-jR-VVL"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.33725490200000002" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -761,28 +777,13 @@ VISITING</string>
                                     <constraint firstItem="wye-Fc-Sdp" firstAttribute="height" relation="greaterThanOrEqual" secondItem="OiK-Vw-yW4" secondAttribute="height" id="ojm-UB-jm4"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o7-eQ-Hs9" userLabel="Close Button" customClass="CloseButton" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="330" y="15" width="30" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="8o7-eQ-Hs9" secondAttribute="height" multiplier="1:1" id="05D-uV-bOV"/>
-                                    <constraint firstAttribute="width" constant="30" id="CPn-d6-L4N"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="✖️">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeButtonTapped" destination="gcm-cc-Ct0" eventType="touchUpInside" id="Ns7-jR-VVL"/>
-                                </connections>
-                            </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OiK-Vw-yW4" firstAttribute="top" secondItem="OmI-1S-9g8" secondAttribute="top" id="3cH-fs-e68"/>
-                            <constraint firstAttribute="trailing" secondItem="8o7-eQ-Hs9" secondAttribute="trailing" constant="15" id="Ezy-a8-ixt"/>
+                            <constraint firstAttribute="trailing" secondItem="8o7-eQ-Hs9" secondAttribute="trailing" constant="10" id="AGa-wV-eo6"/>
                             <constraint firstItem="OiK-Vw-yW4" firstAttribute="centerX" secondItem="DMr-2Y-eup" secondAttribute="centerX" id="FFk-WE-nFA"/>
-                            <constraint firstItem="8o7-eQ-Hs9" firstAttribute="top" secondItem="OmI-1S-9g8" secondAttribute="top" constant="15" id="QPm-Dv-8XD"/>
+                            <constraint firstItem="8o7-eQ-Hs9" firstAttribute="top" secondItem="OmI-1S-9g8" secondAttribute="top" constant="10" id="JH8-UG-CyA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DMr-2Y-eup"/>
                     </view>

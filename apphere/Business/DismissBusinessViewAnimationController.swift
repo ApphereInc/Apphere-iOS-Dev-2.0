@@ -20,16 +20,9 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         else {
             return
         }
-        
-//        let backgroundView = UIView()
-//        backgroundView.frame = businessDetailViewController.view.frame
-//        backgroundView.backgroundColor = .white
-//        transitionContext.containerView.addSubview(backgroundView)
-//
-        let affineTransform = businessDetailViewController.view.layer.affineTransform()
-        businessDetailViewController.view.layer.setAffineTransform(.identity)
+
         let cellFrame = businessDetailViewController.view.convert(selectedBusinessCellFrameInWindow, from: nil)
-        businessDetailViewController.view.layer.setAffineTransform(affineTransform)
+        businessDetailViewController.view.backgroundColor = .clear
         BusinessCell.applyShadow(layer: businessDetailViewController.view.layer)
         transitionContext.containerView.insertSubview(tabBarController.view, at: 0)
         businessListViewController.isStatusBarHidden = true
@@ -52,7 +45,7 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
             businessDetailViewController.nameLeadingConstraint.constant = 10.0
             businessDetailViewController.container.isScrollEnabled = false
             businessDetailViewController.view.layoutIfNeeded()
-            businessDetailViewController.view.layer.setAffineTransform(.identity)
+            businessDetailViewController.container.layer.setAffineTransform(.identity)
             businessDetailViewController.closeButton.alpha = 0
             businessDetailViewController.container.layer.cornerRadius = 14.0
             businessListViewController.isStatusBarHidden = false
