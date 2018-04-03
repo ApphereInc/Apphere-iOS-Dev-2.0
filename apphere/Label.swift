@@ -30,7 +30,9 @@ class Label: UILabel {
             }
             
             isUpdatingAttributedText = true
-            let paragraphStyle = NSMutableParagraphStyle()
+            let currentParagraphStyle = attributedText?.attribute(.paragraphStyle, at: 0, effectiveRange: nil) as? NSParagraphStyle
+            let currentParagraphStyleMutable = currentParagraphStyle?.mutableCopy() as? NSMutableParagraphStyle
+            let paragraphStyle = currentParagraphStyleMutable ?? NSMutableParagraphStyle()
             paragraphStyle.lineHeightMultiple = lineHeightMultiple
             let newAttributedText = attributedText?.mutableCopy() as! NSMutableAttributedString
             newAttributedText.addAttributes([.paragraphStyle: paragraphStyle], range: NSRange(location: 0, length: attributedText?.length ?? 0))
