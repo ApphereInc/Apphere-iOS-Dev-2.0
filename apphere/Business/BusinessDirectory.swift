@@ -21,7 +21,7 @@ class BusinessDirectory {
         Business(
             id: 1,
             name: "Santander Arena",
-            description: "TODO: add description",
+            description: "Santander Arena offers various live entertainment events in Berks County. Featuring the Reading Royals Hockey Team.",
             photo: "san",
             address1: "700 Penn St",
             address2: nil,
@@ -72,15 +72,15 @@ class BusinessDirectory {
         Business(
             id: 3,
             name: "5th and Penn Street",
-            description: "TODO: add description",
+            description: "January 24, 1765 Reading the city was beginning to form. Originally called Callowhill and Market, 5th and Penn is now the heart of Reading PA and the considered the center of the city. ",
             photo: "5",
             address1: "5th and Penn Street",
             address2: nil,
             city: "Reading",
             state: "PA",
-            zip: "19611",
-            phoneNumber: "(484) 987-7338",
-            url: nil,
+            zip: "19604",
+            phoneNumber: "877-727-3234",
+            url: URL(string: "https://www.readingpa.gov/")!,
             webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
@@ -89,7 +89,7 @@ class BusinessDirectory {
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
                 backgroundColor: "#000000",
                 logo: nil,
-                image: "sweet",
+                image: "oldpenn",
                 isImageFullSize: false,
                 url: nil
             )
@@ -97,7 +97,7 @@ class BusinessDirectory {
         Business(
             id: 4,
             name: "Judy’s On Cherry",
-            description: "TODO: add description",
+            description: "Judy’s On Cherry is the leading fine dining restaurant in Reading, PA. Fresh food and in-house brick pizza oven.",
             photo: "judy2",
             address1: "332 Cherry St",
             address2: nil,

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,23 +67,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starx" translatesAutoresizingMaskIntoConstraints="NO" id="af2-Sy-JoX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayj-ru-b8f">
+                                <rect key="frame" x="78" y="274" width="219" height="118"/>
+                                <string key="text">APP  FEATURE
+HIGHLIGHT TEXT</string>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="af2-Sy-JoX" secondAttribute="trailing" id="8GY-SO-Ves"/>
-                            <constraint firstItem="af2-Sy-JoX" firstAttribute="top" secondItem="RME-eW-UwQ" secondAttribute="top" id="HDi-kC-k1C"/>
-                            <constraint firstAttribute="bottom" secondItem="af2-Sy-JoX" secondAttribute="bottom" id="WEk-Hu-9Cj"/>
-                            <constraint firstItem="af2-Sy-JoX" firstAttribute="leading" secondItem="RME-eW-UwQ" secondAttribute="leading" id="dWx-69-r6n"/>
+                            <constraint firstItem="Ayj-ru-b8f" firstAttribute="centerY" secondItem="RME-eW-UwQ" secondAttribute="centerY" id="OsH-g0-VyA"/>
+                            <constraint firstItem="Ayj-ru-b8f" firstAttribute="top" secondItem="A6O-L8-awM" secondAttribute="top" constant="254" id="h1x-MD-uhV"/>
+                            <constraint firstItem="Ayj-ru-b8f" firstAttribute="centerX" secondItem="RME-eW-UwQ" secondAttribute="centerX" id="hhf-ag-7d3"/>
+                            <constraint firstItem="Ayj-ru-b8f" firstAttribute="leading" secondItem="A6O-L8-awM" secondAttribute="leading" constant="78" id="tI3-Fi-Loa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A6O-L8-awM"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAm-s1-Lgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1607" y="380"/>
+            <point key="canvasLocation" x="1605.5999999999999" y="379.16041979010498"/>
         </scene>
         <!--Info Page 2-->
         <scene sceneID="svZ-HP-M4F">
@@ -93,10 +98,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphonedude" translatesAutoresizingMaskIntoConstraints="NO" id="wFg-Zn-lUD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.50634342430000001" green="0.34765821699999999" blue="0.89808589220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-F8-yn7">
                                 <rect key="frame" x="16" y="40" width="343" height="627"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,11 +111,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wFg-Zn-lUD" firstAttribute="top" secondItem="Acq-Xr-dJi" secondAttribute="top" id="CIe-WA-iDj"/>
                             <constraint firstItem="dZR-F8-yn7" firstAttribute="trailing" secondItem="Acq-Xr-dJi" secondAttribute="trailingMargin" id="I14-oV-nXL"/>
-                            <constraint firstItem="wFg-Zn-lUD" firstAttribute="centerX" secondItem="dZR-F8-yn7" secondAttribute="centerX" id="IDk-Vs-sIt"/>
-                            <constraint firstItem="wFg-Zn-lUD" firstAttribute="leading" secondItem="Acq-Xr-dJi" secondAttribute="leading" id="Pz0-w6-rZp"/>
-                            <constraint firstItem="wFg-Zn-lUD" firstAttribute="bottom" secondItem="a1h-2g-AfI" secondAttribute="bottom" id="VSE-n9-zff"/>
                             <constraint firstItem="dZR-F8-yn7" firstAttribute="leading" secondItem="Acq-Xr-dJi" secondAttribute="leadingMargin" id="cl4-uD-UWh"/>
                             <constraint firstItem="dZR-F8-yn7" firstAttribute="top" secondItem="a1h-2g-AfI" secondAttribute="top" constant="20" id="gcU-1M-k1y"/>
                             <constraint firstItem="dZR-F8-yn7" firstAttribute="bottom" secondItem="a1h-2g-AfI" secondAttribute="bottom" id="lSo-ZM-x68"/>
@@ -134,10 +131,6 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biz" translatesAutoresizingMaskIntoConstraints="NO" id="jfU-D3-G6P">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.50634342430000001" green="0.34765821699999999" blue="0.89808589220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cq8-nJ-eWZ">
                                 <rect key="frame" x="16" y="40" width="343" height="627"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,12 +144,8 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jfU-D3-G6P" firstAttribute="top" secondItem="ZjZ-CE-dcu" secondAttribute="top" id="9D1-lp-Wnb"/>
-                            <constraint firstItem="jfU-D3-G6P" firstAttribute="leading" secondItem="ZjZ-CE-dcu" secondAttribute="leading" id="9of-RO-Peb"/>
                             <constraint firstItem="cq8-nJ-eWZ" firstAttribute="trailing" secondItem="ZjZ-CE-dcu" secondAttribute="trailingMargin" id="EU8-ld-Rkc"/>
                             <constraint firstItem="cq8-nJ-eWZ" firstAttribute="bottom" secondItem="g0h-eb-62K" secondAttribute="bottom" id="GNB-1p-gBe"/>
-                            <constraint firstItem="jfU-D3-G6P" firstAttribute="bottom" secondItem="cq8-nJ-eWZ" secondAttribute="bottom" id="cd6-dc-mai"/>
-                            <constraint firstItem="jfU-D3-G6P" firstAttribute="centerX" secondItem="cq8-nJ-eWZ" secondAttribute="centerX" id="jfO-VR-B9z"/>
                             <constraint firstItem="cq8-nJ-eWZ" firstAttribute="top" secondItem="g0h-eb-62K" secondAttribute="top" constant="20" id="pbs-dy-CNY"/>
                             <constraint firstItem="cq8-nJ-eWZ" firstAttribute="leading" secondItem="ZjZ-CE-dcu" secondAttribute="leadingMargin" id="rFL-pa-QQD"/>
                         </constraints>
@@ -214,9 +203,6 @@ Developer: Derek Sheldon</string>
         </scene>
     </scenes>
     <resources>
-        <image name="biz" width="700" height="618"/>
-        <image name="iphonedude" width="1161" height="1000"/>
         <image name="starappicon" width="500" height="500"/>
-        <image name="starx" width="1125" height="2436"/>
     </resources>
 </document>

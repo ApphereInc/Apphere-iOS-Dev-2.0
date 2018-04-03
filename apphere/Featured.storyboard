@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,31 +51,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rpm" translatesAutoresizingMaskIntoConstraints="NO" id="iph-lG-qCS" userLabel="Image">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an image for this page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptn-I0-XZx" userLabel="TODO">
-                                <rect key="frame" x="71.5" y="323" width="233" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="elI-Hx-aZD">
+                                <rect key="frame" x="25" y="72" width="324" height="522"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iph-lG-qCS" firstAttribute="top" secondItem="KtS-VR-aze" secondAttribute="top" id="3IK-af-N0s"/>
-                            <constraint firstItem="ptn-I0-XZx" firstAttribute="centerY" secondItem="KtS-VR-aze" secondAttribute="centerY" id="4FN-Zt-fJd"/>
-                            <constraint firstAttribute="bottom" secondItem="iph-lG-qCS" secondAttribute="bottom" id="68Z-3l-uDS"/>
-                            <constraint firstAttribute="trailing" secondItem="iph-lG-qCS" secondAttribute="trailing" id="Uff-6X-Oqn"/>
-                            <constraint firstItem="iph-lG-qCS" firstAttribute="leading" secondItem="KtS-VR-aze" secondAttribute="leading" id="Ybc-Zg-vDf"/>
-                            <constraint firstItem="ptn-I0-XZx" firstAttribute="centerX" secondItem="KtS-VR-aze" secondAttribute="centerX" id="v93-37-uVy"/>
+                            <constraint firstItem="elI-Hx-aZD" firstAttribute="leading" secondItem="KAg-if-clj" secondAttribute="leading" constant="25" id="4Az-7S-idL"/>
+                            <constraint firstItem="elI-Hx-aZD" firstAttribute="centerY" secondItem="KtS-VR-aze" secondAttribute="centerY" id="GDH-Ue-9aL"/>
+                            <constraint firstItem="elI-Hx-aZD" firstAttribute="top" secondItem="KAg-if-clj" secondAttribute="top" constant="52" id="ddR-2z-ZMT"/>
+                            <constraint firstItem="elI-Hx-aZD" firstAttribute="centerX" secondItem="KtS-VR-aze" secondAttribute="centerX" id="frk-u5-ZR8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KAg-if-clj"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKD-Xa-DiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2446" y="-278"/>
+            <point key="canvasLocation" x="2445.5999999999999" y="-278.41079460269867"/>
         </scene>
         <!--Featured View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -117,7 +114,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rpm" width="1080" height="720"/>
         <image name="triosefeat" width="517" height="600"/>
     </resources>
 </document>
