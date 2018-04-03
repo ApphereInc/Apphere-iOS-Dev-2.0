@@ -47,7 +47,7 @@ class BusinessDirectory {
         Business(
             id: 2,
             name: "Sweet Ride Ice Cream",
-            description: "TODO: add description",
+            description: "Sweet Ride Ice Cream is an ice cream parlor and soda fountain located in West Reading, PA. ",
             photo: "sweet2",
             address1: "542 Penn Ave",
             address2: nil,
