@@ -37,35 +37,53 @@ protocol BeaconMonitorListener {
     // MARK: Location Manager Delegate
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
-        print(#function)
-        
         guard region.identifier == beaconRegion.identifier else {
             return
         }
         
         var businessIdsForCurrentBeaconZones = Set<Int>()
         
-        for beacon in beacons where beacon.proximity != .unknown {
+        for beacon in beacons {
             let businessId = beacon.major.intValue
             businessIdsForCurrentBeaconZones.insert(businessId)
             
-            var beaconZone: BeaconZone
+            if beacon.proximity == .unknown {
+                continue
+            }
             
-            if let activeBeaconZone = activeBeaconZones[businessId] {
-                beaconZone = activeBeaconZone
-                print("Moved within beacon zone, businessId=\(beaconZone.businessId), proximity=\(beacon.proximity.string)")
-            } else {
-                beaconZone = BeaconZone(businessId: businessId)
-                print("Entered beacon zone, businessId=\(beaconZone.businessId), proximity=\(beacon.proximity.string)")
+            var beaconZone = activeBeaconZones[businessId] ?? BeaconZone(businessId: businessId)
+
+            if beaconZone.enterTime == nil {
+                if beacon.proximity == .far {
+                    if beaconZone.proximity != beacon.proximity {
+                        print("Is far from beacon zone, businessId=\(beaconZone.businessId)")
+                    }
+                } else {
+                    beaconZone.enterTime = Date()
+                    beaconZone.exitTime = nil
+                    print("Entered beacon zone, businessId=\(beaconZone.businessId), proximity=\(beacon.proximity.string), time=\(beaconZone.enterTime!)")
+                }
+            } else if beaconZone.proximity != beacon.proximity {
+                if beacon.proximity == .far {
+                    print("Moved far from beacon zone, businessId=\(beaconZone.businessId)")
+                } else if beacon.proximity == .far {
+                    print("Moved back within beacon zone, businessId=\(beaconZone.businessId), proximity=\(beacon.proximity.string)")
+                }
             }
             
             beaconZone.proximity = beacon.proximity
             activeBeaconZones[businessId] = beaconZone
         }
         
-        for var beaconZone in activeBeaconZones.values where !businessIdsForCurrentBeaconZones.contains(beaconZone.businessId) {
-            print("Exited beacon zone, businessId=\(beaconZone.businessId)")
-            beaconZone.exitTime = Date()
+        for var beaconZone in activeBeaconZones.values where beaconZone.enterTime != nil {
+            let beaconWasDetected = businessIdsForCurrentBeaconZones.contains(beaconZone.businessId)
+            
+            if beaconZone.proximity == .far || !beaconWasDetected {
+                beaconZone.enterTime = nil
+                beaconZone.exitTime = Date()
+                print("Exited beacon zone, businessId=\(beaconZone.businessId), time=\(beaconZone.exitTime!)")
+                activeBeaconZones[beaconZone.businessId] = beaconZone
+            }
         }
         
         updateActiveBusinessState()
@@ -113,7 +131,7 @@ protocol BeaconMonitorListener {
     
     struct BeaconZone {
         let businessId: Int
-        let enterTime = Date()
+        var enterTime: Date?
         var exitTime: Date?
         var proximity: CLProximity = .unknown
         
@@ -133,12 +151,12 @@ protocol BeaconMonitorListener {
             }
             
             if let oldActiveBusinessId = oldValue, let oldActiveBusiness = business(from: oldActiveBusinessId) {
-                print("Exited business \(oldActiveBusiness.name), businessId=\(oldActiveBusinessId)")
+                print("Deactivated business \(oldActiveBusiness.name), businessId=\(oldActiveBusinessId)")
                 listeners.forEach { $0.exited(business: oldActiveBusiness) }
             }
             
             if let activeBusinessId = self.activeBusinessId, let activeBusiness = business(from: activeBusinessId) {
-                print("Entered business \(activeBusiness.name), businessId=\(activeBusinessId)")
+                print("Activated business \(activeBusiness.name), businessId=\(activeBusinessId)")
                 listeners.forEach { $0.entered(business: activeBusiness) }
             }
         }
@@ -162,7 +180,8 @@ protocol BeaconMonitorListener {
             }
             
             if let exitTime = beaconZone.exitTime {
-                let timeIntervalSinceExit = exitTime.timeIntervalSinceNow
+                let timeIntervalSinceExit = -exitTime.timeIntervalSinceNow
+                print("Beacon zone businessId=\(beaconZone.businessId) has been exited for \(timeIntervalSinceExit) seconds")
                 
                 if timeIntervalSinceExit >= exitDelay {
                     self.activeBusinessId = nil
@@ -174,12 +193,26 @@ protocol BeaconMonitorListener {
                 }
             }
         } else {
-            let eligibleBeaconZones = activeBeaconZones.values
-                .filter { $0.enterTime.timeIntervalSinceNow > enterDelay }
-                .sorted { $0.proximity.rawValue > $1.proximity.rawValue }
+            let enteredBeaconZones = activeBeaconZones.values.filter { $0.enterTime != nil}
+            
+            if enteredBeaconZones.isEmpty {
+                return
+            }
+            
+            print("Looking for eligible beacons...")
+            
+            let eligibleBeaconZones = enteredBeaconZones.filter { beaconZone in
+                let timeIntervalSinceEnter = -beaconZone.enterTime!.timeIntervalSinceNow
+                print("Beacon zone businessId=\(beaconZone.businessId) was entered \(timeIntervalSinceEnter) seconds ago")
+                return timeIntervalSinceEnter > enterDelay
+            }.sorted { $0.proximity.rawValue > $1.proximity.rawValue }
             
             if let eligibleBeaconZone = eligibleBeaconZones.first {
                 activeBusinessId = eligibleBeaconZone.businessId
+            } else {
+                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
+                    self.updateActiveBusinessState()
+                }
             }
         }
     }
@@ -187,8 +220,8 @@ protocol BeaconMonitorListener {
     // TODO: remove active beacon zones exited over 5 minutes
     
     private let proximityUUID = UUID(uuidString: "41786AA2-86D6-F55A-0515-EACFD49E1378")!
-    private let enterDelay: TimeInterval = 5.0
-    private let exitDelay: TimeInterval = 10.0
+    private let enterDelay: TimeInterval = 1.0
+    private let exitDelay: TimeInterval  = 5.0
 }
 
 extension CLProximity {
