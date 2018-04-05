@@ -863,7 +863,7 @@
 				);
 				NEW_SETTING = "";
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "-D IOS_SIMULATOR";
-				PRODUCT_BUNDLE_IDENTIFIER = com.apphereinc.mvp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apphereinc.apphere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
@@ -891,7 +891,7 @@
 					"$(PROJECT_DIR)/apphere",
 				);
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.apphereinc.mvp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apphereinc.apphere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
