@@ -72,7 +72,7 @@ class BusinessDirectory {
         Business(
             id: 3,
             name: "5th and Penn Street",
-            description: "January 24, 1765 Reading the city was beginning to form. Originally called Callowhill and Market, 5th and Penn is  the heart of Reading PA.",
+            description: "Originally titled Callowhill and Market, 5th and Penn is the founding point of Reading PA.",
             photo: "5",
             address1: "5th and Penn Street",
             address2: nil,
@@ -80,7 +80,7 @@ class BusinessDirectory {
             state: "PA",
             zip: "19604",
             phoneNumber: "877-727-3234",
-            url: URL(string: "https://www.readingpa.gov/")!,
+            url: URL(string: "https://goo.gl/mjMGE9")!,
             webCamId: nil,
             contentStyle: .light,
             promotion: Promotion(
