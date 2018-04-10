@@ -49,18 +49,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: BeaconMonitorListener {
     func entered(business: Business) {
         DispatchQueue.main.async {
-            self.notify(with: business, forEventType: .enter)
+            self.notifyEnter(with: business)
         }
         
-        addEventToDatabase(for: business, ofType: .enter)
+        addCustomer(for: business)
     }
     
     func exited(business: Business) {
         DispatchQueue.main.async {
-            self.notify(with: business, forEventType: .exit)
+            self.notifyExit(with: business)
         }
         
-        addEventToDatabase(for: business, ofType: .exit)
+        exitCustomer(from: business)
     }
     
     func monitoringFailed(error: NSError) {
@@ -69,42 +69,59 @@ extension AppDelegate: BeaconMonitorListener {
         }
     }
     
-    private func addEventToDatabase(for business: Business, ofType type: Database.Event.EventType) {
-        let event = Database.Event(type: type, date: Date(), businessId: String(business.id), userId: User.current.id)
-        
-        Database.shared.add(event: event) { _, error in
+    private func addCustomer(for business: Business) {
+        Database.shared.addCustomer(userId: User.current.id, businessId: String(business.id)) { _, error in
             if let error = error {
                 self.showError(error as NSError)
             }
         }
     }
     
-    private func notify(with business: Business, forEventType eventType: Database.Event.EventType) {
+    private func exitCustomer(from business: Business) {
+        Database.shared.exitCustomer(userId: User.current.id, businessId: String(business.id)) { _, error in
+            if let error = error {
+                self.showError(error as NSError)
+            }
+        }
+    }
+    
+    private func notifyEnter(with business: Business) {
         var userInfo = [String: String]()
         
         userInfo["business_id"] = String(business.id)
-        userInfo["event_type"] = String(eventType.rawValue)
+        userInfo["event_type"]  = "enter"
         
         if let url = business.promotion.url {
             userInfo["url"] = url
         }
         
-        let message: String
-        let eventTypeString: String
+        let notification = Notification(
+            identifier: "enter-\(business.id)",
+            title: "",
+            message: "Open to see a special offer from \(business.name)",
+            userInfo: userInfo,
+            fireTime: .timeInterval(1.0),
+            isRepeating: false,
+            category: nil
+        )
         
-        switch eventType {
-        case .enter:
-            eventTypeString = "enter"
-            message = "Open to see a special offer from \(business.name)"
-        case .exit:
-            eventTypeString = "exit"
-            message = "Thank for you for visiting \(business.name)"
+        Notifications.add(notification: notification)
+    }
+    
+    private func notifyExit(with business: Business) {
+        var userInfo = [String: String]()
+        
+        userInfo["business_id"] = String(business.id)
+        userInfo["event_type"]  = "exit"
+        
+        if let url = business.promotion.url {
+            userInfo["url"] = url
         }
         
         let notification = Notification(
-            identifier: "\(eventTypeString)-\(business.id)",
+            identifier: "exit-\(business.id)",
             title: "",
-            message: message,
+            message: "Thank for you for visiting \(business.name)",
             userInfo: userInfo,
             fireTime: .timeInterval(1.0),
             isRepeating: false,
@@ -130,11 +147,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     private func showNotificationView(notification: UNNotification, animated: Bool) {
         let userInfo = notification.request.content.userInfo as! [String: String]
         
-        guard let eventTypeString = userInfo["event_type"],
-            let eventTypeNumber = Int(eventTypeString),
-            let eventType = Database.Event.EventType(rawValue: eventTypeNumber)
-            else {
-                return
+        guard let eventType = userInfo["event_type"] else {
+            return
         }
         
         guard let businessIdString = userInfo["business_id"],
@@ -148,10 +162,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         if shouldShowViewOnBeaconEvent {
             switch eventType {
-            case .enter:
+            case "enter":
                 showPromotionView(business: business, url: url, animated: animated)
-            case .exit:
+            case "exit":
                 showExitView(business: business, animated: animated)
+            default:
+                break
             }
         }
     }

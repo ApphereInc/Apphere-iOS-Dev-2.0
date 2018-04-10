@@ -13,22 +13,17 @@ import CodableFirebase
 class Database {
     static var shared = Database()
     
-    struct Event: Codable {
-        enum EventType: Int, Codable {
-            case enter = 0
-            case exit  = 1
-        }
-        
-        let type: EventType
-        let date: Date
-        let businessId: String
+    struct Customer: Codable {
         let userId: String
+        let businessId: String
+        let enterDate: Date
+        var exitDate: Date?
         
         enum CodingKeys: String, CodingKey {
-            case type       = "type"
-            case date       = "date"
-            case businessId = "business_id"
             case userId     = "user_id"
+            case businessId = "business_id"
+            case enterDate  = "enter_date"
+            case exitDate   = "exit_date"
         }
     }
     
@@ -89,24 +84,18 @@ class Database {
         var total: Int
     }
     
-    func add(event: Event, completion: @escaping (Any?, Error?) -> Void) {
+    func addCustomer(userId: String, businessId: String, completion: @escaping (Any?, Error?) -> Void) {
         db.runTransaction({ (transaction, errorPointer) -> Any? in
-            let businessDocument = self.db.collection("businesses").document(event.businessId)
-            let dayDocument = self.dayDocument(for: businessDocument, at: event.date)
+            let date = Date()
+            let businessDocument = self.db.collection("businesses").document(businessId)
+            let dayDocument = self.dayDocument(for: businessDocument, at: date)
             
             var business: Business = self.decode(from: businessDocument, using: transaction) ?? Business()
             var day: Day = self.decode(from: dayDocument, using: transaction) ?? Day()
             
-            switch event.type {
-            case .enter:
-                business.activeCustomerCount += 1
-                business.totalCustomerCount  += 1
-                day.customerCount            += 1
-            case .exit:
-                if business.activeCustomerCount > 0 {
-                    business.activeCustomerCount -= 1
-                }
-            }
+            business.activeCustomerCount += 1
+            business.totalCustomerCount  += 1
+            day.customerCount            += 1
             
             let newBusinessData = try! FirestoreEncoder().encode(business)
             transaction.setData(newBusinessData, forDocument: businessDocument)
@@ -114,11 +103,48 @@ class Database {
             let newDayData = try! FirestoreEncoder().encode(day)
             transaction.setData(newDayData, forDocument: dayDocument)
 
-            let eventData = try! FirestoreEncoder().encode(event)
-            let eventDocument = self.db.collection("events").document()
-            transaction.setData(eventData, forDocument: eventDocument)
+            let customer = Customer(userId: userId, businessId: businessId, enterDate: date, exitDate: nil)
+            let customerData = try! FirestoreEncoder().encode(customer)
+            let customerDocument = self.db.collection("customers").document()
+            transaction.setData(customerData, forDocument: customerDocument)
             
-            return business
+            return customer
+        }, completion: completion)
+    }
+    
+    func exitCustomer(userId: String, businessId: String, completion: @escaping (Any?, Error?) -> Void) {
+        db.runTransaction({ (transaction, errorPointer) -> Any? in
+            let businessDocument = self.db.collection("businesses").document(businessId)
+            var business: Business = self.decode(from: businessDocument, using: transaction) ?? Business()
+            
+            if business.activeCustomerCount > 0 {
+                business.activeCustomerCount -= 1
+                let newBusinessData = try! FirestoreEncoder().encode(business)
+                transaction.setData(newBusinessData, forDocument: businessDocument)
+            }
+            
+            let customerQuery = self.db.collection("customers")
+                .whereField("user_id", isEqualTo: userId)
+                .whereField("business_id", isEqualTo: businessId)
+                .order(by: "enter_date", descending: true)
+                .limit(to: 1)
+                
+            customerQuery.getDocuments { snapshot, error in
+                if let error = error {
+                    completion(nil, error)
+                    return
+                }
+                
+                if let customerDocumentSnapshot = snapshot!.documents.first,
+                   var customer: Customer = self.decode(from: customerDocumentSnapshot)
+                {
+                    customer.exitDate = Date()
+                    let customerData = try! FirestoreEncoder().encode(customer)
+                    transaction.setData(customerData, forDocument: customerDocumentSnapshot.reference)
+                }
+            }
+            
+            return nil
         }, completion: completion)
     }
     
