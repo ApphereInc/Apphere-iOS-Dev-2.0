@@ -113,39 +113,41 @@ class Database {
     }
     
     func exitCustomer(userId: String, businessId: String, completion: @escaping (Any?, Error?) -> Void) {
-        db.runTransaction({ (transaction, errorPointer) -> Any? in
-            let businessDocument = self.db.collection("businesses").document(businessId)
-            var business: Business = self.decode(from: businessDocument, using: transaction) ?? Business()
-            
-            if business.activeCustomerCount > 0 {
-                business.activeCustomerCount -= 1
-                let newBusinessData = try! FirestoreEncoder().encode(business)
-                transaction.setData(newBusinessData, forDocument: businessDocument)
+        let customerQuery = self.db.collection("customers")
+            .whereField("user_id", isEqualTo: userId)
+            .whereField("business_id", isEqualTo: businessId)
+            .order(by: "enter_date", descending: true)
+            .limit(to: 1)
+
+        customerQuery.getDocuments { snapshot, error in
+            if let error = error {
+                completion(nil, error)
+                return
             }
             
-            let customerQuery = self.db.collection("customers")
-                .whereField("user_id", isEqualTo: userId)
-                .whereField("business_id", isEqualTo: businessId)
-                .order(by: "enter_date", descending: true)
-                .limit(to: 1)
+            let customerDocument = snapshot!.documents.first?.reference
+            
+            self.db.runTransaction({ (transaction, errorPointer) -> Any? in
+                let businessDocument = self.db.collection("businesses").document(businessId)
+                var business: Business = self.decode(from: businessDocument, using: transaction) ?? Business()
                 
-            customerQuery.getDocuments { snapshot, error in
-                if let error = error {
-                    completion(nil, error)
-                    return
-                }
-                
-                if let customerDocumentSnapshot = snapshot!.documents.first,
-                   var customer: Customer = self.decode(from: customerDocumentSnapshot)
+                if let customerDocument = customerDocument,
+                   var customer: Customer = self.decode(from: customerDocument, using: transaction)
                 {
                     customer.exitDate = Date()
                     let customerData = try! FirestoreEncoder().encode(customer)
-                    transaction.setData(customerData, forDocument: customerDocumentSnapshot.reference)
+                    transaction.setData(customerData, forDocument: customerDocument)
                 }
-            }
-            
-            return nil
-        }, completion: completion)
+                
+                if business.activeCustomerCount > 0 {
+                    business.activeCustomerCount -= 1
+                    let newBusinessData = try! FirestoreEncoder().encode(business)
+                    transaction.setData(newBusinessData, forDocument: businessDocument)
+                }
+                
+                return business.activeCustomerCount
+            }, completion: completion)
+        }
     }
     
     func add(rating: Rating, completion: @escaping (Any?, Error?) -> Void) {
