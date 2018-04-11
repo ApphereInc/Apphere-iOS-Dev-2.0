@@ -22,6 +22,12 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
+## Node
+node_modules
+*.lock
+package-lock.json
+*.log
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
