@@ -91,7 +91,7 @@ class BusinessDirectory {
                 logo: nil,
                 image: "oldpenn",
                 isImageFullSize: false,
-                url: nil
+                url: https://www.dropbox.com/s/2b6wvovvji9d4ov/Apphere%20One-Sheet.pdf?dl=0,
             )
         ),
         Business(
