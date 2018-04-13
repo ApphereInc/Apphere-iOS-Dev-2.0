@@ -9,12 +9,15 @@
 import Foundation
 
 struct Business: Codable {
+    //var id: String!
+    //var createDate = Date()
     var activeCustomerCount: Int = 0
     var totalCustomerCount: Int = 0
     var ratingCount: Int = 0
     var ratingTotal: Int = 0
     
     enum CodingKeys: String, CodingKey {
+        //case createDate          = "create_date"
         case activeCustomerCount = "active_customer_count"
         case totalCustomerCount  = "total_customer_count"
         case ratingCount         = "rating_count"

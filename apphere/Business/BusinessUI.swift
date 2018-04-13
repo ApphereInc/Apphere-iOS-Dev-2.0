@@ -16,7 +16,7 @@ struct StyledText {
     var color: ColorHex
 }
 
-struct Promotion {
+struct PromotionUI {
     var name: String
     var description: StyledText
     var footer: StyledText
@@ -45,7 +45,7 @@ struct BusinessUI {
     let url: URL?
     let webCamId: String?
     let contentStyle: ContentStyle
-    let promotion: Promotion
+    let promotion: PromotionUI
     
     var cityStateZip: String {
         return "\(city), \(state) \(zip)"

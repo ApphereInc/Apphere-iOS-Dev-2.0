@@ -32,7 +32,7 @@ class BusinessDirectory {
             url: URL(string: "https://santander-arena.com/")!,
             webCamId: "8UAZ9c",
             contentStyle: .light,
-            promotion: Promotion(
+            promotion: PromotionUI(
                 name: "Free Reading Royals Hat",
                 description: StyledText(text: "FREE READING ROYALS HAT TODAY ONLY", color: "#FFFFFF"),
                 footer: StyledText(text: "ticket sales and promotions are for entertainment purposes only. we are not sure what we want to say here so I will just keep typing as much as I feel like it.", color: "#FFFFFF"),
@@ -58,7 +58,7 @@ class BusinessDirectory {
             url: URL(string: "https://sweetrideicecream.com/")!,
             webCamId: nil,
             contentStyle: .light,
-            promotion: Promotion(
+            promotion: PromotionUI(
                 name: "free small vanilla scoop",
                 description: StyledText(text: "enjoy one free ice cream sundae", color: "#FFFFFF"),
                 footer: StyledText(text: "while supplies last and purchased before 8PA with order. not redeemable on weekend or holidays. does not include extra cherry or whipped cream.", color: "#FFFFFF"),
@@ -83,7 +83,7 @@ class BusinessDirectory {
             url: URL(string: "https://goo.gl/mjMGE9")!,
             webCamId: nil,
             contentStyle: .light,
-            promotion: Promotion(
+            promotion: PromotionUI(
                 name: "learn about reading",
                 description: StyledText(text: "5th and Penn Street", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -108,7 +108,7 @@ class BusinessDirectory {
             url: URL(string: "http://judysoncherry.com/")!,
             webCamId: nil,
             contentStyle: .light,
-            promotion: Promotion(
+            promotion: PromotionUI(
                 name: "10% off $50 order",
                 description: StyledText(text: "10% OFF YOUR MEAL TODAY", color: "#FFFFFF"),
                 footer: StyledText(text: "while supplies last and purchased before 8PM with order. not redeemable on weekends or holidays. does not include extra nuts and whipped cream", color: "#FFFFFF"),
@@ -133,7 +133,7 @@ class BusinessDirectory {
             url: URL(string: "http://winedowncafe.net/")!,
             webCamId: nil,
             contentStyle: .light,
-            promotion: Promotion(
+            promotion: PromotionUI(
                 name: "free house cab sav",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -158,7 +158,7 @@ class BusinessDirectory {
             url: URL(string: "http://westreadingtavern.com/")!,
             webCamId: nil,
             contentStyle: .light,
-            promotion: Promotion(
+            promotion: PromotionUI(
                 name: "free small pint of ale",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -183,7 +183,7 @@ class BusinessDirectory {
             url: URL(string: "http://muddycreeksoapcompany.com/")!,
             webCamId: nil,
             contentStyle: .light,
-            promotion: Promotion(
+            promotion: PromotionUI(
                 name: "Buy 2 get one free",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -208,7 +208,7 @@ class BusinessDirectory {
             url: URL(string: "https://goggleworks.org")!,
             webCamId: nil,
             contentStyle: .light,
-            promotion: Promotion(
+            promotion: PromotionUI(
                 name: "free bumper sticker",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -233,7 +233,7 @@ class BusinessDirectory {
             url: URL(string: "https://benchwarmerscoffee.com/")!,
             webCamId: nil,
             contentStyle: .light,
-            promotion: Promotion(
+            promotion: PromotionUI(
                 name: "free small cafe mocha",
                 description: StyledText(text: "Headline", color: "#FFFFFF"),
                 footer: StyledText(text: "Footer", color: "#FFFFFF"),
@@ -258,7 +258,7 @@ class BusinessDirectory {
             url: URL(string: "http://readingpublicmuseum.org/")!,
             webCamId: nil,
             contentStyle: .light,
-            promotion: Promotion(
+            promotion: PromotionUI(
                 name: "10% off admission",
                 description: StyledText(text: "Reading Public Museum Promo", color: "#FFFFFF"),
                 footer: StyledText(text: "Reading Public Museum Footer", color: "#FFFFFF"),
