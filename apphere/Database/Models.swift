@@ -8,24 +8,36 @@
 
 import Foundation
 
-struct Business: Codable {
-    //var id: String!
-    //var createDate = Date()
+protocol FirestoreCodable: Codable {
+    var documentID: String { get set }
+}
+
+struct Business: FirestoreCodable {
+    var id: String!
     var activeCustomerCount: Int = 0
     var totalCustomerCount: Int = 0
     var ratingCount: Int = 0
     var ratingTotal: Int = 0
     
     enum CodingKeys: String, CodingKey {
-        //case createDate          = "create_date"
         case activeCustomerCount = "active_customer_count"
         case totalCustomerCount  = "total_customer_count"
         case ratingCount         = "rating_count"
         case ratingTotal         = "rating_total"
     }
+    
+    var documentID: String {
+        get {
+            return id
+        }
+        
+        set {
+            id = newValue
+        }
+    }
 }
 
-struct Customer: Codable {
+struct Customer: FirestoreCodable {
     let userId: String
     let businessId: String
     let enterDate: Date
@@ -39,7 +51,7 @@ struct Customer: Codable {
     }
 }
 
-struct Rating: Codable {
+struct Rating: FirestoreCodable {
     let value: Int
     let date: Date
     let businessId: String
@@ -53,11 +65,19 @@ struct Rating: Codable {
     }
 }
 
-struct Day: Codable {
+struct Day: FirestoreCodable {
     var customerCount: Int = 0
     
     enum CodingKeys: String, CodingKey {
         case customerCount = "customer_count"
     }
 }
+
+extension FirestoreCodable {
+    var documentID: String {
+        get { return "" }
+        set {}
+    }
+}
+
 

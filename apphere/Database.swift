@@ -138,7 +138,7 @@ class Database {
         }
     }
     
-    private func decode<T: Decodable>(from document: DocumentReference, using transaction: Transaction) -> T? {
+    private func decode<T: FirestoreCodable>(from document: DocumentReference, using transaction: Transaction) -> T? {
         do {
             let snapshot = try transaction.getDocument(document)
             return self.decode(from: snapshot)
@@ -147,10 +147,12 @@ class Database {
         }
     }
     
-    private func decode<T: Decodable>(from snapshot: DocumentSnapshot) -> T? {
+    private func decode<T: FirestoreCodable>(from snapshot: DocumentSnapshot) -> T? {
         if let data = snapshot.data() {
             do {
-                return try FirestoreDecoder().decode(T.self, from: data)
+                var object = try FirestoreDecoder().decode(T.self, from: data)
+                object.documentID = snapshot.documentID
+                return object
             } catch {}
         }
         
