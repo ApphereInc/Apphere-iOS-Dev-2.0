@@ -13,6 +13,24 @@ import CodableFirebase
 class Database {
     static var shared = Database()
     
+    typealias CustomerCounts = (active: Int, daily: Int, total: Int)
+    
+    // MARK: - Models
+    
+    struct Business: Codable {
+        var activeCustomerCount: Int = 0
+        var totalCustomerCount: Int = 0
+        var ratingCount: Int = 0
+        var ratingTotal: Int = 0
+        
+        enum CodingKeys: String, CodingKey {
+            case activeCustomerCount = "active_customer_count"
+            case totalCustomerCount  = "total_customer_count"
+            case ratingCount         = "rating_count"
+            case ratingTotal         = "rating_total"
+        }
+    }
+    
     struct Customer: Codable {
         let userId: String
         let businessId: String
@@ -41,47 +59,12 @@ class Database {
         }
     }
     
-    struct Business: Codable {
-        var activeCustomerCount: Int = 0
-        var totalCustomerCount: Int = 0
-        var ratingCount: Int = 0
-        var ratingTotal: Int = 0
-        
-        enum CodingKeys: String, CodingKey {
-            case activeCustomerCount = "active_customer_count"
-            case totalCustomerCount  = "total_customer_count"
-            case ratingCount         = "rating_count"
-            case ratingTotal         = "rating_total"
-        }
-        
-        static let daysCollectionPath = "days"
-        
-        var rating: Int {
-            if ratingCount == 0 {
-                return 0
-            }
-            
-            return ratingTotal / ratingCount
-        }
-    }
-    
     struct Day: Codable {
         var customerCount: Int = 0
         
         enum CodingKeys: String, CodingKey {
             case customerCount = "customer_count"
         }
-        
-        static func path(from date: Date) -> String {
-            let dateAtStartOfDay = Calendar.current.startOfDay(for: date)
-            return String(dateAtStartOfDay.timeIntervalSince1970)
-        }
-    }
-    
-    struct CustomerCounts {
-        var active: Int
-        var daily: Int
-        var total: Int
     }
     
     func addCustomer(userId: String, businessId: String, completion: @escaping (Any?, Error?) -> Void) {
@@ -203,7 +186,7 @@ class Database {
             }
             
             let business: Business = self.decode(from: businessSnapshot!) ?? Business()
-            completion(business.rating, nil)
+            completion(business.averageRating, nil)
         }
     }
     
@@ -227,10 +210,22 @@ class Database {
     }
     
     private func dayDocument(for businessDocument: DocumentReference, at date: Date) -> DocumentReference {
-        return businessDocument.collection(Business.daysCollectionPath).document(Day.path(from: date))
+        let dateAtStartOfDay = Calendar.current.startOfDay(for: date)
+        let dayPath = String(dateAtStartOfDay.timeIntervalSince1970)
+        return businessDocument.collection("days").document(dayPath)
     }
     
     private lazy var db = Firestore.firestore()
+}
+
+extension Database.Business {
+    var averageRating: Int {
+        if ratingCount == 0 {
+            return 0
+        }
+        
+        return ratingTotal / ratingCount
+    }
 }
 
 
