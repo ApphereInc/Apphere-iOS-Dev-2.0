@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FirestoreCodable: Codable {
-    var documentID: String { get set }
+    mutating func setDocumentId(_ documentId: String)
 }
 
 struct Business: FirestoreCodable {
@@ -26,14 +26,8 @@ struct Business: FirestoreCodable {
         case ratingTotal         = "rating_total"
     }
     
-    var documentID: String {
-        get {
-            return id
-        }
-        
-        set {
-            id = newValue
-        }
+    mutating func setDocumentId(_ documentId: String) {
+        id = documentId
     }
 }
 
@@ -74,10 +68,7 @@ struct Day: FirestoreCodable {
 }
 
 extension FirestoreCodable {
-    var documentID: String {
-        get { return "" }
-        set {}
-    }
+    func setDocumentId(_ documentId: String) {}
 }
 
 

@@ -150,8 +150,8 @@ class Database {
     private func decode<T: FirestoreCodable>(from snapshot: DocumentSnapshot) -> T? {
         if let data = snapshot.data() {
             do {
-                var object = try FirestoreDecoder().decode(T.self, from: data)
-                object.documentID = snapshot.documentID
+                let object = try FirestoreDecoder().decode(T.self, from: data)
+                object.setDocumentId(snapshot.documentID)
                 return object
             } catch {}
         }
