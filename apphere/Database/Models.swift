@@ -8,27 +8,74 @@
 
 import Foundation
 
+typealias ColorHex = String
+
 protocol FirestoreCodable: Codable {
     mutating func setDocumentId(_ documentId: String)
 }
 
 struct Business: FirestoreCodable {
     var id: String!
-    var activeCustomerCount: Int = 0
-    var totalCustomerCount: Int = 0
-    var ratingCount: Int = 0
-    var ratingTotal: Int = 0
+    let name: String
+    let description: String
+    let imageUrl: URL?
+    let webPageUrl: URL?
+    let address: String?
+    let city: String
+    let state: String
+    let zip: String
+    let phoneNumber: String?
+    let webcamId: String?
+    var promotion: Promotion?
+    var customerStats = CustomerStats()
+    var ratingStats = RatingStats()
     
     enum CodingKeys: String, CodingKey {
-        case activeCustomerCount = "active_customer_count"
-        case totalCustomerCount  = "total_customer_count"
-        case ratingCount         = "rating_count"
-        case ratingTotal         = "rating_total"
+        case name                = "name"
+        case description         = "description"
+        case imageUrl            = "image_url"
+        case address             = "address"
+        case city                = "city"
+        case state               = "state"
+        case zip                 = "zip"
+        case phoneNumber         = "phone_number"
+        case webPageUrl          = "web_page_url"
+        case webcamId            = "webcam_id"
+        case promotion           = "promotion"
+        case customerStats       = "customer_stats"
+        case ratingStats         = "rating_stats"
     }
     
     mutating func setDocumentId(_ documentId: String) {
         id = documentId
     }
+    
+    var cityStateZip: String {
+        return "\(city), \(state) \(zip)"
+    }
+}
+
+struct Promotion: FirestoreCodable {
+    var name: String
+    var description: String
+    var footer: String
+    var descriptionColor: ColorHex?
+    var footerColor: ColorHex?
+    var backgroundColor: ColorHex?
+    var imageUrl: URL
+    var logoUrl: URL?
+    var webPageUrl: URL?
+    var isImageFullSize: Bool
+}
+
+struct CustomerStats: FirestoreCodable {
+    var active: Int = 0
+    var total: Int = 0
+}
+
+struct RatingStats: FirestoreCodable {
+    var count: Int = 0
+    var total: Int = 0
 }
 
 struct Customer: FirestoreCodable {

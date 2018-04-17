@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias ColorHex = String
+//typealias ColorHex = String
 typealias ImageName = String
 
 struct StyledText {

@@ -12,21 +12,24 @@ import CodableFirebase
 
 class Database {
     static var shared = Database()
-    
+
     typealias CustomerCounts = (active: Int, daily: Int, total: Int)
     
     func addCustomer(userId: String, businessId: String, completion: @escaping (Any?, Error?) -> Void) {
         db.runTransaction({ (transaction, errorPointer) -> Any? in
-            let date = Date()
             let businessDocument = self.db.collection("businesses").document(businessId)
-            let dayDocument = self.dayDocument(for: businessDocument, at: date)
             
-            var business: Business = self.decode(from: businessDocument, using: transaction) ?? Business()
+            guard var business: Business = self.decode(from: businessDocument, using: transaction) else {
+                return nil
+            }
+            
+            let date = Date()
+            let dayDocument = self.dayDocument(for: businessDocument, at: date)
             var day: Day = self.decode(from: dayDocument, using: transaction) ?? Day()
             
-            business.activeCustomerCount += 1
-            business.totalCustomerCount  += 1
-            day.customerCount            += 1
+            business.customerStats.active += 1
+            business.customerStats.total  += 1
+            day.customerCount             += 1
             
             let newBusinessData = try! FirestoreEncoder().encode(business)
             transaction.setData(newBusinessData, forDocument: businessDocument)
@@ -60,7 +63,10 @@ class Database {
             
             self.db.runTransaction({ (transaction, errorPointer) -> Any? in
                 let businessDocument = self.db.collection("businesses").document(businessId)
-                var business: Business = self.decode(from: businessDocument, using: transaction) ?? Business()
+                
+                guard var business: Business = self.decode(from: businessDocument, using: transaction) else {
+                    return nil
+                }
                 
                 if let customerDocument = customerDocument,
                    var customer: Customer = self.decode(from: customerDocument, using: transaction)
@@ -70,13 +76,13 @@ class Database {
                     transaction.setData(customerData, forDocument: customerDocument)
                 }
                 
-                if business.activeCustomerCount > 0 {
-                    business.activeCustomerCount -= 1
+                if business.customerStats.active > 0 {
+                    business.customerStats.active -= 1
                     let newBusinessData = try! FirestoreEncoder().encode(business)
                     transaction.setData(newBusinessData, forDocument: businessDocument)
                 }
                 
-                return business.activeCustomerCount
+                return business.customerStats.active
             }, completion: completion)
         }
     }
@@ -84,10 +90,13 @@ class Database {
     func add(rating: Rating, completion: @escaping (Any?, Error?) -> Void) {
         db.runTransaction({ (transaction, errorPointer) -> Any? in
             let businessDocument = self.db.collection("businesses").document(rating.businessId)
-            var business: Business = self.decode(from: businessDocument, using: transaction) ?? Business()
             
-            business.ratingTotal += rating.value
-            business.ratingCount += 1
+            guard var business: Business = self.decode(from: businessDocument, using: transaction) else {
+                return nil
+            }
+            
+            business.ratingStats.total += rating.value
+            business.ratingStats.count += 1
             
             let newBusinessData = try! FirestoreEncoder().encode(business)
             transaction.setData(newBusinessData, forDocument: businessDocument)
@@ -110,7 +119,10 @@ class Database {
                 return
             }
             
-            let business: Business = self.decode(from: businessSnapshot!) ?? Business()
+            guard let business: Business = self.decode(from: businessSnapshot!) else {
+                completion(nil, NSError(domain: "Database", code: 1, userInfo: nil))
+                return
+            }
             
             dayDocument.getDocument() { daySnapshot, error in
                 if let error = error {
@@ -119,7 +131,7 @@ class Database {
                 }
                 
                 let day: Day = self.decode(from: daySnapshot!) ?? Day()
-                completion(CustomerCounts(active: business.activeCustomerCount, daily: day.customerCount, total: business.totalCustomerCount), nil)
+                completion(CustomerCounts(active: business.customerStats.active, daily: day.customerCount, total: business.customerStats.total), nil)
             }
         }
     }
@@ -133,8 +145,12 @@ class Database {
                 return
             }
             
-            let business: Business = self.decode(from: businessSnapshot!) ?? Business()
-            completion(business.averageRating, nil)
+            guard let business: Business = self.decode(from: businessSnapshot!) else {
+                completion(nil, NSError(domain: "Database", code: 1, userInfo: nil))
+                return
+            }
+            
+            completion(business.ratingStats.average, nil)
         }
     }
     
@@ -168,13 +184,13 @@ class Database {
     private lazy var db = Firestore.firestore()
 }
 
-extension Business {
-    var averageRating: Int {
-        if ratingCount == 0 {
+extension RatingStats {
+    var average: Int {
+        if count == 0 {
             return 0
         }
         
-        return ratingTotal / ratingCount
+        return total / count
     }
 }
 
