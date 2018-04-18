@@ -284,7 +284,60 @@ let home = Category(
             prompt: "Where's the best pizza near me?",
             color: "#539EF6",
             subcategories: [
-                
+                Category(
+                    title: "Italian",
+                    subtitle: "Pasta",
+                    prompt: "Where's the best Italian food near me?",
+                    color: "#539EF6",
+                    subcategories: [],
+                    featuredIds: [],
+                    allIds: []
+                ),
+                Category(
+                    title: "Tex-Mex",
+                    subtitle: "Tacos and Churros",
+                    prompt: "Where's the best Tex-Mex food near me?",
+                    color: "#539EF6",
+                    subcategories: [],
+                    featuredIds: [],
+                    allIds: []
+                ),
+                Category(
+                    title: "American",
+                    subtitle: "Burgers & Fries",
+                    prompt: "Where's the American food near me?",
+                    color: "#539EF6",
+                    subcategories: [],
+                    featuredIds: [],
+                    allIds: []
+                ),
+                Category(
+                    title: "Seafood",
+                    subtitle: "Fish and Lobster",
+                    prompt: "Where's the best seafood near me?",
+                    color: "#539EF6",
+                    subcategories: [],
+                    featuredIds: [],
+                    allIds: []
+                ),
+                Category(
+                    title: "Steak",
+                    subtitle: "Beef and Lamb",
+                    prompt: "Where's the steak near me?",
+                    color: "#539EF6",
+                    subcategories: [],
+                    featuredIds: [],
+                    allIds: []
+                ),
+                Category(
+                    title: "Barbarque",
+                    subtitle: "Ribs and Collard Greens",
+                    prompt: "Where's the best BBQ near me?",
+                    color: "#539EF6",
+                    subcategories: [],
+                    featuredIds: [],
+                    allIds: []
+                )
             ],
             featuredIds: [],
             allIds: []
