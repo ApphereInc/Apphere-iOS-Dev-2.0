@@ -60,3 +60,13 @@ struct Business {
         }
     }
 }
+
+struct Category {
+    let title: String
+    let subtitle: String
+    let prompt: String
+    let color: ColorHex
+    let subcategories: [Category]
+    let featuredIds: [Int]
+    let allIds: [Int]
+}

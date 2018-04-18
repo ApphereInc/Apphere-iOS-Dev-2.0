@@ -271,3 +271,80 @@ class BusinessDirectory {
         )
     ]
 }
+
+let home = Category(
+    title: "",
+    subtitle: "",
+    prompt: "Where's the best _________ near me?",
+    color: "#000000",
+    subcategories: [
+        Category(
+            title: "Food",
+            subtitle: "Restaurants",
+            prompt: "Where's the best pizza near me?",
+            color: "#539EF6",
+            subcategories: [
+                
+            ],
+            featuredIds: [],
+            allIds: []
+        ),
+        Category(
+            title: "Drinks",
+            subtitle: "Cafes & Bars",
+            prompt: "Where's the best bar near me?",
+            color: "#2A23D2",
+            subcategories: [
+                
+            ],
+            featuredIds: [],
+            allIds: []
+        ),
+        Category(
+            title: "Health",
+            subtitle: "Med & Gyms",
+            prompt: "Where's the best doctor near me?",
+            color: "#CF06BE",
+            subcategories: [
+                
+            ],
+            featuredIds: [],
+            allIds: []
+        ),
+        Category(
+            title: "Fun",
+            subtitle: "Fun & Movies",
+            prompt: "Where's the most fun place near me?",
+            color: "#FAA13A",
+            subcategories: [
+                
+            ],
+            featuredIds: [],
+            allIds: []
+        ),
+        Category(
+            title: "Services",
+            subtitle: "Banks & Gas",
+            prompt: "Where's the best bank near me?",
+            color: "#27AA16",
+            subcategories: [
+                
+            ],
+            featuredIds: [],
+            allIds: []
+        ),
+        Category(
+            title: "Shopping",
+            subtitle: "Retail & Malls",
+            prompt: "Where's the best clothing store near me?",
+            color: "#B87CFF",
+            subcategories: [
+                
+            ],
+            featuredIds: [],
+            allIds: []
+        )
+    ],
+    featuredIds: [],
+    allIds: []
+)
