@@ -24,6 +24,7 @@
 		E50CB028372812DC52179166 /* Pods_apphereUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A2627E04DA46F7E9CF7BC /* Pods_apphereUITests.framework */; };
 		EA22D015202E1339006C2861 /* DismissBusinessViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22D013202E1339006C2861 /* DismissBusinessViewAnimationController.swift */; };
 		EA22D016202E1339006C2861 /* PresentBusinessViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22D014202E1339006C2861 /* PresentBusinessViewAnimationController.swift */; };
+		EA36059A2087CF3E00A91267 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3605992087CF3E00A91267 /* Categories.swift */; };
 		EA42F05D205C8D6C00070BCF /* ModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */; };
 		EA4A5970202A53AF0062ACF4 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */; };
 		EA4A5972202A5BDE0062ACF4 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5971202A5BDE0062ACF4 /* Business.swift */; };
@@ -105,6 +106,7 @@
 		CAD841BEA5874BB9F1D25DA6 /* Pods_apphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA22D013202E1339006C2861 /* DismissBusinessViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissBusinessViewAnimationController.swift; sourceTree = "<group>"; };
 		EA22D014202E1339006C2861 /* PresentBusinessViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentBusinessViewAnimationController.swift; sourceTree = "<group>"; };
+		EA3605992087CF3E00A91267 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDismissAnimator.swift; sourceTree = "<group>"; };
 		EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		EA4A5971202A5BDE0062ACF4 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				EAADDF802044A54800D8B78C /* PromotionViewController.swift */,
 				EA4C2E4020606964004BB856 /* ExitViewController.swift */,
 				EAB244DC2040AAA800FF29F1 /* Beacons.swift */,
+				EA3605992087CF3E00A91267 /* Categories.swift */,
 				EAF8064F2056AC98002A89F4 /* Database.swift */,
 				EAB244DE2040B5C400FF29F1 /* Notifications.swift */,
 				EA67368A20378AD5003BA73A /* Label.swift */,
@@ -664,6 +667,7 @@
 				EAADDF812044A54800D8B78C /* PromotionViewController.swift in Sources */,
 				EA4A5972202A5BDE0062ACF4 /* Business.swift in Sources */,
 				EA4A5970202A53AF0062ACF4 /* BusinessCell.swift in Sources */,
+				EA36059A2087CF3E00A91267 /* Categories.swift in Sources */,
 				EA95E4EC20477F6C00EE98DE /* UIImage.swift in Sources */,
 				EA4A5974202A68020062ACF4 /* BusinessListHeaderView.swift in Sources */,
 				EA6AF6FF205850C5002BE69E /* PagedViewController.swift in Sources */,
