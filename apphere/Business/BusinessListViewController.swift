@@ -15,7 +15,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         Notifications.authorize(confirmationViewController: self, completion: {_ in })
-        category = Category.home
+        category = category ?? Category.home
         addSections()
     }
     
@@ -30,7 +30,8 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "businessDetail" {
+        switch segue.identifier {
+        case "businessDetail":
             let cell = sender as! BusinessCell
             activeIndexPath = collectionView.indexPath(for: cell)!
             let businessViewController = segue.destination as! BusinessDetailViewController
@@ -41,6 +42,13 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
             let cellFrameInWindow = cell.convert(cell.bounds, to: nil)
             presentController.selectedBusinessCellFrameInWindow = cellFrameInWindow
             dismissController.selectedBusinessCellFrameInWindow = cellFrameInWindow
+        case "category":
+            let cell = sender as! CategoryCell
+            let indexPath = collectionView.indexPath(for: cell)!
+            let businessListController = segue.destination as! BusinessListViewController
+            businessListController.category = category.subcategories[indexPath.item]
+        default:
+            break
         }
     }
     
@@ -180,7 +188,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) else {
+        guard indexPath.section != categoriesSection, let cell = collectionView.cellForItem(at: indexPath) else {
             return
         }
 
