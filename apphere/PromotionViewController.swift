@@ -23,7 +23,7 @@ class PromotionViewController: UIViewController, StatusBarHideable, Pannable {
     let logoShadowOffset                                    = CGSize(width: 2.0, height: 2.0)
     let logoShadowBlur: CGFloat                             = 3.0
     
-    var business: Business!
+    var business: BusinessUI!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

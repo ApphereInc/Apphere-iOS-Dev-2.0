@@ -10,8 +10,8 @@ import Foundation
 import CoreLocation
 
 protocol BeaconMonitorListener {
-    func entered(business: Business)
-    func exited(business: Business)
+    func entered(business: BusinessUI)
+    func exited(business: BusinessUI)
     func monitoringFailed(error: NSError)
 }
 
@@ -111,7 +111,7 @@ protocol BeaconMonitorListener {
         }
     }
     
-    private func business(from businessId: Int) -> Business? {
+    private func business(from businessId: Int) -> BusinessUI? {
         if let business = BusinessDirectory.get(withID: businessId) {
             return business
         }

@@ -10,7 +10,7 @@ import UIKit
 import Cosmos
 
 class ExitViewController: UIViewController, StatusBarHideable, Pannable {
-    var business: Business!
+    var business: BusinessUI!
     var isStatusBarHidden = true
     
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class ExitViewController: UIViewController, StatusBarHideable, Pannable {
     }
     
     func starRatingChanged(_ ratingValue: Double) {
-        let rating = Database.Rating(
+        let rating = Rating(
             value: Int(ratingValue),
             date: Date(),
             businessId: String(business.id),

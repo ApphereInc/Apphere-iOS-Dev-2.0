@@ -11,7 +11,7 @@ import WebKit
 import Cosmos
 
 class BusinessDetailViewController: UIViewController, StatusBarHideable, UIGestureRecognizerDelegate {
-    var business: Business!
+    var business: BusinessUI!
     var customerCounts: Database.CustomerCounts?
     var rating: Int?
     

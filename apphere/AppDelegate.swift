@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: BeaconMonitorListener {
-    func entered(business: Business) {
+    func entered(business: BusinessUI) {
         DispatchQueue.main.async {
             self.notifyEnter(with: business)
         }
@@ -55,7 +55,7 @@ extension AppDelegate: BeaconMonitorListener {
         addCustomer(for: business)
     }
     
-    func exited(business: Business) {
+    func exited(business: BusinessUI) {
         DispatchQueue.main.async {
             self.notifyExit(with: business)
         }
@@ -69,7 +69,7 @@ extension AppDelegate: BeaconMonitorListener {
         }
     }
     
-    private func addCustomer(for business: Business) {
+    private func addCustomer(for business: BusinessUI) {
         Database.shared.addCustomer(userId: User.current.id, businessId: String(business.id)) { _, error in
             if let error = error {
                 self.showError(error as NSError)
@@ -77,7 +77,7 @@ extension AppDelegate: BeaconMonitorListener {
         }
     }
     
-    private func exitCustomer(from business: Business) {
+    private func exitCustomer(from business: BusinessUI) {
         Database.shared.exitCustomer(userId: User.current.id, businessId: String(business.id)) { _, error in
             if let error = error {
                 self.showError(error as NSError)
@@ -85,7 +85,7 @@ extension AppDelegate: BeaconMonitorListener {
         }
     }
     
-    private func notifyEnter(with business: Business) {
+    private func notifyEnter(with business: BusinessUI) {
         var userInfo = [String: String]()
         
         userInfo["business_id"] = String(business.id)
@@ -108,7 +108,7 @@ extension AppDelegate: BeaconMonitorListener {
         Notifications.add(notification: notification)
     }
     
-    private func notifyExit(with business: Business) {
+    private func notifyExit(with business: BusinessUI) {
         var userInfo = [String: String]()
         
         userInfo["business_id"] = String(business.id)
@@ -172,7 +172,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
     }
     
-    private func showPromotionView(business: Business, url: URL?, animated: Bool) {
+    private func showPromotionView(business: BusinessUI, url: URL?, animated: Bool) {
         if let url = url, UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
             return
@@ -192,7 +192,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         presentingViewController.present(promotionViewController, animated: animated, completion: nil)
     }
     
-    private func showExitView(business: Business, animated: Bool) {
+    private func showExitView(business: BusinessUI, animated: Bool) {
         let presentingViewController = rootViewController
         
         if presentingViewController.presentedViewController != nil {

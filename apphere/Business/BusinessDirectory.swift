@@ -9,16 +9,16 @@
 import Foundation
 
 class BusinessDirectory {
-    static func get(withID id: NSNumber) -> Business? {
+    static func get(withID id: NSNumber) -> BusinessUI? {
         return get(withID: id.intValue)
     }
     
-    static func get(withID id: Int) -> Business? {
+    static func get(withID id: Int) -> BusinessUI? {
         return businesses.first { $0.id == id }
     }
     
-    static var businesses: [Business] = [
-        Business(
+    static var businesses: [BusinessUI] = [
+        BusinessUI(
             id: 1,
             name: "Santander Arena",
             description: "Santander Arena offers various live entertainment events in Berks County. Featuring the Reading Royals Hockey Team.",
@@ -44,7 +44,7 @@ class BusinessDirectory {
             )
         ),
        
-        Business(
+        BusinessUI(
             id: 2,
             name: "Sweet Ride Ice Cream",
             description: "Sweet Ride Ice Cream is an ice cream parlor and soda fountain located in West Reading, PA. ",
@@ -69,7 +69,7 @@ class BusinessDirectory {
                 url: nil
             )
         ),
-        Business(
+        BusinessUI(
             id: 3,
             name: "5th and Penn Street",
             description: "Originally titled Callowhill and Market, 5th and Penn is the founding point of Reading PA.",
@@ -94,7 +94,7 @@ class BusinessDirectory {
                 url: "https://www.dropbox.com/s/2b6wvovvji9d4ov/Apphere%20One-Sheet.pdf?dl=0"
             )
         ),
-        Business(
+        BusinessUI(
             id: 4,
             name: "Judy’s On Cherry",
             description: "Judy’s On Cherry is the leading fine dining restaurant in Reading, PA. Fresh food and in-house brick pizza oven.",
@@ -119,7 +119,7 @@ class BusinessDirectory {
                 url: nil
             )
         ),
-        Business(
+        BusinessUI(
             id: 5,
             name: "Winedown Cafe",
             description: "TODO: add description",
@@ -144,7 +144,7 @@ class BusinessDirectory {
                 url: nil
             )
         ),
-        Business(
+        BusinessUI(
             id: 6,
             name: "West Reading Tavern",
             description: "TODO: add description",
@@ -169,7 +169,7 @@ class BusinessDirectory {
                 url: nil
             )
         ),
-        Business(
+        BusinessUI(
             id: 7,
             name: "Muddy Creek Soap",
             description: "TODO: add description",
@@ -194,7 +194,7 @@ class BusinessDirectory {
                 url: nil
             )
         ),
-        Business(
+        BusinessUI(
             id: 8,
             name: "Goggle Works",
             description: "TODO: add description",
@@ -219,7 +219,7 @@ class BusinessDirectory {
                 url: nil
             )
         ),
-        Business(
+        BusinessUI(
             id: 9,
             name: "Bench Warmers Coffee",
             description: "TODO: add description",
@@ -244,7 +244,7 @@ class BusinessDirectory {
                 url: nil
             )
         ),
-        Business(
+        BusinessUI(
             id: 10,
             name: "Reading Public Museum",
             description: "TODO: add description",

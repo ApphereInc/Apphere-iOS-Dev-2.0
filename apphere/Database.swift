@@ -15,58 +15,6 @@ class Database {
     
     typealias CustomerCounts = (active: Int, daily: Int, total: Int)
     
-    // MARK: - Models
-    
-    struct Business: Codable {
-        var activeCustomerCount: Int = 0
-        var totalCustomerCount: Int = 0
-        var ratingCount: Int = 0
-        var ratingTotal: Int = 0
-        
-        enum CodingKeys: String, CodingKey {
-            case activeCustomerCount = "active_customer_count"
-            case totalCustomerCount  = "total_customer_count"
-            case ratingCount         = "rating_count"
-            case ratingTotal         = "rating_total"
-        }
-    }
-    
-    struct Customer: Codable {
-        let userId: String
-        let businessId: String
-        let enterDate: Date
-        var exitDate: Date?
-        
-        enum CodingKeys: String, CodingKey {
-            case userId     = "user_id"
-            case businessId = "business_id"
-            case enterDate  = "enter_date"
-            case exitDate   = "exit_date"
-        }
-    }
-    
-    struct Rating: Codable {
-        let value: Int
-        let date: Date
-        let businessId: String
-        let userId: String
-        
-        enum CodingKeys: String, CodingKey {
-            case value      = "value"
-            case date       = "date"
-            case businessId = "business_id"
-            case userId     = "user_id"
-        }
-    }
-    
-    struct Day: Codable {
-        var customerCount: Int = 0
-        
-        enum CodingKeys: String, CodingKey {
-            case customerCount = "customer_count"
-        }
-    }
-    
     func addCustomer(userId: String, businessId: String, completion: @escaping (Any?, Error?) -> Void) {
         db.runTransaction({ (transaction, errorPointer) -> Any? in
             let date = Date()
@@ -218,7 +166,7 @@ class Database {
     private lazy var db = Firestore.firestore()
 }
 
-extension Database.Business {
+extension Business {
     var averageRating: Int {
         if ratingCount == 0 {
             return 0

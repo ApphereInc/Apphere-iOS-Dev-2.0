@@ -76,7 +76,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
 }
 
 extension MapViewController: BeaconMonitorListener {
-    func entered(business: Business) {
+    func entered(business: BusinessUI) {
         let features = mapView.visibleFeatures(in: view.bounds, styleLayerIdentifiers: Set(["apphere-businesses"]))
         
         if let feature = features.first(where: { $0.id == business.id} ) as? MGLPointFeature {
@@ -88,7 +88,7 @@ extension MapViewController: BeaconMonitorListener {
         }
     }
     
-    func exited(business: Business) {}
+    func exited(business: BusinessUI) {}
     func monitoringFailed(error: NSError) {}
 }
 

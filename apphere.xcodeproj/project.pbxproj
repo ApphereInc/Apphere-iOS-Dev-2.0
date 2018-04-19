@@ -27,7 +27,7 @@
 		EA36059A2087CF3E00A91267 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3605992087CF3E00A91267 /* Categories.swift */; };
 		EA42F05D205C8D6C00070BCF /* ModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */; };
 		EA4A5970202A53AF0062ACF4 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */; };
-		EA4A5972202A5BDE0062ACF4 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5971202A5BDE0062ACF4 /* Business.swift */; };
+		EA4A5972202A5BDE0062ACF4 /* BusinessUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5971202A5BDE0062ACF4 /* BusinessUI.swift */; };
 		EA4A5974202A68020062ACF4 /* BusinessListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */; };
 		EA4C2E4120606964004BB856 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4C2E4020606964004BB856 /* ExitViewController.swift */; };
 		EA4D2D04203502F60081116A /* BusinessDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4D2D03203502F60081116A /* BusinessDirectory.swift */; };
@@ -43,6 +43,7 @@
 		EAADDF812044A54800D8B78C /* PromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAADDF802044A54800D8B78C /* PromotionViewController.swift */; };
 		EAB244DD2040AAA800FF29F1 /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB244DC2040AAA800FF29F1 /* Beacons.swift */; };
 		EAB244DF2040B5C400FF29F1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB244DE2040B5C400FF29F1 /* Notifications.swift */; };
+		EAB59DEC20811EFF00BDA543 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB59DE920811E1200BDA543 /* Models.swift */; };
 		EAF806502056AC98002A89F4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF8064F2056AC98002A89F4 /* Database.swift */; };
 		EAFFA81820617CEA00BD5AB3 /* Featured.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */; };
 /* End PBXBuildFile section */
@@ -109,7 +110,7 @@
 		EA3605992087CF3E00A91267 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDismissAnimator.swift; sourceTree = "<group>"; };
 		EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
-		EA4A5971202A5BDE0062ACF4 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		EA4A5971202A5BDE0062ACF4 /* BusinessUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessUI.swift; sourceTree = "<group>"; };
 		EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessListHeaderView.swift; sourceTree = "<group>"; };
 		EA4C2E4020606964004BB856 /* ExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		EA4D2D03203502F60081116A /* BusinessDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDirectory.swift; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		EAADDF802044A54800D8B78C /* PromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewController.swift; sourceTree = "<group>"; };
 		EAB244DC2040AAA800FF29F1 /* Beacons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacons.swift; sourceTree = "<group>"; };
 		EAB244DE2040B5C400FF29F1 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		EAB59DE920811E1200BDA543 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		EAF4F8C2202B790500FEA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "apphere/Base.lproj/Old Storyboard.storyboard"; sourceTree = "<group>"; };
 		EAF8064F2056AC98002A89F4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Featured.storyboard; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		2CD1B84D1FD3C4F200179D26 /* apphere */ = {
 			isa = PBXGroup;
 			children = (
+				EAB59DEB20811E2400BDA543 /* Database */,
 				EA22D012202DE820006C2861 /* Business */,
 				2CD1B8501FD3C4F200179D26 /* InfoViewController.swift */,
 				2C05C7141FDBDF5700D1DBE9 /* FeaturedViewController.swift */,
@@ -273,10 +276,19 @@
 				EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */,
 				EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */,
 				EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */,
-				EA4A5971202A5BDE0062ACF4 /* Business.swift */,
+				EA4A5971202A5BDE0062ACF4 /* BusinessUI.swift */,
 				EA4D2D03203502F60081116A /* BusinessDirectory.swift */,
 			);
 			path = Business;
+		EAB59DEB20811E2400BDA543 /* Database */ = {
+			sourceTree = "<group>";
+		};
+			isa = PBXGroup;
+			children = (
+				EAF8064F2056AC98002A89F4 /* Database.swift */,
+				EAB59DE920811E1200BDA543 /* Models.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -653,6 +665,7 @@
 				2C05C7151FDBDF5700D1DBE9 /* FeaturedViewController.swift in Sources */,
 				EA42F05D205C8D6C00070BCF /* ModalDismissAnimator.swift in Sources */,
 				EA4C2E4120606964004BB856 /* ExitViewController.swift in Sources */,
+				EAB59DEC20811EFF00BDA543 /* Models.swift in Sources */,
 				2CD1B84F1FD3C4F200179D26 /* AppDelegate.swift in Sources */,
 				EA22D016202E1339006C2861 /* PresentBusinessViewAnimationController.swift in Sources */,
 				EA22D015202E1339006C2861 /* DismissBusinessViewAnimationController.swift in Sources */,
@@ -665,7 +678,7 @@
 				2CD1B8511FD3C4F200179D26 /* InfoViewController.swift in Sources */,
 				2C3A13CC1FE5BBF60041410C /* BusinessListViewController.swift in Sources */,
 				EAADDF812044A54800D8B78C /* PromotionViewController.swift in Sources */,
-				EA4A5972202A5BDE0062ACF4 /* Business.swift in Sources */,
+				EA4A5972202A5BDE0062ACF4 /* BusinessUI.swift in Sources */,
 				EA4A5970202A53AF0062ACF4 /* BusinessCell.swift in Sources */,
 				EA36059A2087CF3E00A91267 /* Categories.swift in Sources */,
 				EA95E4EC20477F6C00EE98DE /* UIImage.swift in Sources */,

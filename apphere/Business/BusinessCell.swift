@@ -10,7 +10,7 @@ import UIKit
 import Cosmos
 
 class BusinessCell: UICollectionViewCell {
-    var business: Business! {
+    var business: BusinessUI! {
         didSet {
             photoView.image                 = UIImage(named: business.photo)
             nameLabel.text                  = business.name.uppercased()
