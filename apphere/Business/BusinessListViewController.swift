@@ -8,12 +8,15 @@
 
 import UIKit
 
-class BusinessListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate, StatusBarHideable {
+class BusinessListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate, StatusBarHideable {
     public var activeIndexPath: IndexPath?
+    public var category: Category!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Notifications.authorize(confirmationViewController: self, completion: {_ in })
+        category = Category.home
+        addSections()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,28 +58,105 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         return .lightContent
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = BusinessCell.size(frame: view.frame)
-    }
-    
     // MARK: - UICollectionViewDataSource
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return sectionCount
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return BusinessDirectory.businesses.count
+        switch section {
+        case categoriesSection:
+            return category.subcategories.count
+        case featuredSection:
+            return category.featuredIds.count
+        case allSection:
+            return category.allIds.count
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.section == categoriesSection {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "category", for: indexPath) as! CategoryCell
+            cell.category = category.subcategories[indexPath.item]
+            return cell
+        }
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "business", for: indexPath) as! BusinessCell
         cell.business = BusinessDirectory.businesses[indexPath.item]
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch indexPath.section {
+        case categoriesSection:
+            return CategoryCell.size
+        case featuredSection, allSection:
+            return BusinessCell.size(frame: view.frame)
+        default:
+            return .zero
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        switch section {
+        case categoriesSection:
+            return UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
+        case featuredSection, allSection:
+            return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 20.0, right: 0.0)
+        default:
+            return .zero
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        switch section {
+        case categoriesSection:
+            return 10.0
+        case featuredSection, allSection:
+            return 10.0
+        default:
+            return 0.0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        switch section {
+        case categoriesSection:
+            return 10.0
+        case featuredSection, allSection:
+            return 30.0
+        default:
+            return 0.0
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! BusinessListHeaderView
-        header.date = Date()
+        
+        switch indexPath.section {
+        case categoriesSection:
+            header.title = ""
+        case featuredSection:
+            header.title = "Featured Business"
+        case allSection:
+            header.title = "All \(category.title) Results"
+        default:
+            break
+        }
+        
         return header
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        switch section {
+        case featuredSection, allSection:
+            return CGSize(width: 0.0, height: 50.0)
+        default:
+            return .zero
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
@@ -130,4 +210,28 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     
     let presentController = PresentBusinessViewAnimationController()
     let dismissController = DismissBusinessViewAnimationController()
+    
+    // MARK: - Private
+    
+    private func addSections() {
+        if !category.subcategories.isEmpty {
+            categoriesSection = sectionCount
+            sectionCount += 1
+        }
+        
+        if !category.featuredIds.isEmpty {
+            featuredSection = sectionCount
+            sectionCount += 1
+        }
+        
+        if !category.allIds.isEmpty {
+            allSection = sectionCount
+            sectionCount += 1
+        }
+    }
+    
+    private var sectionCount = 0
+    private var categoriesSection = -1
+    private var featuredSection = -1
+    private var allSection = -1
 }

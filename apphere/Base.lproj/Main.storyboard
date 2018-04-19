@@ -96,7 +96,7 @@
                                 <rect key="frame" x="40" y="60" width="295" height="200"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-y1-K5U" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="20" y="280" width="335" height="63"/>
+                                <rect key="frame" x="20" y="280" width="335" height="113.66666666666669"/>
                                 <attributedString key="attributedText">
                                     <fragment content="THE PROMOTION HEADLINE">
                                         <attributes>
@@ -111,7 +111,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="vSG-pe-Kon">
-                                <rect key="frame" x="20" y="363" width="335" height="338"/>
+                                <rect key="frame" x="20" y="413.66666666666674" width="335" height="287.33333333333326"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Footer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-mg-WIN">
                                 <rect key="frame" x="20" y="741" width="335" height="17"/>
@@ -175,7 +175,7 @@
                                 <rect key="frame" x="20" y="65" width="335" height="727"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpG-id-8WQ" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="191.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="221.66666666666666"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="335" id="eZS-qo-Zh1"/>
                                         </constraints>
@@ -229,7 +229,7 @@ VISITING</string>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-5U-Nsz" userLabel="Rating Stack View">
-                                        <rect key="frame" x="27.666666666666657" y="377" width="280" height="92.333333333333314"/>
+                                        <rect key="frame" x="27.666666666666657" y="392" width="280" height="92.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PLEASE RATE YOUR EXPERIENCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPV-MN-lal">
                                                 <rect key="frame" x="9.3333333333333428" y="0.0" width="261" height="20.333333333333332"/>
@@ -481,6 +481,32 @@ VISITING</string>
                                             <outlet property="photoView" destination="1aF-x4-tG4" id="T6v-he-v0o"/>
                                             <outlet property="promotionLabel" destination="bN4-Og-biA" id="RK6-py-pdV"/>
                                             <outlet property="starRatingView" destination="cFK-Gl-7bR" id="w6p-6m-3ML"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category" id="ScP-x0-2bn" userLabel="Category Cell" customClass="CategoryCell" customModule="apphere" customModuleProvider="target">
+                                        <rect key="frame" x="137.66666666666666" y="424" width="100" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gD4-7b-0K6">
+                                                    <rect key="frame" x="10" y="10" width="80" height="70"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gD4-7b-0K6" secondAttribute="trailing" constant="10" id="GhA-Nr-EWO"/>
+                                            <constraint firstAttribute="bottom" secondItem="gD4-7b-0K6" secondAttribute="bottom" constant="10" id="MlN-sq-iMw"/>
+                                            <constraint firstItem="gD4-7b-0K6" firstAttribute="top" secondItem="ScP-x0-2bn" secondAttribute="top" constant="10" id="idQ-Ad-drC"/>
+                                            <constraint firstItem="gD4-7b-0K6" firstAttribute="leading" secondItem="ScP-x0-2bn" secondAttribute="leading" constant="10" id="spN-Sm-gYw"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="90"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="gD4-7b-0K6" id="Vz5-st-Yzs"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
