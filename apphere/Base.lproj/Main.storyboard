@@ -490,22 +490,46 @@ VISITING</string>
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gD4-7b-0K6">
-                                                    <rect key="frame" x="10" y="10" width="80" height="70"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YCe-Uq-CvB">
+                                                    <rect key="frame" x="8" y="10" width="124.66666666666666" height="84.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.54000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="999" text="Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5X-Qa-Ckr">
+                                                            <rect key="frame" x="20.000000000000004" y="0.0" width="44.333333333333343" height="18"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gD4-7b-0K6">
+                                                            <rect key="frame" x="25.000000000000004" y="23" width="34.333333333333343" height="19.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.54000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="999" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4c-Kw-Q63">
+                                                            <rect key="frame" x="18.333333333333332" y="47.333333333333329" width="47.666666666666671" height="14.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.5495605469" green="0.76506491269999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="gD4-7b-0K6" secondAttribute="trailing" constant="10" id="GhA-Nr-EWO"/>
-                                            <constraint firstAttribute="bottom" secondItem="gD4-7b-0K6" secondAttribute="bottom" constant="10" id="MlN-sq-iMw"/>
-                                            <constraint firstItem="gD4-7b-0K6" firstAttribute="top" secondItem="ScP-x0-2bn" secondAttribute="top" constant="10" id="idQ-Ad-drC"/>
-                                            <constraint firstItem="gD4-7b-0K6" firstAttribute="leading" secondItem="ScP-x0-2bn" secondAttribute="leading" constant="10" id="spN-Sm-gYw"/>
+                                            <constraint firstItem="YCe-Uq-CvB" firstAttribute="centerY" secondItem="ScP-x0-2bn" secondAttribute="centerY" id="0Cn-G9-Msu"/>
+                                            <constraint firstItem="YCe-Uq-CvB" firstAttribute="leading" secondItem="ScP-x0-2bn" secondAttribute="leading" constant="8" id="kf3-PD-Imh"/>
+                                            <constraint firstAttribute="trailing" secondItem="YCe-Uq-CvB" secondAttribute="trailing" constant="8" id="vWN-2e-tR1"/>
                                         </constraints>
                                         <size key="customSize" width="100" height="90"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <outlet property="countLabel" destination="R5X-Qa-Ckr" id="7DH-Fm-0Nd"/>
+                                            <outlet property="subtitleLabel" destination="i4c-Kw-Q63" id="G39-hh-rIR"/>
                                             <outlet property="titleLabel" destination="gD4-7b-0K6" id="Vz5-st-Yzs"/>
                                             <segue destination="La9-D8-5uU" kind="show" identifier="category" id="bb4-yP-hRf"/>
                                         </connections>
@@ -546,6 +570,9 @@ VISITING</string>
                             <constraint firstAttribute="bottom" secondItem="p0n-iP-3Ch" secondAttribute="bottom" id="mzw-Kj-eXk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mIv-CP-qjD"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Apphere" id="kCc-uF-BYU"/>
                     <connections>

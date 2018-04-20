@@ -122,7 +122,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         switch section {
         case categoriesSection:
-            return 10.0
+            return 12.0
         case featuredSection, allSection:
             return 10.0
         default:
@@ -133,7 +133,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         switch section {
         case categoriesSection:
-            return 10.0
+            return 20.0
         case featuredSection, allSection:
             return 30.0
         default:
