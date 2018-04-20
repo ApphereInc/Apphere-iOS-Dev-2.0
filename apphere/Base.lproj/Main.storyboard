@@ -371,10 +371,10 @@ VISITING</string>
             </objects>
             <point key="canvasLocation" x="-890" y="576"/>
         </scene>
-        <!--Apphere-->
+        <!--Business List-->
         <scene sceneID="FYs-ts-ggw">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="La9-D8-5uU" customClass="BusinessListViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="La9-D8-5uU" userLabel="Business List" customClass="BusinessListViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LTk-w2-tFT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -898,6 +898,7 @@ VISITING</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fv8-wW-4cE">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.53476089240000002" green="0.33745265009999997" blue="0.93111383910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -915,4 +916,5 @@ VISITING</string>
         <image name="star-filled" width="53" height="49"/>
         <image name="sweet" width="550" height="363"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

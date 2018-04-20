@@ -17,6 +17,8 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         Notifications.authorize(confirmationViewController: self, completion: {_ in })
         category = category ?? Category.home
         addSections()
+        
+        configureNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -237,6 +239,16 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
             sectionCount += 1
         }
     }
+    
+    private func configureNavigationBar() {
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 128.0, height: 48.0))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128.0, height: 38.0))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "logo")!
+        titleView.addSubview(imageView)
+        navigationItem.titleView = titleView
+    }
+    
     
     private var sectionCount = 0
     private var categoriesSection = -1
