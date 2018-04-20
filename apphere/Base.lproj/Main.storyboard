@@ -58,7 +58,7 @@
                         <color key="selectedImageTintColor" red="0.53476089240000002" green="0.33745265009999997" blue="0.93111383910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="La9-D8-5uU" kind="relationship" relationship="viewControllers" id="z9j-ff-vQD"/>
+                        <segue destination="wMF-B6-dDG" kind="relationship" relationship="viewControllers" id="z9j-ff-vQD"/>
                         <segue destination="4Wi-Pg-A2U" kind="relationship" relationship="viewControllers" id="BpN-cY-Qf9"/>
                         <segue destination="XPJ-dO-egJ" kind="relationship" relationship="viewControllers" id="mAf-bj-qkN"/>
                         <segue destination="QwD-OS-4c5" kind="relationship" relationship="viewControllers" id="q5f-iR-6XW"/>
@@ -96,7 +96,7 @@
                                 <rect key="frame" x="40" y="60" width="295" height="200"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-y1-K5U" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="20" y="280" width="335" height="63"/>
+                                <rect key="frame" x="20" y="280" width="335" height="113.66666666666669"/>
                                 <attributedString key="attributedText">
                                     <fragment content="THE PROMOTION HEADLINE">
                                         <attributes>
@@ -111,7 +111,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="vSG-pe-Kon">
-                                <rect key="frame" x="20" y="363" width="335" height="338"/>
+                                <rect key="frame" x="20" y="413.66666666666674" width="335" height="287.33333333333326"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Footer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-mg-WIN">
                                 <rect key="frame" x="20" y="741" width="335" height="17"/>
@@ -175,7 +175,7 @@
                                 <rect key="frame" x="20" y="65" width="335" height="727"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpG-id-8WQ" customClass="Label" customModule="apphere" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="191.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="221.66666666666666"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="335" id="eZS-qo-Zh1"/>
                                         </constraints>
@@ -229,7 +229,7 @@ VISITING</string>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-5U-Nsz" userLabel="Rating Stack View">
-                                        <rect key="frame" x="27.666666666666657" y="377" width="280" height="92.333333333333314"/>
+                                        <rect key="frame" x="27.666666666666657" y="392" width="280" height="92.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PLEASE RATE YOUR EXPERIENCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPV-MN-lal">
                                                 <rect key="frame" x="9.3333333333333428" y="0.0" width="261" height="20.333333333333332"/>
@@ -371,7 +371,7 @@ VISITING</string>
             </objects>
             <point key="canvasLocation" x="-890" y="576"/>
         </scene>
-        <!--Business List View Controller-->
+        <!--Apphere-->
         <scene sceneID="FYs-ts-ggw">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="La9-D8-5uU" customClass="BusinessListViewController" customModule="apphere" customModuleProvider="target" sceneMemberID="viewController">
@@ -380,7 +380,7 @@ VISITING</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p0n-iP-3Ch">
-                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="ov9-Oj-hqU">
                                     <size key="itemSize" width="300" height="344"/>
@@ -483,6 +483,57 @@ VISITING</string>
                                             <outlet property="starRatingView" destination="cFK-Gl-7bR" id="w6p-6m-3ML"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category" id="ScP-x0-2bn" userLabel="Category Cell" customClass="CategoryCell" customModule="apphere" customModuleProvider="target">
+                                        <rect key="frame" x="137.66666666666666" y="424" width="100" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YCe-Uq-CvB">
+                                                    <rect key="frame" x="8" y="10" width="124.66666666666666" height="84.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.54000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="999" text="Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5X-Qa-Ckr">
+                                                            <rect key="frame" x="20.000000000000004" y="0.0" width="44.333333333333343" height="18"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gD4-7b-0K6">
+                                                            <rect key="frame" x="25.000000000000004" y="23" width="34.333333333333343" height="19.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.54000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="999" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4c-Kw-Q63">
+                                                            <rect key="frame" x="18.333333333333332" y="47.333333333333329" width="47.666666666666671" height="14.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.5495605469" green="0.76506491269999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="YCe-Uq-CvB" firstAttribute="centerY" secondItem="ScP-x0-2bn" secondAttribute="centerY" id="0Cn-G9-Msu"/>
+                                            <constraint firstItem="YCe-Uq-CvB" firstAttribute="leading" secondItem="ScP-x0-2bn" secondAttribute="leading" constant="8" id="kf3-PD-Imh"/>
+                                            <constraint firstAttribute="trailing" secondItem="YCe-Uq-CvB" secondAttribute="trailing" constant="8" id="vWN-2e-tR1"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="90"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="countLabel" destination="R5X-Qa-Ckr" id="7DH-Fm-0Nd"/>
+                                            <outlet property="subtitleLabel" destination="i4c-Kw-Q63" id="G39-hh-rIR"/>
+                                            <outlet property="titleLabel" destination="gD4-7b-0K6" id="Vz5-st-Yzs"/>
+                                            <segue destination="La9-D8-5uU" kind="show" identifier="category" id="bb4-yP-hRf"/>
+                                        </connections>
+                                    </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="t7d-uA-trr" customClass="BusinessListHeaderView" customModule="apphere" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -519,9 +570,11 @@ VISITING</string>
                             <constraint firstAttribute="bottom" secondItem="p0n-iP-3Ch" secondAttribute="bottom" id="mzw-Kj-eXk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mIv-CP-qjD"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="UBn-9G-Zs9"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Apphere" id="kCc-uF-BYU"/>
                     <connections>
                         <outlet property="collectionView" destination="p0n-iP-3Ch" id="VWw-kY-toO"/>
                         <outlet property="searchDisplayController" destination="7cj-nR-N7d" id="vxn-CM-drq"/>
@@ -538,7 +591,7 @@ VISITING</string>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="182" y="-1632"/>
+            <point key="canvasLocation" x="1054" y="-2392"/>
         </scene>
         <!--Business Detail View Controller-->
         <scene sceneID="Eu3-25-2j8">
@@ -814,7 +867,7 @@ VISITING</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41Y-yJ-6g4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="-1632.2660098522167"/>
+            <point key="canvasLocation" x="2130" y="-1581"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="wJV-bq-4ie">
@@ -835,6 +888,25 @@ VISITING</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hz-9V-2PC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="181.59999999999999" y="-276.35467980295567"/>
+        </scene>
+        <!--Business List Navigation Controller-->
+        <scene sceneID="D7M-Dj-wqU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wMF-B6-dDG" userLabel="Business List Navigation Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="UBn-9G-Zs9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fv8-wW-4cE">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="La9-D8-5uU" kind="relationship" relationship="rootViewController" id="VtM-lC-905"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vne-iY-8pQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.59999999999999" y="-1632.2660098522167"/>
         </scene>
     </scenes>
     <resources>

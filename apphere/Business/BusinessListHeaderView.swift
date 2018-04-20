@@ -9,17 +9,11 @@
 import UIKit
 
 class BusinessListHeaderView: UICollectionReusableView {
-    var date: Date! {
+    var title: String! {
         didSet {
-            label.text = BusinessListHeaderView.dateFormatter.string(from: date).uppercased()
+            label.text = title
         }
     }
     
     @IBOutlet weak var label: UILabel!
-    
-    static let dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM d"
-        return dateFormatter
-    }()
 }
