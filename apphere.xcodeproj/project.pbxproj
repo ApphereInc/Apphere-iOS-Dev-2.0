@@ -26,10 +26,11 @@
 		EA22D015202E1339006C2861 /* DismissBusinessViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22D013202E1339006C2861 /* DismissBusinessViewAnimationController.swift */; };
 		EA22D016202E1339006C2861 /* PresentBusinessViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22D014202E1339006C2861 /* PresentBusinessViewAnimationController.swift */; };
 		EA36059A2087CF3E00A91267 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3605992087CF3E00A91267 /* Categories.swift */; };
+		EA3D5CEF208E789900EDF91F /* BusinessHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3D5CEE208E789900EDF91F /* BusinessHeaderView.xib */; };
 		EA42F05D205C8D6C00070BCF /* ModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */; };
 		EA4A5970202A53AF0062ACF4 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */; };
 		EA4A5972202A5BDE0062ACF4 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5971202A5BDE0062ACF4 /* Business.swift */; };
-		EA4A5974202A68020062ACF4 /* BusinessListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */; };
+		EA4A5974202A68020062ACF4 /* BusinessHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A5973202A68020062ACF4 /* BusinessHeaderView.swift */; };
 		EA4C2E4120606964004BB856 /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4C2E4020606964004BB856 /* ExitViewController.swift */; };
 		EA4D2D04203502F60081116A /* BusinessDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4D2D03203502F60081116A /* BusinessDirectory.swift */; };
 		EA5D2383205082380058B4E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA5D2382205082370058B4E7 /* GoogleService-Info.plist */; };
@@ -109,10 +110,11 @@
 		EA22D013202E1339006C2861 /* DismissBusinessViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissBusinessViewAnimationController.swift; sourceTree = "<group>"; };
 		EA22D014202E1339006C2861 /* PresentBusinessViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentBusinessViewAnimationController.swift; sourceTree = "<group>"; };
 		EA3605992087CF3E00A91267 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		EA3D5CEE208E789900EDF91F /* BusinessHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessHeaderView.xib; sourceTree = "<group>"; };
 		EA42F05C205C8D6C00070BCF /* ModalDismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDismissAnimator.swift; sourceTree = "<group>"; };
 		EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		EA4A5971202A5BDE0062ACF4 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
-		EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessListHeaderView.swift; sourceTree = "<group>"; };
+		EA4A5973202A68020062ACF4 /* BusinessHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessHeaderView.swift; sourceTree = "<group>"; };
 		EA4C2E4020606964004BB856 /* ExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		EA4D2D03203502F60081116A /* BusinessDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDirectory.swift; sourceTree = "<group>"; };
 		EA5D2382205082370058B4E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				EAFFA81720617CEA00BD5AB3 /* Featured.storyboard */,
 				2CD1B8591FD3C4F200179D26 /* LaunchScreen.storyboard */,
 				2C543CC1203ACF8E00600EDC /* Assets.xcassets */,
+				EA3D5CEE208E789900EDF91F /* BusinessHeaderView.xib */,
 				243CF5C92048A87A007A55CD /* ArialMTPro-Black.otf */,
 				2CB6D7B5204905300028DE4D /* Arial Black.ttf */,
 				EA5D2382205082370058B4E7 /* GoogleService-Info.plist */,
@@ -275,7 +278,7 @@
 				EA6A4749202B7A2600455766 /* BusinessDetailViewController.swift */,
 				EA4A596F202A53AF0062ACF4 /* BusinessCell.swift */,
 				EA0F924C208928A300FAA683 /* CategoryCell.swift */,
-				EA4A5973202A68020062ACF4 /* BusinessListHeaderView.swift */,
+				EA4A5973202A68020062ACF4 /* BusinessHeaderView.swift */,
 				EA4A5971202A5BDE0062ACF4 /* Business.swift */,
 				EA4D2D03203502F60081116A /* BusinessDirectory.swift */,
 			);
@@ -411,6 +414,7 @@
 				2C543CC2203ACF8E00600EDC /* Assets.xcassets in Resources */,
 				2CD1B8561FD3C4F200179D26 /* Main.storyboard in Resources */,
 				243CF5CA2048A87A007A55CD /* ArialMTPro-Black.otf in Resources */,
+				EA3D5CEF208E789900EDF91F /* BusinessHeaderView.xib in Resources */,
 				2CB6D7B6204905300028DE4D /* Arial Black.ttf in Resources */,
 				EA5D2383205082380058B4E7 /* GoogleService-Info.plist in Resources */,
 			);
@@ -673,7 +677,7 @@
 				EA4A5970202A53AF0062ACF4 /* BusinessCell.swift in Sources */,
 				EA36059A2087CF3E00A91267 /* Categories.swift in Sources */,
 				EA95E4EC20477F6C00EE98DE /* UIImage.swift in Sources */,
-				EA4A5974202A68020062ACF4 /* BusinessListHeaderView.swift in Sources */,
+				EA4A5974202A68020062ACF4 /* BusinessHeaderView.swift in Sources */,
 				EA6AF6FF205850C5002BE69E /* PagedViewController.swift in Sources */,
 				EAF806502056AC98002A89F4 /* Database.swift in Sources */,
 				EA4D2D04203502F60081116A /* BusinessDirectory.swift in Sources */,

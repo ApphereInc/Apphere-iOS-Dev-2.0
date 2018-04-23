@@ -16,8 +16,10 @@ class BusinessListViewController: UICollectionViewController, UICollectionViewDe
         super.viewDidLoad()
         Notifications.authorize(confirmationViewController: self, completion: {_ in })
         category = category ?? Category.home
-        addSections()
         
+        collectionView!.register(UINib(nibName: "BusinessHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "businessHeader")
+        
+        addSections()
         configureNavigationBar()
     }
     
@@ -144,20 +146,22 @@ class BusinessListViewController: UICollectionViewController, UICollectionViewDe
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! BusinessListHeaderView
-        
         switch indexPath.section {
         case categoriesSection:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "businessHeader", for: indexPath) as! BusinessHeaderView
             header.title = ""
+            return header
         case featuredSection:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "businessHeader", for: indexPath) as! BusinessHeaderView
             header.title = "Featured Business"
+            return header
         case allSection:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "businessHeader", for: indexPath) as! BusinessHeaderView
             header.title = "All \(category.title) Results"
+            return header
         default:
-            break
+            preconditionFailure()
         }
-        
-        return header
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

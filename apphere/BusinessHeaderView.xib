@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="businessHeader" id="mSk-at-C1G" userLabel="Business Header View" customClass="BusinessHeaderView" customModule="apphere" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="MONTH 00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp4-34-sGP">
+                    <rect key="frame" x="16" y="0.0" width="349" height="50"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                    <color key="textColor" red="0.5071622133" green="0.34449067709999998" blue="0.89811784029999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gp4-34-sGP" secondAttribute="bottom" id="5hI-8z-HpK"/>
+                <constraint firstAttribute="trailing" secondItem="gp4-34-sGP" secondAttribute="trailing" constant="10" id="PrJ-TH-0vk"/>
+                <constraint firstItem="gp4-34-sGP" firstAttribute="top" secondItem="mSk-at-C1G" secondAttribute="top" id="UnY-ZB-sze"/>
+                <constraint firstItem="gp4-34-sGP" firstAttribute="leading" secondItem="mSk-at-C1G" secondAttribute="leading" constant="16" id="fgS-xF-ark"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="MRv-c2-zYH"/>
+            <connections>
+                <outlet property="label" destination="gp4-34-sGP" id="caL-vM-Dmk"/>
+            </connections>
+        </collectionReusableView>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+</document>

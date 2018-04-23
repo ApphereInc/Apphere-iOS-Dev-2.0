@@ -1,5 +1,5 @@
 //
-//  BusinessListHeaderView.swift
+//  BusinessHeaderView.swift
 //  apphere
 //
 //  Created by Tony Mann on 2/6/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessListHeaderView: UICollectionReusableView {
+class BusinessHeaderView: UICollectionReusableView {
     var title: String! {
         didSet {
             label.text = title

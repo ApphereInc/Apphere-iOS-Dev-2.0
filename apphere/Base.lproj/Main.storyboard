@@ -697,13 +697,13 @@ VISITING</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="95y-l9-w44">
                             <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="business" id="Jq7-Aj-Ray" userLabel="Business Cell" customClass="BusinessCell" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="70" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="20" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -797,7 +797,7 @@ VISITING</string>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category" id="I90-TT-9Yc" userLabel="Category Cell" customClass="CategoryCell" customModule="apphere" customModuleProvider="target">
-                                <rect key="frame" x="60" y="50" width="100" height="90"/>
+                                <rect key="frame" x="60" y="0.0" width="100" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
@@ -848,27 +848,6 @@ VISITING</string>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="businessHeader" id="sqq-bo-AyJ" userLabel="Business Header View" customClass="BusinessListHeaderView" customModule="apphere" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="MONTH 00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT7-yf-5Q0">
-                                    <rect key="frame" x="16" y="0.0" width="349" height="50"/>
-                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
-                                    <color key="textColor" red="0.5071622133" green="0.34449067709999998" blue="0.89811784029999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="bT7-yf-5Q0" secondAttribute="trailing" constant="10" id="4YK-dy-Vas"/>
-                                <constraint firstItem="bT7-yf-5Q0" firstAttribute="leading" secondItem="sqq-bo-AyJ" secondAttribute="leading" constant="16" id="CP4-Fy-rU7"/>
-                                <constraint firstItem="bT7-yf-5Q0" firstAttribute="top" secondItem="sqq-bo-AyJ" secondAttribute="top" id="th6-KN-8hc"/>
-                                <constraint firstAttribute="bottom" secondItem="bT7-yf-5Q0" secondAttribute="bottom" id="vdk-xm-BS0"/>
-                            </constraints>
-                            <connections>
-                                <outlet property="label" destination="bT7-yf-5Q0" id="0Ad-zx-QdK"/>
-                            </connections>
-                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="KAg-39-cHI" id="F5E-Jk-Apx"/>
                             <outlet property="delegate" destination="KAg-39-cHI" id="yDJ-Pf-utx"/>
