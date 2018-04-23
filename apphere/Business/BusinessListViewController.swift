@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate, StatusBarHideable {
+class BusinessListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate, StatusBarHideable {
     public var activeIndexPath: IndexPath?
     public var category: Category!
     
@@ -25,7 +25,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         super.viewWillAppear(animated)
   
         if let indexPath = activeIndexPath,
-           let cell = collectionView.cellForItem(at: indexPath)
+           let cell = collectionView!.cellForItem(at: indexPath)
         {
             cell.contentView.layer.setAffineTransform(.identity)
         }
@@ -35,7 +35,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         switch segue.identifier {
         case "businessDetail":
             let cell = sender as! BusinessCell
-            activeIndexPath = collectionView.indexPath(for: cell)!
+            activeIndexPath = collectionView!.indexPath(for: cell)!
             let businessViewController = segue.destination as! BusinessDetailViewController
             businessViewController.business = BusinessDirectory.businesses[activeIndexPath!.item]
             businessViewController.customerCounts = cell.customerCounts
@@ -46,7 +46,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
             dismissController.selectedBusinessCellFrameInWindow = cellFrameInWindow
         case "category":
             let cell = sender as! CategoryCell
-            let indexPath = collectionView.indexPath(for: cell)!
+            let indexPath = collectionView!.indexPath(for: cell)!
             let businessListController = segue.destination as! BusinessListViewController
             businessListController.category = category.subcategories[indexPath.item]
         default:
@@ -70,11 +70,11 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     
     // MARK: - UICollectionViewDataSource
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sectionCount
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case categoriesSection:
             return category.subcategories.count
@@ -87,7 +87,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == categoriesSection {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "category", for: indexPath) as! CategoryCell
             cell.category = category.subcategories[indexPath.item]
@@ -143,7 +143,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! BusinessListHeaderView
         
         switch indexPath.section {
@@ -169,7 +169,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) else {
             return
         }
@@ -179,7 +179,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) else {
             return
         }
@@ -189,7 +189,7 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard indexPath.section != categoriesSection, let cell = collectionView.cellForItem(at: indexPath) else {
             return
         }
@@ -211,10 +211,6 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return dismissController
     }
-    
-    // MARK: - Outlets
-    
-    @IBOutlet var collectionView: UICollectionView!
     
     // MARK: - Properties
     

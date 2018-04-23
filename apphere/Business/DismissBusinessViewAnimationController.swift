@@ -16,7 +16,8 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let businessDetailViewController = transitionContext.viewController(forKey: .from) as? BusinessDetailViewController,
               let tabBarController = transitionContext.viewController(forKey: .to) as? UITabBarController,
-              let businessListViewController = tabBarController.viewControllers?.first as? BusinessListViewController
+              let businessListNavigationController = tabBarController.viewControllers?.first as? UINavigationController,
+              let businessListViewController = businessListNavigationController.topViewController as? BusinessListViewController
         else {
             return
         }
@@ -30,7 +31,7 @@ class DismissBusinessViewAnimationController: NSObject, UIViewControllerAnimated
         let cell: UICollectionViewCell?
         
         if let indexPath = businessListViewController.activeIndexPath {
-            cell = businessListViewController.collectionView.cellForItem(at: indexPath)
+            cell = businessListViewController.collectionView!.cellForItem(at: indexPath)
         } else {
             cell = nil
         }
