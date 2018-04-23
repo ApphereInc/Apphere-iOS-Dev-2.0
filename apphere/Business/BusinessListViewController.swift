@@ -241,8 +241,8 @@ class BusinessListViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     private func configureNavigationBar() {
-        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 128.0, height: 48.0))
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128.0, height: 38.0))
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 97.0, height: 44.0))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 97.0, height: 44.0))
         imageView.contentMode = .scaleAspectFit
         imageView.image = UIImage(named: "logo")!
         titleView.addSubview(imageView)

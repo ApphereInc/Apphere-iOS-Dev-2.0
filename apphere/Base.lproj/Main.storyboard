@@ -574,7 +574,9 @@ VISITING</string>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" title="Apphere" id="kCc-uF-BYU"/>
+                    <navigationItem key="navigationItem" title="Apphere" id="kCc-uF-BYU">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="settings" id="Zt7-ii-rJp"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="p0n-iP-3Ch" id="VWw-kY-toO"/>
                         <outlet property="searchDisplayController" destination="7cj-nR-N7d" id="vxn-CM-drq"/>
@@ -912,6 +914,7 @@ VISITING</string>
     </scenes>
     <resources>
         <image name="exit-bg" width="800" height="600"/>
+        <image name="settings" width="32" height="32"/>
         <image name="star-empty" width="53" height="49"/>
         <image name="star-filled" width="53" height="49"/>
         <image name="sweet" width="550" height="363"/>
