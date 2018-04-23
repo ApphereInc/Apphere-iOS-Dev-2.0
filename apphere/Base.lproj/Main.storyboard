@@ -645,7 +645,7 @@ VISITING</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41Y-yJ-6g4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2130" y="-1581"/>
+            <point key="canvasLocation" x="3271" y="-2557"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="wJV-bq-4ie">
@@ -685,7 +685,7 @@ VISITING</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vne-iY-8pQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.59999999999999" y="-1632.2660098522167"/>
+            <point key="canvasLocation" x="953" y="-2557"/>
         </scene>
         <!--Business List View Controller-->
         <scene sceneID="g1y-oT-mUH">
@@ -848,7 +848,7 @@ VISITING</string>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="sqq-bo-AyJ" customClass="BusinessListHeaderView" customModule="apphere" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="businessHeader" id="sqq-bo-AyJ" userLabel="Business Header View" customClass="BusinessListHeaderView" customModule="apphere" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -884,7 +884,7 @@ VISITING</string>
                     <barButtonItem key="rightBarButtonItem" title="Item" image="settings" id="2Tg-kk-As9"/>
                 </navigationItem>
             </objects>
-            <point key="canvasLocation" x="1706" y="-1632"/>
+            <point key="canvasLocation" x="2106" y="-2556"/>
         </scene>
     </scenes>
     <resources>
